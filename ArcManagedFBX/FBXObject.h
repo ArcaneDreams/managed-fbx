@@ -9,16 +9,16 @@ using namespace System::Text;
 
 namespace ArcManagedFBX
 {
-	// Delicious forward declarations because fuck you that's why.
 	ref class FBXDocument;
 	ref class FBXScene;
 
-	// The object instance that we are working with
+	// The fbx object within the document that we are working with
 	public ref class FBXObject : public FBXEmitter, public IDisposable
 	{
 	public:
 		FBXObject();
 		virtual ~FBXObject();
+		!FBXObject();
 		virtual void SetSelected(bool pSelected);
 		virtual bool GetSelected();
 
@@ -41,11 +41,23 @@ namespace ArcManagedFBX
 
 		const String^ GetInitialName();
 		const String^ GetName();
+		void SetName(String^ name);
+		const String^ GetNameSpaceOnly();
+		const String^ GetNameOnly();
+		const String^ GetNameSpacePrefix();
+
+		const uint64 GetUniqueID();
+
+		// Check whether the source object is connected
+		ARC_INLINE bool IsConnectedSrcObject(FBXObject^ other);
+		ARC_INLINE bool DisconnectSrcObject(FBXObject^ other);
 
 	protected:
 		FbxObject* m_NativeObject;
 		
 	internal:
 		FBXObject(FbxObject* objectInstance);
+	
+		FbxObject* GetObjectInstance();
 	};
 }

@@ -10,4 +10,6 @@
 #include <Windows.h>
 #include <string>
 
+#include "FBXException.h"
+#include "StringHelper.h"
 #include "Defines.h"

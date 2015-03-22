@@ -29,11 +29,19 @@ namespace ArcManagedFBXTest
 
         private FBXScene m_Scene;
 
+        #region Properties
+        public FBXScene Scene
+        {
+            get { return m_Scene; }
+            set { m_Scene = value; }
+        }
+
         public string Filename
         {
             get;
             set;
-        }
+        } 
+        #endregion
 
 
         private Framework()

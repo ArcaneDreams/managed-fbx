@@ -80,7 +80,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(IncludePath);..\Libs\FBX\include</IncludePath>
-    <LibraryPath>$(LibraryPath);..\Libs\FBX\lib\vs2012\x64</LibraryPath>
+    <LibraryPath>$(LibraryPath);..\Libs\FBX\lib\vs2012\x64\debug</LibraryPath>
     <OutDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
@@ -113,8 +113,8 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>
-      </AdditionalDependencies>
+      <AdditionalDependencies>libfbxsdk-md.lib</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>LIBMCT</IgnoreSpecificDefaultLibraries>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -147,6 +147,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Defines.h" />
+    <ClInclude Include="FBXAnimLayer.h" />
     <ClInclude Include="FBXAttribute.h" />
     <ClInclude Include="FBXCamera.h" />
     <ClInclude Include="FBXCollection.h" />
@@ -155,7 +156,10 @@
     <ClInclude Include="FBXDocumentInfo.h" />
     <ClInclude Include="FBXEmitter.h" />
     <ClInclude Include="FBXException.h" />
+    <ClInclude Include="FBXGeometry.h" />
+    <ClInclude Include="FBXGeometryBase.h" />
     <ClInclude Include="FBXLayer.h" />
+    <ClInclude Include="FBXLayerContainer.h" />
     <ClInclude Include="FBXLight.h" />
     <ClInclude Include="FBXManager.h" />
     <ClInclude Include="FBXMesh.h" />
@@ -172,6 +176,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
+    <ClCompile Include="FBXAnimLayer.cpp" />
     <ClCompile Include="FBXAttribute.cpp" />
     <ClCompile Include="FBXCamera.cpp" />
     <ClCompile Include="FBXCollection.cpp" />
@@ -179,6 +184,10 @@
     <ClCompile Include="FBXDocument.cpp" />
     <ClCompile Include="FBXDocumentInfo.cpp" />
     <ClCompile Include="FBXEmitter.cpp" />
+    <ClCompile Include="FBXGeometry.cpp" />
+    <ClCompile Include="FBXGeometryBase.cpp" />
+    <ClCompile Include="FBXLayer.cpp" />
+    <ClCompile Include="FBXLayerContainer.cpp" />
     <ClCompile Include="FBXLight.cpp" />
     <ClCompile Include="FBXManager.cpp" />
     <ClCompile Include="FBXNode.cpp" />

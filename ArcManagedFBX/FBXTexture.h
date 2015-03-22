@@ -7,7 +7,7 @@ namespace ArcManagedFBX
 	{
 	public:
 		FBXTexture();
-		~FBXTexture();
+		virtual ~FBXTexture();
 
 	private:
 

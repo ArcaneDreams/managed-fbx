@@ -3,6 +3,7 @@
 #include "FBXObject.h"
 
 using namespace ArcManagedFBX;
+using namespace ArcManagedFBX::Utility;
 using namespace ArcManagedFBX::Types;
 using namespace System;
 
@@ -12,6 +13,11 @@ FBXObject::FBXObject()
 }
 
 FBXObject::~FBXObject()
+{
+
+}
+
+FBXObject::!FBXObject()
 {
 
 }
@@ -35,12 +41,13 @@ FBXObject::FBXObject(FbxObject* objectInstance)
 
 bool FBXObject::GetSelected()
 {
-	return false;
+	return this->m_NativeObject->GetSelected();
 }
 
+// The call destroy on the object that we are working on
 void FBXObject::Destroy(bool recursive)
 {
-
+	this->m_NativeObject->Destroy(recursive);
 }
 
 void FBXObject::SetAllObjectFlags(uint32 flags)
@@ -58,6 +65,11 @@ const FBXManager^ FBXObject::GetManager()
 	return nullptr;
 }
 
+void FBXObject::SetName(String^ name)
+{
+	this->m_NativeObject->SetName(StringHelper::ToNative(name));
+}
+
 const FBXScene^ FBXObject::GetScene()
 {
 	return gcnew FBXScene(this->m_NativeObject->GetScene());
@@ -70,12 +82,47 @@ const FBXDocument^ FBXObject::GetRootDocument()
 
 const FBXDocument^ FBXObject::GetDocument()
 {
-	return nullptr;
+	return gcnew FBXDocument(this->m_NativeObject->GetDocument());
 }
 
 void FBXObject::SetSelected(bool pSelected)
 {
-	
+	this->m_NativeObject->SetSelected(pSelected);
+}
+
+FbxObject* FBXObject::GetObjectInstance()
+{
+	return this->m_NativeObject;
+}
+
+const String^ FBXObject::GetNameOnly()
+{
+	return StringHelper::ToManaged(this->m_NativeObject->GetNameOnly().Buffer());
+}
+
+const String^ FBXObject::GetNameSpaceOnly()
+{
+	return StringHelper::ToManaged(this->m_NativeObject->GetNameSpaceOnly().Buffer());
+}
+
+const String^ FBXObject::GetNameSpacePrefix()
+{
+	return StringHelper::ToManaged(this->m_NativeObject->GetNameSpacePrefix().Buffer());
+}
+
+const uint64 FBXObject::GetUniqueID()
+{
+	return this->m_NativeObject->GetUniqueID();
+}
+
+bool FBXObject::IsConnectedSrcObject(FBXObject^ other)
+{
+	return this->m_NativeObject->IsConnectedSrcObject(other->GetObjectInstance());
+}
+
+bool FBXObject::DisconnectSrcObject(FBXObject^ other)
+{
+	return this->m_NativeObject->DisconnectSrcObject(other->GetObjectInstance());
 }
 
 // Reset the properties of the native object.

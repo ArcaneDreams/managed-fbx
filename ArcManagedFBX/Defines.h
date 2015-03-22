@@ -25,6 +25,9 @@ typedef double	float64;
 #define ARC_CHILD_CAST(ParentMember, NativeType, ChildType) \
 NativeType##* ChildType##::Get##ChildType##()\
 {\
+	if (this->m_##ParentMember == nullptr)\
+		throw gcnew ArcManagedFBX::Exceptions::FBXException("The parent member native object is not valid!");\
+		\
 	return dynamic_cast<##NativeType##*>(this->m_##ParentMember##);	\
 }
 

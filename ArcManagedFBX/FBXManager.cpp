@@ -7,8 +7,13 @@ FBXManager::FBXManager()
 {
 	m_Manager = FbxManager::Create();
 	m_Importer = FbxImporter::Create(m_Manager, "Importer");
-	m_Exporter = FbxExporter::Create(m_Manager, "Importer");
+	m_Exporter = FbxExporter::Create(m_Manager, "Exporter");
 	m_Converter = new FbxGeometryConverter(m_Manager);
+}
+
+FbxManager* FBXManager::GetManagerInstance()
+{
+	return FBXManager::m_Manager;
 }
 
 // Get the importer

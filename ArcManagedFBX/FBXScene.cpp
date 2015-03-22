@@ -5,6 +5,7 @@ using namespace ArcManagedFBX;
 using namespace ArcManagedFBX::Types;
 using namespace ArcManagedFBX::Utility;
 
+// The copy constructor for the scene
 FBXScene::FBXScene(FBXScene^ other)
 {
 

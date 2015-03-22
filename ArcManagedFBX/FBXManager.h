@@ -13,6 +13,7 @@ namespace ArcManagedFBX
 		static FBXManager();
 		static FbxImporter* GetImporter();
 		static FbxExporter* GetExporter();
+		static FbxManager* GetManagerInstance();
 
 		static const String^ GetVersion(bool full);
 	private:
