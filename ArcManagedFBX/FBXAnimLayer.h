@@ -1,4 +1,6 @@
 #pragma once
+#include "FBXTypes.h"
+#include "FBXColour.h"
 #include "FBXCollection.h"
 
 using namespace System::Text;
@@ -14,6 +16,14 @@ namespace ArcManagedFBX
 			FBXAnimLayer();
 			virtual ~FBXAnimLayer();
 			!FBXAnimLayer();
+
+			ARC_PROPERTY_PUBLICGET(float64, Weight);
+			ARC_PROPERTY_PUBLICGET(bool,Mute);
+			ARC_PROPERTY_PUBLICGET(bool,Solo);
+			ARC_PROPERTY_PUBLICGET(bool,Lock);
+			ARC_PROPERTY_PUBLICGET(FBXColour,Color);
+
+			void Reset();
 		internal:
 			FBXAnimLayer(FbxAnimLayer* instance);
 		private:

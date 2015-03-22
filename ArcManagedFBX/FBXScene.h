@@ -40,8 +40,5 @@ namespace ArcManagedFBX
 		FbxManager* m_NativeManager;
 
 		ARC_CHILD_CAST(NativeObject,FbxScene,FBXScene)
-
-		// The native implementation of the scene
-		FbxScene* m_NativeScene;
 	};
 }

@@ -3,6 +3,7 @@
 
 using namespace ArcManagedFBX;
 using namespace ArcManagedFBX::Types;
+using namespace ArcManagedFBX::Exceptions;
 using namespace ArcManagedFBX::Utility;
 
 // The copy constructor for the scene
@@ -58,16 +59,17 @@ int32 FBXScene::CreateCharacter(String^ pName)
 	return 0;
 }
 
-
-
 FBXScene^ FBXScene::Import(String^ fileName)
 {
 	auto importer = FBXManager::GetImporter();
 
-	if (importer->Initialize(StringHelper::ToNative(fileName)))
-	{
+	if (!importer->Initialize(StringHelper::ToNative(fileName)))
+		throw gcnew FBXException("Failed to initialize the FBX importer");
 
-	}
+	auto scene = gcnew FBXScene();
+
+	if (!importer->Import(scene->GetFBXScene()))
+		throw gcnew FBXException("Failed to import the content into the FBX scene");
 
 	return gcnew FBXScene();
 }

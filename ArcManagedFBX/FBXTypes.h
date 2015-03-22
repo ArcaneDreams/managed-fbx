@@ -31,6 +31,22 @@ namespace ArcManagedFBX
 			eLine
 		};
 
+		/** Rotation accumulation mode of animation layer.
+		  */
+		enum RotationAccumulationMode
+		{
+			eRotationByLayer,	//! Rotation values are weighted per layer and the result rotation curves are calculated using concatenated quaternion values.
+			eRotationByChannel	//! Rotation values are weighted per component and the result rotation curves are calculated by adding each independent Euler XYZ value.
+		};
+
+		/** Scale accumulation mode of animation layer.
+		  */
+		enum ScaleAccumulationMode
+		{
+			eScaleMultiply,	//! Independent XYZ scale values per layer are calculated using the layer weight value as an exponent, and result scale curves are calculated by multiplying each independent XYZ scale value.
+			eScaleAdditive	//! Result scale curves are calculated by adding each independent XYZ value.
+		};
+
 		enum class FilmRollOrder
 		{
 			eRotateFirst,	//!< The film back is first rotated then translated by the pivot point value.
@@ -72,6 +88,19 @@ namespace ArcManagedFBX
 			eCopyCalledByClone = 1 << 16 //!< Used internally. If set, modify the Copy behavior of the object
 		};
 		
+		enum BlendMode
+		{
+			eBlendAdditive,	//! The layer "adds" its animation to layers that precede it in the stack and affect the same attributes.
+			eBlendOverride,	//! The layer "overrides" the animation of any layer that shares the same attributes and precedes it in the stack.
+			eBlendOverridePassthrough	/*!<This mode is like the eOverride but the Weight value 
+										influence how much animation from the preceding layers is 
+										allowed to pass-through. When using this mode with a Weight of 
+										100.0, this layer is completely opaque and it masks any animation
+										from the preceding layers for the same attribute. If the Weight
+										is 50.0, half of this layer animation is mixed with half of the
+										animation of the preceding layers for the same attribute. */
+		};
+
 		// Wraps "Type"
 		public enum class LightType
 		{
