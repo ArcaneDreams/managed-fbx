@@ -31,7 +31,6 @@ NativeType##* ChildType##::Get##ChildType##()\
 	return dynamic_cast<##NativeType##*>(this->m_##ParentMember##);	\
 }
 
-
 #define ARC_UNCOPYABLE(type) \
 	private: \
 	type(const type& rhs); \

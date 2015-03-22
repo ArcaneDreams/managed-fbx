@@ -15,7 +15,7 @@ namespace ArcManagedFBX
 			virtual ~FBXAnimLayer();
 			!FBXAnimLayer();
 		internal:
-
+			FBXAnimLayer(FbxAnimLayer* instance);
 		private:
 			ARC_CHILD_CAST(NativeObject,FbxAnimLayer,FBXAnimLayer);
 		};

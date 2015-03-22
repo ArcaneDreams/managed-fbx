@@ -11,7 +11,6 @@ namespace ArcManagedFBX
 	{
 	public:
 		FBXGeometry();
-		FBXGeometry(FbxGeometry* instance);
 		~FBXGeometry();
 		!FBXGeometry();
 
