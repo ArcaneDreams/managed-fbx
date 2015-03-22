@@ -158,6 +158,9 @@
     <ClInclude Include="FBXException.h" />
     <ClInclude Include="FBXGeometry.h" />
     <ClInclude Include="FBXGeometryBase.h" />
+    <ClInclude Include="FBXImporter.h" />
+    <ClInclude Include="FBXIOBase.h" />
+    <ClInclude Include="FBXIOSettings.h" />
     <ClInclude Include="FBXLayer.h" />
     <ClInclude Include="FBXLayerContainer.h" />
     <ClInclude Include="FBXLight.h" />
@@ -166,6 +169,7 @@
     <ClInclude Include="FBXNode.h" />
     <ClInclude Include="FBXObject.h" />
     <ClInclude Include="FBXPose.h" />
+    <ClInclude Include="FBXProperty.h" />
     <ClInclude Include="FBXScene.h" />
     <ClInclude Include="FBXTexture.h" />
     <ClInclude Include="FBXTypes.h" />
@@ -186,12 +190,16 @@
     <ClCompile Include="FBXEmitter.cpp" />
     <ClCompile Include="FBXGeometry.cpp" />
     <ClCompile Include="FBXGeometryBase.cpp" />
+    <ClCompile Include="FBXImporter.cpp" />
+    <ClCompile Include="FBXIOBase.cpp" />
+    <ClCompile Include="FBXIOSettings.cpp" />
     <ClCompile Include="FBXLayer.cpp" />
     <ClCompile Include="FBXLayerContainer.cpp" />
     <ClCompile Include="FBXLight.cpp" />
     <ClCompile Include="FBXManager.cpp" />
     <ClCompile Include="FBXNode.cpp" />
     <ClCompile Include="FBXObject.cpp" />
+    <ClCompile Include="FBXProperty.cpp" />
     <ClCompile Include="FBXScene.cpp" />
     <ClCompile Include="FBXVector.cpp" />
     <ClCompile Include="FBXMesh.cpp" />

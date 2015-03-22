@@ -41,22 +41,25 @@ FBXNode^ FBXScene::GetRootNode()
 
 int32 FBXScene::GetControlSetPlugCount()
 {
-	return 0;
+	return this->GetFBXScene()->GetControlSetPlugCount();
 }
 
 int32 FBXScene::GetCurveOnSurfaceCount()
 {
-	return 0;
+	return this->GetFBXScene()->GetCurveOnSurfaceCount();
 }
 
 void FBXScene::DestroyCharacter(int32 pIndex)
 {
-
+	this->GetFBXScene()->DestroyCharacter(pIndex);
 }
 
 int32 FBXScene::CreateCharacter(String^ pName)
 {
-	return 0;
+	// Marshal down and then make the call on the create character
+	const char* nameValue = StringHelper::ToNative(pName);
+
+	return this->GetFBXScene()->CreateCharacter(nameValue);
 }
 
 FBXScene^ FBXScene::Import(String^ fileName)
@@ -70,6 +73,8 @@ FBXScene^ FBXScene::Import(String^ fileName)
 
 	if (!importer->Import(scene->GetFBXScene()))
 		throw gcnew FBXException("Failed to import the content into the FBX scene");
+
+
 
 	return gcnew FBXScene();
 }

@@ -1,4 +1,6 @@
 #pragma once
+
+
 #include "FBXObject.h"
 
 namespace ArcManagedFBX

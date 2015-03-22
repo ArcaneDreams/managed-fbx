@@ -17,4 +17,5 @@ namespace ArcManagedFBX
 	private:
 		float64 x,y,z,w;
 	};
+
 }

@@ -55,7 +55,7 @@ FBXVector FBXCamera::Position::get()
 	return FBXVector(instance->Position.Get().mData[0],
 					instance->Position.Get().mData[1],
 					instance->Position.Get().mData[2],
-					instance->Position.Get().mData[0]);
+					0.f);
 }
 
 float64 FBXCamera::FocalLength::get()
@@ -87,5 +87,6 @@ const float64 FBXCamera::GetPixelRatio()
 
 FBXVector FBXCamera::Rotation::get()
 {
+	
 	return FBXVector(0.f,0.f,0.f,0.f);
 }

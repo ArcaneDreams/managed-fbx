@@ -5,7 +5,7 @@ namespace ArcManagedFBX
 	namespace Types
 	{
 		// The types that are to be used for the attributes
-		enum class AttributeType
+		public enum class AttributeType
 		{   
 			eUnknown,
 			eNull,
@@ -31,9 +31,21 @@ namespace ArcManagedFBX
 			eLine
 		};
 
+		//! Supported languages enumeration list
+		public enum class Language
+		{
+			eENU,			//!< 409 English - United States
+			eDEU,			//!< 407 German - Germany
+			eFRA,			//!< 40c French - France
+			eJPN,			//!< 411 Japanese - Japan
+			eKOR,			//!< 412 Korean(Extended Wansung) - Korea 
+			eCHS,			//!< 804 Chinese - PRC
+			eLanguageCount	//!< Total language count
+		};
+
 		/** Rotation accumulation mode of animation layer.
 		  */
-		enum RotationAccumulationMode
+		public enum class RotationAccumulationMode
 		{
 			eRotationByLayer,	//! Rotation values are weighted per layer and the result rotation curves are calculated using concatenated quaternion values.
 			eRotationByChannel	//! Rotation values are weighted per component and the result rotation curves are calculated by adding each independent Euler XYZ value.
@@ -41,13 +53,13 @@ namespace ArcManagedFBX
 
 		/** Scale accumulation mode of animation layer.
 		  */
-		enum ScaleAccumulationMode
+		public enum class ScaleAccumulationMode
 		{
 			eScaleMultiply,	//! Independent XYZ scale values per layer are calculated using the layer weight value as an exponent, and result scale curves are calculated by multiplying each independent XYZ scale value.
 			eScaleAdditive	//! Result scale curves are calculated by adding each independent XYZ value.
 		};
 
-		enum class FilmRollOrder
+		public enum class FilmRollOrder
 		{
 			eRotateFirst,	//!< The film back is first rotated then translated by the pivot point value.
 			eTranslateFirst	//!< The film back is first translated then rotated by the film roll value.
@@ -75,7 +87,7 @@ namespace ArcManagedFBX
 			eCubic
 		};
 
-		enum class ObjectFlag
+		public enum class ObjectFlag
 		{
 			eNone = 0,					 //!< No flags.
 			eInitialized = 1 << 0,		 //!< Automatically set when FbxObject::Construct() is completed.
@@ -88,7 +100,7 @@ namespace ArcManagedFBX
 			eCopyCalledByClone = 1 << 16 //!< Used internally. If set, modify the Copy behavior of the object
 		};
 		
-		enum BlendMode
+		public enum class BlendMode
 		{
 			eBlendAdditive,	//! The layer "adds" its animation to layers that precede it in the stack and affect the same attributes.
 			eBlendOverride,	//! The layer "overrides" the animation of any layer that shares the same attributes and precedes it in the stack.
@@ -117,7 +129,7 @@ namespace ArcManagedFBX
 			eSphere
 		};
 
-		enum class ApertureMode
+		public enum class ApertureMode
 		{
 			eHorizAndVert,	//!< Set the angle values for both the horizontal and vertical settings. 
 			eHorizontal,	//!< Set only the horizontal angle. 
@@ -125,7 +137,7 @@ namespace ArcManagedFBX
 			eFocalLength	//!< Use focal length directly. 
 		};
 
-		enum class AspectRatioMode
+		public enum class AspectRatioMode
 		{
 			eWindowSize,		//!< Both width and height values aren't relevant.
 			eFixedRatio,		//!< The height value is set to 1.0 and the width value is relative to the height value.
@@ -134,7 +146,7 @@ namespace ArcManagedFBX
 			eFixedHeight		//!< The height value is in pixels and the width value is relative to the height value.
 		};
 
-		enum class ApertureFormat
+		public enum class ApertureFormat
 		{
 			eCustomAperture,	//!< The film size, squeeze ratio and aspect ratio has been user-specified, and matches none of the other aperture formats.
 			e16mmTheatrical,	//!< Film Size: 0.404, 0.295 inches. Film Squeeze Ratio: 1.0. Film Aspect Ratio: 1.369.

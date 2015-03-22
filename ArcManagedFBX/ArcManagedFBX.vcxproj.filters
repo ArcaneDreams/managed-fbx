@@ -28,6 +28,12 @@
     <Filter Include="Source Files\Layers">
       <UniqueIdentifier>{25cb729d-773d-4ef2-9222-32678f906744}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\IO">
+      <UniqueIdentifier>{16ebbedc-b247-4410-b1e8-10a4016647af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\IO">
+      <UniqueIdentifier>{903776af-1987-448f-9847-824023228d53}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Stdafx.h">
@@ -111,6 +117,18 @@
     <ClInclude Include="FBXAnimLayer.h">
       <Filter>Header Files\Layers</Filter>
     </ClInclude>
+    <ClInclude Include="FBXImporter.h">
+      <Filter>Header Files\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="FBXIOBase.h">
+      <Filter>Header Files\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="FBXIOSettings.h">
+      <Filter>Header Files\IO</Filter>
+    </ClInclude>
+    <ClInclude Include="FBXProperty.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp">
@@ -178,6 +196,18 @@
     </ClCompile>
     <ClCompile Include="FBXAnimLayer.cpp">
       <Filter>Source Files\Layers</Filter>
+    </ClCompile>
+    <ClCompile Include="FBXImporter.cpp">
+      <Filter>Source Files\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="FBXIOBase.cpp">
+      <Filter>Source Files\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="FBXIOSettings.cpp">
+      <Filter>Source Files\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="FBXProperty.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

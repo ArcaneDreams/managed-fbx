@@ -1,6 +1,7 @@
 #pragma once
 
 #include "FBXObject.h"
+#include "FBXDocumentInfo.h"
 #include "FBXCollection.h"
 
 namespace ArcManagedFBX
@@ -13,6 +14,10 @@ namespace ArcManagedFBX
 		virtual ~FBXDocument();
 		!FBXDocument();
 		virtual void Clear();
+
+		virtual bool IsRootMember(FBXObject^ member);
+		FBXDocumentInfo^ GetDocumentInfo();
+		void SetDocumentInfo(FBXDocumentInfo^ info);
 
 		ARC_PROPERTY_PUBLICGET(int32,RootMemberCount)
 		ARC_PROPERTY_PUBLICGET(FBXObject^,RootMember)

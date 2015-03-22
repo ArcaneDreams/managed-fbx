@@ -20,6 +20,14 @@ typedef double	float64;
 #define ARC_FORCEINLINE __forceinline
 #define ARC_INLINE inline
 
+#define ARC_DEFAULT_INTERNAL_CONSTRUCTOR(Type,NativeType) \
+	Type##(##NativeType##* instance);
+
+#define ARC_DEFAULT_CONSTRUCTORS(Type) \
+	Type##();\
+	~##Type##();\
+	!##Type##();
+
 // This will most likely be used with the likes of FBXObject and having to cast down and up based on
 // all the child classes in the SDK
 #define ARC_CHILD_CAST(ParentMember, NativeType, ChildType) \

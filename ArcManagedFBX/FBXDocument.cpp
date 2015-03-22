@@ -27,6 +27,24 @@ FBXDocument::FBXDocument(FbxDocument* instance)
 
 }
 
+FBXDocumentInfo^ FBXDocument::GetDocumentInfo()
+{
+	return gcnew FBXDocumentInfo();
+}
+
+// Return whether or not a certain FBX object is in fact the root of this document
+bool FBXDocument::IsRootMember(FBXObject^ other)
+{
+	return false;
+}
+
+void FBXDocument::SetDocumentInfo(FBXDocumentInfo^ info)
+{
+
+}
+
+
+
 // Retrieve the root member
 FBXObject^ FBXDocument::RootMember::get()
 {
