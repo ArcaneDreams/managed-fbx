@@ -20,5 +20,5 @@ FBXProperty::~FBXProperty()
 
 FBXProperty::FBXProperty(FbxProperty* instance)
 {
-
+	
 }

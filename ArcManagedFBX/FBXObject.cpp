@@ -77,7 +77,7 @@ const FBXScene^ FBXObject::GetScene()
 
 const FBXDocument^ FBXObject::GetRootDocument()
 {
-	return nullptr;
+	return gcnew FBXDocument(this->m_NativeObject->GetRootDocument());
 }
 
 const FBXDocument^ FBXObject::GetDocument()
@@ -139,7 +139,5 @@ const String^ FBXObject::GetName()
 
 const String^ FBXObject::GetInitialName()
 {
-	String^ initialName = gcnew String("");
-
-	return initialName;
+	return StringHelper::ToManaged(this->m_NativeObject->GetInitialName());
 }
