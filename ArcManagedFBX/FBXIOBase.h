@@ -1,5 +1,6 @@
 #pragma once
 
+#include "FBXIOSettings.h"
 #include "FBXObject.h"
 
 using namespace ArcManagedFBX;
@@ -19,6 +20,8 @@ namespace ArcManagedFBX
 			~FBXIOBase();
 			!FBXIOBase();
 
+
+			virtual bool Initialize(String^ filename, int fileformat,FBXIOSettings^ iosettings);
 			virtual String^ GetFilename();
 		protected:
 			String^ m_Filename;

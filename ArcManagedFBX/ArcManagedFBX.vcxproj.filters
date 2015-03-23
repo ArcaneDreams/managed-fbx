@@ -129,6 +129,9 @@
     <ClInclude Include="FBXProperty.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="FBXFile.h">
+      <Filter>Header Files\IO</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp">
@@ -209,6 +212,12 @@
     <ClCompile Include="FBXProperty.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="FBXIOFileHeaderInfo.cpp">
+      <Filter>Source Files\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="FBXFile.cpp">
+      <Filter>Source Files\IO</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -222,5 +231,10 @@
     <Image Include="app.ico">
       <Filter>Resource Files</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FBXIOFileHeaderInfo.h">
+      <Filter>Header Files\IO</Filter>
+    </None>
   </ItemGroup>
 </Project>

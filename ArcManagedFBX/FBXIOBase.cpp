@@ -28,3 +28,8 @@ String^ ArcManagedFBX::IO::FBXIOBase::GetFilename()
 {
 	return "";
 }
+
+bool ArcManagedFBX::IO::FBXIOBase::Initialize(String^ filename, int fileformat,FBXIOSettings^ iosettings)
+{
+	return false;
+}

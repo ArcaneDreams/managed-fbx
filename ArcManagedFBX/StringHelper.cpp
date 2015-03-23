@@ -13,7 +13,7 @@ using namespace std;
 using namespace msclr::interop;
 
 // The helper methods to be used for generating a string into both environments.
-const String^ StringHelper::ToManaged(const char* input)
+String^ StringHelper::ToManaged(const char* input)
 {
 	InitContext();
 

@@ -71,6 +71,7 @@ FBXScene^ FBXScene::Import(String^ fileName)
 
 	auto scene = gcnew FBXScene();
 
+	// Import in the scene that we are working with
 	if (!importer->Import(scene->GetFBXScene()))
 		throw gcnew FBXException("Failed to import the content into the FBX scene");
 
@@ -80,6 +81,16 @@ FBXScene^ FBXScene::Import(String^ fileName)
 }
 
 void FBXScene::Export(String^ fileName)
+{
+
+}
+
+void ArcManagedFBX::FBXScene::SyncShowPropertyForInstance()
+{
+
+}
+
+void ArcManagedFBX::FBXScene::ConnectTextures()
 {
 
 }

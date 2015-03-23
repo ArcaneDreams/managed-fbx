@@ -75,6 +75,25 @@ property type name \
 internal: set (type value); \
 }
 
+// The implementation macro for any of the member properties in the class
+#define ARC_IMPL_GET(type,classname,name, ...)\
+type classname##::##name##::get()\
+{\
+	return this->Get##classname##()->##name##__VA_ARGS__;\
+}
+
+#define ARC_IMPL_GET_STRING_PROP(ClassName,Name,PropertyName)\
+String^ ClassName##::##PropertyName##::get()\
+{\
+	return gcnew String(StringHelper::ToManaged(this->Get##ClassName##()->##Name##.Get().Buffer()));\
+}
+
+#define ARC_IMPL_GET_STRING_MEMBER(ClassName,Name,PropertyName)\
+String^ ClassName##::##PropertyName##::get()\
+{\
+	return gcnew String(StringHelper::ToManaged(this->Get##ClassName##()->##Name##.Buffer()));\
+}
+
 // The type being the return type of the method
 #define ARC_IMPL_PROPERTY_GET(type,classname,name)\
 type classname##::##name##::get()\

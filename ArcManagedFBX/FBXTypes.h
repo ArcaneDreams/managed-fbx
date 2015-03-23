@@ -4,6 +4,14 @@ namespace ArcManagedFBX
 {
 	namespace Types
 	{
+		public enum class DeformerType
+		{
+			eUnknown,		//!< Unknown deformer type
+			eSkin,			//!< Type FbxSkin
+			eBlendShape,	//!< Type FbxBlendShape
+			eVertexCache	//!< Type FbxVertexCacheDeformer
+		};
+
 		// The types that are to be used for the attributes
 		public enum class AttributeType
 		{   

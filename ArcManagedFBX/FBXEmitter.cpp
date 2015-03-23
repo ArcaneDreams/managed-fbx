@@ -13,7 +13,12 @@ FBXEmitter::~FBXEmitter()
 
 }
 
-FBXEmitter::FBXEmitter(FbxEmitter* instance)
+FBXEmitter::!FBXEmitter()
 {
 
+}
+
+FBXEmitter::FBXEmitter(FbxEmitter* instance)
+{
+	this->m_NativeEmitter = instance;
 }

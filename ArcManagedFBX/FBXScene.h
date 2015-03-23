@@ -28,6 +28,9 @@ namespace ArcManagedFBX
 
 		FBXNode^ GetRootNode();
 
+		void SyncShowPropertyForInstance();
+		void ConnectTextures();
+
 		// Import / export operations that are to be performed
 		FBXScene^ Import(String^ fileName);
 		void Export(String^ fileName);

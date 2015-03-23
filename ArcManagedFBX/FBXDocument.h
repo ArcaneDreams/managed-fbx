@@ -21,11 +21,11 @@ namespace ArcManagedFBX
 
 		ARC_PROPERTY_PUBLICGET(int32,RootMemberCount)
 		ARC_PROPERTY_PUBLICGET(FBXObject^,RootMember)
+		ARC_CHILD_CAST(NativeObject,FbxDocument,FBXDocument)
 	internal:
 		FBXDocument(FbxDocument* instance);
 	protected:
 
 	private:
-		ARC_CHILD_CAST(NativeObject,FbxDocument,FBXDocument)
 	};
 }

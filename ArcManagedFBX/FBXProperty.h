@@ -1,5 +1,8 @@
 #pragma once
 
+
+
+
 namespace ArcManagedFBX
 {
 	public ref class FBXProperty

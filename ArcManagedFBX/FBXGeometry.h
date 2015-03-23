@@ -10,11 +10,10 @@ namespace ArcManagedFBX
 	public ref class FBXGeometry : public FBXGeometryBase
 	{
 	public:
-		FBXGeometry();
-		~FBXGeometry();
-		!FBXGeometry();
-
+		ARC_DEFAULT_CONSTRUCTORS(FBXGeometry)
 	private:
+		ARC_CHILD_CAST(NativeObject,FbxGeometry,FBXGeometry)
+		
 
 	internal:
 		FBXGeometry(FbxGeometry* instance);

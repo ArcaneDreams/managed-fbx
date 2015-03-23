@@ -10,7 +10,7 @@ namespace ArcManagedFBX
 	{
 	public:
 		FBXEmitter();
-
+		!FBXEmitter();
 		virtual ~FBXEmitter();
 
 	internal:

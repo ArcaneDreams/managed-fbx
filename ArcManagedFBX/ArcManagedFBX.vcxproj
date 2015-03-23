@@ -156,6 +156,7 @@
     <ClInclude Include="FBXDocumentInfo.h" />
     <ClInclude Include="FBXEmitter.h" />
     <ClInclude Include="FBXException.h" />
+    <ClInclude Include="FBXFile.h" />
     <ClInclude Include="FBXGeometry.h" />
     <ClInclude Include="FBXGeometryBase.h" />
     <ClInclude Include="FBXImporter.h" />
@@ -188,10 +189,12 @@
     <ClCompile Include="FBXDocument.cpp" />
     <ClCompile Include="FBXDocumentInfo.cpp" />
     <ClCompile Include="FBXEmitter.cpp" />
+    <ClCompile Include="FBXFile.cpp" />
     <ClCompile Include="FBXGeometry.cpp" />
     <ClCompile Include="FBXGeometryBase.cpp" />
     <ClCompile Include="FBXImporter.cpp" />
     <ClCompile Include="FBXIOBase.cpp" />
+    <ClCompile Include="FBXIOFileHeaderInfo.cpp" />
     <ClCompile Include="FBXIOSettings.cpp" />
     <ClCompile Include="FBXLayer.cpp" />
     <ClCompile Include="FBXLayerContainer.cpp" />
@@ -219,6 +222,9 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="app.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FBXIOFileHeaderInfo.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

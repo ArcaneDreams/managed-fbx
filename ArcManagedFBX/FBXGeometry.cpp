@@ -20,5 +20,5 @@ FBXGeometry::~FBXGeometry()
 
 FBXGeometry::FBXGeometry(FbxGeometry* instance)
 {
-	
+	this->m_NativeObject = instance;
 }

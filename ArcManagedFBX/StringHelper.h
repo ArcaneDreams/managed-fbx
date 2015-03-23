@@ -15,7 +15,7 @@ namespace ArcManagedFBX
 		{
 		public:
 			static const char* ToNative(String^ input);
-			static const String^ ToManaged(const char* input);
+			static String^ ToManaged(const char* input);
 
 			static void InitContext();
 		private:
