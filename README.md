@@ -6,3 +6,7 @@ A managed CLR .NET wrapper for the AutoDesk FBX SDK 2015. Enables developers wri
 ## Features
 * Import and save scenes
 * Modify scenes and their attributes
+
+## Requirements
+* Visual Studio 2012 with Update 4
+* AutoDesk FBX SDK 2015
