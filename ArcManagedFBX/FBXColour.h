@@ -5,15 +5,15 @@ using namespace System::Text;
 
 namespace ArcManagedFBX
 {
+	// The colour representation that is to be used
+	// around the library
 	public value struct FBXColour
 	{
 	public:
 		FBXColour(float64 r,float64 g,float64 b,float64 a);
-
-		// Override the method for writing out the string to the console
 		virtual String^ ToString() override
 		{
-			return "";
+			return String::Format("{0}, {1}, {2}",m_r.ToString(),m_g.ToString(),m_b.ToString());
 		}
 	private:
 		float64 m_r;

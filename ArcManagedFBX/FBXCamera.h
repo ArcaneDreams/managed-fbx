@@ -21,6 +21,7 @@ namespace ArcManagedFBX
 		const float64 GetPixelRatio();
 		void SetNearPlane(double distance);
 
+		// The properties that are to be used for representing the camera class.
 		ARC_PROPERTY_PUBLICGET(FBXVector,Position)
 		ARC_PROPERTY_PUBLICGET(FBXVector,Rotation)
 		ARC_PROPERTY_PUBLICGET(float64,PixelAspectRatio)

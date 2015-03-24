@@ -132,6 +132,9 @@
     <ClInclude Include="FBXFile.h">
       <Filter>Header Files\IO</Filter>
     </ClInclude>
+    <ClInclude Include="FBXStatus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp">
@@ -217,6 +220,9 @@
     </ClCompile>
     <ClCompile Include="FBXFile.cpp">
       <Filter>Source Files\IO</Filter>
+    </ClCompile>
+    <ClCompile Include="FBXStatus.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

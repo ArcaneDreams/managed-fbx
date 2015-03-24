@@ -1,23 +1,23 @@
 #pragma once
 
+#include "FBXStatus.h"
 #include "FBXAttribute.h"
 #include "FBXVector.h"
+#include "FBXObject.h"
 #include "FBXMesh.h"
 #include "FBXManager.h"
 
 namespace ArcManagedFBX
 {
 	// The representation of a node within the FBX library
-	public ref class FBXNode
+	public ref class FBXNode : public FBXObject
 	{
 	public:
 		FBXNode();
 		FBXNode(FBXNode^ other);
 		virtual ~FBXNode();
 		!FBXNode();
-		ARC_PROPERTY_PUBLICGET_PUBLICSET(int32,NodeCount);
-		ARC_PROPERTY_PUBLICGET_PUBLICSET(String^,Name);
-
+		
 		// Get only properties that are to be used for getting the position and rotation
 		ARC_PROPERTY_PUBLICGET(FBXVector^,Position);
 		ARC_PROPERTY_PUBLICGET(FBXVector^,Rotation);
@@ -26,25 +26,35 @@ namespace ArcManagedFBX
 		// Add a child node to this node.
 		void AddChild(FBXNode^ Node);
 
+		void RemoveChild(FBXNode^ Node);
+		FBXNode^ GetChild(int32 pIndex);
+		FBXNode^ FindChild(String^ name, bool recursive, bool initial);
+		void SetTarget(FBXNode^ node);
+		FBXNode^ GetTarget();
+		void SetPostTargetRotation(FBXVector vector);
+		FBXVector GetPostTargetRotation();
+		void SetTargetUp(FBXNode^ pNode);
+		FBXNode^ GetTargetUp();
+		void SetTargetUpVector(FBXVector vector);
+		FBXVector GetTargetUpVector();
+		void SetVisibility(bool isVisible);
+		bool GetVisibility();
+		void SetShadingMode(ShadingMode mode);
+		ShadingMode GetShadingMode();
+		FBXAttribute^ SetNodeAttribute(FBXAttribute^ attribute);
+		FBXAttribute^ GetNodeAttribute();
+
+		// The attribute count
+		int32 GetNodeAttributeCount();
+		int32 GetDefaultNodeAttributeIndex();
+
+		// The attribute index.
+		bool SetDefaultNodeAttributeIndex(int32 index, FBXStatus^ status);
+
 	internal:
+		ARC_CHILD_CAST(NativeObject,FbxNode,FBXNode)
 		FBXNode(FbxNode* instance);
 
 	private:
-		int32 m_NodeCount;
-
-		array<FBXNode^>^ m_Children;
-		array<FBXAttribute^>^ m_Attributes;
-
-		FbxNode* m_Node;
-
-		FBXVector^	mRotationOffset;
-		FBXVector^	mRotationPivot;
-		FBXVector^	mPreRotation;
-		FBXVector^	mPostRotation;
-		FBXVector^	mScalingOffset;
-		FBXVector^	mScalingPivot;
-		FBXVector^	mGeometricTranslation;
-		FBXVector^	mGeometricRotation;
-		FBXVector^	mGeometricScaling;
 	};
 }

@@ -11,5 +11,6 @@
 #include <string>
 
 #include "FBXException.h"
+#include "FBXTypes.h"
 #include "StringHelper.h"
 #include "Defines.h"

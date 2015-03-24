@@ -1,5 +1,6 @@
 #pragma once
 
+#include "FBXColour.h"
 #include "FBXObject.h"
 #include "FBXTypes.h"
 
@@ -10,6 +11,7 @@ using namespace ArcManagedFBX::Types;
 
 namespace ArcManagedFBX
 {
+	// The attribute that is responsible for generating the content.
 	public ref class FBXAttribute : public FBXObject, public IDisposable
 	{
 	public:
@@ -17,11 +19,18 @@ namespace ArcManagedFBX
 		!FBXAttribute();
 		virtual ~FBXAttribute();
 		
-		ARC_PROPERTY_PUBLICGET(AttributeType,PropAttributeType)
+		virtual AttributeType GetAttributeType();
+
+		int32 GetNodeCount();
+
+		ARC_PROPERTY_PUBLICGET(String^,ColourName);
+		ARC_PROPERTY_PUBLICGET(FBXColour,Colour)
+
+		ARC_CHILD_CAST(NativeObject,FbxNodeAttribute,FBXAttribute);
+	protected:
+		virtual void ConstructProperties(bool pForceSet);
 
 	private:
-		// The child cast that has to be done to get all the properties relating to the fbxattribute natively.
-		ARC_CHILD_CAST(NativeObject,FbxNodeAttribute,FBXAttribute);
 
 	internal:
 		FBXAttribute(FbxNodeAttribute* instance);

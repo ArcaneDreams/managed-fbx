@@ -4,12 +4,34 @@ namespace ArcManagedFBX
 {
 	namespace Types
 	{
+		//! Available status codes.
+		public enum class StatusCode {        
+			eSuccess = 0,                           //!< Operation was successful
+			eFailure,                               //!< Operation failed
+			eInsufficientMemory,                    //!< Operation failed due to insufficient memory
+			eInvalidParameter,                      //!< An invalid parameter was provided
+			eIndexOutOfRange,                       //!< Index value outside the valid range
+			ePasswordError,                         //!< Operation on FBX file password failed
+			eInvalidFileVersion,                    //!< File version not supported (anymore or yet)
+			eInvalidFile                            //!< Operation on the file access failed
+		};
+
 		public enum class DeformerType
 		{
 			eUnknown,		//!< Unknown deformer type
 			eSkin,			//!< Type FbxSkin
 			eBlendShape,	//!< Type FbxBlendShape
 			eVertexCache	//!< Type FbxVertexCacheDeformer
+		};
+
+		public enum class ShadingMode
+		{
+			eHardShading,		//!< Solid geometries rendered with smooth surfaces - using the system light.
+			eWireFrame,			//!< Geometries displayed in wire frame.
+			eFlatShading,		//!< Solid geometries rendered faceted - using the system light.
+			eLightShading,		//!< Solid geometries rendered with the scene lights.
+			eTextureShading,	//!< Solid geometries rendered with smooth textured surfaces - using system light.
+			eFullShading		//!< Solid geometries rendered with smooth textured surfaces and scene lights.
 		};
 
 		// The types that are to be used for the attributes

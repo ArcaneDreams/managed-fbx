@@ -12,6 +12,11 @@ FBXVector::FBXVector(float64 x,float64 y,float64 z,float64 w)
 	this->w = w;
 }
 
+FBXVector::FBXVector(FbxVector4 vector)
+{
+
+}
+
 FBXVector::FBXVector(FBXVector^ other)
 {
 

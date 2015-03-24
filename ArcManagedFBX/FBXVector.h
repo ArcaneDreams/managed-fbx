@@ -16,6 +16,9 @@ namespace ArcManagedFBX
 		float64	Dot(FBXVector^ other);
 	private:
 		float64 x,y,z,w;
+
+	internal:
+		FBXVector(FbxVector4 vector);
 	};
 
 }
