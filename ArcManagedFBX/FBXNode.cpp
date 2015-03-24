@@ -9,6 +9,7 @@ using namespace System;
 using namespace System::Text;
 
 
+// Constructor related bollocks.
 FBXNode::FBXNode()
 {
 
