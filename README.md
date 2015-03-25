@@ -5,10 +5,15 @@ A managed CLR .NET wrapper for the AutoDesk FBX SDK 2015. Enables developers wri
 
 ## Features
 * Import and save scenes
-* Modify scenes and their attributes
+* Modify cameras, attributes, nodes and more.
+* Comprehensive wrapper of most of the features documented by the FBX SDK.
 
 ## Requirements
 * Visual Studio 2012 with Update 4
 * AutoDesk FBX SDK 2015
-* 
-## Requirements
+
+## Purpose
+* To be used in conjunction with MonoGame for importing the FBX file asset type and retrieving more indepth information about files imported through the API.
+
+## Shoutout
+https://github.com/returnString/ManagedFBX
