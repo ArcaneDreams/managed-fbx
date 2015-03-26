@@ -1,4 +1,5 @@
 #include "Stdafx.h"
+#include "FBXManager.h"
 #include "FBXScene.h"
 #include "FBXObject.h"
 

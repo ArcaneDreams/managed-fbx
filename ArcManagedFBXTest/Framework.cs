@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 using System.IO;
 
+using ArcManagedFBXTest.Attributes;
 using ArcManagedFBXTest.Utility;
+
 using ArcManagedFBX;
 
 namespace ArcManagedFBXTest
@@ -36,13 +38,14 @@ namespace ArcManagedFBXTest
             set { m_Scene = value; }
         }
 
+
+        [CommandLineArgument("file",false)]
         public string Filename
         {
             get;
             set;
         } 
         #endregion
-
 
         private Framework()
         {
@@ -57,10 +60,24 @@ namespace ArcManagedFBXTest
             }
         }
 
+        public void Process()
+        {
+            m_Handler.InjectArguments(this);
+
+            this.Load();
+        }
+
         public void Load()
         {
+            ArcManagedFBX.FBXManager managerInstance = ArcManagedFBX.FBXManager.Create();
+
             if (string.IsNullOrEmpty(Filename))
                 throw new FileNotFoundException("The file that is being loaded in does not exist!");
+
+            if (!File.Exists(Filename))
+                throw new FileNotFoundException("The file that is being loaded was not found on disk.");
+
+            m_Scene.Import(Filename);
         }
 
         public void Load(string fileName)
@@ -68,7 +85,6 @@ namespace ArcManagedFBXTest
             if (!string.IsNullOrEmpty(fileName))
             {
                 Filename = fileName;
-
             }
         }
     }

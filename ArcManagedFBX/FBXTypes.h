@@ -61,6 +61,9 @@ namespace ArcManagedFBX
 			eLine
 		};
 
+		public enum class Mode {eNone, eReadOnly, eReadWrite, eCreateWriteOnly, eCreateReadWrite, eCreateAppend};
+		public enum class SeekPos {eBegin, eCurrent, eEnd};
+
 		//! Supported languages enumeration list
 		public enum class Language
 		{

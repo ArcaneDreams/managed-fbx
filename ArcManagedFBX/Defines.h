@@ -20,6 +20,11 @@ typedef double	float64;
 #define ARC_FORCEINLINE __forceinline
 #define ARC_INLINE inline
 
+// The defines for the macros for declaring objects accordingly.
+#define ARC_FBX_OBJECT_DECLARE(Class,Parent) 1
+
+#define ARC_FBX_FBXOBJECT_DECLARE(Class,Parent) 1
+
 #define ARC_DEFAULT_INTERNAL_CONSTRUCTOR(Type,NativeType) \
 	Type##(##NativeType##* instance);
 

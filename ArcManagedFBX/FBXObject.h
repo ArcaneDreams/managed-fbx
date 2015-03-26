@@ -1,16 +1,19 @@
 #pragma once
 
 #include "FBXTypes.h"
-#include "FBXManager.h"
 #include "FBXEmitter.h"
 
 using namespace System;
 using namespace System::Text;
 
+using namespace ArcManagedFBX;
+
 namespace ArcManagedFBX
 {
+	// Fuck yeah forward declar-- oh god why ;___;
 	ref class FBXDocument;
 	ref class FBXScene;
+	ref class FBXManager;
 
 	// The fbx object within the document that we are working with
 	public ref class FBXObject : public FBXEmitter, public IDisposable

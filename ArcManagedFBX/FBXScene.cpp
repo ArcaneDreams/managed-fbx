@@ -62,20 +62,9 @@ int32 FBXScene::CreateCharacter(String^ pName)
 	return this->GetFBXScene()->CreateCharacter(nameValue);
 }
 
+// For loading in the fbx scene into the project
 FBXScene^ FBXScene::Import(String^ fileName)
 {
-	auto importer = FBXManager::GetImporter();
-
-	if (!importer->Initialize(StringHelper::ToNative(fileName)))
-		throw gcnew FBXException("Failed to initialize the FBX importer");
-
-	auto scene = gcnew FBXScene();
-
-	// Import in the scene that we are working with
-	if (!importer->Import(scene->GetFBXScene()))
-		throw gcnew FBXException("Failed to import the content into the FBX scene");
-
-
 
 	return gcnew FBXScene();
 }

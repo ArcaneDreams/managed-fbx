@@ -3,7 +3,6 @@
 #include "StringHelper.h"
 
 #include "FBXNode.h"
-#include "FBXObject.h"
 #include "FBXDocument.h"
 
 using namespace System;
@@ -30,6 +29,8 @@ namespace ArcManagedFBX
 
 		void SyncShowPropertyForInstance();
 		void ConnectTextures();
+
+
 
 		// Import / export operations that are to be performed
 		FBXScene^ Import(String^ fileName);

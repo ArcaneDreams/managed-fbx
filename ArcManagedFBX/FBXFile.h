@@ -9,7 +9,7 @@ namespace ArcManagedFBX
 		public:
 			ARC_DEFAULT_CONSTRUCTORS(FBXFile)
 		private:
-
+			
 		};
 	}
 }

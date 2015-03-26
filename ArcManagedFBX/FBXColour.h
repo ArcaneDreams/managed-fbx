@@ -5,8 +5,6 @@ using namespace System::Text;
 
 namespace ArcManagedFBX
 {
-	// The colour representation that is to be used
-	// around the library
 	public value struct FBXColour
 	{
 	public:

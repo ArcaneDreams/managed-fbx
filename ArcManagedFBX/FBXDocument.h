@@ -15,6 +15,11 @@ namespace ArcManagedFBX
 		!FBXDocument();
 		virtual void Clear();
 
+		void AddRootMember(FBXObject^ other);
+		int32 GetRootMemberCount();
+		FBXObject^ GetRootMember(int32 index);
+
+		// Return whether or not this is a root member
 		virtual bool IsRootMember(FBXObject^ member);
 		FBXDocumentInfo^ GetDocumentInfo();
 		void SetDocumentInfo(FBXDocumentInfo^ info);

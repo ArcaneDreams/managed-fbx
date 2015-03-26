@@ -150,6 +150,7 @@
     <ClInclude Include="FBXAnimLayer.h" />
     <ClInclude Include="FBXAttribute.h" />
     <ClInclude Include="FBXCamera.h" />
+    <ClInclude Include="FBXClassId.h" />
     <ClInclude Include="FBXCollection.h" />
     <ClInclude Include="FBXColour.h" />
     <ClInclude Include="FBXDocument.h" />

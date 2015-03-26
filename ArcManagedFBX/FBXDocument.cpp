@@ -43,8 +43,6 @@ void FBXDocument::SetDocumentInfo(FBXDocumentInfo^ info)
 
 }
 
-
-
 // Retrieve the root member
 FBXObject^ FBXDocument::RootMember::get()
 {
@@ -59,4 +57,19 @@ void FBXDocument::Clear()
 int32 FBXDocument::RootMemberCount::get()
 {
 	return this->GetFBXDocument()->GetRootMemberCount();
+}
+
+FBXObject^ ArcManagedFBX::FBXDocument::GetRootMember(int32 index)
+{
+	return gcnew FBXObject(this->GetFBXDocument()->GetRootMember(index));
+}
+
+int32 ArcManagedFBX::FBXDocument::GetRootMemberCount()
+{
+	return this->GetFBXDocument()->GetRootMemberCount();
+}
+
+void ArcManagedFBX::FBXDocument::AddRootMember(FBXObject^ other)
+{
+	this->GetFBXDocument()->AddRootMember(other->GetObjectInstance());
 }

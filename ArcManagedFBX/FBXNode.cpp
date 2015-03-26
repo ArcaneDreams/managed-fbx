@@ -64,7 +64,7 @@ int32 ArcManagedFBX::FBXNode::GetDefaultNodeAttributeIndex()
 
 int32 ArcManagedFBX::FBXNode::GetNodeAttributeCount()
 {
-	return this->GetNodeAttributeCount();
+	return this->GetFBXNode()->GetNodeAttributeCount();
 }
 
 FBXAttribute^ ArcManagedFBX::FBXNode::GetNodeAttribute()
