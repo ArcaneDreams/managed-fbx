@@ -14,7 +14,6 @@ namespace ArcManagedFBX
 	private:
 		ARC_CHILD_CAST(NativeObject,FbxGeometry,FBXGeometry)
 		
-
 	internal:
 		FBXGeometry(FbxGeometry* instance);
 	};
