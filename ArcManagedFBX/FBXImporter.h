@@ -38,7 +38,6 @@ namespace ArcManagedFBX
 			bool IsFBX();
 
 		protected:
-			void Reset();
 			bool FileOpen(FBXFile^ file);
 			void FileClose();
 
@@ -46,7 +45,6 @@ namespace ArcManagedFBX
 			ARC_CHILD_CAST(NativeObject,FbxImporter,FBXImporter)
 
 		internal:
-
 
 		};
 	}

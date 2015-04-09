@@ -13,6 +13,13 @@ namespace ArcManagedFBX
 		{
 			return String::Format("{0}, {1}, {2}",m_r.ToString(),m_g.ToString(),m_b.ToString());
 		}
+
+		// The properties for encapsulating the rgba values
+		ARC_PROPERTY_PUBLICGET(float64,R);
+		ARC_PROPERTY_PUBLICGET(float64,G);
+		ARC_PROPERTY_PUBLICGET(float64,B);
+		ARC_PROPERTY_PUBLICGET(float64,A);
+
 	private:
 		float64 m_r;
 		float64 m_g;

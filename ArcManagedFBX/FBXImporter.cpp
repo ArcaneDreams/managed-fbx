@@ -25,6 +25,7 @@ bool ArcManagedFBX::IO::FBXImporter::Import(FBXDocument^ document, bool nonBlock
 	return this->GetFBXImporter()->Import(document->GetFBXDocument(),nonBlocking);
 }
 
+// Retrieve the progress of the importing
 float64 ArcManagedFBX::IO::FBXImporter::GetProgress(String^ status)
 {
 	FbxString statusUpdate;
@@ -37,12 +38,17 @@ float64 ArcManagedFBX::IO::FBXImporter::GetProgress(String^ status)
 
 bool ArcManagedFBX::IO::FBXImporter::IsImporting(bool^ importResult)
 {
-	return false;
+	bool resultImport = false;
+
+	return this->GetFBXImporter()->IsImporting(resultImport);
+
+	importResult = resultImport;
+
+	return resultImport;
 }
 
 void ArcManagedFBX::IO::FBXImporter::FileClose()
 {
-
 }
 
 bool ArcManagedFBX::IO::FBXImporter::FileOpen(FBXFile^ file)
@@ -50,19 +56,15 @@ bool ArcManagedFBX::IO::FBXImporter::FileOpen(FBXFile^ file)
 	return false;
 }
 
-void ArcManagedFBX::IO::FBXImporter::Reset()
-{
-
-}
 
 bool ArcManagedFBX::IO::FBXImporter::IsFBX()
 {
-	return false;
+	return this->GetFBXImporter()->IsFBX();
 }
 
 int32 ArcManagedFBX::IO::FBXImporter::GetFileFormat()
 {
-	return 0;
+	return this->GetFBXImporter()->GetFileFormat();
 }
 
 FBXDocumentInfo^ ArcManagedFBX::IO::FBXImporter::GetSceneInfo()

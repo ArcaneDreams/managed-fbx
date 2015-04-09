@@ -4,6 +4,23 @@ namespace ArcManagedFBX
 {
 	namespace Types
 	{
+		// The type of the skeleton that we are working with
+		public enum class SkeletonType
+		{
+			eRoot,			/*!< First element of a chain. */
+			eLimb,			/*!< Chain element. */
+			eLimbNode,		/*!< Chain element. */
+			eEffector		/*!< Last element of a chain. */
+		};
+
+		/** \enum EBoundaryRule the boundary rule. */
+		public enum class BoundaryRule
+		{
+			eLegacy,	//!< Default value.
+			eCreaseAll,	//!< Used for hard corner.
+			eCreaseEdge	//!< Used for round corner.
+		};
+
 		//! Available status codes.
 		public enum class StatusCode {        
 			eSuccess = 0,                           //!< Operation was successful
@@ -14,6 +31,23 @@ namespace ArcManagedFBX
 			ePasswordError,                         //!< Operation on FBX file password failed
 			eInvalidFileVersion,                    //!< File version not supported (anymore or yet)
 			eInvalidFile                            //!< Operation on the file access failed
+		};
+
+		public enum class ReferenceMode
+		{
+			eDirect,
+			eIndex,
+			eIndexToDirect
+		};
+
+		public enum class MappingMode
+		{
+			eNone,
+			eByControlPoint,
+			eByPolygonVertex,
+			eByPolygon,
+			eByEdge,
+			eAllSame
 		};
 
 		public enum class DeformerType
@@ -32,6 +66,14 @@ namespace ArcManagedFBX
 			eLightShading,		//!< Solid geometries rendered with the scene lights.
 			eTextureShading,	//!< Solid geometries rendered with smooth textured surfaces - using system light.
 			eFullShading		//!< Solid geometries rendered with smooth textured surfaces and scene lights.
+		};
+
+		public enum class Smoothness
+		{
+			eHull,		//!< Default value, not active "smooth mesh preview".
+			eRough,		//!< Not active "smooth mesh preview".
+			eMedium,	//!< Both display cage and smooth mesh.
+			eFine		//!< Display smooth mesh.
 		};
 
 		// The types that are to be used for the attributes

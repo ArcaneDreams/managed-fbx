@@ -35,20 +35,21 @@ FBXNode::FBXNode(FbxNode* instance)
 	this->m_NativeObject = instance;
 }
 
-
-
 FBXVector^ FBXNode::Position::get()
 {
+	FBXVector toReturn = FBXVector();
 	return nullptr;
 }
 
 FBXVector^ FBXNode::Scale::get()
 {
+	FBXVector toReturn = FBXVector();
 	return nullptr;
 }
 
 FBXVector^ FBXNode::Rotation::get()
 {
+	FBXVector toReturn = FBXVector();
 	return nullptr;
 }
 
@@ -114,7 +115,7 @@ FBXNode^ ArcManagedFBX::FBXNode::GetTargetUp()
 
 void ArcManagedFBX::FBXNode::SetTargetUp(FBXNode^ pNode)
 {
-
+	this->GetFBXNode()->SetTargetUp(pNode->GetFBXNode());
 }
 
 ArcManagedFBX::FBXVector ArcManagedFBX::FBXNode::GetPostTargetRotation()

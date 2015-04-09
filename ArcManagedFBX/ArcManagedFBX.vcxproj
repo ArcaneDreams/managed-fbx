@@ -148,11 +148,13 @@
   <ItemGroup>
     <ClInclude Include="Defines.h" />
     <ClInclude Include="FBXAnimLayer.h" />
+    <ClInclude Include="FBXAnimStack.h" />
     <ClInclude Include="FBXAttribute.h" />
     <ClInclude Include="FBXCamera.h" />
     <ClInclude Include="FBXClassId.h" />
     <ClInclude Include="FBXCollection.h" />
     <ClInclude Include="FBXColour.h" />
+    <ClInclude Include="FBXDeformer.h" />
     <ClInclude Include="FBXDocument.h" />
     <ClInclude Include="FBXDocumentInfo.h" />
     <ClInclude Include="FBXEmitter.h" />
@@ -170,13 +172,16 @@
     <ClInclude Include="FBXMesh.h" />
     <ClInclude Include="FBXNode.h" />
     <ClInclude Include="FBXObject.h" />
+    <ClInclude Include="FBXPolygonDef.h" />
     <ClInclude Include="FBXPose.h" />
     <ClInclude Include="FBXProperty.h" />
     <ClInclude Include="FBXScene.h" />
+    <ClInclude Include="FBXSkeleton.h" />
     <ClInclude Include="FBXStatus.h" />
     <ClInclude Include="FBXTexture.h" />
     <ClInclude Include="FBXTypes.h" />
     <ClInclude Include="FBXVector.h" />
+    <ClInclude Include="FBXVertexNormalInfo.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="Stdafx.h" />
     <ClInclude Include="StringHelper.h" />
@@ -184,10 +189,12 @@
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="FBXAnimLayer.cpp" />
+    <ClCompile Include="FBXAnimStack.cpp" />
     <ClCompile Include="FBXAttribute.cpp" />
     <ClCompile Include="FBXCamera.cpp" />
     <ClCompile Include="FBXCollection.cpp" />
     <ClCompile Include="FBXColour.cpp" />
+    <ClCompile Include="FBXDeformer.cpp" />
     <ClCompile Include="FBXDocument.cpp" />
     <ClCompile Include="FBXDocumentInfo.cpp" />
     <ClCompile Include="FBXEmitter.cpp" />
@@ -204,8 +211,10 @@
     <ClCompile Include="FBXManager.cpp" />
     <ClCompile Include="FBXNode.cpp" />
     <ClCompile Include="FBXObject.cpp" />
+    <ClCompile Include="FBXPolygonDef.cpp" />
     <ClCompile Include="FBXProperty.cpp" />
     <ClCompile Include="FBXScene.cpp" />
+    <ClCompile Include="FBXSkeleton.cpp" />
     <ClCompile Include="FBXStatus.cpp" />
     <ClCompile Include="FBXVector.cpp" />
     <ClCompile Include="FBXMesh.cpp" />
