@@ -167,6 +167,8 @@
     <ClInclude Include="FBXIOSettings.h" />
     <ClInclude Include="FBXLayer.h" />
     <ClInclude Include="FBXLayerContainer.h" />
+    <ClInclude Include="FBXLayerElement.h" />
+    <ClInclude Include="FBXLayerElementTemplate.h" />
     <ClInclude Include="FBXLight.h" />
     <ClInclude Include="FBXManager.h" />
     <ClInclude Include="FBXMesh.h" />
@@ -207,6 +209,8 @@
     <ClCompile Include="FBXIOSettings.cpp" />
     <ClCompile Include="FBXLayer.cpp" />
     <ClCompile Include="FBXLayerContainer.cpp" />
+    <ClCompile Include="FBXLayerElement.cpp" />
+    <ClCompile Include="FBXLayerElementTemplate.cpp" />
     <ClCompile Include="FBXLight.cpp" />
     <ClCompile Include="FBXManager.cpp" />
     <ClCompile Include="FBXNode.cpp" />

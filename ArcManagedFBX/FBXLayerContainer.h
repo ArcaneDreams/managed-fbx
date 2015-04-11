@@ -1,5 +1,5 @@
 #pragma once
-
+#include "FBXLayer.h"
 #include "FBXAttribute.h"
 
 using namespace System;
@@ -14,6 +14,17 @@ namespace ArcManagedFBX
 		FBXLayerContainer(FbxLayerContainer* instance);
 		virtual ~FBXLayerContainer();
 		!FBXLayerContainer();
+
+		int32 GetLayerCount();
+
+		// Retrieve the layer count
+		int32 GetLayerCount(LayerType type, bool uvCount);
+
+		FBXLayer^ GetLayer(int32 index);
+
+		int32 CreateLayer();
+
+		FBXLayer^ GetLayer(int32 index,LayerType type, bool isUv);
 
 	private:
 		ARC_CHILD_CAST(NativeObject,FbxLayerContainer,FBXLayerContainer);

@@ -153,6 +153,12 @@
     <ClInclude Include="FBXPolygonDef.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="FBXLayerElementTemplate.h">
+      <Filter>Header Files\Layers</Filter>
+    </ClInclude>
+    <ClInclude Include="FBXLayerElement.h">
+      <Filter>Header Files\Layers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp">
@@ -253,6 +259,12 @@
     </ClCompile>
     <ClCompile Include="FBXPolygonDef.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FBXLayerElementTemplate.cpp">
+      <Filter>Source Files\Layers</Filter>
+    </ClCompile>
+    <ClCompile Include="FBXLayerElement.cpp">
+      <Filter>Source Files\Layers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

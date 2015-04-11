@@ -3,8 +3,6 @@
 
 using namespace ArcManagedFBX;
 
-
-
 FBXSkeleton::FBXSkeleton()
 {
 
@@ -63,9 +61,8 @@ bool ArcManagedFBX::FBXSkeleton::GetLimbNodeColorIsSet()
 bool ArcManagedFBX::FBXSkeleton::SetLimbNodeColor(FBXColour color)
 {
 	FbxColor newColor = FbxColor(color.R,color.G,color.B,color.A);
-	this->GetFBXSkeleton()->SetLimbNodeColor(newColor);
 
-	return false;
+	return this->GetFBXSkeleton()->SetLimbNodeColor(newColor);
 }
 
 ArcManagedFBX::Types::AttributeType ArcManagedFBX::FBXSkeleton::GetAttributeType()

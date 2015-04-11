@@ -1,5 +1,7 @@
 #pragma once
 
+#include "FBXStatus.h"
+#include "FBXDeformer.h"
 #include "FBXGeometryBase.h"
 
 using namespace System;
@@ -15,7 +17,25 @@ namespace ArcManagedFBX
 		ARC_DEFAULT_CONSTRUCTORS(FBXGeometry)
 
 		virtual AttributeType GetAttributeType() override;
-	
+
+		int32 AddDeformer(FBXDeformer^ deformer);
+
+		FBXDeformer^ RemoveDeformer(int32 index, FBXStatus^ status);
+
+		int32 GetDeformerCount();
+
+		int32 GetDeformerCount(DeformerType type);
+
+		int32 GetDestinationGeometryWeightedMapCount();
+
+		void ClearShape();
+
+		int32 GetShapeCount();
+
+		int32 GetShapeCount(int32 blendShapeIndex, int32 blendShapeChannelIndex, FBXStatus^ status);
+
+		void ApplyPivot();
+
 	private:
 		ARC_CHILD_CAST(NativeObject,FbxGeometry,FBXGeometry)
 

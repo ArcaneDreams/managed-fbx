@@ -8,7 +8,6 @@ using namespace ArcManagedFBX::Utility;
 
 namespace ArcManagedFBX
 {
-	// The skeleton representation of the node that we are developing
 	public ref class FBXSkeleton : public FBXAttribute
 	{
 	public:

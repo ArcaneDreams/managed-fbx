@@ -27,17 +27,23 @@ namespace ArcManagedFBX
 
 		ARC_INLINE int32 GetPolygonCount();
 
+		ARC_INLINE int32 GetPolygonVertex(int32 polygonindex, int32 positionInPolygon);
+
 		ARC_INLINE int32 GetPolygonSize(int32 polygonIndex);
 
 		ARC_INLINE int32 GetPolygonGroup(int32 polygonIndex);
 
 		ARC_INLINE void SetPolygonGroup(int32 polygonIndex,int32 group);
 
+		ARC_INLINE int32 GetPolygonVertexCount();
+
 		bool GetPolygonVertexNormal(int32 polygonIndex, int32 vertexIndex, FBXVector^ normal);
 
 		bool GetPolygonVertexNormals(array<FBXVector^>^ normals);
 
 		bool GetPolygonVertexUV(int32 polygonindex, int32 vertexindex, String^ uvSetName, FBXVector uv, bool^ unmapped);
+
+
 
 		bool GetPolygonVertexUVs(String^ uvSetName, array<FBXVector>^ uvs, array<int>^ unMappedUVId);
 

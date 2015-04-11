@@ -4,6 +4,7 @@ namespace ArcManagedFBX
 {
 	namespace Types
 	{
+
 		// The type of the skeleton that we are working with
 		public enum class SkeletonType
 		{
@@ -196,6 +197,49 @@ namespace ArcManagedFBX
 			eSpot,
 			eArea,
 			eVolume
+		};
+
+		public enum class LayerType
+		{
+			eUnknown,
+
+			//Non-Texture layer element types
+			//Note: Make sure to update static index below if you change this enum!
+			eNormal,
+			eBiNormal,
+			eTangent,
+			eMaterial,
+			ePolygonGroup,
+			eUV,
+			eVertexColor,
+			eSmoothing,
+			eVertexCrease,
+			eEdgeCrease,
+			eHole,
+			eUserData,
+			eVisibility,
+
+			//Texture layer element types
+			//Note: Make sure to update static index below if you change this enum!
+			eTextureDiffuse,
+			eTextureDiffuseFactor,
+			eTextureEmissive,
+			eTextureEmissiveFactor,
+			eTextureAmbient,
+			eTextureAmbientFactor,
+			eTextureSpecular,
+			eTextureSpecularFactor,
+			eTextureShininess,
+			eTextureNormalMap,
+			eTextureBump,
+			eTextureTransparency,
+			eTextureTransparencyFactor,
+			eTextureReflection,
+			eTextureReflectionFactor,
+			eTextureDisplacement,
+			eTextureDisplacementVector,
+
+			eTypeCount
 		};
 
 		public enum class AreaLightShape
