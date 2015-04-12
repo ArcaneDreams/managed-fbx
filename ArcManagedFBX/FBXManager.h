@@ -18,15 +18,22 @@ namespace ArcManagedFBX
 		ARC_DEFAULT_CONSTRUCTORS(FBXManager)
 
 		static FBXManager^ Create();
+
 		static FBXManager^ GetDefaultManager();
 
 		// The base methods that are to be used.
 		virtual void Destroy();
+
 		static String^ GetVersion(bool full);
+
 		static void GetFileFormatVersion(int^ major, int^ minor, int^ revision);
+
 		int GetDataTypeCount();
+
 		virtual FBXIOSettings^ GetIOSettings();
+
 		virtual void SetIOSettings(FBXIOSettings^ settings);
+
 		bool SetLocale(String^ locale);
 
 		int GetReferenceCount();
@@ -37,7 +44,9 @@ namespace ArcManagedFBX
 		int GetPluginCount();
 
 		bool LoadPlugin(String^ fileName);
+
 		bool LoadPluginsDirectory(String^ fileName, String^ extensions);
+
 		bool UnloadPlugins();
 	internal:
 		ARC_DEFAULT_INTERNAL_CONSTRUCTOR(FBXManager,FbxManager)
