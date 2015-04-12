@@ -2,8 +2,8 @@
 
 namespace ArcManagedFBX
 {
-	// Wrapper for FbxLayerElementTemplate
-	template<class Type>
+	// This class might actually be irrelevant so I might skip on it
+	generic<class Type>
 	public ref class FBXLayerElementTemplate
 	{
 	public:

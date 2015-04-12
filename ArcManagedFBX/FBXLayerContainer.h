@@ -24,6 +24,8 @@ namespace ArcManagedFBX
 
 		int32 CreateLayer();
 
+		void ClearLayers();
+
 		FBXLayer^ GetLayer(int32 index,LayerType type, bool isUv);
 
 	private:

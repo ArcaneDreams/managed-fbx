@@ -159,6 +159,12 @@
     <ClInclude Include="FBXLayerElement.h">
       <Filter>Header Files\Layers</Filter>
     </ClInclude>
+    <ClInclude Include="FBXGeometryWeightedMap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FBXLayerElementPolygonGroup.h">
+      <Filter>Header Files\Layers</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp">
@@ -264,6 +270,12 @@
       <Filter>Source Files\Layers</Filter>
     </ClCompile>
     <ClCompile Include="FBXLayerElement.cpp">
+      <Filter>Source Files\Layers</Filter>
+    </ClCompile>
+    <ClCompile Include="FBXGeometryWeightedMap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FBXLayerElementPolygonGroup.cpp">
       <Filter>Source Files\Layers</Filter>
     </ClCompile>
   </ItemGroup>

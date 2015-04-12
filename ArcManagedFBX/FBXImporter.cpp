@@ -47,14 +47,6 @@ bool ArcManagedFBX::IO::FBXImporter::IsImporting(bool^ importResult)
 	return resultImport;
 }
 
-void ArcManagedFBX::IO::FBXImporter::FileClose()
-{
-}
-
-bool ArcManagedFBX::IO::FBXImporter::FileOpen(FBXFile^ file)
-{
-	return false;
-}
 
 
 bool ArcManagedFBX::IO::FBXImporter::IsFBX()

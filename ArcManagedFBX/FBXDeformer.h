@@ -14,10 +14,10 @@ namespace ArcManagedFBX
 
 		virtual DeformerType GetDeformerType();
 
+		ARC_CHILD_CAST(NativeObject,FbxDeformer,FBXDeformer)
 	private:
 
 	internal:
-		ARC_CHILD_CAST(NativeObject,FbxDeformer,FBXDeformer)
 		ARC_DEFAULT_INTERNAL_CONSTRUCTOR(FBXDeformer,FbxDeformer)
 
 	};

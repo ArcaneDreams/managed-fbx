@@ -37,10 +37,6 @@ namespace ArcManagedFBX
 			int32 GetFileFormat();
 			bool IsFBX();
 
-		protected:
-			bool FileOpen(FBXFile^ file);
-			void FileClose();
-
 		private:
 			ARC_CHILD_CAST(NativeObject,FbxImporter,FBXImporter)
 

@@ -57,6 +57,12 @@ property type name\
 	type get();\
 };
 
+// Defines a read-only property.
+#define ARC_STATIC_PROPERTY_PUBLICGET(type, name)\
+static property type name\
+{\
+	type get();\
+};
 
 // Define the property macros that are to be used for boiler plate definitions
 #define ARC_PROPERTY_PUBLICGET_PUBLICSET(type,name) \

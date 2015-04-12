@@ -5,14 +5,20 @@ using namespace ArcManagedFBX;
 using namespace ArcManagedFBX::Types;
 using namespace ArcManagedFBX::Exceptions;
 
-template<class Type>
+generic<class Type>
 FBXLayerElementTemplate<Type>::FBXLayerElementTemplate()
 {
 
 }
 
-template<class Type>
+generic<class Type>
 FBXLayerElementTemplate<Type>::~FBXLayerElementTemplate()
+{
+
+}
+
+generic<class Type>
+FBXLayerElementTemplate<Type>::!FBXLayerElementTemplate()
 {
 
 }

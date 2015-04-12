@@ -133,3 +133,13 @@ bool ArcManagedFBX::FBXMesh::GenerateTangetsData(String^ uvSetName, bool overWri
 	return false;
 }
 
+ARC_INLINE int32 ArcManagedFBX::FBXMesh::GetPolygonVertexCount()
+{
+	return this->GetFBXMesh()->GetPolygonVertexCount();
+}
+
+ARC_INLINE int32 ArcManagedFBX::FBXMesh::GetPolygonVertex(int32 polygonindex, int32 positionInPolygon)
+{
+	return this->GetFBXMesh()->GetPolygonVertex(polygonindex,positionInPolygon);
+}
+

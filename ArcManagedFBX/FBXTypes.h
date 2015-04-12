@@ -5,6 +5,23 @@ namespace ArcManagedFBX
 	namespace Types
 	{
 
+		public enum class FileMode 
+		{
+			eNone, 
+			eReadOnly, 
+			eReadWrite, 
+			eCreateWriteOnly, 
+			eCreateReadWrite, 
+			eCreateAppend
+		};
+		
+		public enum class FileSeekPos 
+		{
+			eBegin, 
+			eCurrent, 
+			eEnd
+		};
+
 		// The type of the skeleton that we are working with
 		public enum class SkeletonType
 		{

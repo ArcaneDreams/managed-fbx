@@ -9,9 +9,7 @@ namespace ArcManagedFBX
 	public ref class FBXGeometryBase : public FBXLayerContainer
 	{
 	public:
-		FBXGeometryBase();
-		!FBXGeometryBase();
-		virtual ~FBXGeometryBase();
+		ARC_DEFAULT_CONSTRUCTORS(FBXGeometryBase)
 
 		void InitNormals(int32 count);
 
@@ -50,10 +48,10 @@ namespace ArcManagedFBX
 	private:
 		ARC_CHILD_CAST(NativeObject,FbxGeometryBase,FBXGeometryBase)
 
-
 		void GetElementUV(String^ name);
 
 	internal:
 		ARC_DEFAULT_INTERNAL_CONSTRUCTOR(FBXGeometryBase,FbxGeometryBase)
+		
 	};
 }

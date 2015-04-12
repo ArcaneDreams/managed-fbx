@@ -32,7 +32,26 @@ FBXVector FBXGeometryBase::BBoxMax::get()
 	return FBXVector();
 }
 
+FBXVector FBXGeometryBase::BBoxMin::get()
+{
+	return FBXVector();
+}
 
+
+bool FBXGeometryBase::PrimaryVisibility::get()
+{
+	return false;
+}
+
+bool FBXGeometryBase::ReceiveShadow::get()
+{
+	return false;
+}
+
+bool FBXGeometryBase::CastShadow::get()
+{
+	return false;
+}
 
 void ArcManagedFBX::FBXGeometryBase::GetElementUV(String^ name)
 {
@@ -46,7 +65,7 @@ void ArcManagedFBX::FBXGeometryBase::InitBinormals(int32 count, const int layeri
 
 void ArcManagedFBX::FBXGeometryBase::InitTangents(FBXGeometryBase^ source, const int32 layerindex)
 {
-
+	
 }
 
 void ArcManagedFBX::FBXGeometryBase::InitTangents(int32 count, int32 layerindex, String^ name)
@@ -61,7 +80,7 @@ void ArcManagedFBX::FBXGeometryBase::InitNormals(int32 count)
 
 void ArcManagedFBX::FBXGeometryBase::InitNormals(FBXGeometryBase^ source)
 {
-	
+	this->GetFBXGeometryBase()->InitNormals(source->GetFBXGeometryBase());
 }
 
 void ArcManagedFBX::FBXGeometryBase::SetControlPoint(const FBXVector^ controlPoint, const FBXVector^ normal)
@@ -71,7 +90,7 @@ void ArcManagedFBX::FBXGeometryBase::SetControlPoint(const FBXVector^ controlPoi
 
 ArcManagedFBX::FBXVector ArcManagedFBX::FBXGeometryBase::GetControlPointAt(int32 index)
 {
-
+	return FBXVector();
 }
 
 int32 ArcManagedFBX::FBXGeometryBase::GetControlPointsCount()
@@ -94,4 +113,9 @@ array<FBXVector^>^ ArcManagedFBX::FBXGeometryBase::GetControlPoints(FBXStatus^ s
 void ArcManagedFBX::FBXGeometryBase::InitControlPoints(int32 count)
 {
 	this->GetFBXGeometryBase()->InitControlPoints(count);
+}
+
+void ArcManagedFBX::FBXGeometryBase::SetControlPointAt(const FBXVector^ controlPoint, int32 index)
+{
+
 }

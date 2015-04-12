@@ -13,11 +13,9 @@ namespace ArcManagedFBX
 
 		MappingMode GetMappingMode();
 
-		// Static properties that are used
 		static array<String^>^ sTextureChannelNames;
 		static array<String^>^ sTextureUVNames;
 		static array<String^>^ sNonTextureNames;
-
 	private:
 
 	};
