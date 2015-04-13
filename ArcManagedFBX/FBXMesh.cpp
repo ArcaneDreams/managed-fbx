@@ -72,7 +72,21 @@ void ArcManagedFBX::FBXMesh::BeginPolygon(int32 pMaterial, int32 pTexture, int32
 
 array<int>^ ArcManagedFBX::FBXMesh::GetPolygonVertices()
 {
-	return gcnew array<int>(2);
+	int32 vertexCount = this->GetFBXMesh()->GetPolygonVertexCount();
+
+	array<int>^ vertexOutput = gcnew array<int>(vertexCount);
+
+	int* vertices = this->GetFBXMesh()->GetPolygonVertices();
+
+	if (vertices != nullptr)
+	{
+		for(int32 i = 0; i < vertexCount; i++)
+		{
+			vertexOutput[i] = vertices[i];
+		}
+	}
+
+	return vertexOutput;
 }
 
 bool ArcManagedFBX::FBXMesh::GetPolygonVertexUVs(String^ uvSetName, array<FBXVector>^ uvs, array<int>^ unMappedUVId)

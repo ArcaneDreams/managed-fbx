@@ -21,7 +21,6 @@ namespace ArcManagedFBX
 
 		static FBXManager^ GetDefaultManager();
 
-		// The base methods that are to be used.
 		virtual void Destroy();
 
 		static String^ GetVersion(bool full);

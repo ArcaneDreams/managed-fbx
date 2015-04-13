@@ -37,30 +37,25 @@ FBXVector FBXGeometryBase::BBoxMin::get()
 	return FBXVector();
 }
 
-
 bool FBXGeometryBase::PrimaryVisibility::get()
 {
-	return false;
+	return this->GetFBXGeometryBase()->PrimaryVisibility.Get();
 }
 
 bool FBXGeometryBase::ReceiveShadow::get()
 {
-	return false;
+	return this->GetFBXGeometryBase()->ReceiveShadow.Get();
 }
 
 bool FBXGeometryBase::CastShadow::get()
 {
-	return false;
+	return this->GetFBXGeometryBase()->CastShadow.Get();
 }
 
-void ArcManagedFBX::FBXGeometryBase::GetElementUV(String^ name)
+void ArcManagedFBX::FBXGeometryBase::InitBinormals(int32 count, const int32 layerindex, String^ name)
 {
-
-}
-
-void ArcManagedFBX::FBXGeometryBase::InitBinormals(int32 count, const int layerindex, String^ name)
-{
-
+	const char* nativeName = StringHelper::ToNative(name);
+	this->GetFBXGeometryBase()->InitBinormals(count,layerindex,nativeName);
 }
 
 void ArcManagedFBX::FBXGeometryBase::InitTangents(FBXGeometryBase^ source, const int32 layerindex)
@@ -105,7 +100,17 @@ void ArcManagedFBX::FBXGeometryBase::ComputeBBox()
 
 array<FBXVector^>^ ArcManagedFBX::FBXGeometryBase::GetControlPoints(FBXStatus^ status)
 {
-	array<FBXVector^>^ outputVectors = gcnew array<FBXVector^>(2);
+	// Retrieve the total count of control points that exist.
+	int32 controlPointsCount  = this->GetFBXGeometryBase()->GetControlPointsCount();
+	array<FBXVector^>^ outputVectors = gcnew array<FBXVector^>(controlPointsCount);
+
+	FbxVector4* controlPointsHandle = this->GetFBXGeometryBase()->GetControlPoints(status->GetInstance());
+
+	// Iterate over the control points and store them into the output vectors
+	for(uint32 i = 0; i < controlPointsCount; i++)
+	{
+		outputVectors[i] = FBXVector::ConvertVector4(&controlPointsHandle[i]);
+	}
 
 	return outputVectors;
 }
@@ -115,7 +120,18 @@ void ArcManagedFBX::FBXGeometryBase::InitControlPoints(int32 count)
 	this->GetFBXGeometryBase()->InitControlPoints(count);
 }
 
-void ArcManagedFBX::FBXGeometryBase::SetControlPointAt(const FBXVector^ controlPoint, int32 index)
+void ArcManagedFBX::FBXGeometryBase::SetControlPointAt(FBXVector^ controlPoint, int32 index)
 {
+	FbxVector4 generatedVector = controlPoint->GenerateVector4();
+	this->GetFBXGeometryBase()->SetControlPointAt(generatedVector,index);
+}
 
+int32 ArcManagedFBX::FBXGeometryBase::GetElementVertexColorCount()
+{
+	return this->GetFBXGeometryBase()->GetElementVertexColorCount();
+}
+
+void ArcManagedFBX::FBXGeometryBase::SetControlPointCount(int32 count)
+{
+	this->GetFBXGeometryBase()->SetControlPointCount(count);
 }

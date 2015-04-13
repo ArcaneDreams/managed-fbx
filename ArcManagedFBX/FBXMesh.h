@@ -37,19 +37,17 @@ namespace ArcManagedFBX
 
 		ARC_INLINE int32 GetPolygonVertexCount();
 
+		array<int>^ GetPolygonVertices();
+		
 		bool GetPolygonVertexNormal(int32 polygonIndex, int32 vertexIndex, FBXVector^ normal);
 
 		bool GetPolygonVertexNormals(array<FBXVector^>^ normals);
 
 		bool GetPolygonVertexUV(int32 polygonindex, int32 vertexindex, String^ uvSetName, FBXVector uv, bool^ unmapped);
 
-
-
 		bool GetPolygonVertexUVs(String^ uvSetName, array<FBXVector>^ uvs, array<int>^ unMappedUVId);
 
 		bool GenerateTangetsData(String^ uvSetName, bool overWrite);
-
-		array<int>^ GetPolygonVertices();
 
 		int RemovePolygon(int32 polygonIndex);
 

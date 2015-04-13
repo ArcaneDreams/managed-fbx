@@ -25,10 +25,14 @@ namespace ArcManagedFBX
 
 		void SetControlPoint(const FBXVector^ controlPoint, const FBXVector^ normal);
 
-		void SetControlPointAt(const FBXVector^ controlPoint, int32 index);
+		void SetControlPointAt(FBXVector^ controlPoint, int32 index);
+
+		int32 GetElementVertexColorCount();
 
 		FBXVector GetControlPointAt(int32 index);
-		
+
+		virtual void SetControlPointCount(int32 count);
+
 		int32 GetControlPointsCount();
 
 		void ComputeBBox();
@@ -46,11 +50,10 @@ namespace ArcManagedFBX
 		virtual array<FBXVector^>^ GetControlPoints(FBXStatus^ status);
 
 	private:
-		ARC_CHILD_CAST(NativeObject,FbxGeometryBase,FBXGeometryBase)
 
-		void GetElementUV(String^ name);
 
 	internal:
+		ARC_CHILD_CAST(NativeObject,FbxGeometryBase,FBXGeometryBase)
 		ARC_DEFAULT_INTERNAL_CONSTRUCTOR(FBXGeometryBase,FbxGeometryBase)
 		
 	};
