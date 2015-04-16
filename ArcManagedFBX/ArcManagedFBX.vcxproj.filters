@@ -34,6 +34,9 @@
     <Filter Include="Source Files\IO">
       <UniqueIdentifier>{903776af-1987-448f-9847-824023228d53}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Interfaces">
+      <UniqueIdentifier>{85eb9a41-a153-48f2-8e8a-1e40d1e7dcd2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Stdafx.h">

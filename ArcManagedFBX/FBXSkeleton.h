@@ -8,10 +8,13 @@ using namespace ArcManagedFBX::Utility;
 
 namespace ArcManagedFBX
 {
+	// The skeleton representation
 	public ref class FBXSkeleton : public FBXAttribute
 	{
 	public:
 		ARC_DEFAULT_CONSTRUCTORS(FBXSkeleton)
+
+		typedef class FbxSkeleton NativeType;
 
 		virtual AttributeType GetAttributeType() override;
 

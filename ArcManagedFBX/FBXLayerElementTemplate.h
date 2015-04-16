@@ -11,6 +11,6 @@ namespace ArcManagedFBX
 
 	private:
 
-	
+
 	};
 }
