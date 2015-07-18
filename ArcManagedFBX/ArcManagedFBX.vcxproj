@@ -147,6 +147,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Defines.h" />
+    <ClInclude Include="FBXAnimCurveKeyBase.h" />
     <ClInclude Include="FBXAnimLayer.h" />
     <ClInclude Include="FBXAnimStack.h" />
     <ClInclude Include="FBXAttribute.h" />
