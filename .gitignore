@@ -2,3 +2,6 @@ ArcManagedFBX.opensdf
 ArcManagedFBX.sdf
 Bin
 ipch
+/*.opensdf
+/*.exe
+/*.obj
