@@ -17,7 +17,8 @@ FBXPolygonDef::!FBXPolygonDef()
 
 FBXPolygonDef::~FBXPolygonDef()
 {
-
+	// Call the finalizer from the destructor
+	this->!FBXPolygonDef();
 }
 
 FBXPolygonDef::FBXPolygonDef(FbxMesh::PolygonDef* instance)
