@@ -142,3 +142,10 @@ const String^ FBXObject::GetInitialName()
 {
 	return StringHelper::ToManaged(this->m_NativeObject->GetInitialName());
 }
+
+// Forgive me father, for I have sinned...
+generic<class ObjectType> where ObjectType : FBXObject, gcnew()
+ObjectType ArcManagedFBX::FBXObject::GetSrcObject(int32 index)
+{
+	return gcnew ObjectType();
+}

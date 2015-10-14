@@ -34,6 +34,15 @@
     <Filter Include="Source Files\IO">
       <UniqueIdentifier>{903776af-1987-448f-9847-824023228d53}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Interfaces">
+      <UniqueIdentifier>{85eb9a41-a153-48f2-8e8a-1e40d1e7dcd2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Animations">
+      <UniqueIdentifier>{03c4adad-8752-4f97-b1a8-a425e7798a3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Animations">
+      <UniqueIdentifier>{3d1dd66b-8a13-4983-83ef-e38d99cbdfc9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Stdafx.h">
@@ -164,6 +173,9 @@
     </ClInclude>
     <ClInclude Include="FBXLayerElementPolygonGroup.h">
       <Filter>Header Files\Layers</Filter>
+    </ClInclude>
+    <ClInclude Include="FBXAnimCurveKeyBase.h">
+      <Filter>Header Files\Animations</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

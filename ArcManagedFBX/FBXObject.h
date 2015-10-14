@@ -5,7 +5,6 @@
 
 using namespace System;
 using namespace System::Text;
-
 using namespace ArcManagedFBX;
 
 namespace ArcManagedFBX
@@ -50,6 +49,10 @@ namespace ArcManagedFBX
 		const String^ GetNameSpacePrefix();
 
 		const uint64 GetUniqueID();
+
+
+		generic<class ObjectType> where ObjectType : FBXObject, gcnew()
+		ObjectType GetSrcObject(int32 index);
 
 		// Check whether the source object is connected
 		ARC_INLINE bool IsConnectedSrcObject(FBXObject^ other);
