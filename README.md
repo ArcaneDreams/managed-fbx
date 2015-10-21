@@ -1,12 +1,13 @@
 ![arcmanagedfbx](http://i.imgur.com/br4KwNr.png)
 ====
-# Description
+## Description
 A managed CLR .NET wrapper for the AutoDesk FBX SDK 2015. Enables developers writing in C# or any other .NET supported language to work with the FBX SDK without having to use pinvokes and the like.
 
 ## Features
 * Import and save scenes
 * Modify cameras, attributes, nodes and more.
 * Comprehensive wrapper of most of the features documented by the FBX SDK.
+* To be useable with the [Arcane Dreams MonoGame fork](https://github.com/arcanedreams/MonoGame) that is actively being worked on.
 
 ## Requirements
 * Visual Studio 2012 with Update 4
