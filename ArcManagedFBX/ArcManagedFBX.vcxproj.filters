@@ -290,6 +290,9 @@
     <ClCompile Include="FBXLayerElementPolygonGroup.cpp">
       <Filter>Source Files\Layers</Filter>
     </ClCompile>
+    <ClCompile Include="FBXClassId.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />

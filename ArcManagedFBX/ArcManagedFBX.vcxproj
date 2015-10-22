@@ -197,6 +197,7 @@
     <ClCompile Include="FBXAnimStack.cpp" />
     <ClCompile Include="FBXAttribute.cpp" />
     <ClCompile Include="FBXCamera.cpp" />
+    <ClCompile Include="FBXClassId.cpp" />
     <ClCompile Include="FBXCollection.cpp" />
     <ClCompile Include="FBXColour.cpp" />
     <ClCompile Include="FBXDeformer.cpp" />
