@@ -318,5 +318,72 @@ namespace ArcManagedFBX
 			ePerspective,
 			eOrthogonal
 		};
+
+		public enum class LoadMode         
+		{ 
+			eCreate,          /*!< Add to scene(duplicate the ones with the same name)    */  
+			eMerge,           /*!< Add to scene and update animation                      */
+			eExclusiveMerge  /*!< Update animation                                       */
+		};
+
+		public enum class QuaternionMode   { eAsQuaternion, eAsEuler, eResample };
+		public enum class ObjectDerivation { eByLayer, eByEntity, eByBlock }; 
+
+		public enum class SysUnits
+		{
+			eUnitsUser,
+			eUnitsInches, 
+			eUnitsFeet,
+			eUnitYards,
+			eUnitsMiles,
+			eUnitsMillimeters,
+			eUnitsCentimeters,
+			eUnitsMeters,
+			eUnitsKilometers
+		};
+
+		public enum class SysFrameRate  
+		{
+			eFrameRateUser,
+			eFrameRateHours,
+			eFrameRateMinutes,
+			eFrameRateSeconds,
+			eFrameRateMilliseconds,
+			eFrameRateGames15,
+			eFrameRateFilm24,
+			eFrameRatePAL25,
+			eFrameRateNTSC30,
+			eFrameRateShowScan48,
+			eFrameRatePALField50,
+			eFrameRateNTSCField60
+		};
+
+		// Max
+		public enum class EnveloppeSystem
+		{
+			eSkinModifier,
+			ePhysic,
+			eBonePro,
+			eEnveloppeSystemCount
+		};
+
+		// Max
+		public enum class GeometryType
+		{
+			eTriangle,
+			eSimplifiedPoly,
+			ePolygon,
+			eNurbs,
+			ePatch,
+			eGeometryTypeCount
+		};
+
+		// Maya IK type
+		public enum class IKType
+		{
+			eNone,
+			eFBIK,		
+			eHumanIK
+		};
 	}
 }
