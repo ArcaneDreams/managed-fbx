@@ -11,7 +11,6 @@ namespace ArcManagedFBX
 	{
 	public:
 		ARC_FBX_FBXOBJECT_IMPLEMENT(FBXDeformer,FBXObject)
-
 		ARC_DEFAULT_CONSTRUCTORS(FBXDeformer)
 
 		virtual DeformerType GetDeformerType();

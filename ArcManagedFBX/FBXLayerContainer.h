@@ -17,7 +17,6 @@ namespace ArcManagedFBX
 
 		int32 GetLayerCount();
 
-		// Retrieve the layer count
 		int32 GetLayerCount(LayerType type, bool uvCount);
 
 		FBXLayer^ GetLayer(int32 index);
@@ -26,8 +25,7 @@ namespace ArcManagedFBX
 
 		void ClearLayers();
 
-		FBXLayer^ GetLayer(int32 index,LayerType type, bool isUv);
-
+		FBXLayer^ GetLayer(int32 index,LayerType type, bool isUV);
 	private:
 		ARC_CHILD_CAST(NativeObject,FbxLayerContainer,FBXLayerContainer);
 	

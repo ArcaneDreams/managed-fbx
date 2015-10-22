@@ -4,6 +4,45 @@ namespace ArcManagedFBX
 {
 	namespace Types
 	{
+		public enum class FbxType
+		{
+			eFbxUndefined,	//!< Unidentified.
+			eFbxChar,		//!< 8 bit signed integer.
+			eFbxUChar,		//!< 8 bit unsigned integer.
+			eFbxShort,		//!< 16 bit signed integer.
+			eFbxUShort,		//!< 16 bit unsigned integer.
+			eFbxUInt,		//!< 32 bit unsigned integer.
+			eFbxLongLong,	//!< 64 bit signed integer.
+			eFbxULongLong,	//!< 64 bit unsigned integer.
+			eFbxHalfFloat,	//!< 16 bit floating point.
+			eFbxBool,		//!< Boolean.
+			eFbxInt,		//!< 32 bit signed integer.
+			eFbxFloat,		//!< Floating point value.
+			eFbxDouble,		//!< Double width floating point value.
+			eFbxDouble2,	//!< Vector of two double values.
+			eFbxDouble3,	//!< Vector of three double values.
+			eFbxDouble4,	//!< Vector of four double values.
+			eFbxDouble4x4,	//!< Four vectors of four double values.
+			eFbxEnum,		//!< Enumeration.
+			eFbxString,		//!< String.
+			eFbxTime,		//!< Time value.
+			eFbxReference,	//!< Reference to object or property.
+			eFbxBlob,		//!< Binary data block type.
+			eFbxDistance,	//!< Distance.
+			eFbxDateTime,	//!< Date and time.
+			eFbxTypeCount	//!< Indicates the number of type identifiers constants.
+		};
+
+		public enum class Language
+		{
+			eENU,			//!< 409 English - United States
+			eDEU,			//!< 407 German - Germany
+			eFRA,			//!< 40c French - France
+			eJPN,			//!< 411 Japanese - Japan
+			eKOR,			//!< 412 Korean(Extended Wansung) - Korea 
+			eCHS,			//!< 804 Chinese - PRC
+			eLanguageCount	//!< Total language count
+		};
 
 		public enum class FileMode 
 		{

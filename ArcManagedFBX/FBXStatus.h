@@ -19,8 +19,8 @@ namespace ArcManagedFBX
 		
 		bool Error();
 
-		bool operator==(const FBXStatus^ rhs);
-		bool operator!=(const FBXStatus^ rhs);
+		bool operator==(FBXStatus^ rhs);
+		bool operator!=(FBXStatus^ rhs);
 
 	internal:
 		FBXStatus(FbxStatus* instance);

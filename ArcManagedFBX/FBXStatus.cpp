@@ -59,12 +59,12 @@ FbxStatus* ArcManagedFBX::FBXStatus::GetInstance()
 	return this->m_Instance;
 }
 
-bool ArcManagedFBX::FBXStatus::operator!=(const FBXStatus^ rhs)
+bool ArcManagedFBX::FBXStatus::operator!=(FBXStatus^ rhs)
 {
-	return false;
+	return *m_Instance != *(rhs->GetInstance());
 }
 
-bool ArcManagedFBX::FBXStatus::operator==(const FBXStatus^ rhs)
+bool ArcManagedFBX::FBXStatus::operator==(FBXStatus^ rhs)
 {
-	return false;
+	return *m_Instance == *(rhs->GetInstance());
 }

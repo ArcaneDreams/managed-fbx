@@ -153,6 +153,7 @@
     <ClInclude Include="FBXAttribute.h" />
     <ClInclude Include="FBXCamera.h" />
     <ClInclude Include="FBXClassId.h" />
+    <ClInclude Include="FBXCluster.h" />
     <ClInclude Include="FBXCollection.h" />
     <ClInclude Include="FBXColour.h" />
     <ClInclude Include="FBXDeformer.h" />
@@ -184,6 +185,7 @@
     <ClInclude Include="FBXProperty.h" />
     <ClInclude Include="FBXScene.h" />
     <ClInclude Include="FBXSkeleton.h" />
+    <ClInclude Include="FBXSkin.h" />
     <ClInclude Include="FBXStatus.h" />
     <ClInclude Include="FBXTexture.h" />
     <ClInclude Include="FBXTypes.h" />
@@ -228,6 +230,7 @@
     <ClCompile Include="FBXProperty.cpp" />
     <ClCompile Include="FBXScene.cpp" />
     <ClCompile Include="FBXSkeleton.cpp" />
+    <ClCompile Include="FBXSkin.cpp" />
     <ClCompile Include="FBXStatus.cpp" />
     <ClCompile Include="FBXVector.cpp" />
     <ClCompile Include="FBXMesh.cpp" />

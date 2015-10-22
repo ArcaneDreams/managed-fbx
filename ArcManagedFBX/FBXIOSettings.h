@@ -17,6 +17,18 @@ namespace ArcManagedFBX
 
 			void AddPropertyGroup(String^ name);
 
+			bool GetBoolProp(String^pName, bool pDefValue);
+
+			void SetBoolProp(String^ pName, bool pValue);
+
+			double GetDoubleProp(String^ pName, double pDefValue);
+
+			void   SetDoubleProp(String^ pName, double pValue);
+
+			int    GetIntProp(String^ pName, int pDefValue);
+
+			void   SetIntProp(String^ pName, int pValue);
+
 		private:
 
 

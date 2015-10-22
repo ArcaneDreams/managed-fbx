@@ -23,6 +23,10 @@ namespace ArcManagedFBX
 
 		virtual void Compact();
 
+		ARC_INLINE int32 GetShapeCount();
+
+		ARC_INLINE int32 GetDeformerCount();
+
 		ARC_INLINE void ReservePolygonCount(int count);
 
 		ARC_INLINE int32 GetPolygonCount();
@@ -37,7 +41,7 @@ namespace ArcManagedFBX
 
 		ARC_INLINE int32 GetPolygonVertexCount();
 
-		array<int>^ GetPolygonVertices();
+		array<int32>^ GetPolygonVertices();
 		
 		bool GetPolygonVertexNormal(int32 polygonIndex, int32 vertexIndex, FBXVector^ normal);
 
@@ -57,7 +61,9 @@ namespace ArcManagedFBX
 
 		bool GenerateNormals(bool overview, bool byCtrlPoint, bool cw);
 
-		int RemoveBadPolygons();
+		int32 RemoveBadPolygons();
+
+		int32 GetControlPointsCount();
 
 	internal:
 		FBXMesh(FbxMesh* instance);

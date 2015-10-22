@@ -157,3 +157,18 @@ ARC_INLINE int32 ArcManagedFBX::FBXMesh::GetPolygonVertex(int32 polygonindex, in
 	return this->GetFBXMesh()->GetPolygonVertex(polygonindex,positionInPolygon);
 }
 
+int32 ArcManagedFBX::FBXMesh::GetControlPointsCount()
+{
+	return this->GetFBXMesh()->GetControlPointsCount();
+}
+
+int32 ArcManagedFBX::FBXMesh::GetShapeCount()
+{
+	return GetFBXMesh()->GetShapeCount();
+}
+
+int32 ArcManagedFBX::FBXMesh::GetDeformerCount()
+{
+	return GetFBXMesh()->GetDeformerCount();
+}
+
