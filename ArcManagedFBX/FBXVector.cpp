@@ -35,9 +35,7 @@ float64 FBXVector::Dot(FBXVector^ other)
 FBXVector^ ArcManagedFBX::FBXVector::ConvertVector2(FbxVector2* instance)
 {
 	if (instance != nullptr)
-	{
 		return gcnew FBXVector(instance->mData[0],instance->mData[1],0.f,0.f);
-	}
 
 	return gcnew FBXVector(0.f,0.f,0.f,0.f);
 }
@@ -45,9 +43,7 @@ FBXVector^ ArcManagedFBX::FBXVector::ConvertVector2(FbxVector2* instance)
 FBXVector^ ArcManagedFBX::FBXVector::ConvertVector4(FbxVector4* instance)
 {
 	if (instance != nullptr)
-	{
 		return gcnew FBXVector(instance->mData[0],instance->mData[1],instance->mData[2],instance->mData[3]);
-	}
 
 	return gcnew FBXVector(0.f,0.f,0.f,0.f);
 }

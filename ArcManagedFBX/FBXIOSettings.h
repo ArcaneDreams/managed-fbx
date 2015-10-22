@@ -15,22 +15,18 @@ namespace ArcManagedFBX
 		public:
 			ARC_DEFAULT_CONSTRUCTORS(FBXIOSettings)
 
-			void AddPropertyGroup(String^ name);
+			bool	GetBoolProp(String^pName, bool pDefValue);
 
-			bool GetBoolProp(String^pName, bool pDefValue);
+			void	SetBoolProp(String^ pName, bool pValue);
 
-			void SetBoolProp(String^ pName, bool pValue);
+			double	GetDoubleProp(String^ pName, double pDefValue);
 
-			double GetDoubleProp(String^ pName, double pDefValue);
+			void	SetDoubleProp(String^ pName, double pValue);
 
-			void   SetDoubleProp(String^ pName, double pValue);
+			int		GetIntProp(String^ pName, int pDefValue);
 
-			int    GetIntProp(String^ pName, int pDefValue);
-
-			void   SetIntProp(String^ pName, int pValue);
-
+			void	SetIntProp(String^ pName, int pValue);
 		private:
-
 
 		internal:
 			ARC_CHILD_CAST(NativeObject,FbxIOSettings,FBXIOSettings)
