@@ -33,17 +33,6 @@ namespace ArcManagedFBX
 			eFbxTypeCount	//!< Indicates the number of type identifiers constants.
 		};
 
-		public enum class Language
-		{
-			eENU,			//!< 409 English - United States
-			eDEU,			//!< 407 German - Germany
-			eFRA,			//!< 40c French - France
-			eJPN,			//!< 411 Japanese - Japan
-			eKOR,			//!< 412 Korean(Extended Wansung) - Korea 
-			eCHS,			//!< 804 Chinese - PRC
-			eLanguageCount	//!< Total language count
-		};
-
 		public enum class FileMode 
 		{
 			eNone, 

@@ -4,7 +4,7 @@ namespace ArcManagedFBX
 {
 	namespace Types
 	{
-		public ref class VertexNormalInfo
+		public ref class FBXVertexNormalInfo
 		{
 
 		};

@@ -102,7 +102,6 @@ bool ArcManagedFBX::FBXMesh::GetPolygonVertexUV(int32 polygonindex, int32 vertex
 // This is going to require some work as we convert between an fbx array and a CLI array that is to be used for returning to the consumer.
 bool ArcManagedFBX::FBXMesh::GetPolygonVertexNormals(array<FBXVector^>^ normals)
 {	
-
 	return false;
 }
 

@@ -27,17 +27,19 @@ namespace ArcManagedFBXTest
         } 
         #endregion
 
-        private ArgumentHandler m_Handler;
+        private ArgumentHandler m_Handler = null;
 
-        private FBXScene m_Scene;
+        private FBXScene m_Scene = null;
 
         #region Properties
+        /// <summary>
+        ///     The scene that we are importing to view.
+        /// </summary>
         public FBXScene Scene
         {
             get { return m_Scene; }
             set { m_Scene = value; }
         }
-
 
         [CommandLineArgument("file",false)]
         public string Filename
