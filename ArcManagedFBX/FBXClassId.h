@@ -30,11 +30,14 @@ namespace ArcManagedFBX
 		
 		const int32 ClassInstanceDecRef();
 		
-		const int32 ClassInstanceRef();
+		const int32 GetInstanceRef();
 	private:
 		FbxClassId* m_NativeInstance;
 
 	protected:
+
+	internal:
+		FBXClassId(FbxClassId* instance);
 
 	};
 }

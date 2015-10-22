@@ -8,55 +8,60 @@ using namespace System;
 
 void ArcManagedFBX::FBXClassId::Destroy()
 {
-
+	m_NativeInstance->Destroy();
 }
 
 const String^ ArcManagedFBX::FBXClassId::GetName()
 {
-	return "";
+	return StringHelper::ToManaged(m_NativeInstance->GetName());
 }
 
 bool ArcManagedFBX::FBXClassId::Is(const FBXClassId^ other)
 {
-	return false;
+	return m_NativeInstance->Is(*other->m_NativeInstance);
 }
 
 const String^ ArcManagedFBX::FBXClassId::GetFbxFileTypeName(bool bAskParent)
 {
-	return "";
+	return StringHelper::ToManaged(m_NativeInstance->GetFbxFileTypeName(bAskParent));
 }
 
 const String^ ArcManagedFBX::FBXClassId::GetFbxFileSubTypeName()
 {
-	return "";
+	return StringHelper::ToManaged(m_NativeInstance->GetFbxFileSubTypeName());
 }
 
 const String^ ArcManagedFBX::FBXClassId::GetObjectTypePrefix()
 {
-	return "";
+	return StringHelper::ToManaged(m_NativeInstance->GetObjectTypePrefix());
 }
 
 const int32 ArcManagedFBX::FBXClassId::ClassInstanceIncRef()
 {
-	return 0;
+	return m_NativeInstance->ClassInstanceIncRef();
 }
 
 const int32 ArcManagedFBX::FBXClassId::ClassInstanceDecRef()
 {
-	return 0;
+	return m_NativeInstance->ClassInstanceDecRef();
 }
 
-const int32 ArcManagedFBX::FBXClassId::ClassInstanceRef()
+const int32 ArcManagedFBX::FBXClassId::GetInstanceRef()
 {
-	return 0;
+	return m_NativeInstance->GetInstanceRef();
+}
+
+ArcManagedFBX::FBXClassId::FBXClassId(FbxClassId* instance)
+{
+	m_NativeInstance = instance;
 }
 
 bool ArcManagedFBX::FBXClassId::operator!=(const FBXClassId^ other)
 {
-	return false;
+	return *other->m_NativeInstance != *this->m_NativeInstance;
 }
 
 bool ArcManagedFBX::FBXClassId::operator==(const FBXClassId^ other)
 {
-	return false;
+	return *other->m_NativeInstance == *this->m_NativeInstance;
 }
