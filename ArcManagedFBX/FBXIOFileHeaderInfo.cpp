@@ -20,17 +20,22 @@ FBXIOFileHeaderInfo::~FBXIOFileHeaderInfo()
 
 }
 
+FBXIOFileHeaderInfo::FBXIOFileHeaderInfo(FbxIOFileHeaderInfo* instance)
+{
+	this->instance = instance;
+}
+
 bool FBXIOFileHeaderInfo::CreationTimeStampPresent::get()
 {
-	return false;
+	return this->instance->mCreationTimeStampPresent;
 }
 
 int32 FBXIOFileHeaderInfo::FileVersion::get()
 {
-	return 0;
+	return this->instance->mFileVersion;
 }
 
 void ArcManagedFBX::IO::FBXIOFileHeaderInfo::Reset()
 {
-
+	this->instance->Reset();
 }

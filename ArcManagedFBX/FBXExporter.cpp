@@ -5,8 +5,13 @@
 #include "FBXDocument.h"
 
 using namespace ArcManagedFBX::IO;
+using namespace ArcManagedFBX::Utility;
 
 ArcManagedFBX::IO::FBXExporter::FBXExporter() : FBXIOBase()
+{
+}
+
+ArcManagedFBX::IO::FBXExporter::FBXExporter(FbxExporter* instance) : FBXIOBase(instance)
 {
 }
 
@@ -30,4 +35,24 @@ bool ArcManagedFBX::IO::FBXExporter::Export(FBXDocument^ document, bool nonBlock
 bool ArcManagedFBX::IO::FBXExporter::IsExporting(bool exportResult)
 {
 	return GetFBXExporter()->IsExporting(exportResult);
+}
+
+bool ArcManagedFBX::IO::FBXExporter::Initialize(String^ fileName, int32 fileFormat, FBXIOSettings^ settings)
+{
+	return GetFBXExporter()->Initialize(StringHelper::ToNative(fileName),fileFormat,settings->GetFBXIOSettings());
+}
+
+bool ArcManagedFBX::IO::FBXExporter::GetExportOptions()
+{
+	return GetFBXExporter()->GetExportOptions();
+}
+
+bool ArcManagedFBX::IO::FBXExporter::IsFBX()
+{
+	return GetFBXExporter()->IsFBX();
+}
+
+int ArcManagedFBX::IO::FBXExporter::GetFileFormat()
+{
+	return GetFBXExporter()->GetFileFormat();
 }

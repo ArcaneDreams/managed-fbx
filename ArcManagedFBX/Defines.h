@@ -36,8 +36,7 @@ protected: \
 	{ \
 		Class^ instance = (Class^)container; \
 		return gcnew Class##(instance->Get##Class##());\
-	} \
-protected:
+	} 
 
 // The defines for the macros for declaring objects accordingly.
 #define ARC_FBX_OBJECT_DECLARE(Class,Parent) \
@@ -45,6 +44,18 @@ protected:
 
 #define ARC_DEFAULT_INTERNAL_CONSTRUCTOR(Type,NativeType) \
 	Type##(##NativeType##* instance);
+
+#define ARC_DEFAULT_INTERNAL_CONSTRUCTOR_IMPL(Type, NativeType) \
+	Type##(##NativeType##* instance) \
+	{	\
+		\
+	}
+
+#define ARC_DEFAULT_INTERNAL_CONSTRUCTOR_INHERIT_IMPL(Type, ParentType, NativeType) \
+	Type##(##NativeType##* instance) : ParentType(instance) \
+	{	\
+		\
+	}
 
 #define ARC_DEFAULT_CONSTRUCTORS(Type) \
 	Type##();\
