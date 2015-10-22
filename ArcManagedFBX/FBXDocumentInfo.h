@@ -8,8 +8,9 @@ namespace ArcManagedFBX
 	public ref class FBXDocumentInfo : public FBXObject
 	{
 	public:
+		ARC_FBX_FBXOBJECT_IMPLEMENT(FBXDocumentInfo,FBXObject)
+
 		ARC_DEFAULT_CONSTRUCTORS(FBXDocumentInfo)
-		ARC_CHILD_CAST(NativeObject,FbxDocumentInfo,FBXDocumentInfo)
 	private:
 
 		// The various properties for the document information that we are working on
@@ -31,14 +32,10 @@ namespace ArcManagedFBX
 		ARC_PROPERTY_PUBLICGET(String^,Revision)
 		ARC_PROPERTY_PUBLICGET(String^,Comment)
 
-	protected:
-		// The inherited methods 
-		virtual void Destruct(bool recursive);
-		virtual void ConstructProperties(bool forceSet);
-
-
 		void Clear();
 	internal:
 		FBXDocumentInfo(FbxDocumentInfo* instance);
+
+		ARC_CHILD_CAST(NativeObject,FbxDocumentInfo,FBXDocumentInfo)
 	};
 }

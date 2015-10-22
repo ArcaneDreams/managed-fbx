@@ -8,7 +8,7 @@ using namespace ArcManagedFBX::Utility;
 using namespace ArcManagedFBX::Types;
 using namespace System;
 
-FBXObject::FBXObject()
+FBXObject::FBXObject() : m_NativeObject(0)
 {
 
 }

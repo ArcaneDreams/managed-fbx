@@ -17,11 +17,11 @@ namespace ArcManagedFBX
 
 			void AddPropertyGroup(String^ name);
 
-			ARC_CHILD_CAST(NativeObject,FbxIOSettings,FBXIOSettings)
 		private:
 
 
 		internal:
+			ARC_CHILD_CAST(NativeObject,FbxIOSettings,FBXIOSettings)
 			ARC_DEFAULT_INTERNAL_CONSTRUCTOR(FBXIOSettings,FbxIOSettings)
 		};
 	}

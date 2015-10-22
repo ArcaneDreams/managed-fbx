@@ -61,7 +61,7 @@ int32 ArcManagedFBX::IO::FBXImporter::GetFileFormat()
 
 FBXDocumentInfo^ ArcManagedFBX::IO::FBXImporter::GetSceneInfo()
 {
-	return gcnew FBXDocumentInfo();
+	return gcnew FBXDocumentInfo(GetFBXImporter()->GetSceneInfo());
 }
 
 String^ ArcManagedFBX::IO::FBXImporter::GetActiveAnimStackName()
@@ -83,18 +83,17 @@ void ArcManagedFBX::IO::FBXImporter::SetIOSettings(FBXIOSettings^ settings)
 
 FBXIOSettings^ ArcManagedFBX::IO::FBXImporter::GetIOSettings()
 {
-	return gcnew FBXIOSettings();
+	return gcnew FBXIOSettings(GetFBXImporter()->GetIOSettings());
 }
 
 String^ ArcManagedFBX::IO::FBXImporter::GetEmbeddingExtractionFolder()
 {
-	return "";
+	return StringHelper::ToManaged(GetFBXImporter()->GetEmbeddingExtractionFolder());
 }
 
 // Set the password appropriately
 void ArcManagedFBX::IO::FBXImporter::SetPassword(String^ password)
 {
 	char* passwordNative = const_cast<char*>(StringHelper::ToNative(password));
-	
 	//this->GetFBXImporter()->SetPassword(passwordNative);
 }

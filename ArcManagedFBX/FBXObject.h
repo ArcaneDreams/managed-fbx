@@ -21,8 +21,10 @@ namespace ArcManagedFBX
 		FBXObject();
 		virtual ~FBXObject();
 		!FBXObject();
-		
+		ARC_FBX_FBXOBJECT_IMPLEMENT(FBXObject,FBXEmitter)
+
 		virtual void SetSelected(bool pSelected);
+
 		virtual bool GetSelected();
 
 		const FBXManager^ GetManager();
@@ -68,6 +70,7 @@ namespace ArcManagedFBX
 		FbxObject* m_NativeObject;
 		
 	internal:
+		ARC_CHILD_CAST(NativeObject,FbxObject,FBXObject);
 		FBXObject(FbxObject* objectInstance);
 	
 		FbxObject* GetObjectInstance();

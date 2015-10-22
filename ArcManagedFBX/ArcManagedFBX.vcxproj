@@ -160,6 +160,7 @@
     <ClInclude Include="FBXDocumentInfo.h" />
     <ClInclude Include="FBXEmitter.h" />
     <ClInclude Include="FBXException.h" />
+    <ClInclude Include="FBXExporter.h" />
     <ClInclude Include="FBXFile.h" />
     <ClInclude Include="FBXGeometry.h" />
     <ClInclude Include="FBXGeometryBase.h" />
@@ -204,6 +205,7 @@
     <ClCompile Include="FBXDocument.cpp" />
     <ClCompile Include="FBXDocumentInfo.cpp" />
     <ClCompile Include="FBXEmitter.cpp" />
+    <ClCompile Include="FBXExporter.cpp" />
     <ClCompile Include="FBXFile.cpp" />
     <ClCompile Include="FBXGeometry.cpp" />
     <ClCompile Include="FBXGeometryBase.cpp" />

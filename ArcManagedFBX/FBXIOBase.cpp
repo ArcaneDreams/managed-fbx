@@ -4,7 +4,7 @@
 using namespace ArcManagedFBX;
 using namespace ArcManagedFBX::IO;
 
-FBXIOBase::FBXIOBase()
+FBXIOBase::FBXIOBase() : FBXObject() 
 {
 
 }

@@ -37,16 +37,6 @@ void ArcManagedFBX::FBXDocumentInfo::Clear()
 	this->GetFBXDocumentInfo()->Clear();
 }
 
-void ArcManagedFBX::FBXDocumentInfo::ConstructProperties(bool forceSet)
-{
-
-}
-
-void ArcManagedFBX::FBXDocumentInfo::Destruct(bool recursive)
-{
-
-}
-
 // The implementations for the game that we are after.
 ARC_IMPL_GET_STRING_PROP(FBXDocumentInfo,Url,Url)
 ARC_IMPL_GET_STRING_PROP(FBXDocumentInfo,LastSavedUrl,LastSavedUrl)

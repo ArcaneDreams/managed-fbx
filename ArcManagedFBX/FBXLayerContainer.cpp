@@ -35,7 +35,7 @@ int32 ArcManagedFBX::FBXLayerContainer::GetLayerCount()
 
 void ArcManagedFBX::FBXLayerContainer::ClearLayers()
 {
-
+	this->GetFBXLayerContainer()->ClearLayers();
 }
 
 FBXLayer^ ArcManagedFBX::FBXLayerContainer::GetLayer(int32 index,LayerType type, bool isUv)
