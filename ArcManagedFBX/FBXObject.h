@@ -21,13 +21,16 @@ namespace ArcManagedFBX
 		FBXObject();
 		virtual ~FBXObject();
 		!FBXObject();
+		
 		virtual void SetSelected(bool pSelected);
 		virtual bool GetSelected();
 
-		// A bunch of getters in this instance.
 		const FBXManager^ GetManager();
+		
 		const FBXDocument^ GetDocument();
+		
 		const FBXDocument^ GetRootDocument();
+		
 		const FBXScene^ GetScene();
 		
 		void SetAllObjectFlags(uint32 flags);
@@ -42,14 +45,17 @@ namespace ArcManagedFBX
 		void Destroy(bool recursive);
 
 		const String^ GetInitialName();
+		
 		const String^ GetName();
 		void SetName(String^ name);
+		
 		const String^ GetNameSpaceOnly();
+		
 		const String^ GetNameOnly();
+		
 		const String^ GetNameSpacePrefix();
 
 		const uint64 GetUniqueID();
-
 
 		generic<class ObjectType> where ObjectType : FBXObject, gcnew()
 		ObjectType GetSrcObject(int32 index);
