@@ -21,9 +21,8 @@ FBXIOSettings::~FBXIOSettings()
 
 }
 
-FBXIOSettings::FBXIOSettings(FbxIOSettings* instance)
+FBXIOSettings::FBXIOSettings(FbxIOSettings* instance) : FBXObject(instance)
 {
-	this->m_NativeObject = instance;
 }
 
 void ArcManagedFBX::IO::FBXIOSettings::AddPropertyGroup(String^ name)

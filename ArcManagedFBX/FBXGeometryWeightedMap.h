@@ -9,12 +9,9 @@ namespace ArcManagedFBX
 	public:
 		ARC_DEFAULT_CONSTRUCTORS(FBXGeometryWeightedMap)
 
-
 	internal:
 		ARC_CHILD_CAST(NativeObject,FbxGeometryWeightedMap,FBXGeometryWeightedMap)
-
 		ARC_DEFAULT_INTERNAL_CONSTRUCTOR(FBXGeometryWeightedMap,FbxGeometryWeightedMap)
-
 	private:
 	};
 }

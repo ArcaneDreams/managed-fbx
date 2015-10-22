@@ -56,6 +56,11 @@ ArcManagedFBX::FBXClassId::FBXClassId(FbxClassId* instance)
 	m_NativeInstance = instance;
 }
 
+ArcManagedFBX::FBXClassId::FBXClassId()
+{
+
+}
+
 bool ArcManagedFBX::FBXClassId::operator!=(const FBXClassId^ other)
 {
 	return *other->m_NativeInstance != *this->m_NativeInstance;

@@ -21,7 +21,6 @@ FBXGeometryWeightedMap::!FBXGeometryWeightedMap()
 
 }
 
-FBXGeometryWeightedMap::FBXGeometryWeightedMap(FbxGeometryWeightedMap* instance)
+FBXGeometryWeightedMap::FBXGeometryWeightedMap(FbxGeometryWeightedMap* instance) : FBXObject(instance)
 {
-	this->m_NativeObject = instance;
 }

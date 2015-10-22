@@ -24,7 +24,7 @@ FBXDocument::!FBXDocument()
 
 FBXDocument::FBXDocument(FbxDocument* instance) : FBXCollection()
 {
-
+	this->m_NativeObject = instance;
 }
 
 FBXDocumentInfo^ FBXDocument::GetDocumentInfo()

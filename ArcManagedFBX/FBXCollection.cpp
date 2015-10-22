@@ -18,7 +18,6 @@ FBXCollection::!FBXCollection()
 
 }
 
-FBXCollection::FBXCollection(FbxCollection* instance)
+FBXCollection::FBXCollection(FbxCollection* instance) : FBXObject(instance)
 {
-	this->m_NativeObject = instance;
 }
