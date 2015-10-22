@@ -1,4 +1,5 @@
 #include "Stdafx.h"
+#include "FBXStatus.h"
 #include "FBXImporter.h"
 
 using namespace ArcManagedFBX;
@@ -96,4 +97,14 @@ void ArcManagedFBX::IO::FBXImporter::SetPassword(String^ password)
 {
 	char* passwordNative = const_cast<char*>(StringHelper::ToNative(password));
 	//this->GetFBXImporter()->SetPassword(passwordNative);
+}
+
+bool ArcManagedFBX::IO::FBXImporter::Initialize(String^ fileName, int fileFormat, FBXIOSettings^ settings)
+{
+	return this->GetFBXImporter()->Initialize(StringHelper::ToNative(fileName),fileFormat,settings->GetFBXIOSettings());
+}
+
+FBXStatus^ ArcManagedFBX::IO::FBXImporter::GetStatus()
+{
+	return gcnew FBXStatus(&this->GetFBXImporter()->GetStatus());
 }

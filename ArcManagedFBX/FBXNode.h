@@ -27,21 +27,37 @@ namespace ArcManagedFBX
 		void AddChild(FBXNode^ Node);
 
 		void RemoveChild(FBXNode^ Node);
+
 		FBXNode^ GetChild(int32 pIndex);
+
 		FBXNode^ FindChild(String^ name, bool recursive, bool initial);
+
 		void SetTarget(FBXNode^ node);
+
 		FBXNode^ GetTarget();
+
 		void SetPostTargetRotation(FBXVector vector);
+
 		FBXVector GetPostTargetRotation();
+
 		void SetTargetUp(FBXNode^ pNode);
+
 		FBXNode^ GetTargetUp();
+
 		void SetTargetUpVector(FBXVector vector);
+
 		FBXVector GetTargetUpVector();
+
 		void SetVisibility(bool isVisible);
+
 		bool GetVisibility();
+
 		void SetShadingMode(ShadingMode mode);
+
 		ShadingMode GetShadingMode();
+
 		FBXAttribute^ SetNodeAttribute(FBXAttribute^ attribute);
+
 		FBXAttribute^ GetNodeAttribute();
 
 		// The attribute count
