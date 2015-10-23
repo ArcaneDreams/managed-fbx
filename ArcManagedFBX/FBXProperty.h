@@ -8,7 +8,9 @@ namespace ArcManagedFBX
 		ARC_DEFAULT_CONSTRUCTORS(FBXProperty)
 
 		void Destroy();
+		
 		void DestroyRecursively();
+		
 		void DestroyChildren();
 
 		// Converts from FbxString

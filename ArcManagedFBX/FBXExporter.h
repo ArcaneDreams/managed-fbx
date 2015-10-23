@@ -8,7 +8,7 @@ namespace ArcManagedFBX
 		public ref class FBXExporter : FBXIOBase
 		{
 		public:
-			ARC_FBX_FBXOBJECT_IMPLEMENT(FBXExporter,FBXIOBase)
+			ARC_FBX_FBXOBJECT_IMPLEMENT(FBXExporter,FBXIOBase,FbxExporter)
 
 			FBXExporter();
 

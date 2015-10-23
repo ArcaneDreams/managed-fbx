@@ -19,23 +19,29 @@ namespace ArcManagedFBX
 	{
 	public:
 		FBXObject();
+		
+		// The manager instance.
+		FBXObject(FBXManager^ managerInstance, String^ objectName);
+		
 		virtual ~FBXObject();
+		
 		!FBXObject();
-		ARC_FBX_FBXOBJECT_IMPLEMENT(FBXObject,FBXEmitter)
+		ARC_FBX_FBXOBJECT_IMPLEMENT(FBXObject,FBXEmitter,FbxObject)
 
 		virtual void SetSelected(bool pSelected);
 
 		virtual bool GetSelected();
 
-		const FBXManager^ GetManager();
+		FBXManager^ GetManager();
 		
-		const FBXDocument^ GetDocument();
+		FBXDocument^ GetDocument();
 		
-		const FBXDocument^ GetRootDocument();
+		FBXDocument^ GetRootDocument();
 		
-		const FBXScene^ GetScene();
+		FBXScene^ GetScene();
 		
 		void SetAllObjectFlags(uint32 flags);
+
 		uint32 GetAllObjectFlags();
 
 		// Wrapping the relevant objects for this
@@ -68,6 +74,9 @@ namespace ArcManagedFBX
 
 	protected:
 		FbxObject* m_NativeObject;
+
+	private:
+		FBXManager^ m_ManagerInstance;
 		
 	internal:
 		ARC_CHILD_CAST(NativeObject,FbxObject,FBXObject);

@@ -13,6 +13,11 @@ FBXObject::FBXObject() : m_NativeObject(0)
 
 }
 
+FBXObject::FBXObject(FBXManager^ managerInstance, String^ objectName)
+{
+
+}
+
 FBXObject::~FBXObject()
 {
 
@@ -60,9 +65,9 @@ uint32 FBXObject::GetAllObjectFlags()
 	return this->m_NativeObject->GetAllObjectFlags();
 }
 
-const FBXManager^ FBXObject::GetManager()
+FBXManager^ FBXObject::GetManager()
 {
-	return nullptr;
+	return m_ManagerInstance;
 }
 
 void FBXObject::SetName(String^ name)
@@ -70,17 +75,17 @@ void FBXObject::SetName(String^ name)
 	this->m_NativeObject->SetName(StringHelper::ToNative(name));
 }
 
-const FBXScene^ FBXObject::GetScene()
+FBXScene^ FBXObject::GetScene()
 {
 	return gcnew FBXScene(this->m_NativeObject->GetScene());
 }
 
-const FBXDocument^ FBXObject::GetRootDocument()
+FBXDocument^ FBXObject::GetRootDocument()
 {
 	return gcnew FBXDocument(this->m_NativeObject->GetRootDocument());
 }
 
-const FBXDocument^ FBXObject::GetDocument()
+FBXDocument^ FBXObject::GetDocument()
 {
 	return gcnew FBXDocument(this->m_NativeObject->GetDocument());
 }

@@ -1,4 +1,5 @@
 #include "Stdafx.h"
+#include "FBXObject.h"
 #include "FBXClassId.h"
 
 using namespace ArcManagedFBX;
@@ -49,6 +50,11 @@ const int32 ArcManagedFBX::FBXClassId::ClassInstanceDecRef()
 const int32 ArcManagedFBX::FBXClassId::GetInstanceRef()
 {
 	return m_NativeInstance->GetInstanceRef();
+}
+
+ArcManagedFBX::FBXClassId::FBXClassId(String^ className, FBXClassId^ parentClassId)
+{
+
 }
 
 ArcManagedFBX::FBXClassId::FBXClassId(FbxClassId* instance)

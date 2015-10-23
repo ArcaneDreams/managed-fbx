@@ -37,6 +37,21 @@ namespace ArcManagedFBXTest.Utility
             }
         }
 
+        public byte AsByte
+        {
+            get
+            {
+                if (!m_RawValue.Any())
+                    throw new InvalidCastException("The raw value has not been defined for this argument.");
+
+                byte output = 0;
+
+                output = byte.Parse(m_RawValue[0]);
+
+                return output;
+            }
+        }
+
 
         public short AsInt16
         {
@@ -188,13 +203,18 @@ namespace ArcManagedFBXTest.Utility
                         }
                     }
                     // Add the key pairs of the asset that we are loading
-                    output.Add(key, value);
+                    output.Add(key.TrimStart(new char[] { '-' }), value);
                 }
             }
 
             return output;
         }
 
+        /// <summary>
+        ///     Forcefully inject the arguments into this framework
+        /// </summary>
+        /// <typeparam name="T">The type of the object that we are dealing with</typeparam>
+        /// <param name="graph">The object instance</param>
         public void InjectArguments<T>(T graph)
         {
             if (graph != null)
@@ -235,6 +255,10 @@ namespace ArcManagedFBXTest.Utility
                                         break;
                                 }
                             }
+
+                            property.SetValue(graph, injectionValue);
+
+
                         }
                     }
                 }

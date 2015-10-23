@@ -146,6 +146,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ArcFBXFramework.h" />
     <ClInclude Include="Defines.h" />
     <ClInclude Include="FBXAnimCurveKeyBase.h" />
     <ClInclude Include="FBXAnimLayer.h" />
@@ -196,6 +197,7 @@
     <ClInclude Include="StringHelper.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="ArcFBXFramework.cpp" />
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="FBXAnimLayer.cpp" />
     <ClCompile Include="FBXAnimStack.cpp" />
