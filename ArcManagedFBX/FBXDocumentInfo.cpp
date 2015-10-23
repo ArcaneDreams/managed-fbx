@@ -11,12 +11,11 @@ using namespace System;
 using namespace System::Text;
 
 // The internal declaration for the document info
-FBXDocumentInfo::FBXDocumentInfo(FbxDocumentInfo* instance)
+FBXDocumentInfo::FBXDocumentInfo(FbxDocumentInfo* instance) : FBXObject(instance)
 {
-	this->m_NativeObject = instance;
 }
 
-FBXDocumentInfo::FBXDocumentInfo()
+FBXDocumentInfo::FBXDocumentInfo() : FBXObject()
 {
 
 }
@@ -35,16 +34,6 @@ FBXDocumentInfo::!FBXDocumentInfo()
 void ArcManagedFBX::FBXDocumentInfo::Clear()
 {
 	this->GetFBXDocumentInfo()->Clear();
-}
-
-void ArcManagedFBX::FBXDocumentInfo::ConstructProperties(bool forceSet)
-{
-
-}
-
-void ArcManagedFBX::FBXDocumentInfo::Destruct(bool recursive)
-{
-
 }
 
 // The implementations for the game that we are after.

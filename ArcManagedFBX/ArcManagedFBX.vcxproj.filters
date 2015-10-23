@@ -177,6 +177,18 @@
     <ClInclude Include="FBXAnimCurveKeyBase.h">
       <Filter>Header Files\Animations</Filter>
     </ClInclude>
+    <ClInclude Include="FBXExporter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FBXLocalTime.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FBXSkin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FBXCluster.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp">
@@ -291,6 +303,12 @@
       <Filter>Source Files\Layers</Filter>
     </ClCompile>
     <ClCompile Include="FBXClassId.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FBXExporter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FBXSkin.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

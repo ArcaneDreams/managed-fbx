@@ -30,9 +30,8 @@ FBXNode::FBXNode(FBXNode^ other)
 
 }
 
-FBXNode::FBXNode(FbxNode* instance)
+FBXNode::FBXNode(FbxNode* instance) : FBXObject(instance)
 {
-	this->m_NativeObject = instance;
 }
 
 FBXVector^ FBXNode::Position::get()

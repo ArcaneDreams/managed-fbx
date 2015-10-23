@@ -34,12 +34,12 @@ void ArcManagedFBX::FBXStatus::SetCode(StatusCode code)
 
 bool ArcManagedFBX::FBXStatus::Error()
 {
-	return false;
+	return this->m_Instance->Error();
 }
 
 void ArcManagedFBX::FBXStatus::Clear()
 {
-
+	this->m_Instance->Clear();
 }
 
 String^ ArcManagedFBX::FBXStatus::GetErrorString()
@@ -57,4 +57,14 @@ ArcManagedFBX::Types::StatusCode ArcManagedFBX::FBXStatus::GetCode()
 FbxStatus* ArcManagedFBX::FBXStatus::GetInstance()
 {
 	return this->m_Instance;
+}
+
+bool ArcManagedFBX::FBXStatus::operator!=(FBXStatus^ rhs)
+{
+	return *m_Instance != *(rhs->GetInstance());
+}
+
+bool ArcManagedFBX::FBXStatus::operator==(FBXStatus^ rhs)
+{
+	return *m_Instance == *(rhs->GetInstance());
 }

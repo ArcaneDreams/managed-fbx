@@ -21,7 +21,7 @@ namespace ArcManagedFBX
 			!FBXIOBase();
 
 
-			virtual bool Initialize(String^ filename, int fileformat,FBXIOSettings^ iosettings);
+			virtual bool Initialize(String^ fileName, int32 fileFormat, FBXIOSettings^ settings);
 			virtual String^ GetFilename();
 		protected:
 			String^ m_Filename;

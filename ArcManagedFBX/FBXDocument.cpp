@@ -22,14 +22,14 @@ FBXDocument::!FBXDocument()
 
 }
 
-FBXDocument::FBXDocument(FbxDocument* instance)
+FBXDocument::FBXDocument(FbxDocument* instance) : FBXCollection()
 {
-
+	this->m_NativeObject = instance;
 }
 
 FBXDocumentInfo^ FBXDocument::GetDocumentInfo()
 {
-	return gcnew FBXDocumentInfo();
+	return gcnew FBXDocumentInfo(GetFBXDocument()->GetDocumentInfo());
 }
 
 // Return whether or not a certain FBX object is in fact the root of this document
@@ -40,7 +40,7 @@ bool FBXDocument::IsRootMember(FBXObject^ other)
 
 void FBXDocument::SetDocumentInfo(FBXDocumentInfo^ info)
 {
-
+	this->GetFBXDocument()->SetDocumentInfo(info->GetFBXDocumentInfo());
 }
 
 // Retrieve the root member

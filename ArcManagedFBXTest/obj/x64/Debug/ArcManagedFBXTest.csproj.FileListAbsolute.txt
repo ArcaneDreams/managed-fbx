@@ -1,13 +1,13 @@
-C:\Users\Luc\Documents\Visual Studio 2012\Projects\ArcManagedFBX\ArcManagedFBXTest\bin\x64\Debug\ArcManagedFBXTest.exe.config
-C:\Users\Luc\Documents\Visual Studio 2012\Projects\ArcManagedFBX\ArcManagedFBXTest\bin\x64\Debug\Assets\dude.fbx
-C:\Users\Luc\Documents\Visual Studio 2012\Projects\ArcManagedFBX\ArcManagedFBXTest\bin\x64\Debug\Assets\head.tga
-C:\Users\Luc\Documents\Visual Studio 2012\Projects\ArcManagedFBX\ArcManagedFBXTest\bin\x64\Debug\Assets\jacket.tga
-C:\Users\Luc\Documents\Visual Studio 2012\Projects\ArcManagedFBX\ArcManagedFBXTest\bin\x64\Debug\Assets\pants.tga
-C:\Users\Luc\Documents\Visual Studio 2012\Projects\ArcManagedFBX\ArcManagedFBXTest\bin\x64\Debug\Assets\upBodyC.tga
-C:\Users\Luc\Documents\Visual Studio 2012\Projects\ArcManagedFBX\ArcManagedFBXTest\bin\x64\Debug\ArcManagedFBXTest.exe
-C:\Users\Luc\Documents\Visual Studio 2012\Projects\ArcManagedFBX\ArcManagedFBXTest\bin\x64\Debug\ArcManagedFBXTest.pdb
-C:\Users\Luc\Documents\Visual Studio 2012\Projects\ArcManagedFBX\ArcManagedFBXTest\bin\x64\Debug\ArcManagedFBX.dll
-C:\Users\Luc\Documents\Visual Studio 2012\Projects\ArcManagedFBX\ArcManagedFBXTest\bin\x64\Debug\ArcManagedFBX.pdb
-C:\Users\Luc\Documents\Visual Studio 2012\Projects\ArcManagedFBX\ArcManagedFBXTest\obj\x64\Debug\ArcManagedFBXTest.csprojResolveAssemblyReference.cache
-C:\Users\Luc\Documents\Visual Studio 2012\Projects\ArcManagedFBX\ArcManagedFBXTest\obj\x64\Debug\ArcManagedFBXTest.exe
-C:\Users\Luc\Documents\Visual Studio 2012\Projects\ArcManagedFBX\ArcManagedFBXTest\obj\x64\Debug\ArcManagedFBXTest.pdb
+I:\Repositories\GitHub\ArcManagedFBX\ArcManagedFBXTest\bin\x64\Debug\Assets\dude.fbx
+I:\Repositories\GitHub\ArcManagedFBX\ArcManagedFBXTest\bin\x64\Debug\Assets\head.tga
+I:\Repositories\GitHub\ArcManagedFBX\ArcManagedFBXTest\bin\x64\Debug\Assets\jacket.tga
+I:\Repositories\GitHub\ArcManagedFBX\ArcManagedFBXTest\bin\x64\Debug\Assets\pants.tga
+I:\Repositories\GitHub\ArcManagedFBX\ArcManagedFBXTest\bin\x64\Debug\Assets\upBodyC.tga
+I:\Repositories\GitHub\ArcManagedFBX\ArcManagedFBXTest\bin\x64\Debug\ArcManagedFBXTest.exe.config
+I:\Repositories\GitHub\ArcManagedFBX\ArcManagedFBXTest\bin\x64\Debug\ArcManagedFBXTest.exe
+I:\Repositories\GitHub\ArcManagedFBX\ArcManagedFBXTest\bin\x64\Debug\ArcManagedFBXTest.pdb
+I:\Repositories\GitHub\ArcManagedFBX\ArcManagedFBXTest\bin\x64\Debug\ArcManagedFBX.dll
+I:\Repositories\GitHub\ArcManagedFBX\ArcManagedFBXTest\bin\x64\Debug\ArcManagedFBX.pdb
+I:\Repositories\GitHub\ArcManagedFBX\ArcManagedFBXTest\obj\x64\Debug\ArcManagedFBXTest.csprojResolveAssemblyReference.cache
+I:\Repositories\GitHub\ArcManagedFBX\ArcManagedFBXTest\obj\x64\Debug\ArcManagedFBXTest.exe
+I:\Repositories\GitHub\ArcManagedFBX\ArcManagedFBXTest\obj\x64\Debug\ArcManagedFBXTest.pdb

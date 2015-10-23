@@ -19,6 +19,7 @@ namespace ArcManagedFBX
 		private:
 
 		internal:
+			FBXIOFileHeaderInfo(FbxIOFileHeaderInfo* instance);
 			FbxIOFileHeaderInfo* instance;
 		};
 	}

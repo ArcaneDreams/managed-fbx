@@ -27,7 +27,16 @@ private: \
 protected:
 
 #define ARC_FBX_FBXOBJECT_DECLARE(Class,Parent) \
-	static Class^ Create(FBXObject^ container, String^ name);
+	static Class^ Create(FBXObject^ container, String^ name); \
+protected: \
+	static Class* Allocate(FBXManager^ manager, String^ name, const Class^ from);
+
+#define ARC_FBX_FBXOBJECT_IMPLEMENT(Class,Parent) \
+	static Class^ Create(FBXObject^ container, String^ name) \
+	{ \
+		Class^ instance = (Class^)container; \
+		return gcnew Class##(instance->Get##Class##());\
+	} 
 
 // The defines for the macros for declaring objects accordingly.
 #define ARC_FBX_OBJECT_DECLARE(Class,Parent) \
@@ -35,6 +44,18 @@ protected:
 
 #define ARC_DEFAULT_INTERNAL_CONSTRUCTOR(Type,NativeType) \
 	Type##(##NativeType##* instance);
+
+#define ARC_DEFAULT_INTERNAL_CONSTRUCTOR_IMPL(Type, NativeType) \
+	Type##(##NativeType##* instance) \
+	{	\
+		\
+	}
+
+#define ARC_DEFAULT_INTERNAL_CONSTRUCTOR_INHERIT_IMPL(Type, ParentType, NativeType) \
+	Type##(##NativeType##* instance) : ParentType(instance) \
+	{	\
+		\
+	}
 
 #define ARC_DEFAULT_CONSTRUCTORS(Type) \
 	Type##();\

@@ -6,7 +6,7 @@ using namespace ArcManagedFBX::Types;
 using namespace ArcManagedFBX::Exceptions;
 using namespace ArcManagedFBX::Utility;
 
-FBXGeometry::FBXGeometry()
+FBXGeometry::FBXGeometry() : FBXGeometryBase()
 {
 
 }

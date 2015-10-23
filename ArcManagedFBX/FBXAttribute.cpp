@@ -6,14 +6,13 @@ using namespace ArcManagedFBX;
 using namespace ArcManagedFBX::Types;
 using namespace ArcManagedFBX::Utility;
 
-FBXAttribute::FBXAttribute()
+FBXAttribute::FBXAttribute() : FBXObject()
 {
 
 }
 
-FBXAttribute::FBXAttribute(FbxNodeAttribute* instance)
+FBXAttribute::FBXAttribute(FbxNodeAttribute* instance) : FBXObject(instance)
 {
-	this->m_NativeObject = instance;
 }
 
 FBXAttribute::~FBXAttribute()

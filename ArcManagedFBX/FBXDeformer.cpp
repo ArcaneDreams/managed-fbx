@@ -19,9 +19,8 @@ FBXDeformer::!FBXDeformer()
 
 }
 
-FBXDeformer::FBXDeformer(FbxDeformer* instance)
+FBXDeformer::FBXDeformer(FbxDeformer* instance) : FBXObject(instance)
 {
-	this->m_NativeObject = instance;
 }
 
 ArcManagedFBX::Types::DeformerType ArcManagedFBX::FBXDeformer::GetDeformerType()

@@ -8,7 +8,7 @@ using namespace ArcManagedFBX::Utility;
 using namespace ArcManagedFBX::Types;
 using namespace System;
 
-FBXObject::FBXObject()
+FBXObject::FBXObject() : m_NativeObject(0)
 {
 
 }
@@ -35,9 +35,8 @@ FBXObject^ FBXObject::GetReferencedBy(int32 index)
 
 // The instantiation of the managed class that contains the 
 // reference for the object instance.
-FBXObject::FBXObject(FbxObject* objectInstance)
+FBXObject::FBXObject(FbxObject* objectInstance) : m_NativeObject(objectInstance)
 {
-	this->m_NativeObject = objectInstance;
 }
 
 bool FBXObject::GetSelected()

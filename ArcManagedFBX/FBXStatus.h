@@ -10,12 +10,17 @@ namespace ArcManagedFBX
 		ARC_DEFAULT_CONSTRUCTORS(FBXStatus)
 
 		void SetCode(StatusCode code);
+		
 		String^ GetErrorString();
+		
 		void Clear();
+		
 		StatusCode GetCode();
+		
 		bool Error();
 
-		
+		bool operator==(FBXStatus^ rhs);
+		bool operator!=(FBXStatus^ rhs);
 
 	internal:
 		FBXStatus(FbxStatus* instance);

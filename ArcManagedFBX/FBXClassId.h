@@ -9,6 +9,7 @@ namespace ArcManagedFBX
 	public ref class FBXClassId
 	{
 	public:
+		FBXClassId();
 
 		void Destroy();
 

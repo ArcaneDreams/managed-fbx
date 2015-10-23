@@ -48,7 +48,6 @@ namespace ArcManagedFBX
 		ARC_PROPERTY_PUBLICGET(bool,PrimaryVisibility)
 			
 		virtual array<FBXVector^>^ GetControlPoints(FBXStatus^ status);
-
 	private:
 
 

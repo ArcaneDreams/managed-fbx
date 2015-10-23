@@ -107,7 +107,7 @@ array<FBXVector^>^ ArcManagedFBX::FBXGeometryBase::GetControlPoints(FBXStatus^ s
 	FbxVector4* controlPointsHandle = this->GetFBXGeometryBase()->GetControlPoints(status->GetInstance());
 
 	// Iterate over the control points and store them into the output vectors
-	for(uint32 i = 0; i < controlPointsCount; i++)
+	for(uint32 i = 0; i < (uint32)controlPointsCount; i++)
 	{
 		outputVectors[i] = FBXVector::ConvertVector4(&controlPointsHandle[i]);
 	}

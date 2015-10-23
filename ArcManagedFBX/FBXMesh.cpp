@@ -102,7 +102,6 @@ bool ArcManagedFBX::FBXMesh::GetPolygonVertexUV(int32 polygonindex, int32 vertex
 // This is going to require some work as we convert between an fbx array and a CLI array that is to be used for returning to the consumer.
 bool ArcManagedFBX::FBXMesh::GetPolygonVertexNormals(array<FBXVector^>^ normals)
 {	
-
 	return false;
 }
 
@@ -155,5 +154,20 @@ ARC_INLINE int32 ArcManagedFBX::FBXMesh::GetPolygonVertexCount()
 ARC_INLINE int32 ArcManagedFBX::FBXMesh::GetPolygonVertex(int32 polygonindex, int32 positionInPolygon)
 {
 	return this->GetFBXMesh()->GetPolygonVertex(polygonindex,positionInPolygon);
+}
+
+int32 ArcManagedFBX::FBXMesh::GetControlPointsCount()
+{
+	return this->GetFBXMesh()->GetControlPointsCount();
+}
+
+int32 ArcManagedFBX::FBXMesh::GetShapeCount()
+{
+	return GetFBXMesh()->GetShapeCount();
+}
+
+int32 ArcManagedFBX::FBXMesh::GetDeformerCount()
+{
+	return GetFBXMesh()->GetDeformerCount();
 }
 
