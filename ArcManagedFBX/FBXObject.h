@@ -19,7 +19,12 @@ namespace ArcManagedFBX
 	{
 	public:
 		FBXObject();
+		
+		// The manager instance.
+		FBXObject(FBXManager^ managerInstance, String^ objectName);
+		
 		virtual ~FBXObject();
+		
 		!FBXObject();
 		ARC_FBX_FBXOBJECT_IMPLEMENT(FBXObject,FBXEmitter)
 
@@ -68,6 +73,9 @@ namespace ArcManagedFBX
 
 	protected:
 		FbxObject* m_NativeObject;
+
+	private:
+		FBXManager^ m_ManagerInstance;
 		
 	internal:
 		ARC_CHILD_CAST(NativeObject,FbxObject,FBXObject);

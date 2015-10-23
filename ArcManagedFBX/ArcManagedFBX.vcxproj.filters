@@ -43,6 +43,12 @@
     <Filter Include="Source Files\Animations">
       <UniqueIdentifier>{3d1dd66b-8a13-4983-83ef-e38d99cbdfc9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Framework">
+      <UniqueIdentifier>{1f738bea-5037-4f04-bf6c-2678899d0f67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Framework">
+      <UniqueIdentifier>{a0e54a77-15c0-47f5-a40d-25f54f0b64d7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Stdafx.h">
@@ -189,6 +195,9 @@
     <ClInclude Include="FBXCluster.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ArcFBXFramework.h">
+      <Filter>Header Files\Framework</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp">
@@ -310,6 +319,9 @@
     </ClCompile>
     <ClCompile Include="FBXSkin.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ArcFBXFramework.cpp">
+      <Filter>Source Files\Framework</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

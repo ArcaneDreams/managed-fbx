@@ -13,6 +13,11 @@ FBXObject::FBXObject() : m_NativeObject(0)
 
 }
 
+FBXObject::FBXObject(FBXManager^ managerInstance, String^ objectName)
+{
+
+}
+
 FBXObject::~FBXObject()
 {
 

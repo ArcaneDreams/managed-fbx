@@ -5,11 +5,16 @@
 
 namespace ArcManagedFBX
 {
+	// Delegate definition required for the constructor
+	delegate void FbxObjectCreateProcManaged(FBXManager^ manager, String^ name, FBXObject^ from);
+
 	// The managed representation of a class ID
 	public ref class FBXClassId
 	{
 	public:
 		FBXClassId();
+
+		FBXClassId(String^ className, FBXClassId^ parentClassId);
 
 		void Destroy();
 

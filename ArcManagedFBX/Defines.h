@@ -35,7 +35,7 @@ protected: \
 	static Class^ Create(FBXObject^ container, String^ name) \
 	{ \
 		Class^ instance = (Class^)container; \
-		return gcnew Class##(instance->Get##Class##());\
+		return gcnew Class##(instance->Get##Class##()); \
 	} 
 
 // The defines for the macros for declaring objects accordingly.

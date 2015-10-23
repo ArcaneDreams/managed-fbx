@@ -50,6 +50,10 @@ namespace ArcManagedFBX
 	internal:
 		ARC_DEFAULT_INTERNAL_CONSTRUCTOR(FBXManager,FbxManager)
 
+		ARC_FORCEINLINE FbxManager* GetFBXManager()
+		{
+			return m_Instance;
+		}
 	protected:
 		
 	private:

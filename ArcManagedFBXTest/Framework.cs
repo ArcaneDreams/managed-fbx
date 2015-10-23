@@ -41,7 +41,7 @@ namespace ArcManagedFBXTest
             set { m_Scene = value; }
         }
 
-        [CommandLineArgument("file",false)]
+        [CommandLineArgument("filename",false)]
         public string Filename
         {
             get;
@@ -54,16 +54,19 @@ namespace ArcManagedFBXTest
             m_Handler = new ArgumentHandler();
         }
 
+        /// <summary>
+        ///     Initialize the framework
+        /// </summary>
+        /// <param name="args">The args that we are initializing with</param>
         public void Initialize(string[] args)
         {
             if (args != null && args.Any())
-            {
                 m_Handler.ParseArgs(args);
-            }
         }
 
         public void Process()
         {
+            // Make sure to inject the arguments that are required
             m_Handler.InjectArguments(this);
 
             this.Load();
@@ -71,6 +74,7 @@ namespace ArcManagedFBXTest
 
         public void Load()
         {
+            // Instantiate the manager that is to be used
             ArcManagedFBX.FBXManager managerInstance = ArcManagedFBX.FBXManager.Create();
 
             if (string.IsNullOrEmpty(Filename))
@@ -79,7 +83,7 @@ namespace ArcManagedFBXTest
             if (!File.Exists(Filename))
                 throw new FileNotFoundException("The file that is being loaded was not found on disk.");
 
-            m_Scene.Import(Filename);
+
         }
 
         public void Load(string fileName)
