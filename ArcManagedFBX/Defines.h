@@ -31,12 +31,18 @@ protected:
 protected: \
 	static Class* Allocate(FBXManager^ manager, String^ name, const Class^ from);
 
-#define ARC_FBX_FBXOBJECT_IMPLEMENT(Class,Parent) \
+#define ARC_FBX_FBXOBJECT_IMPLEMENT(Class,Parent,Native) \
 	static Class^ Create(FBXObject^ container, String^ name) \
 	{ \
 		Class^ instance = (Class^)container; \
 		return gcnew Class##(instance->Get##Class##()); \
-	} 
+	}
+
+// Second iteration of this macro
+#define ARC_FBXSDK_FBXOBJECT_IMPLEMENT(Class,Parent,Native)\
+	static Class^ Create(FBXObject^ container, String^ name)\
+	{\
+	};
 
 // The defines for the macros for declaring objects accordingly.
 #define ARC_FBX_OBJECT_DECLARE(Class,Parent) \

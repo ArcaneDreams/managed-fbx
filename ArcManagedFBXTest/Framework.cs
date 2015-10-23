@@ -8,8 +8,12 @@ using System.IO;
 
 using ArcManagedFBXTest.Attributes;
 using ArcManagedFBXTest.Utility;
-
 using ArcManagedFBX;
+using ArcManagedFBX.Utility;
+using ArcManagedFBX.Types;
+using ArcManagedFBX.Framework;
+using ArcManagedFBX.Exceptions;
+using ArcManagedFBX.IO;
 
 namespace ArcManagedFBXTest
 {
@@ -75,7 +79,7 @@ namespace ArcManagedFBXTest
         public void Load()
         {
             // Instantiate the manager that is to be used
-            ArcManagedFBX.FBXManager managerInstance = ArcManagedFBX.FBXManager.Create();
+            FBXManager managerInstance = ArcManagedFBX.FBXManager.Create();
 
             if (string.IsNullOrEmpty(Filename))
                 throw new FileNotFoundException("The file that is being loaded in does not exist!");
@@ -83,7 +87,7 @@ namespace ArcManagedFBXTest
             if (!File.Exists(Filename))
                 throw new FileNotFoundException("The file that is being loaded was not found on disk.");
 
-
+            FBXIOSettings settings = new FBXIOSettings();
         }
 
         public void Load(string fileName)
