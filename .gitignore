@@ -1,8 +1,8 @@
 ArcManagedFBX.opensdf
 ArcManagedFBX.sdf
 Bin/
-ArcManagedFBX/obj/
-ArcManagedFBX/bin/
+ArcManagedFBX/obj/*
+ArcManagedFBX/bin/*
 ipch/
 /*.opensdf
 /*.exe
