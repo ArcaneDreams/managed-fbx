@@ -20,34 +20,40 @@ typedef double	float64;
 #define ARC_FORCEINLINE __forceinline
 #define ARC_INLINE inline
 
-#define ARC_FBXSDK_CLASS_DECLARE(Class,Parent)\
-private: \
-	Class(const Class&);\
-	Class& operator=(const Class&); \
-protected:
-
-#define ARC_FBX_FBXOBJECT_DECLARE(Class,Parent) \
-	static Class^ Create(FBXObject^ container, String^ name); \
-protected: \
-	static Class* Allocate(FBXManager^ manager, String^ name, const Class^ from);
-
-#define ARC_FBX_FBXOBJECT_IMPLEMENT(Class,Parent,Native) \
-	static Class^ Create(FBXObject^ container, String^ name) \
+// Assertion checking on the condition that is made
+#define ARC_CHECK_AND_THROW(Condition,Message) \
+	if (Condition) \
 	{ \
-		Class^ instance = (Class^)container; \
-		return gcnew Class##(instance->Get##Class##()); \
+		throw gcnew System::Exception(Message); \
 	}
 
+#define ARC_FBXSDK_CLASS_DECLARE(Class,Native,Parent)\
+	public:\
+		static FBXClassId^ ClassId;\
+		static Class^ Create(FBXManager^ manager, String^ name);
+
+#define ARC_FBXSDK_FRIEND_NEW() 1
+
+#define ARC_FBXSDK_CLASS_IMPLEMENT(Class, Native, Parent) \
+	Class^ Class::Create(FBXManager^ managerInstance, String^ name) \
+	{\
+		return gcnew Class##(##Native##::Create(managerInstance->GetFBXManager(),StringHelper::ToNative(name)));\
+	}
+
+#define ARC_FBXSDK_OBJECT_DEFINE(Class,Parent,Native) 1
+
 // Second iteration of this macro
-#define ARC_FBXSDK_FBXOBJECT_IMPLEMENT(Class,Parent,Native)\
+#define ARC_FBXSDK_OBJECT_IMPLEMENT(Class,Parent,Native)\
 	static Class^ Create(FBXObject^ container, String^ name)\
 	{\
-	};
+		return gcnew Class##(Native##::Create(container->GetFBXObject(),StringHelper::ToNative(name)));\
+	}
 
-// The defines for the macros for declaring objects accordingly.
-#define ARC_FBX_OBJECT_DECLARE(Class,Parent) \
-	ARC_FBX_FBXOBJECT_DECLARE(Class,Parent)
-
+/* 
+ * **********************************
+ * ARCMANAGEDFBX SPECIFIC MACROS 
+ * **********************************
+ */
 #define ARC_DEFAULT_INTERNAL_CONSTRUCTOR(Type,NativeType) \
 	Type##(##NativeType##* instance);
 
@@ -80,17 +86,10 @@ NativeType##* ChildType##::Get##ChildType##()\
 	return dynamic_cast<##NativeType##*>(this->m_##ParentMember##);	\
 }
 
-#define ARC_GETSRCOBJECT(NativeType,ManagedType,Object) \
-internal:\
-static ManagedType GetSrcObjectStatic(Object instance) \
-{\
-\
-}
-
 #define ARC_UNCOPYABLE(type) \
 	private: \
-	type(const type& rhs); \
-	type operator=(const type& rhs);
+		type(const type& rhs); \
+		type operator=(const type& rhs);
 
 
 // Defines a read-only property.
@@ -113,20 +112,6 @@ property type name \
 { \
 type get(); \
 void set(type value); \
-}
-
-#define ARC_PROPERTY_PUBLICGET_PROTECTEDSET(type,name) \
-property type name \
-{ \
-	type get(); \
-protected: set (type value); \
-}
-
-#define ARC_PROPERTY_PUBLICGET_INTERNALSET(type,name) \
-property type name \
-{ \
-	type get(); \
-internal: set (type value); \
 }
 
 // The implementation macro for any of the member properties in the class

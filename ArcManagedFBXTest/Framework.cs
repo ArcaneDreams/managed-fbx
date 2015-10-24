@@ -87,7 +87,7 @@ namespace ArcManagedFBXTest
             if (!File.Exists(Filename))
                 throw new FileNotFoundException("The file that is being loaded was not found on disk.");
 
-            FBXIOSettings settings = new FBXIOSettings();
+            FBXIOSettings settings = FBXIOSettings.Create(managerInstance, "IOSROOT");
         }
 
         public void Load(string fileName)

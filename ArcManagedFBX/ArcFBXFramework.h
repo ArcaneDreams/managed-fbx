@@ -18,7 +18,7 @@ namespace ArcManagedFBX
 
 			void Initialize();
 			void LoadFile(String^ fileName);
-			
+
 		private:
 			String^ fileName;
 			

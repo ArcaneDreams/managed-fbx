@@ -5,7 +5,7 @@
 
 using namespace System;
 using namespace System::Text;
-using namespace ArcManagedFBX;
+using namespace ArcManagedFBX::Utility;
 
 namespace ArcManagedFBX
 {
@@ -26,7 +26,7 @@ namespace ArcManagedFBX
 		virtual ~FBXObject();
 		
 		!FBXObject();
-		ARC_FBX_FBXOBJECT_IMPLEMENT(FBXObject,FBXEmitter,FbxObject)
+		ARC_FBXSDK_OBJECT_IMPLEMENT(FBXObject,FBXEmitter,FbxObject)
 
 		virtual void SetSelected(bool pSelected);
 
@@ -68,7 +68,6 @@ namespace ArcManagedFBX
 		generic<class ObjectType> where ObjectType : FBXObject, gcnew()
 		ObjectType GetSrcObject(int32 index);
 
-		// Check whether the source object is connected
 		ARC_INLINE bool IsConnectedSrcObject(FBXObject^ other);
 		ARC_INLINE bool DisconnectSrcObject(FBXObject^ other);
 

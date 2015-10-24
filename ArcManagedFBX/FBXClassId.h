@@ -45,6 +45,11 @@ namespace ArcManagedFBX
 	internal:
 		FBXClassId(FbxClassId* instance);
 
+		// Return the native instance of the fbx class iD
+		ARC_FORCEINLINE FbxClassId* GetFbxClassId()
+		{
+			return m_NativeInstance;
+		}
 	};
 }
 #endif // FBXClassId_h__

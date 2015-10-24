@@ -1,9 +1,12 @@
 #include "Stdafx.h"
+#include "FBXManager.h"
 #include "FBXIOSettings.h"
 
 using namespace ArcManagedFBX;
 using namespace ArcManagedFBX::Utility;
 using namespace ArcManagedFBX::IO;
+
+ARC_FBXSDK_CLASS_IMPLEMENT(FBXIOSettings,FbxIOSettings,FBXObject)
 
 // Default constructors that are to be used
 FBXIOSettings::FBXIOSettings() : FBXObject()

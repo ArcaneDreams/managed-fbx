@@ -1,5 +1,6 @@
 #pragma once
 #include "FBXObject.h"
+#include "FBXClassId.h"
 
 using namespace System;
 using namespace System::Text;
@@ -15,7 +16,9 @@ namespace ArcManagedFBX
 		public:
 			ARC_DEFAULT_CONSTRUCTORS(FBXIOSettings)
 
-			ARC_FBX_FBXOBJECT_IMPLEMENT(FBXIOSettings,FBXObject,FbxIOSettings)
+			ARC_FBXSDK_OBJECT_IMPLEMENT(FBXIOSettings,FBXObject,FbxIOSettings)
+
+			ARC_FBXSDK_CLASS_DECLARE(FBXIOSettings,FbxIOSettings,FBXObject)
 
 			bool	GetBoolProp(String^ pName, bool pDefValue);
 

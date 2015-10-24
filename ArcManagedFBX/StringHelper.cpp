@@ -18,7 +18,7 @@ String^ StringHelper::ToManaged(const char* input)
 	InitContext();
 
 	// The strangest casting that I have ever had to do in order to get it working
-	return Marshal::PtrToStringAnsi((IntPtr)(void*)input,strlen(input));
+	return Marshal::PtrToStringAnsi((IntPtr)(void*)input,(int32)strlen(input));
 }
 
 void StringHelper::InitContext()

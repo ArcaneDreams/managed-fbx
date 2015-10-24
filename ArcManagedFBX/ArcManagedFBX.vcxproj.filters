@@ -198,6 +198,9 @@
     <ClInclude Include="ArcFBXFramework.h">
       <Filter>Header Files\Framework</Filter>
     </ClInclude>
+    <ClInclude Include="ArcFBXFile.h">
+      <Filter>Header Files\Framework</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp">
@@ -321,6 +324,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ArcFBXFramework.cpp">
+      <Filter>Source Files\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="ArcFBXFile.cpp">
       <Filter>Source Files\Framework</Filter>
     </ClCompile>
   </ItemGroup>

@@ -2,6 +2,7 @@
 
 #include "FBXIOSettings.h"
 #include "FBXDocument.h"
+#include "FBXClassId.h"
 
 using namespace System;
 using namespace System::Text;
@@ -25,7 +26,9 @@ namespace ArcManagedFBX
 
 		static String^ GetVersion(bool full);
 
-		static void GetFileFormatVersion(int^ major, int^ minor, int^ revision);
+		static void GetFileFormatVersion(int^% major, int^% minor, int^% revision);
+
+		FBXObject^ CreateNewObjectFromClassId(FBXClassId^ classId, String^ name, FBXObject^ container);
 
 		int GetDataTypeCount();
 
@@ -38,6 +41,7 @@ namespace ArcManagedFBX
 		int GetReferenceCount();
 		
 		FBXDocument^ GetDocument(int pIndex);
+
 		int GetDocumentCount();
 		
 		int GetPluginCount();
@@ -50,8 +54,11 @@ namespace ArcManagedFBX
 	internal:
 		ARC_DEFAULT_INTERNAL_CONSTRUCTOR(FBXManager,FbxManager)
 
+		// Return the FBX manager instance that is to be used
 		ARC_FORCEINLINE FbxManager* GetFBXManager()
 		{
+			ARC_CHECK_AND_THROW(m_Instance == NULL,"The FBX Manager instance is null. Check and try again.")
+
 			return m_Instance;
 		}
 	protected:
