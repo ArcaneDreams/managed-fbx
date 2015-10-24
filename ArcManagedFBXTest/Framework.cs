@@ -88,6 +88,11 @@ namespace ArcManagedFBXTest
                 throw new FileNotFoundException("The file that is being loaded was not found on disk.");
 
             FBXIOSettings settings = FBXIOSettings.Create(managerInstance, "IOSROOT");
+            FBXManager retrievedManager = settings.GetManager();
+
+            managerInstance.SetIOSettings(settings);
+
+            FBXScene scene = FBXScene.Create(managerInstance, "My Scene");
         }
 
         public void Load(string fileName)

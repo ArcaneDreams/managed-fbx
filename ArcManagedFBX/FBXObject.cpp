@@ -67,6 +67,11 @@ uint32 FBXObject::GetAllObjectFlags()
 
 FBXManager^ FBXObject::GetManager()
 {
+	ARC_CHECK_AND_THROW(m_NativeObject == nullptr,"The native object that this FBXObject wraps is null. Check and try again.")
+
+	if (m_ManagerInstance == nullptr)
+		m_ManagerInstance = gcnew FBXManager(m_NativeObject->GetFbxManager());
+
 	return m_ManagerInstance;
 }
 

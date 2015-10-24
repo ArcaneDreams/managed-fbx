@@ -21,9 +21,8 @@ FBXManager::!FBXManager()
 
 }
 
-FBXManager::FBXManager(FbxManager* instance)
+FBXManager::FBXManager(FbxManager* instance) : m_Instance(instance)
 {
-	this->m_Instance = instance;
 }
 
 bool ArcManagedFBX::FBXManager::SetLocale(String^ locale)
@@ -33,7 +32,10 @@ bool ArcManagedFBX::FBXManager::SetLocale(String^ locale)
 
 void ArcManagedFBX::FBXManager::SetIOSettings(FBXIOSettings^ settings)
 {
-	this->m_Instance->SetIOSettings(settings->GetFBXIOSettings());
+	FbxIOSettings* instance = settings->GetFBXIOSettings();
+
+	// Retrieve the IO Settings that are to be used
+	this->m_Instance->SetIOSettings(instance);
 }
 
 FBXIOSettings^ ArcManagedFBX::FBXManager::GetIOSettings()

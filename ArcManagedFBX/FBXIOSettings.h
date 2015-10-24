@@ -13,12 +13,12 @@ namespace ArcManagedFBX
 	{
 		public ref class FBXIOSettings : public FBXObject
 		{
+			ARC_FBXSDK_CLASS_DECLARE(FBXIOSettings,FbxIOSettings,FBXObject)
 		public:
 			ARC_DEFAULT_CONSTRUCTORS(FBXIOSettings)
 
 			ARC_FBXSDK_OBJECT_IMPLEMENT(FBXIOSettings,FBXObject,FbxIOSettings)
 
-			ARC_FBXSDK_CLASS_DECLARE(FBXIOSettings,FbxIOSettings,FBXObject)
 
 			bool	GetBoolProp(String^ pName, bool pDefValue);
 

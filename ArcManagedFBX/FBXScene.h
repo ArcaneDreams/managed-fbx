@@ -12,7 +12,9 @@ namespace ArcManagedFBX
 {
 	public ref class FBXScene : public FBXDocument
 	{
+		ARC_FBXSDK_CLASS_DECLARE(FBXScene,FbxScene,FBXDocument)
 	public:
+
 		// Constructors that are to be used
 		FBXScene();
 		FBXScene(FBXScene^ other);

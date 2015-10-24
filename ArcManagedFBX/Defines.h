@@ -37,7 +37,7 @@ typedef double	float64;
 #define ARC_FBXSDK_CLASS_IMPLEMENT(Class, Native, Parent) \
 	Class^ Class::Create(FBXManager^ managerInstance, String^ name) \
 	{\
-		return gcnew Class##(##Native##::Create(managerInstance->GetFBXManager(),StringHelper::ToNative(name)));\
+	return gcnew Class##((##Native##*)##Native##::Create(managerInstance->GetFBXManager(),StringHelper::ToNative(name)));\
 	}
 
 #define ARC_FBXSDK_OBJECT_DEFINE(Class,Parent,Native) 1
@@ -78,12 +78,9 @@ typedef double	float64;
 // all the child classes in the SDK
 #define ARC_CHILD_CAST(ParentMember, NativeType, ChildType) \
 static const char* ClassName = #NativeType;\
-NativeType##* ChildType##::Get##ChildType##()\
+NativeType##* ChildType::Get##ChildType()\
 {\
-	if (this->m_##ParentMember == nullptr)\
-		throw gcnew ArcManagedFBX::Exceptions::FBXException("The parent member native object is not valid!");\
-		\
-	return dynamic_cast<##NativeType##*>(this->m_##ParentMember##);	\
+	return static_cast<NativeType*>(this->m_##ParentMember);	\
 }
 
 #define ARC_UNCOPYABLE(type) \

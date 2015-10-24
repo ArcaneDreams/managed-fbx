@@ -6,6 +6,8 @@ using namespace ArcManagedFBX::Types;
 using namespace ArcManagedFBX::Exceptions;
 using namespace ArcManagedFBX::Utility;
 
+ARC_FBXSDK_CLASS_IMPLEMENT(FBXScene,FbxScene,FBXDocument)
+
 // The copy constructor for the scene
 FBXScene::FBXScene(FBXScene^ other)
 {
@@ -23,7 +25,7 @@ FBXScene::~FBXScene()
 
 }
 
-FBXScene::FBXScene(FbxScene* instance)
+FBXScene::FBXScene(FbxScene* instance) : FBXDocument(instance)
 {
 
 }
