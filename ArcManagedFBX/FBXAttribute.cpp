@@ -28,12 +28,16 @@ FBXAttribute::!FBXAttribute()
 // Generate the colour name property that is to be used.
 String^ ArcManagedFBX::FBXAttribute::ColourName::get()
 {
+	ARC_CHECK_AND_THROW(this->GetFBXAttribute() == nullptr,"The node attribute native instance is invalid. Check and try again.")
+
 	String^ colourName = StringHelper::ToManaged(this->GetFBXAttribute()->sColor);
 	return colourName;
 }
 
 FBXColour ArcManagedFBX::FBXAttribute::Colour::get()
 {
+	ARC_CHECK_AND_THROW(this->GetFBXAttribute() == nullptr,"The node attribute native instance is invalid. Check and try again.")
+
 	float64 r,g,b;
 
 	r = GetFBXAttribute()->Color.Get().mData[0];
