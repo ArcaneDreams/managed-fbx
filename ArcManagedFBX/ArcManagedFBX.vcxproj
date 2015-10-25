@@ -170,6 +170,7 @@
     <ClInclude Include="FBXGeometryWeightedMap.h" />
     <ClInclude Include="FBXImporter.h" />
     <ClInclude Include="FBXIOBase.h" />
+    <ClInclude Include="FBXIOPluginRegistry.h" />
     <ClInclude Include="FBXIOSettings.h" />
     <ClInclude Include="FBXLayer.h" />
     <ClInclude Include="FBXLayerContainer.h" />
@@ -220,6 +221,7 @@
     <ClCompile Include="FBXImporter.cpp" />
     <ClCompile Include="FBXIOBase.cpp" />
     <ClCompile Include="FBXIOFileHeaderInfo.cpp" />
+    <ClCompile Include="FBXIOPluginRegistry.cpp" />
     <ClCompile Include="FBXIOSettings.cpp" />
     <ClCompile Include="FBXLayer.cpp" />
     <ClCompile Include="FBXLayerContainer.cpp" />

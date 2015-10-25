@@ -141,3 +141,8 @@ FBXObject^ ArcManagedFBX::FBXManager::CreateNewObjectFromClassId(FBXClassId^ cla
 
 	return gcnew FBXObject(this->GetFBXManager()->CreateNewObjectFromClassId(*classId->GetFbxClassId(),StringHelper::ToNative(name),container->GetFBXObject()));
 }
+
+FBXIOPluginRegistry^ ArcManagedFBX::FBXManager::GetIOPluginRegistry()
+{
+	return gcnew FBXIOPluginRegistry(m_Instance->GetIOPluginRegistry());
+}

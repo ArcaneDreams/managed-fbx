@@ -201,6 +201,9 @@
     <ClInclude Include="ArcFBXFile.h">
       <Filter>Header Files\Framework</Filter>
     </ClInclude>
+    <ClInclude Include="FBXIOPluginRegistry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp">
@@ -328,6 +331,9 @@
     </ClCompile>
     <ClCompile Include="ArcFBXFile.cpp">
       <Filter>Source Files\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="FBXIOPluginRegistry.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

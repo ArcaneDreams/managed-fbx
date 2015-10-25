@@ -55,16 +55,17 @@ typedef double	float64;
  * **********************************
  */
 #define ARC_DEFAULT_INTERNAL_CONSTRUCTOR(Type,NativeType) \
-	Type##(##NativeType##* instance);
+	internal:\
+		Type##(##NativeType##* instance);
 
 #define ARC_DEFAULT_INTERNAL_CONSTRUCTOR_IMPL(Type, NativeType) \
-	Type##(##NativeType##* instance) \
+	Type::##Type##(##NativeType##* instance) \
 	{	\
-		\
+		m_NativeInstance = instance;\
 	}
 
 #define ARC_DEFAULT_INTERNAL_CONSTRUCTOR_INHERIT_IMPL(Type, ParentType, NativeType) \
-	Type##(##NativeType##* instance) : ParentType(instance) \
+	Type::##Type##(##NativeType##* instance) : ParentType(instance) \
 	{	\
 		\
 	}
@@ -73,6 +74,17 @@ typedef double	float64;
 	Type##();\
 	~##Type##();\
 	!##Type##();
+
+#define ARC_DEFAULT_CONSTRUCTORS_IMPL(ImplType) \
+	ImplType::ImplType()\
+	{\
+	}\
+	ImplType::~ImplType()\
+	{\
+	}\
+	ImplType::!ImplType()\
+	{\
+	}
 
 // This will most likely be used with the likes of FBXObject and having to cast down and up based on
 // all the child classes in the SDK

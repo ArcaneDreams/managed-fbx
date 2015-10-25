@@ -90,7 +90,9 @@ namespace ArcManagedFBXTest
             FBXIOSettings settings = FBXIOSettings.Create(managerInstance, "IOSROOT");
             FBXManager retrievedManager = settings.GetManager();
 
+            // Load in the settings and the plugins directory required
             managerInstance.SetIOSettings(settings);
+            managerInstance.LoadPluginsDirectory(Environment.CurrentDirectory, "");
 
             FBXScene scene = FBXScene.Create(managerInstance, "My Scene");
         }

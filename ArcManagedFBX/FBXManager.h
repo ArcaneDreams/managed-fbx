@@ -3,6 +3,7 @@
 #include "FBXIOSettings.h"
 #include "FBXDocument.h"
 #include "FBXClassId.h"
+#include "FBXIOPluginRegistry.h"
 
 using namespace System;
 using namespace System::Text;
@@ -43,7 +44,9 @@ namespace ArcManagedFBX
 		FBXDocument^ GetDocument(int pIndex);
 
 		int GetDocumentCount();
-		
+
+		FBXIOPluginRegistry^ GetIOPluginRegistry();
+
 		int GetPluginCount();
 
 		bool LoadPlugin(String^ fileName);
