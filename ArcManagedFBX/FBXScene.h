@@ -29,6 +29,8 @@ namespace ArcManagedFBX
 
 		FBXNode^ GetRootNode();
 
+		FBXDocumentInfo^ GetSceneInfo();
+
 		void SyncShowPropertyForInstance();
 		void ConnectTextures();
 

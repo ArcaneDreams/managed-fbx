@@ -95,9 +95,26 @@ namespace ArcManagedFBXTest
             bool initializeResult = importer.Initialize("Assets/dude.fbx", -1, managerInstance.GetIOSettings());
             FBXManager.GetFileFormatVersion(ref fileMajorNumber,ref fileMinorNumber,ref fileRevisionNumber);
 
-            // Now that we have instantiated the manager, the importer and the scene, it's time to import it.
-            importer.Import(scene);
-            
+            bool importResult = importer.Import(scene);
+
+            if (importResult)
+            {
+                DisplayContent(scene);
+            }
+        }
+
+        private static void DisplayContent(FBXScene sceneInstance)
+        {
+            FBXNode rootNode = sceneInstance.GetRootNode();
+            if (rootNode != null)
+            {
+                // Iterate over the children in this node.
+                for (int index = 0; index < rootNode.GetChildCount(); index++)
+                {
+                    var attributeType = rootNode.GetChild(index).GetNodeAttribute().GetAttributeType();
+
+                }
+            }
         }
 
         private static void LogMessage(string message, params object[] parameters)
@@ -119,9 +136,37 @@ namespace ArcManagedFBXTest
 
         }
 
+        /// <summary>
+        ///     Output the contents of the log message as well doing the relevant formatting to the 
+        ///     console stdio so that it the coloring appears.
+        /// </summary>
+        /// <param name="type">The type of message</param>
+        /// <param name="message">The message</param>
         private static void Output(LogType type, string message)
         {
+            Console.ForegroundColor = ConsoleColor.White;
 
+            Console.Write("[");
+            switch (type)
+            {
+                default:
+                case LogType.Normal:
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    break;
+
+                case LogType.Warning:
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    break;
+
+                case LogType.Error:
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    break;
+            }
+            Console.Write(type.ToString().ToUpper());
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("] ");
+
+            Console.WriteLine(message);
         }
 
         public void Load(string fileName)

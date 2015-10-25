@@ -8,9 +8,7 @@ using namespace ArcManagedFBX::Utility;
 using namespace System;
 using namespace System::Text;
 
-
-// Constructor related bollocks.
-FBXNode::FBXNode()
+FBXNode::FBXNode() : FBXObject()
 {
 
 }
@@ -54,31 +52,43 @@ FBXVector^ FBXNode::Rotation::get()
 
 void FBXNode::AddChild(FBXNode^ node)
 {
+	ARC_CHECK_AND_THROW(node == nullptr || node->GetFBXNode() == nullptr, "This FBX node has not been properly initialized. Check and try again")
+
 	this->GetFBXNode()->AddChild(node->GetFBXNode());
 }
 
 int32 ArcManagedFBX::FBXNode::GetDefaultNodeAttributeIndex()
 {
+	ARC_CHECK_AND_THROW(this->GetFBXNode() == nullptr, "This FBX node has not been properly initialized. Check and try again")
+
 	return this->GetFBXNode()->GetDefaultNodeAttributeIndex();
 }
 
 int32 ArcManagedFBX::FBXNode::GetNodeAttributeCount()
 {
+	ARC_CHECK_AND_THROW(this->GetFBXNode() == nullptr, "This FBX node has not been properly initialized. Check and try again")
+
 	return this->GetFBXNode()->GetNodeAttributeCount();
 }
 
 FBXAttribute^ ArcManagedFBX::FBXNode::GetNodeAttribute()
 {
+	ARC_CHECK_AND_THROW(this->GetFBXNode() == nullptr, "This FBX node has not been properly initialized. Check and try again")
+
 	return gcnew FBXAttribute(this->GetFBXNode()->GetNodeAttribute());
 }
 
 FBXAttribute^ ArcManagedFBX::FBXNode::SetNodeAttribute(FBXAttribute^ attribute)
 {
+	ARC_CHECK_AND_THROW(this->GetFBXNode() == nullptr, "This FBX node has not been properly initialized. Check and try again")
+
 	return gcnew FBXAttribute(this->GetFBXNode()->SetNodeAttribute(attribute->GetFBXAttribute()));
 }
 
 ArcManagedFBX::Types::ShadingMode ArcManagedFBX::FBXNode::GetShadingMode()
 {
+	ARC_CHECK_AND_THROW(this->GetFBXNode() == nullptr, "This FBX node has not been properly initialized. Check and try again")
+
 	return (ShadingMode)this->GetFBXNode()->GetShadingMode();
 }
 
@@ -156,4 +166,11 @@ void ArcManagedFBX::FBXNode::RemoveChild(FBXNode^ Node)
 bool ArcManagedFBX::FBXNode::SetDefaultNodeAttributeIndex(int32 index, FBXStatus^ status)
 {
 	return this->GetFBXNode()->SetDefaultNodeAttributeIndex(index,status->GetInstance());
+}
+
+int32 ArcManagedFBX::FBXNode::GetChildCount(bool recursive)
+{
+	ARC_CHECK_AND_THROW(this->GetFBXNode() == nullptr, "This FBX node has not been properly initialized. Check and try again")
+
+	return this->GetFBXNode()->GetChildCount();
 }

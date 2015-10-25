@@ -257,8 +257,6 @@ namespace ArcManagedFBXTest.Utility
                             }
 
                             property.SetValue(graph, injectionValue);
-
-
                         }
                     }
                 }

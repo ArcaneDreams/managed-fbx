@@ -33,7 +33,7 @@ namespace ArcManagedFBX
 
 			// Check whether we are still importing
 			bool IsImporting(bool^ importResult);
-			
+
 			FBXIOFileHeaderInfo^ GetFileHeaderInfo();
 
 			String^ GetEmbeddingExtractionFolder();

@@ -4,6 +4,7 @@
 #include "FBXEmitter.h"
 
 using namespace System;
+using namespace System::Runtime::InteropServices;
 using namespace System::Text;
 using namespace ArcManagedFBX::Utility;
 
@@ -51,7 +52,7 @@ namespace ArcManagedFBX
 
 		void ResetProperties();
 
-		void Destroy(bool recursive);
+		void Destroy([Optional] bool recursive);
 
 		const String^ GetInitialName();
 		
@@ -66,6 +67,7 @@ namespace ArcManagedFBX
 
 		const uint64 GetUniqueID();
 
+		// This could be tricky to implement, will have to figure this out
 		generic<class ObjectType> where ObjectType : FBXObject, gcnew()
 		ObjectType GetSrcObject(int32 index);
 

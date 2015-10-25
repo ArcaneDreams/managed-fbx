@@ -7,6 +7,8 @@
 #include "FBXMesh.h"
 #include "FBXManager.h"
 
+using namespace System::Runtime::InteropServices;
+
 namespace ArcManagedFBX
 {
 	// The representation of a node within the FBX library
@@ -27,6 +29,8 @@ namespace ArcManagedFBX
 		void AddChild(FBXNode^ Node);
 
 		void RemoveChild(FBXNode^ Node);
+
+		int32 GetChildCount([Optional] bool recursive);
 
 		FBXNode^ GetChild(int32 pIndex);
 

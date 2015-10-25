@@ -46,12 +46,16 @@ FBXColour ArcManagedFBX::FBXAttribute::Colour::get()
 
 int ArcManagedFBX::FBXAttribute::GetNodeCount()
 {
+	ARC_CHECK_AND_THROW(this->GetFBXAttribute() == nullptr,"The node attribute native instance is invalid. Check and try again.")
+
 	return this->GetFBXAttribute()->GetNodeCount();
 }
 
 // Retrieve the type of the attribute from the object
 ArcManagedFBX::Types::AttributeType ArcManagedFBX::FBXAttribute::GetAttributeType()
 {
+	ARC_CHECK_AND_THROW(this->GetFBXAttribute() == nullptr,"The node attribute native instance is invalid. Check and try again.")
+
 	return (AttributeType)this->GetFBXAttribute()->GetAttributeType();
 }
 

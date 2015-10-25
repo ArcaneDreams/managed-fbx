@@ -191,6 +191,7 @@
     <ClInclude Include="FBXSkin.h" />
     <ClInclude Include="FBXStatus.h" />
     <ClInclude Include="FBXTexture.h" />
+    <ClInclude Include="FBXThumbnail.h" />
     <ClInclude Include="FBXTypes.h" />
     <ClInclude Include="FBXVector.h" />
     <ClInclude Include="FBXVertexNormalInfo.h" />
@@ -238,6 +239,7 @@
     <ClCompile Include="FBXSkeleton.cpp" />
     <ClCompile Include="FBXSkin.cpp" />
     <ClCompile Include="FBXStatus.cpp" />
+    <ClCompile Include="FBXThumbnail.cpp" />
     <ClCompile Include="FBXVector.cpp" />
     <ClCompile Include="FBXMesh.cpp" />
     <ClCompile Include="Stdafx.cpp">

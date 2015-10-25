@@ -85,3 +85,10 @@ void ArcManagedFBX::FBXScene::ConnectTextures()
 {
 
 }
+
+FBXDocumentInfo^ ArcManagedFBX::FBXScene::GetSceneInfo()
+{
+	ARC_CHECK_AND_THROW(m_NativeObject == nullptr, "The native instance of this object is null. Check and try again.");
+
+	return gcnew FBXDocumentInfo(this->GetFBXScene()->GetSceneInfo());
+}
