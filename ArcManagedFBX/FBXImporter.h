@@ -4,6 +4,7 @@
 #include "FBXDocument.h"
 #include "FBXIOBase.h"
 
+using namespace System::Runtime::InteropServices;
 using namespace System;
 using namespace System::Text;
 
@@ -20,7 +21,7 @@ namespace ArcManagedFBX
 			ARC_FBXSDK_CLASS_DECLARE(FBXImporter,FbxImporter,FBXIOBase)
 
 			// Various functions relating to the importer that we are using
-			bool Import(FBXDocument^ document, bool nonBlocking);
+			bool Import(FBXDocument^ document, [Optional]bool nonBlocking);
 
 			float64 GetProgress(String^ status);
 

@@ -86,7 +86,6 @@ namespace ArcManagedFBXTest
 
             int fileMajorNumber = 0, fileMinorNumber = 0, fileRevisionNumber = 0;
 
-
             // Generate the scene that is to be used
             FBXScene scene = FBXScene.Create(managerInstance, "My Scene");
 
@@ -95,6 +94,33 @@ namespace ArcManagedFBXTest
 
             bool initializeResult = importer.Initialize("Assets/dude.fbx", -1, managerInstance.GetIOSettings());
             FBXManager.GetFileFormatVersion(ref fileMajorNumber,ref fileMinorNumber,ref fileRevisionNumber);
+
+            // Now that we have instantiated the manager, the importer and the scene, it's time to import it.
+            importer.Import(scene);
+            
+        }
+
+        private static void LogMessage(string message, params object[] parameters)
+        {
+            if (string.IsNullOrEmpty(message))
+                throw new ArgumentNullException("The message specified is either null or invalid.");
+        }
+
+        private static void LogError(string message, params object[] parameters)
+        {
+            if (string.IsNullOrEmpty(message))
+                throw new ArgumentNullException("The message specified is either null or invalid.");
+        }
+
+        private static void LogWarning(string message, params object[] parameters)
+        {
+            if (string.IsNullOrEmpty(message))
+                throw new ArgumentNullException("The message specified is either null or invalid.");
+
+        }
+
+        private static void Output(LogType type, string message)
+        {
 
         }
 
@@ -105,5 +131,12 @@ namespace ArcManagedFBXTest
                 Filename = fileName;
             }
         }
+    }
+
+    enum LogType 
+    {
+        Normal = 1,
+        Warning,
+        Error
     }
 }
