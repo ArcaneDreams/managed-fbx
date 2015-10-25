@@ -48,9 +48,9 @@ int ArcManagedFBX::FBXManager::GetDataTypeCount()
 	return this->m_Instance->GetDataTypeCount();
 }
 
-void ArcManagedFBX::FBXManager::GetFileFormatVersion(int^% major, int^% minor, int^% revision)
+void ArcManagedFBX::FBXManager::GetFileFormatVersion(int% major, int% minor, int% revision)
 {
-	int32 nmajor,nminor,nrevision;
+	int32 nmajor = 0,nminor = 0,nrevision = 0;
 
 	FbxManager::GetFileFormatVersion(nmajor,nminor,nrevision);
 

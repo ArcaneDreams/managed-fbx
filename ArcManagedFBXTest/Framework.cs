@@ -36,15 +36,6 @@ namespace ArcManagedFBXTest
         private FBXScene m_Scene = null;
 
         #region Properties
-        /// <summary>
-        ///     The scene that we are importing to view.
-        /// </summary>
-        public FBXScene Scene
-        {
-            get { return m_Scene; }
-            set { m_Scene = value; }
-        }
-
         [CommandLineArgument("filename",false)]
         public string Filename
         {
@@ -87,14 +78,24 @@ namespace ArcManagedFBXTest
             if (!File.Exists(Filename))
                 throw new FileNotFoundException("The file that is being loaded was not found on disk.");
 
-            FBXIOSettings settings = FBXIOSettings.Create(managerInstance, "IOSROOT");
-            FBXManager retrievedManager = settings.GetManager();
-
+            FBXIOSettings settings = FBXIOSettings.Create(managerInstance, "IOSRoot");
+            
             // Load in the settings and the plugins directory required
             managerInstance.SetIOSettings(settings);
             managerInstance.LoadPluginsDirectory(Environment.CurrentDirectory, "");
 
+            int fileMajorNumber = 0, fileMinorNumber = 0, fileRevisionNumber = 0;
+
+
+            // Generate the scene that is to be used
             FBXScene scene = FBXScene.Create(managerInstance, "My Scene");
+
+            // Load in the importer that we are to use
+            FBXImporter importer = FBXImporter.Create(managerInstance, "");
+
+            bool initializeResult = importer.Initialize("Assets/dude.fbx", -1, managerInstance.GetIOSettings());
+            FBXManager.GetFileFormatVersion(ref fileMajorNumber,ref fileMinorNumber,ref fileRevisionNumber);
+
         }
 
         public void Load(string fileName)

@@ -14,7 +14,7 @@ using namespace System::Security::Permissions;
 [assembly:AssemblyTitleAttribute("ArcManagedFBX")];
 [assembly:AssemblyDescriptionAttribute("")];
 [assembly:AssemblyConfigurationAttribute("")];
-[assembly:AssemblyCompanyAttribute("")];
+[assembly:AssemblyCompanyAttribute("arcanedreams")];
 [assembly:AssemblyProductAttribute("ArcManagedFBX")];
 [assembly:AssemblyCopyrightAttribute("Copyright (c)  2015")];
 [assembly:AssemblyTrademarkAttribute("")];

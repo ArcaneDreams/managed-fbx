@@ -1,12 +1,17 @@
 #include "Stdafx.h"
 #include "FBXStatus.h"
 #include "FBXImporter.h"
+#include "FBXManager.h"
 
 using namespace ArcManagedFBX;
 using namespace ArcManagedFBX::IO;
 using namespace ArcManagedFBX::Utility;
 
-FBXImporter::FBXImporter()
+ARC_FBXSDK_CLASS_IMPLEMENT(FBXImporter,FbxImporter,FBXIOBase)
+
+ARC_DEFAULT_INTERNAL_CONSTRUCTOR_INHERIT_IMPL(FBXImporter,FBXIOBase,FbxImporter)
+
+FBXImporter::FBXImporter() : FBXIOBase()
 {
 
 }
@@ -47,8 +52,6 @@ bool ArcManagedFBX::IO::FBXImporter::IsImporting(bool^ importResult)
 
 	return resultImport;
 }
-
-
 
 bool ArcManagedFBX::IO::FBXImporter::IsFBX()
 {
@@ -101,10 +104,19 @@ void ArcManagedFBX::IO::FBXImporter::SetPassword(String^ password)
 
 bool ArcManagedFBX::IO::FBXImporter::Initialize(String^ fileName, int fileFormat, FBXIOSettings^ settings)
 {
-	return this->GetFBXImporter()->Initialize(StringHelper::ToNative(fileName),fileFormat,settings->GetFBXIOSettings());
+	const char* nativeFileName = StringHelper::ToNative(fileName);
+	int32 nativefileFormat = fileFormat;
+	FbxIOSettings* nativeSettings = settings->GetFBXIOSettings();
+
+	return this->GetFBXImporter()->Initialize(nativeFileName,fileFormat,nativeSettings);
 }
 
 FBXStatus^ ArcManagedFBX::IO::FBXImporter::GetStatus()
 {
 	return gcnew FBXStatus(&this->GetFBXImporter()->GetStatus());
+}
+
+FBXIOFileHeaderInfo^ ArcManagedFBX::IO::FBXImporter::GetFileHeaderInfo()
+{
+	return gcnew FBXIOFileHeaderInfo(this->GetFBXImporter()->GetFileHeaderInfo());
 }

@@ -25,7 +25,6 @@ FBXCamera::!FBXCamera()
 
 }
 
-
 void FBXCamera::SetNearPlane(double distance)
 {
 	this->GetFBXCamera()->SetNearPlane(distance);
@@ -33,17 +32,17 @@ void FBXCamera::SetNearPlane(double distance)
 
 float64 FBXCamera::AspectHeight::get()
 {
-	return 0.0f;
+	return this->GetFBXCamera()->AspectHeight.Get();
 }
 
 float64 FBXCamera::AspectWidth::get()
 {
-	return 0.0f;
+	return this->GetFBXCamera()->AspectWidth.Get();
 }
 
 float64 FBXCamera::PixelAspectRatio::get()
 {
-	return 0.0f;
+	return this->GetFBXCamera()->PixelAspectRatio.Get();
 }
 
 FBXVector FBXCamera::Position::get()
@@ -82,10 +81,4 @@ void FBXCamera::SetPixelRatio(double ratio)
 const float64 FBXCamera::GetPixelRatio()
 {
 	return this->GetFBXCamera()->GetPixelRatio();
-}
-
-FBXVector FBXCamera::Rotation::get()
-{
-	
-	return FBXVector(0.f,0.f,0.f,0.f);
 }

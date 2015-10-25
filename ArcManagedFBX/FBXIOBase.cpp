@@ -19,7 +19,7 @@ FBXIOBase::!FBXIOBase()
 
 }
 
-FBXIOBase::FBXIOBase(FbxIOBase* instance)
+FBXIOBase::FBXIOBase(FbxIOBase* instance) : FBXObject(instance)
 {
 
 }

@@ -27,7 +27,7 @@ namespace ArcManagedFBX
 
 		static String^ GetVersion(bool full);
 
-		static void GetFileFormatVersion(int^% major, int^% minor, int^% revision);
+		static void GetFileFormatVersion(int% major, int% minor, int% revision);
 
 		FBXObject^ CreateNewObjectFromClassId(FBXClassId^ classId, String^ name, FBXObject^ container);
 

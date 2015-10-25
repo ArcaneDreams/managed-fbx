@@ -1,5 +1,6 @@
 #pragma once
 #include "FBXFile.h"
+#include "FBXIOFileHeaderInfo.h"
 #include "FBXDocument.h"
 #include "FBXIOBase.h"
 
@@ -14,10 +15,10 @@ namespace ArcManagedFBX
 		public ref class FBXImporter : public FBXIOBase
 		{
 		public:
-			FBXImporter();
-			~FBXImporter();
-			!FBXImporter();
+			ARC_DEFAULT_CONSTRUCTORS(FBXImporter)
 	
+			ARC_FBXSDK_CLASS_DECLARE(FBXImporter,FbxImporter,FBXIOBase)
+
 			// Various functions relating to the importer that we are using
 			bool Import(FBXDocument^ document, bool nonBlocking);
 
@@ -32,6 +33,8 @@ namespace ArcManagedFBX
 			// Check whether we are still importing
 			bool IsImporting(bool^ importResult);
 			
+			FBXIOFileHeaderInfo^ GetFileHeaderInfo();
+
 			String^ GetEmbeddingExtractionFolder();
 
 			FBXIOSettings^ GetIOSettings();
@@ -51,8 +54,7 @@ namespace ArcManagedFBX
 		private:
 			ARC_CHILD_CAST(NativeObject,FbxImporter,FBXImporter)
 
-		internal:
-
+			ARC_DEFAULT_INTERNAL_CONSTRUCTOR(FBXImporter,FbxImporter)
 		};
 	}
 }

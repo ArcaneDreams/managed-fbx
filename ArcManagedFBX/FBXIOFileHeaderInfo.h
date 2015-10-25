@@ -15,11 +15,13 @@ namespace ArcManagedFBX
 			// Properties for various parts of the object
 			ARC_PROPERTY_PUBLICGET(int32, FileVersion)
 			ARC_PROPERTY_PUBLICGET(bool, CreationTimeStampPresent)
+			ARC_PROPERTY_PUBLICGET(bool, IOPlugin)
+			ARC_PROPERTY_PUBLICGET(bool, PLE)
+			ARC_PROPERTY_PUBLICGET(String^, Creator)
 			
 		private:
+			ARC_DEFAULT_INTERNAL_CONSTRUCTOR(FBXIOFileHeaderInfo,FbxIOFileHeaderInfo)
 
-		internal:
-			FBXIOFileHeaderInfo(FbxIOFileHeaderInfo* instance);
 			FbxIOFileHeaderInfo* instance;
 		};
 	}
