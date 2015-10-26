@@ -164,8 +164,14 @@ namespace ArcManagedFBXTest
 
             if (parameters != null && parameters.Any())
                 message = string.Format(message, parameters);
+
         }
 
+        /// <summary>
+        ///     Log out the error based on the message that is passed through
+        /// </summary>
+        /// <param name="message"></param>
+        /// <param name="parameters"></param>
         private static void LogError(string message, params object[] parameters)
         {
             if (string.IsNullOrEmpty(message))
@@ -173,6 +179,7 @@ namespace ArcManagedFBXTest
 
             if (parameters != null && parameters.Any())
                 message = string.Format(message, parameters);
+            
         }
 
         private static void LogWarning(string message, params object[] parameters)
