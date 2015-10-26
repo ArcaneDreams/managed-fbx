@@ -103,6 +103,7 @@ namespace ArcManagedFBXTest
             }
         }
 
+        // Display content within the instance
         private static void DisplayContent(FBXScene sceneInstance)
         {
             FBXNode rootNode = sceneInstance.GetRootNode();
@@ -113,26 +114,81 @@ namespace ArcManagedFBXTest
                 {
                     var attributeType = rootNode.GetChild(index).GetNodeAttribute().GetAttributeType();
 
+                    // Cast out the node object based on the type of the attribute.
+                    switch (attributeType)
+                    {
+                        case AttributeType.eMesh:
+                            DisplayMesh((FBXMesh)rootNode.GetChild(index).GetNodeAttribute());
+                            break;
+                        case AttributeType.eCamera:
+
+                            break;
+
+                        case AttributeType.eLight:
+
+                            break;
+
+                        case AttributeType.eSkeleton:
+                            DisplaySkeleton((FBXSkeleton)rootNode.GetChild(index).GetNodeAttribute());
+                            break;
+                    }
                 }
             }
         }
 
+        private static void DisplayMesh(FBXMesh meshInstance)
+        {
+            if (meshInstance == null)
+                throw new ArgumentNullException("The mesh instance was null. Check and try again!");
+        }
+
+        /// <summary>
+        ///     Display the information regarding the skeleton
+        /// </summary>
+        /// <param name="skelInstance">The skeleton instance in question</param>
+        private static void DisplaySkeleton(FBXSkeleton skelInstance)
+        {
+            if (skelInstance == null)
+                throw new ArgumentNullException("The mesh instance was null. Check and try again!");
+        }
+
+        /// <summary>
+        ///     Write out the log message
+        /// </summary>
+        /// <param name="message"></param>
+        /// <param name="parameters"></param>
         private static void LogMessage(string message, params object[] parameters)
         {
             if (string.IsNullOrEmpty(message))
                 throw new ArgumentNullException("The message specified is either null or invalid.");
+
+            if (parameters != null && parameters.Any())
+                message = string.Format(message, parameters);
+
         }
 
+        /// <summary>
+        ///     Log out the error based on the message that is passed through
+        /// </summary>
+        /// <param name="message"></param>
+        /// <param name="parameters"></param>
         private static void LogError(string message, params object[] parameters)
         {
             if (string.IsNullOrEmpty(message))
                 throw new ArgumentNullException("The message specified is either null or invalid.");
+
+            if (parameters != null && parameters.Any())
+                message = string.Format(message, parameters);
+            
         }
 
         private static void LogWarning(string message, params object[] parameters)
         {
             if (string.IsNullOrEmpty(message))
                 throw new ArgumentNullException("The message specified is either null or invalid.");
+
+            if (parameters != null && parameters.Any())
+                message = string.Format(message, parameters);
 
         }
 

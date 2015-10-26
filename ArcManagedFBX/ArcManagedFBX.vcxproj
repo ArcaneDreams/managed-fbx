@@ -152,7 +152,7 @@
     <ClInclude Include="FBXAnimCurveKeyBase.h" />
     <ClInclude Include="FBXAnimLayer.h" />
     <ClInclude Include="FBXAnimStack.h" />
-    <ClInclude Include="FBXAttribute.h" />
+    <ClInclude Include="FBXNodeAttribute.h" />
     <ClInclude Include="FBXCamera.h" />
     <ClInclude Include="FBXClassId.h" />
     <ClInclude Include="FBXCluster.h" />
@@ -205,7 +205,7 @@
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="FBXAnimLayer.cpp" />
     <ClCompile Include="FBXAnimStack.cpp" />
-    <ClCompile Include="FBXAttribute.cpp" />
+    <ClCompile Include="FBXNodeAttribute.cpp" />
     <ClCompile Include="FBXCamera.cpp" />
     <ClCompile Include="FBXClassId.cpp" />
     <ClCompile Include="FBXCollection.cpp" />
