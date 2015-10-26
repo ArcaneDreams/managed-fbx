@@ -142,28 +142,55 @@ namespace ArcManagedFBXTest
                 throw new ArgumentNullException("The mesh instance was null. Check and try again!");
         }
 
+        /// <summary>
+        ///     Display the information regarding the skeleton
+        /// </summary>
+        /// <param name="skelInstance">The skeleton instance in question</param>
         private static void DisplaySkeleton(FBXSkeleton skelInstance)
         {
             if (skelInstance == null)
                 throw new ArgumentNullException("The mesh instance was null. Check and try again!");
         }
 
+        /// <summary>
+        ///     Write out the log message
+        /// </summary>
+        /// <param name="message"></param>
+        /// <param name="parameters"></param>
         private static void LogMessage(string message, params object[] parameters)
         {
             if (string.IsNullOrEmpty(message))
                 throw new ArgumentNullException("The message specified is either null or invalid.");
+
+            if (parameters != null && parameters.Any())
+            {
+
+            }
         }
 
         private static void LogError(string message, params object[] parameters)
         {
             if (string.IsNullOrEmpty(message))
                 throw new ArgumentNullException("The message specified is either null or invalid.");
+
+            if (parameters != null && parameters.Any())
+            {
+
+            }
+
+
         }
 
         private static void LogWarning(string message, params object[] parameters)
         {
             if (string.IsNullOrEmpty(message))
                 throw new ArgumentNullException("The message specified is either null or invalid.");
+
+            if (parameters != null && parameters.Any())
+            {
+
+            }
+
 
         }
 
