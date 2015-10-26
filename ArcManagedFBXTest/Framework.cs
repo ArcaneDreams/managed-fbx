@@ -163,9 +163,7 @@ namespace ArcManagedFBXTest
                 throw new ArgumentNullException("The message specified is either null or invalid.");
 
             if (parameters != null && parameters.Any())
-            {
-
-            }
+                message = string.Format(message, parameters);
         }
 
         private static void LogError(string message, params object[] parameters)
@@ -174,11 +172,7 @@ namespace ArcManagedFBXTest
                 throw new ArgumentNullException("The message specified is either null or invalid.");
 
             if (parameters != null && parameters.Any())
-            {
-
-            }
-
-
+                message = string.Format(message, parameters);
         }
 
         private static void LogWarning(string message, params object[] parameters)
@@ -187,10 +181,7 @@ namespace ArcManagedFBXTest
                 throw new ArgumentNullException("The message specified is either null or invalid.");
 
             if (parameters != null && parameters.Any())
-            {
-
-            }
-
+                message = string.Format(message, parameters);
 
         }
 
