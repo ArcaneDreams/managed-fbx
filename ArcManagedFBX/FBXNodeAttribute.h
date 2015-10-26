@@ -12,12 +12,12 @@ using namespace ArcManagedFBX::Types;
 namespace ArcManagedFBX
 {
 	// The attribute that is responsible for generating the content.
-	public ref class FBXAttribute : public FBXObject, public IDisposable
+	public ref class FBXNodeAttribute : public FBXObject, public IDisposable
 	{
 	public:
-		FBXAttribute();
-		!FBXAttribute();
-		virtual ~FBXAttribute();
+		FBXNodeAttribute();
+		!FBXNodeAttribute();
+		virtual ~FBXNodeAttribute();
 		
 		virtual AttributeType GetAttributeType();
 
@@ -26,14 +26,14 @@ namespace ArcManagedFBX
 		ARC_PROPERTY_PUBLICGET(String^,ColourName);
 		ARC_PROPERTY_PUBLICGET(FBXColour,Colour)
 
-		ARC_CHILD_CAST(NativeObject,FbxNodeAttribute,FBXAttribute);
+		ARC_CHILD_CAST(NativeObject,FbxNodeAttribute,FBXNodeAttribute);
 	protected:
 		virtual void ConstructProperties(bool pForceSet);
 
 	private:
 
 	internal:
-		FBXAttribute(FbxNodeAttribute* instance);
+		FBXNodeAttribute(FbxNodeAttribute* instance);
 
 	};
 }

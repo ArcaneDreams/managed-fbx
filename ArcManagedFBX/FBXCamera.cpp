@@ -6,7 +6,7 @@ using namespace System::Text;
 using namespace ArcManagedFBX;
 using namespace ArcManagedFBX::Types;
 
-FBXCamera::FBXCamera(FbxCamera* instance) : FBXAttribute(instance)
+FBXCamera::FBXCamera(FbxCamera* instance) : FBXNodeAttribute(instance)
 {
 }
 

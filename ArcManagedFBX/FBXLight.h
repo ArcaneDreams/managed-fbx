@@ -1,11 +1,11 @@
 #pragma once
-#include "FBXAttribute.h"
+#include "FBXNodeAttribute.h"
 
 using namespace System;
 
 namespace ArcManagedFBX
 {
-	public ref class FBXLight : public FBXAttribute, public IDisposable
+	public ref class FBXLight : public FBXNodeAttribute, public IDisposable
 	{
 	public:
 		FBXLight();

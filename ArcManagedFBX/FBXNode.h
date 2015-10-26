@@ -1,7 +1,7 @@
 #pragma once
 
 #include "FBXStatus.h"
-#include "FBXAttribute.h"
+#include "FBXNodeAttribute.h"
 #include "FBXVector.h"
 #include "FBXObject.h"
 #include "FBXMesh.h"
@@ -60,9 +60,9 @@ namespace ArcManagedFBX
 
 		ShadingMode GetShadingMode();
 
-		FBXAttribute^ SetNodeAttribute(FBXAttribute^ attribute);
+		FBXNodeAttribute^ SetNodeAttribute(FBXNodeAttribute^ attribute);
 
-		FBXAttribute^ GetNodeAttribute();
+		FBXNodeAttribute^ GetNodeAttribute();
 
 		// The attribute count
 		int32 GetNodeAttributeCount();

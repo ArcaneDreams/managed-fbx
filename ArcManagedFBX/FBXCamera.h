@@ -2,14 +2,14 @@
 
 
 #include "FBXVector.h"
-#include "FBXAttribute.h"
+#include "FBXNodeAttribute.h"
 
 using namespace System;
 using namespace System::Text;
 
 namespace ArcManagedFBX
 {
-	public ref class FBXCamera : public FBXAttribute
+	public ref class FBXCamera : public FBXNodeAttribute
 	{
 	public:
 		FBXCamera();

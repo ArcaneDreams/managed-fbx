@@ -103,6 +103,7 @@ namespace ArcManagedFBXTest
             }
         }
 
+        // Display content within the instance
         private static void DisplayContent(FBXScene sceneInstance)
         {
             FBXNode rootNode = sceneInstance.GetRootNode();
@@ -113,8 +114,38 @@ namespace ArcManagedFBXTest
                 {
                     var attributeType = rootNode.GetChild(index).GetNodeAttribute().GetAttributeType();
 
+                    // Cast out the node object based on the type of the attribute.
+                    switch (attributeType)
+                    {
+                        case AttributeType.eMesh:
+                            DisplayMesh((FBXMesh)rootNode.GetChild(index).GetNodeAttribute());
+                            break;
+                        case AttributeType.eCamera:
+
+                            break;
+
+                        case AttributeType.eLight:
+
+                            break;
+
+                        case AttributeType.eSkeleton:
+                            DisplaySkeleton((FBXSkeleton)rootNode.GetChild(index).GetNodeAttribute());
+                            break;
+                    }
                 }
             }
+        }
+
+        private static void DisplayMesh(FBXMesh meshInstance)
+        {
+            if (meshInstance == null)
+                throw new ArgumentNullException("The mesh instance was null. Check and try again!");
+        }
+
+        private static void DisplaySkeleton(FBXSkeleton skelInstance)
+        {
+            if (skelInstance == null)
+                throw new ArgumentNullException("The mesh instance was null. Check and try again!");
         }
 
         private static void LogMessage(string message, params object[] parameters)

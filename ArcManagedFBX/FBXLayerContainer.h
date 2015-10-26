@@ -1,13 +1,13 @@
 #pragma once
 #include "FBXLayer.h"
-#include "FBXAttribute.h"
+#include "FBXNodeAttribute.h"
 
 using namespace System;
 using namespace System::Text;
 
 namespace ArcManagedFBX
 {
-	public ref class FBXLayerContainer : public FBXAttribute
+	public ref class FBXLayerContainer : public FBXNodeAttribute
 	{
 	public:
 		FBXLayerContainer();

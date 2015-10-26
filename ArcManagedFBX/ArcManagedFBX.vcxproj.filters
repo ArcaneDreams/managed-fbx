@@ -96,9 +96,6 @@
     <ClInclude Include="FBXNode.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="FBXAttribute.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="FBXPose.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -207,6 +204,9 @@
     <ClInclude Include="FBXThumbnail.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="FBXNodeAttribute.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp">
@@ -234,9 +234,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="FBXNode.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="FBXAttribute.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="FBXObject.cpp">
@@ -339,6 +336,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="FBXThumbnail.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FBXNodeAttribute.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

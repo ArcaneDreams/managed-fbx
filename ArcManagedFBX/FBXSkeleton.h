@@ -1,7 +1,7 @@
 #pragma once
 
 #include "FBXColour.h"
-#include "FBXAttribute.h"
+#include "FBXNodeAttribute.h"
 
 using namespace ArcManagedFBX::Types;
 using namespace ArcManagedFBX::Utility;
@@ -9,7 +9,7 @@ using namespace ArcManagedFBX::Utility;
 namespace ArcManagedFBX
 {
 	// The skeleton representation
-	public ref class FBXSkeleton : public FBXAttribute
+	public ref class FBXSkeleton : public FBXNodeAttribute
 	{
 	public:
 		ARC_DEFAULT_CONSTRUCTORS(FBXSkeleton)
