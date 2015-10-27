@@ -9,9 +9,9 @@ namespace ArcManagedFBX
 	public:
 		ARC_DEFAULT_CONSTRUCTORS(FBXLayerElement)
 
-		void SetMappingMode(MappingMode mode);
+		void SetMappingMode(EMappingMode mode);
 
-		MappingMode GetMappingMode();
+		EMappingMode GetMappingMode();
 
 		static array<String^>^ sTextureChannelNames;
 		static array<String^>^ sTextureUVNames;

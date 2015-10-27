@@ -23,7 +23,7 @@ FBXDeformer::FBXDeformer(FbxDeformer* instance) : FBXObject(instance)
 {
 }
 
-ArcManagedFBX::Types::DeformerType ArcManagedFBX::FBXDeformer::GetDeformerType()
+ArcManagedFBX::Types::EDeformerType ArcManagedFBX::FBXDeformer::GetDeformerType()
 {
-	return (DeformerType)this->GetFBXDeformer()->GetDeformerType();
+	return (EDeformerType)this->GetFBXDeformer()->GetDeformerType();
 }

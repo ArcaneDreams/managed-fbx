@@ -12,9 +12,7 @@ namespace ArcManagedFBX
 	public ref class FBXCamera : public FBXNodeAttribute
 	{
 	public:
-		FBXCamera();
-		~FBXCamera();
-		!FBXCamera();
+		ARC_DEFAULT_CONSTRUCTORS(FBXCamera)
 
 		void SetPixelRatio(double ratio);
 
@@ -29,8 +27,7 @@ namespace ArcManagedFBX
 		ARC_PROPERTY_PUBLICGET(float64,FieldOfView)
 		ARC_PROPERTY_PUBLICGET(float64,FocalLength)
 		ARC_PROPERTY_PUBLICGET(Format,CameraFormat)
-	internal:
-		FBXCamera(FbxCamera* instance);
+		ARC_DEFAULT_INTERNAL_CONSTRUCTOR(FBXCamera,FbxCamera)
 	private:
 		ARC_CHILD_CAST(NativeObject,FbxCamera,FBXCamera);
 

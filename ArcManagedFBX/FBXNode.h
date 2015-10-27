@@ -56,9 +56,9 @@ namespace ArcManagedFBX
 
 		bool GetVisibility();
 
-		void SetShadingMode(ShadingMode mode);
+		void SetShadingMode(EShadingMode mode);
 
-		ShadingMode GetShadingMode();
+		EShadingMode GetShadingMode();
 
 		FBXNodeAttribute^ SetNodeAttribute(FBXNodeAttribute^ attribute);
 

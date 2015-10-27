@@ -8,7 +8,6 @@ using namespace ArcManagedFBX::Utility;
 
 namespace ArcManagedFBX
 {
-	// The skeleton representation
 	public ref class FBXSkeleton : public FBXNodeAttribute
 	{
 	public:
@@ -20,21 +19,22 @@ namespace ArcManagedFBX
 
 		void Reset();
 
-		void SetSkeletonType(SkeletonType type);
-		SkeletonType GetSkeletonType();
+		void SetSkeletonType(ESkeletonType type);
+		
+		ESkeletonType GetSkeletonType();
 
 		bool GetSkeletonTypeIsSet();
-		SkeletonType GetSkeletonTypeDefaultValue();
+		
+		ESkeletonType GetSkeletonTypeDefaultValue();
+		
 		double GetLimbLengthDefaultValue();
+		
 		bool IsSkeletonRoot();
 
 		bool GetLimbNodeColorIsSet();
 
-		static String^ sSize;
-		static String^ sLimbLength;
-
-		static float64 DefaultSize;
-		static float64 DefaultLimbLength;
+		static String^ GetSize();
+		static String^ GetLimbLength();
 
 		bool SetLimbNodeColor(FBXColour color);
 

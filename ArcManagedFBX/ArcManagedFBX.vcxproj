@@ -239,6 +239,7 @@
     <ClCompile Include="FBXSkeleton.cpp" />
     <ClCompile Include="FBXSkin.cpp" />
     <ClCompile Include="FBXStatus.cpp" />
+    <ClCompile Include="FBXTexture.cpp" />
     <ClCompile Include="FBXThumbnail.cpp" />
     <ClCompile Include="FBXVector.cpp" />
     <ClCompile Include="FBXMesh.cpp" />

@@ -25,7 +25,7 @@ FBXStatus::~FBXStatus()
 
 }
 
-void ArcManagedFBX::FBXStatus::SetCode(StatusCode code)
+void ArcManagedFBX::FBXStatus::SetCode(EStatusCode code)
 {
 	FbxStatus::EStatusCode errorCode = (FbxStatus::EStatusCode)code;
 
@@ -49,9 +49,9 @@ String^ ArcManagedFBX::FBXStatus::GetErrorString()
 	return output;
 }
 
-ArcManagedFBX::Types::StatusCode ArcManagedFBX::FBXStatus::GetCode()
+ArcManagedFBX::Types::EStatusCode ArcManagedFBX::FBXStatus::GetCode()
 {
-	return (StatusCode)this->m_Instance->GetCode();
+	return (EStatusCode)this->m_Instance->GetCode();
 }
 
 FbxStatus* ArcManagedFBX::FBXStatus::GetInstance()

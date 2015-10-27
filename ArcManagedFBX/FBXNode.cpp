@@ -82,17 +82,17 @@ FBXNodeAttribute^ ArcManagedFBX::FBXNode::SetNodeAttribute(FBXNodeAttribute^ att
 {
 	ARC_CHECK_AND_THROW(this->GetFBXNode() == nullptr, "This FBX node has not been properly initialized. Check and try again")
 
-	return gcnew FBXNodeAttribute(this->GetFBXNode()->SetNodeAttribute(attribute->GetFBXAttribute()));
+	return gcnew FBXNodeAttribute(this->GetFBXNode()->SetNodeAttribute(attribute->GetFBXNodeAttribute()));
 }
 
-ArcManagedFBX::Types::ShadingMode ArcManagedFBX::FBXNode::GetShadingMode()
+ArcManagedFBX::Types::EShadingMode ArcManagedFBX::FBXNode::GetShadingMode()
 {
 	ARC_CHECK_AND_THROW(this->GetFBXNode() == nullptr, "This FBX node has not been properly initialized. Check and try again")
 
-	return (ShadingMode)this->GetFBXNode()->GetShadingMode();
+	return (EShadingMode)this->GetFBXNode()->GetShadingMode();
 }
 
-void ArcManagedFBX::FBXNode::SetShadingMode(ShadingMode mode)
+void ArcManagedFBX::FBXNode::SetShadingMode(EShadingMode mode)
 {
 	this->GetFBXNode()->SetShadingMode((FbxNode::EShadingMode)mode);
 }

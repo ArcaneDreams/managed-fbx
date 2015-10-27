@@ -4,7 +4,7 @@ namespace ArcManagedFBX
 {
 	namespace Types
 	{
-		public enum class FbxType
+		public enum class EFbxType
 		{
 			eFbxUndefined,	//!< Unidentified.
 			eFbxChar,		//!< 8 bit signed integer.
@@ -33,7 +33,7 @@ namespace ArcManagedFBX
 			eFbxTypeCount	//!< Indicates the number of type identifiers constants.
 		};
 
-		public enum class FileMode 
+		public enum class EFileMode 
 		{
 			eNone, 
 			eReadOnly, 
@@ -43,7 +43,7 @@ namespace ArcManagedFBX
 			eCreateAppend
 		};
 		
-		public enum class FileSeekPos 
+		public enum class EFileSeekPos 
 		{
 			eBegin, 
 			eCurrent, 
@@ -51,7 +51,7 @@ namespace ArcManagedFBX
 		};
 
 		// The type of the skeleton that we are working with
-		public enum class SkeletonType
+		public enum class ESkeletonType
 		{
 			eRoot,			/*!< First element of a chain. */
 			eLimb,			/*!< Chain element. */
@@ -60,7 +60,7 @@ namespace ArcManagedFBX
 		};
 
 		/** \enum EBoundaryRule the boundary rule. */
-		public enum class BoundaryRule
+		public enum class EBoundaryRule
 		{
 			eLegacy,	//!< Default value.
 			eCreaseAll,	//!< Used for hard corner.
@@ -68,7 +68,7 @@ namespace ArcManagedFBX
 		};
 
 		//! Available status codes.
-		public enum class StatusCode {        
+		public enum class EStatusCode {        
 			eSuccess = 0,                           //!< Operation was successful
 			eFailure,                               //!< Operation failed
 			eInsufficientMemory,                    //!< Operation failed due to insufficient memory
@@ -79,14 +79,14 @@ namespace ArcManagedFBX
 			eInvalidFile                            //!< Operation on the file access failed
 		};
 
-		public enum class ReferenceMode
+		public enum class EReferenceMode
 		{
 			eDirect,
 			eIndex,
 			eIndexToDirect
 		};
 
-		public enum class MappingMode
+		public enum class EMappingMode
 		{
 			eNone,
 			eByControlPoint,
@@ -96,7 +96,7 @@ namespace ArcManagedFBX
 			eAllSame
 		};
 
-		public enum class DeformerType
+		public enum class EDeformerType
 		{
 			eUnknown,		//!< Unknown deformer type
 			eSkin,			//!< Type FbxSkin
@@ -104,7 +104,7 @@ namespace ArcManagedFBX
 			eVertexCache	//!< Type FbxVertexCacheDeformer
 		};
 
-		public enum class ShadingMode
+		public enum class EShadingMode
 		{
 			eHardShading,		//!< Solid geometries rendered with smooth surfaces - using the system light.
 			eWireFrame,			//!< Geometries displayed in wire frame.
@@ -235,7 +235,7 @@ namespace ArcManagedFBX
 		};
 
 		// Wraps "Type"
-		public enum class LightType
+		public enum class ELightType
 		{
 			ePoint, 
 			eDirectional, 

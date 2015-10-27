@@ -23,14 +23,14 @@ FBXSkeleton::FBXSkeleton(FbxSkeleton* instance)
 	this->m_NativeObject = instance;
 }
 
-void ArcManagedFBX::FBXSkeleton::SetSkeletonType(SkeletonType type)
+void ArcManagedFBX::FBXSkeleton::SetSkeletonType(ESkeletonType type)
 {
 	this->GetFBXSkeleton()->SetSkeletonType((FbxSkeleton::EType)type);
 }
 
-ArcManagedFBX::Types::SkeletonType ArcManagedFBX::FBXSkeleton::GetSkeletonType()
+ArcManagedFBX::Types::ESkeletonType ArcManagedFBX::FBXSkeleton::GetSkeletonType()
 {
-	return (SkeletonType)this->GetFBXSkeleton()->GetSkeletonType();
+	return (ESkeletonType)this->GetFBXSkeleton()->GetSkeletonType();
 }
 
 bool ArcManagedFBX::FBXSkeleton::GetSkeletonTypeIsSet()
@@ -38,9 +38,9 @@ bool ArcManagedFBX::FBXSkeleton::GetSkeletonTypeIsSet()
 	return this->GetFBXSkeleton()->GetSkeletonTypeIsSet();
 }
 
-ArcManagedFBX::Types::SkeletonType ArcManagedFBX::FBXSkeleton::GetSkeletonTypeDefaultValue()
+ArcManagedFBX::Types::ESkeletonType ArcManagedFBX::FBXSkeleton::GetSkeletonTypeDefaultValue()
 {
-	return (SkeletonType)this->GetFBXSkeleton()->GetSkeletonTypeDefaultValue();
+	return (ESkeletonType)this->GetFBXSkeleton()->GetSkeletonTypeDefaultValue();
 }
 
 double ArcManagedFBX::FBXSkeleton::GetLimbLengthDefaultValue()
@@ -57,6 +57,17 @@ bool ArcManagedFBX::FBXSkeleton::GetLimbNodeColorIsSet()
 {
 	return this->GetFBXSkeleton()->GetLimbNodeColorIsSet();
 }
+
+String^ ArcManagedFBX::FBXSkeleton::GetSize()
+{
+	return String::Empty;
+}
+
+String^ ArcManagedFBX::FBXSkeleton::GetLimbLength()
+{
+	return String::Empty;
+}
+
 
 bool ArcManagedFBX::FBXSkeleton::SetLimbNodeColor(FBXColour color)
 {

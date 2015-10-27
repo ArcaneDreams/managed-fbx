@@ -24,7 +24,7 @@ namespace ArcManagedFBX
 
 		int32 GetDeformerCount();
 
-		int32 GetDeformerCount(DeformerType type);
+		int32 GetDeformerCount(EDeformerType type);
 
 		int32 GetDestinationGeometryWeightedMapCount();
 
