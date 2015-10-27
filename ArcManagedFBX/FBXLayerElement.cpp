@@ -21,12 +21,12 @@ FBXLayerElement::~FBXLayerElement()
 }
 
 
-ArcManagedFBX::Types::MappingMode ArcManagedFBX::FBXLayerElement::GetMappingMode()
+ArcManagedFBX::Types::EMappingMode ArcManagedFBX::FBXLayerElement::GetMappingMode()
 {
-	return MappingMode::eAllSame;
+	return EMappingMode::eAllSame;
 }
 
-void ArcManagedFBX::FBXLayerElement::SetMappingMode(MappingMode mode)
+void ArcManagedFBX::FBXLayerElement::SetMappingMode(EMappingMode mode)
 {
 
 }

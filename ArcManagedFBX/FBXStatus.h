@@ -9,13 +9,13 @@ namespace ArcManagedFBX
 	public:
 		ARC_DEFAULT_CONSTRUCTORS(FBXStatus)
 
-		void SetCode(StatusCode code);
+		void SetCode(EStatusCode code);
 		
 		String^ GetErrorString();
 		
 		void Clear();
 		
-		StatusCode GetCode();
+		EStatusCode GetCode();
 		
 		bool Error();
 

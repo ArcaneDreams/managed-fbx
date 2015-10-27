@@ -26,9 +26,9 @@ FBXGeometry::FBXGeometry(FbxGeometry* instance)
 	this->m_NativeObject = instance;
 }
 
-ArcManagedFBX::Types::AttributeType ArcManagedFBX::FBXGeometry::GetAttributeType()
+ArcManagedFBX::Types::EAttributeType ArcManagedFBX::FBXGeometry::GetAttributeType()
 {
-	return (AttributeType)this->GetFBXGeometry()->GetAttributeType();
+	return (EAttributeType)this->GetFBXGeometry()->GetAttributeType();
 }
 
 int32 ArcManagedFBX::FBXGeometry::GetShapeCount(int32 blendShapeIndex, int32 blendShapeChannelIndex, FBXStatus^ status)
@@ -51,7 +51,7 @@ int32 ArcManagedFBX::FBXGeometry::GetDestinationGeometryWeightedMapCount()
 	return this->GetFBXGeometry()->GetDestinationGeometryWeightedMapCount();
 }
 
-int32 ArcManagedFBX::FBXGeometry::GetDeformerCount(DeformerType type)
+int32 ArcManagedFBX::FBXGeometry::GetDeformerCount(EDeformerType type)
 {
 	return this->GetFBXGeometry()->GetDeformerCount((FbxDeformer::EDeformerType)type);
 }

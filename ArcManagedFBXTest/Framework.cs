@@ -69,6 +69,7 @@ namespace ArcManagedFBXTest
 
         public void Load()
         {
+            LogMessage("Instantiating the FBX Manager...");
             // Instantiate the manager that is to be used
             FBXManager managerInstance = ArcManagedFBX.FBXManager.Create();
 
@@ -78,14 +79,20 @@ namespace ArcManagedFBXTest
             if (!File.Exists(Filename))
                 throw new FileNotFoundException("The file that is being loaded was not found on disk.");
 
+
+            LogMessage("Instantiating the FBX Settings...");
             FBXIOSettings settings = FBXIOSettings.Create(managerInstance, "IOSRoot");
             
             // Load in the settings and the plugins directory required
             managerInstance.SetIOSettings(settings);
+
+            LogMessage("Loading plugins directory...");
             managerInstance.LoadPluginsDirectory(Environment.CurrentDirectory, "");
 
             int fileMajorNumber = 0, fileMinorNumber = 0, fileRevisionNumber = 0;
 
+
+            LogMessage("Instantiating the Scene...");
             // Generate the scene that is to be used
             FBXScene scene = FBXScene.Create(managerInstance, "My Scene");
 
@@ -136,21 +143,10 @@ namespace ArcManagedFBXTest
             }
         }
 
-        private static void DisplayCamera(FBXCamera cameraInstance)
-        {
-            if (cameraInstance == null)
-                throw new ArgumentNullException("The camera instance is considered null. Check and try again.");
-        }
-
         /// <summary>
-        ///     Display information regarding the light instance
+        ///     Output the contents of the mesh
         /// </summary>
-        /// <param name="lightInstance"></param>
-        private static void DisplayLight(FBXLight lightInstance)
-        {
-
-        }
-
+        /// <param name="meshInstance"></param>
         private static void DisplayMesh(FBXMesh meshInstance)
         {
             if (meshInstance == null)
@@ -170,8 +166,8 @@ namespace ArcManagedFBXTest
         /// <summary>
         ///     Write out the log message
         /// </summary>
-        /// <param name="message"></param>
-        /// <param name="parameters"></param>
+        /// <param name="message">The message that we are writing out</param>
+        /// <param name="parameters">The parameters that we are formatting the string with</param>
         private static void LogMessage(string message, params object[] parameters)
         {
             if (string.IsNullOrEmpty(message))
@@ -184,10 +180,10 @@ namespace ArcManagedFBXTest
         }
 
         /// <summary>
-        ///     Log out the error based on the message that is passed through
+        ///     Write out the log message
         /// </summary>
-        /// <param name="message"></param>
-        /// <param name="parameters"></param>
+        /// <param name="message">The message that we are writing out</param>
+        /// <param name="parameters">The parameters that we are formatting the string with</param>
         private static void LogError(string message, params object[] parameters)
         {
             if (string.IsNullOrEmpty(message))
@@ -199,6 +195,11 @@ namespace ArcManagedFBXTest
             Output(LogType.Error, message);
         }
 
+        /// <summary>
+        ///     Write out the log message
+        /// </summary>
+        /// <param name="message">The message that we are writing out</param>
+        /// <param name="parameters">The parameters that we are formatting the string with</param>
         private static void LogWarning(string message, params object[] parameters)
         {
             if (string.IsNullOrEmpty(message))

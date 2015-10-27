@@ -8,7 +8,6 @@ using namespace ArcManagedFBX::Utility;
 
 namespace ArcManagedFBX
 {
-	// The skeleton representation
 	public ref class FBXSkeleton : public FBXNodeAttribute
 	{
 	public:
@@ -16,30 +15,28 @@ namespace ArcManagedFBX
 
 		typedef class FbxSkeleton NativeType;
 
-		virtual AttributeType GetAttributeType() override;
+		virtual EAttributeType GetAttributeType() override;
 
 		void Reset();
 
-		void SetSkeletonType(SkeletonType type);
-		SkeletonType GetSkeletonType();
+		void SetSkeletonType(ESkeletonType type);
+		
+		ESkeletonType GetSkeletonType();
 
 		bool GetSkeletonTypeIsSet();
-		SkeletonType GetSkeletonTypeDefaultValue();
+		
+		ESkeletonType GetSkeletonTypeDefaultValue();
+		
 		double GetLimbLengthDefaultValue();
+		
 		bool IsSkeletonRoot();
 
 		bool GetLimbNodeColorIsSet();
 
-		static String^ sSize;
-		static String^ sLimbLength;
-
-		static float64 DefaultSize;
-		static float64 DefaultLimbLength;
-
 		bool SetLimbNodeColor(FBXColour color);
 
-		ARC_PROPERTY_PUBLICGET(float64,LimbLength)
-		ARC_PROPERTY_PUBLICGET(float64,Size)
+		ARC_PROPERTY_FBXPROPERTY_PUBLICGET(float64,LimbLength)
+		ARC_PROPERTY_FBXPROPERTY_PUBLICGET(float64,Size)
 
 	internal:
 		ARC_DEFAULT_INTERNAL_CONSTRUCTOR(FBXSkeleton,FbxSkeleton)

@@ -28,7 +28,7 @@ namespace ArcManagedFBX
 		
 		!FBXObject();
 		
-		ARC_FBXSDK_OBJECT_IMPLEMENT(FBXObject,FBXEmitter,FbxObject)
+		ARC_FBXSDK_FBXOBJECT_IMPLEMENT(FBXObject,FBXEmitter,FbxObject)
 
 		virtual void SetSelected(bool pSelected);
 

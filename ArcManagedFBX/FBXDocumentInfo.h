@@ -8,7 +8,7 @@ namespace ArcManagedFBX
 	public ref class FBXDocumentInfo : public FBXObject
 	{
 	public:
-		ARC_FBXSDK_OBJECT_IMPLEMENT(FBXDocumentInfo,FBXObject,FbxDocumentInfo)
+		ARC_FBXSDK_FBXOBJECT_IMPLEMENT(FBXDocumentInfo,FBXObject,FbxDocumentInfo)
 
 		ARC_DEFAULT_CONSTRUCTORS(FBXDocumentInfo)
 	private:

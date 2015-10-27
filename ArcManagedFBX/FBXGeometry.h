@@ -16,7 +16,7 @@ namespace ArcManagedFBX
 	public:
 		ARC_DEFAULT_CONSTRUCTORS(FBXGeometry)
 
-		virtual AttributeType GetAttributeType() override;
+		virtual EAttributeType GetAttributeType() override;
 
 		int32 AddDeformer(FBXDeformer^ deformer);
 
@@ -24,7 +24,7 @@ namespace ArcManagedFBX
 
 		int32 GetDeformerCount();
 
-		int32 GetDeformerCount(DeformerType type);
+		int32 GetDeformerCount(EDeformerType type);
 
 		int32 GetDestinationGeometryWeightedMapCount();
 

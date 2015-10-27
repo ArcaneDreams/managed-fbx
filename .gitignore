@@ -8,4 +8,5 @@ ipch/
 /*.exe
 /*.obj
 /*.v11.suo
+/*.suo
 Libs/FBX/lib/

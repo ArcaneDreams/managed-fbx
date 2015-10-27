@@ -6,23 +6,10 @@ using namespace ArcManagedFBX;
 using namespace ArcManagedFBX::Types;
 using namespace ArcManagedFBX::Utility;
 
-FBXNodeAttribute::FBXNodeAttribute() : FBXObject()
-{
-
-}
+ARC_DEFAULT_CONSTRUCTORS_IMPL(FBXNodeAttribute)
 
 FBXNodeAttribute::FBXNodeAttribute(FbxNodeAttribute* instance) : FBXObject(instance)
 {
-}
-
-FBXNodeAttribute::~FBXNodeAttribute()
-{
-
-}
-
-FBXNodeAttribute::!FBXNodeAttribute()
-{
-
 }
 
 // Generate the colour name property that is to be used.
@@ -52,11 +39,11 @@ int ArcManagedFBX::FBXNodeAttribute::GetNodeCount()
 }
 
 // Retrieve the type of the attribute from the object
-ArcManagedFBX::Types::AttributeType ArcManagedFBX::FBXNodeAttribute::GetAttributeType()
+ArcManagedFBX::Types::EAttributeType ArcManagedFBX::FBXNodeAttribute::GetAttributeType()
 {
 	ARC_CHECK_AND_THROW(this->GetFBXNodeAttribute() == nullptr,"The node attribute native instance is invalid. Check and try again.")
 
-	return (AttributeType)this->GetFBXNodeAttribute()->GetAttributeType();
+	return (EAttributeType)this->GetFBXNodeAttribute()->GetAttributeType();
 }
 
 void ArcManagedFBX::FBXNodeAttribute::ConstructProperties(bool pForceSet)

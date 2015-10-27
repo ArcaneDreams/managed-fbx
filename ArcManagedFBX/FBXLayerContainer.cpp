@@ -8,7 +8,7 @@ FBXLayerContainer::FBXLayerContainer()
 
 }
 
-FBXLayerContainer::FBXLayerContainer(FbxLayerContainer* instance)
+FBXLayerContainer::FBXLayerContainer(FbxLayerContainer* instance) : FBXNodeAttribute(instance)
 {
 	this->m_NativeObject = instance;
 }
@@ -23,7 +23,7 @@ FBXLayerContainer::!FBXLayerContainer()
 
 }
 
-int32 ArcManagedFBX::FBXLayerContainer::GetLayerCount(LayerType type, bool uvCount)
+int32 ArcManagedFBX::FBXLayerContainer::GetLayerCount(ELayerType type, bool uvCount)
 {
 	return this->GetFBXLayerContainer()->GetLayerCount((FbxLayerElement::EType)type,uvCount);
 }
@@ -38,7 +38,7 @@ void ArcManagedFBX::FBXLayerContainer::ClearLayers()
 	this->GetFBXLayerContainer()->ClearLayers();
 }
 
-FBXLayer^ ArcManagedFBX::FBXLayerContainer::GetLayer(int32 index,LayerType type, bool isUv)
+FBXLayer^ ArcManagedFBX::FBXLayerContainer::GetLayer(int32 index,ELayerType type, bool isUv)
 {
 	return gcnew FBXLayer(this->GetFBXLayerContainer()->GetLayer(index,(FbxLayerElement::EType)type,isUv));
 }

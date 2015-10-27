@@ -10,14 +10,12 @@ namespace ArcManagedFBX
 	public ref class FBXLayerContainer : public FBXNodeAttribute
 	{
 	public:
-		FBXLayerContainer();
-		FBXLayerContainer(FbxLayerContainer* instance);
-		virtual ~FBXLayerContainer();
-		!FBXLayerContainer();
+		ARC_DEFAULT_CONSTRUCTORS(FBXLayerContainer)
+		ARC_DEFAULT_INTERNAL_CONSTRUCTOR(FBXLayerContainer,FbxLayerContainer)
 
 		int32 GetLayerCount();
 
-		int32 GetLayerCount(LayerType type, bool uvCount);
+		int32 GetLayerCount(ELayerType type, bool uvCount);
 
 		FBXLayer^ GetLayer(int32 index);
 
@@ -25,7 +23,7 @@ namespace ArcManagedFBX
 
 		void ClearLayers();
 
-		FBXLayer^ GetLayer(int32 index,LayerType type, bool isUV);
+		FBXLayer^ GetLayer(int32 index,ELayerType type, bool isUV);
 	private:
 		ARC_CHILD_CAST(NativeObject,FbxLayerContainer,FBXLayerContainer);
 	

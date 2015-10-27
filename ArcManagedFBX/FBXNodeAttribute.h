@@ -15,11 +15,9 @@ namespace ArcManagedFBX
 	public ref class FBXNodeAttribute : public FBXObject, public IDisposable
 	{
 	public:
-		FBXNodeAttribute();
-		!FBXNodeAttribute();
-		virtual ~FBXNodeAttribute();
-		
-		virtual AttributeType GetAttributeType();
+		ARC_DEFAULT_CONSTRUCTORS(FBXNodeAttribute)
+
+		virtual EAttributeType GetAttributeType();
 
 		int32 GetNodeCount();
 
@@ -30,10 +28,7 @@ namespace ArcManagedFBX
 	protected:
 		virtual void ConstructProperties(bool pForceSet);
 
-	private:
-
-	internal:
-		FBXNodeAttribute(FbxNodeAttribute* instance);
+		ARC_DEFAULT_INTERNAL_CONSTRUCTOR(FBXNodeAttribute,FbxNodeAttribute)
 
 	};
 }

@@ -23,12 +23,12 @@ FBXFile::FBXFile()
 
 }
 
-bool ArcManagedFBX::IO::FBXFile::Open(String^ pFilename, FileMode mode, bool binary)
+bool ArcManagedFBX::IO::FBXFile::Open(String^ pFilename, EFileMode mode, bool binary)
 {
 	return false;
 }
 
-void ArcManagedFBX::IO::FBXFile::Seek(const int64 offset, const FileSeekPos pos)
+void ArcManagedFBX::IO::FBXFile::Seek(const int64 offset, const EFileSeekPos pos)
 {
 
 }

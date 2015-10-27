@@ -10,7 +10,7 @@ namespace ArcManagedFBX
 	public ref class FBXCollection : public FBXObject
 	{
 	public:
-		ARC_FBXSDK_OBJECT_IMPLEMENT(FBXCollection,FBXObject,FbxCollection)
+		ARC_FBXSDK_FBXOBJECT_IMPLEMENT(FBXCollection,FBXObject,FbxCollection)
 		FBXCollection();
 		virtual ~FBXCollection();
 		!FBXCollection();

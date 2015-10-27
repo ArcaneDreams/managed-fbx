@@ -3,16 +3,13 @@
 
 namespace ArcManagedFBX
 {
-	public ref class FBXTexture
+	public ref class FBXTexture : public FBXObject
 	{
 	public:
-		FBXTexture();
-		virtual ~FBXTexture();
+		ARC_DEFAULT_CONSTRUCTORS(FBXTexture)
 
 	private:
-
-	internal:
-
-
+		ARC_DEFAULT_INTERNAL_CONSTRUCTOR(FBXTexture,FbxTexture)
+		ARC_CHILD_CAST(NativeObject,FbxTexture,FBXTexture)
 	};
 }

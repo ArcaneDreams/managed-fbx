@@ -3,18 +3,17 @@
 
 using namespace ArcManagedFBX;
 
-FBXLight::FBXLight()
-{
+ARC_DEFAULT_INTERNAL_CONSTRUCTOR_INHERIT_IMPL(FBXLight,FBXNodeAttribute,FbxLight)
 
+ARC_DEFAULT_CONSTRUCTORS_IMPL(FBXLight)
+
+void ArcManagedFBX::FBXLight::SetShadowTexture(FBXTexture^ textureInstance)
+{
+	this->GetFBXLight()->SetShadowTexture(textureInstance->GetFBXTexture());
 }
 
-FBXLight::~FBXLight()
+FBXTexture^ ArcManagedFBX::FBXLight::GetShadowTexture()
 {
-
+	return gcnew FBXTexture(this->GetFBXLight()->GetShadowTexture());
 }
 
-// Return the object instance as the fbx light that we require for operations around the place.
-const FbxLight* FBXLight::GetLight()
-{
-	return dynamic_cast<FbxLight*>(this->m_NativeObject);
-}

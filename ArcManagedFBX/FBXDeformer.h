@@ -10,10 +10,10 @@ namespace ArcManagedFBX
 	public ref class FBXDeformer : public FBXObject
 	{
 	public:
-		ARC_FBXSDK_OBJECT_IMPLEMENT(FBXDeformer,FBXObject,FbxDeformer)
+		ARC_FBXSDK_FBXOBJECT_IMPLEMENT(FBXDeformer,FBXObject,FbxDeformer)
 		ARC_DEFAULT_CONSTRUCTORS(FBXDeformer)
 
-		virtual DeformerType GetDeformerType();
+		virtual EDeformerType GetDeformerType();
 	private:
 
 	internal:
