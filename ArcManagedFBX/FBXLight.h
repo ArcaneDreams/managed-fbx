@@ -12,6 +12,6 @@ namespace ArcManagedFBX
 		virtual ~FBXLight();
 
 	private:
-		const FbxLight* GetLight();
+		ARC_CHILD_CAST(NativeObject,FbxLight,FBXLight)
 	};
 }

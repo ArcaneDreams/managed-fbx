@@ -136,6 +136,21 @@ namespace ArcManagedFBXTest
             }
         }
 
+        private static void DisplayCamera(FBXCamera cameraInstance)
+        {
+            if (cameraInstance == null)
+                throw new ArgumentNullException("The camera instance is considered null. Check and try again.");
+        }
+
+        /// <summary>
+        ///     Display information regarding the light instance
+        /// </summary>
+        /// <param name="lightInstance"></param>
+        private static void DisplayLight(FBXLight lightInstance)
+        {
+
+        }
+
         private static void DisplayMesh(FBXMesh meshInstance)
         {
             if (meshInstance == null)
@@ -165,6 +180,7 @@ namespace ArcManagedFBXTest
             if (parameters != null && parameters.Any())
                 message = string.Format(message, parameters);
 
+            Output(LogType.Normal, message);
         }
 
         /// <summary>
@@ -179,7 +195,8 @@ namespace ArcManagedFBXTest
 
             if (parameters != null && parameters.Any())
                 message = string.Format(message, parameters);
-            
+
+            Output(LogType.Error, message);
         }
 
         private static void LogWarning(string message, params object[] parameters)
@@ -190,6 +207,7 @@ namespace ArcManagedFBXTest
             if (parameters != null && parameters.Any())
                 message = string.Format(message, parameters);
 
+            Output(LogType.Warning, message);
         }
 
         /// <summary>
