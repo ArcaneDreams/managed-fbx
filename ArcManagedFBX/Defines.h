@@ -32,18 +32,17 @@ typedef double	float64;
 		static FBXClassId^ ClassId;\
 		static Class^ Create(FBXManager^ manager, String^ name);
 
-#define ARC_FBXSDK_FRIEND_NEW() 1
-
 #define ARC_FBXSDK_CLASS_IMPLEMENT(Class, Native, Parent) \
 	Class^ Class::Create(FBXManager^ managerInstance, String^ name) \
 	{\
-	return gcnew Class##((##Native##*)##Native##::Create(managerInstance->GetFBXManager(),StringHelper::ToNative(name)));\
+		return gcnew Class##((##Native##*)##Native##::Create(managerInstance->GetFBXManager(),StringHelper::ToNative(name)));\
 	}
 
-#define ARC_FBXSDK_OBJECT_DEFINE(Class,Parent,Native) 1
+#define ARC_FBXSDK_FBXOBJECT_DECLARE(Class,Parent,Native) \
+	static Class^ Create(FBXObject^ container, String^ name);
 
 // Second iteration of this macro
-#define ARC_FBXSDK_OBJECT_IMPLEMENT(Class,Parent,Native)\
+#define ARC_FBXSDK_FBXOBJECT_IMPLEMENT(Class,Parent,Native)\
 	static Class^ Create(FBXObject^ container, String^ name)\
 	{\
 		return gcnew Class##(Native##::Create(container->GetFBXObject(),StringHelper::ToNative(name)));\
@@ -102,29 +101,51 @@ NativeType##* ChildType::Get##ChildType()\
 
 
 // Defines a read-only property.
-#define ARC_PROPERTY_PUBLICGET(type, name)\
-property type name\
+#define ARC_PROPERTY_PUBLICGET(ReturnType, Name)\
+property ReturnType Name\
 {\
-	type get();\
+	ReturnType get();\
 };
 
 // Defines a read-only property.
-#define ARC_STATIC_PROPERTY_PUBLICGET(type, name)\
-static property type name\
+#define ARC_STATIC_PROPERTY_PUBLICGET(ReturnType, Name)\
+static property ReturnType Name\
 {\
-	type get();\
+	ReturnType get();\
 };
 
 // Define the property macros that are to be used for boiler plate definitions
-#define ARC_PROPERTY_PUBLICGET_PUBLICSET(type,name) \
-property type name \
+#define ARC_PROPERTY_PUBLICGET_PUBLICSET(ReturnType,Name) \
+property ReturnType Name \
 { \
-type get(); \
-void set(type value); \
+ReturnType get(); \
+void set(ReturnType value); \
 }
 
+// These macros should support the fbx property template class that is part of the Autodesk SDK
+#define ARC_PROPERTY_FBXPROPERTY_PUBLICGET(ReturnType,Name) \
+	property ReturnType Name\
+	{\
+		ReturnType get();\
+	}
+								 
+#define ARC_PROPERTY_FBXPROPERTY_PUBLICGET_IMPL(ReturnType,Class,Name) \
+	ReturnType Class##::##Name##::get()\
+	{\
+	return this->Get##Class##()->Name.Get();\
+	}
+
+#define ARC_PROPERTY_FBXPROPERTY_PUBLICGET_PUBLICSET(ReturnType,Class,Name)\
+	property ReturnType Name\
+	{\
+	ReturnType get();\
+	}
+
+#define ARC_PROPERTY_FBXPROPERTY_PUBLICGET_PUBLICSET_IMPL(ReturnType,Class,Name) 1
+
+
 // The implementation macro for any of the member properties in the class
-#define ARC_IMPL_GET(type,classname,name, ...)\
+#define ARC_PROPERTY_PUBLICGET_IMPL(type,classname,name, ...)\
 type classname##::##name##::get()\
 {\
 	return this->Get##classname##()->##name##__VA_ARGS__;\

@@ -3,9 +3,8 @@
 
 using namespace ArcManagedFBX;
 
-FBXLayer::FBXLayer()
+FBXLayer::FBXLayer() : m_NativeInstance(0)
 {
-
 }
 
 FBXLayer::~FBXLayer()
@@ -20,5 +19,5 @@ FBXLayer::!FBXLayer()
 
 FBXLayer::FBXLayer(FbxLayer* instance)
 {
-	m_LayerInstance = instance;
+	m_NativeInstance = instance;
 }

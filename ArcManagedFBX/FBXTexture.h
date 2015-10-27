@@ -10,6 +10,6 @@ namespace ArcManagedFBX
 
 	private:
 		ARC_DEFAULT_INTERNAL_CONSTRUCTOR(FBXTexture,FbxTexture)
-
+		ARC_CHILD_CAST(NativeObject,FbxTexture,FBXTexture)
 	};
 }

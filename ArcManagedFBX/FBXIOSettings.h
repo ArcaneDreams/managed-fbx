@@ -17,7 +17,7 @@ namespace ArcManagedFBX
 		public:
 			ARC_DEFAULT_CONSTRUCTORS(FBXIOSettings)
 
-			ARC_FBXSDK_OBJECT_IMPLEMENT(FBXIOSettings,FBXObject,FbxIOSettings)
+			ARC_FBXSDK_FBXOBJECT_IMPLEMENT(FBXIOSettings,FBXObject,FbxIOSettings)
 
 
 			bool	GetBoolProp(String^ pName, bool pDefValue);

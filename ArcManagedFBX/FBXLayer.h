@@ -8,12 +8,11 @@ namespace ArcManagedFBX
 	public ref class FBXLayer
 	{
 	public:
-		FBXLayer(FbxLayer* instance);
-		FBXLayer();
-		!FBXLayer();
-		~FBXLayer();
+		ARC_DEFAULT_CONSTRUCTORS(FBXLayer)
 
 	private:
-		FbxLayer* m_LayerInstance;
+		ARC_DEFAULT_INTERNAL_CONSTRUCTOR(FBXLayer,FbxLayer)
+
+		FbxLayer* m_NativeInstance;
 	};
 }

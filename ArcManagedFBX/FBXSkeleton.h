@@ -15,7 +15,7 @@ namespace ArcManagedFBX
 
 		typedef class FbxSkeleton NativeType;
 
-		virtual AttributeType GetAttributeType() override;
+		virtual EAttributeType GetAttributeType() override;
 
 		void Reset();
 
@@ -33,13 +33,10 @@ namespace ArcManagedFBX
 
 		bool GetLimbNodeColorIsSet();
 
-		static String^ GetSize();
-		static String^ GetLimbLength();
-
 		bool SetLimbNodeColor(FBXColour color);
 
-		ARC_PROPERTY_PUBLICGET(float64,LimbLength)
-		ARC_PROPERTY_PUBLICGET(float64,Size)
+		ARC_PROPERTY_FBXPROPERTY_PUBLICGET(float64,LimbLength)
+		ARC_PROPERTY_FBXPROPERTY_PUBLICGET(float64,Size)
 
 	internal:
 		ARC_DEFAULT_INTERNAL_CONSTRUCTOR(FBXSkeleton,FbxSkeleton)

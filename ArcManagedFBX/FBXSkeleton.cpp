@@ -3,7 +3,7 @@
 
 using namespace ArcManagedFBX;
 
-FBXSkeleton::FBXSkeleton()
+FBXSkeleton::FBXSkeleton() : FBXNodeAttribute()
 {
 
 }
@@ -18,9 +18,12 @@ FBXSkeleton::!FBXSkeleton()
 
 }
 
-FBXSkeleton::FBXSkeleton(FbxSkeleton* instance)
+ARC_PROPERTY_FBXPROPERTY_PUBLICGET_IMPL(float64,FBXSkeleton,LimbLength)
+
+ARC_PROPERTY_FBXPROPERTY_PUBLICGET_IMPL(float64,FBXSkeleton,Size)
+
+FBXSkeleton::FBXSkeleton(FbxSkeleton* instance) : FBXNodeAttribute(instance)
 {
-	this->m_NativeObject = instance;
 }
 
 void ArcManagedFBX::FBXSkeleton::SetSkeletonType(ESkeletonType type)
@@ -58,16 +61,6 @@ bool ArcManagedFBX::FBXSkeleton::GetLimbNodeColorIsSet()
 	return this->GetFBXSkeleton()->GetLimbNodeColorIsSet();
 }
 
-String^ ArcManagedFBX::FBXSkeleton::GetSize()
-{
-	return String::Empty;
-}
-
-String^ ArcManagedFBX::FBXSkeleton::GetLimbLength()
-{
-	return String::Empty;
-}
-
 
 bool ArcManagedFBX::FBXSkeleton::SetLimbNodeColor(FBXColour color)
 {
@@ -76,23 +69,13 @@ bool ArcManagedFBX::FBXSkeleton::SetLimbNodeColor(FBXColour color)
 	return this->GetFBXSkeleton()->SetLimbNodeColor(newColor);
 }
 
-ArcManagedFBX::Types::AttributeType ArcManagedFBX::FBXSkeleton::GetAttributeType()
+ArcManagedFBX::Types::EAttributeType ArcManagedFBX::FBXSkeleton::GetAttributeType()
 {
-	return (AttributeType)this->GetFBXSkeleton()->GetAttributeType();
+	return (EAttributeType)this->GetFBXSkeleton()->GetAttributeType();
 }
 
 void ArcManagedFBX::FBXSkeleton::Reset()
 {
 	this->GetFBXSkeleton()->Reset();
-}
-
-float64 FBXSkeleton::LimbLength::get()
-{
-	return this->GetFBXSkeleton()->LimbLength;
-}
-
-float64 FBXSkeleton::Size::get()
-{
-	return this->GetFBXSkeleton()->Size;
 }
 

@@ -114,7 +114,7 @@ namespace ArcManagedFBX
 			eFullShading		//!< Solid geometries rendered with smooth textured surfaces and scene lights.
 		};
 
-		public enum class Smoothness
+		public enum class ESmoothness
 		{
 			eHull,		//!< Default value, not active "smooth mesh preview".
 			eRough,		//!< Not active "smooth mesh preview".
@@ -123,7 +123,7 @@ namespace ArcManagedFBX
 		};
 
 		// The types that are to be used for the attributes
-		public enum class AttributeType
+		public enum class EAttributeType
 		{   
 			eUnknown,
 			eNull,
@@ -149,11 +149,11 @@ namespace ArcManagedFBX
 			eLine
 		};
 
-		public enum class Mode {eNone, eReadOnly, eReadWrite, eCreateWriteOnly, eCreateReadWrite, eCreateAppend};
-		public enum class SeekPos {eBegin, eCurrent, eEnd};
+		public enum class EMode {eNone, eReadOnly, eReadWrite, eCreateWriteOnly, eCreateReadWrite, eCreateAppend};
+		public enum class ESeekPos {eBegin, eCurrent, eEnd};
 
 		//! Supported languages enumeration list
-		public enum class Language
+		public enum class ELanguage
 		{
 			eENU,			//!< 409 English - United States
 			eDEU,			//!< 407 German - Germany
@@ -166,7 +166,7 @@ namespace ArcManagedFBX
 
 		/** Rotation accumulation mode of animation layer.
 		  */
-		public enum class RotationAccumulationMode
+		public enum class ERotationAccumulationMode
 		{
 			eRotationByLayer,	//! Rotation values are weighted per layer and the result rotation curves are calculated using concatenated quaternion values.
 			eRotationByChannel	//! Rotation values are weighted per component and the result rotation curves are calculated by adding each independent Euler XYZ value.
@@ -174,25 +174,25 @@ namespace ArcManagedFBX
 
 		/** Scale accumulation mode of animation layer.
 		  */
-		public enum class ScaleAccumulationMode
+		public enum class EScaleAccumulationMode
 		{
 			eScaleMultiply,	//! Independent XYZ scale values per layer are calculated using the layer weight value as an exponent, and result scale curves are calculated by multiplying each independent XYZ scale value.
 			eScaleAdditive	//! Result scale curves are calculated by adding each independent XYZ value.
 		};
 
-		public enum class FilmRollOrder
+		public enum class EFilmRollOrder
 		{
 			eRotateFirst,	//!< The film back is first rotated then translated by the pivot point value.
 			eTranslateFirst	//!< The film back is first translated then rotated by the film roll value.
 		};
 
-		public enum class Unit
+		public enum class EUnit
 		{
 			Metres,
 			Centimetres
 		};
 
-		public enum class AxisSystem
+		public enum class EAxisSystem
 		{
 			Max,
 			MayaYUp,
@@ -200,7 +200,7 @@ namespace ArcManagedFBX
 		};
 
 		// Wraps "DecayType"
-		public enum class DecayType
+		public enum class EDecayType
 		{
 			eNone,
 			eLinear,
@@ -208,7 +208,7 @@ namespace ArcManagedFBX
 			eCubic
 		};
 
-		public enum class ObjectFlag
+		public enum class EObjectFlag
 		{
 			eNone = 0,					 //!< No flags.
 			eInitialized = 1 << 0,		 //!< Automatically set when FbxObject::Construct() is completed.
@@ -221,7 +221,7 @@ namespace ArcManagedFBX
 			eCopyCalledByClone = 1 << 16 //!< Used internally. If set, modify the Copy behavior of the object
 		};
 		
-		public enum class BlendMode
+		public enum class EBlendMode
 		{
 			eBlendAdditive,	//! The layer "adds" its animation to layers that precede it in the stack and affect the same attributes.
 			eBlendOverride,	//! The layer "overrides" the animation of any layer that shares the same attributes and precedes it in the stack.
@@ -244,7 +244,7 @@ namespace ArcManagedFBX
 			eVolume
 		};
 
-		public enum class LayerType
+		public enum class ELayerType
 		{
 			eUnknown,
 
@@ -287,13 +287,13 @@ namespace ArcManagedFBX
 			eTypeCount
 		};
 
-		public enum class AreaLightShape
+		public enum class EAreaLightShape
 		{
 			eRectangle,
 			eSphere
 		};
 
-		public enum class ApertureMode
+		public enum class EApertureMode
 		{
 			eHorizAndVert,	//!< Set the angle values for both the horizontal and vertical settings. 
 			eHorizontal,	//!< Set only the horizontal angle. 
@@ -301,7 +301,7 @@ namespace ArcManagedFBX
 			eFocalLength	//!< Use focal length directly. 
 		};
 
-		public enum class AspectRatioMode
+		public enum class EAspectRatioMode
 		{
 			eWindowSize,		//!< Both width and height values aren't relevant.
 			eFixedRatio,		//!< The height value is set to 1.0 and the width value is relative to the height value.
@@ -310,7 +310,7 @@ namespace ArcManagedFBX
 			eFixedHeight		//!< The height value is in pixels and the width value is relative to the height value.
 		};
 
-		public enum class ApertureFormat
+		public enum class EApertureFormat
 		{
 			eCustomAperture,	//!< The film size, squeeze ratio and aspect ratio has been user-specified, and matches none of the other aperture formats.
 			e16mmTheatrical,	//!< Film Size: 0.404, 0.295 inches. Film Squeeze Ratio: 1.0. Film Aspect Ratio: 1.369.
@@ -326,7 +326,7 @@ namespace ArcManagedFBX
 			eIMAX				//!< Film Size: 2.772, 2.072 inches. Film Squeeze Ratio: 1.0. Film Aspect Ratio: 1.338.
 		};
 
-		public enum class Format
+		public enum class EFormat
 		{
 			eCustomFormat,	//!< The format's width, height, or pixel ratio has been user-specified, and matches none of the other picture formats.
 			eD1NTSC,		//!< Standard format for D1 NTSC (720 by 486).
@@ -341,13 +341,13 @@ namespace ArcManagedFBX
 			eFullscreen		//!< Full computer screen format (1280 by 1024 pixels).
 		};
 
-		public enum class ProjectionType
+		public enum class EProjectionType
 		{
 			ePerspective,
 			eOrthogonal
 		};
 
-		public enum class LoadMode         
+		public enum class ELoadMode         
 		{ 
 			eCreate,          /*!< Add to scene(duplicate the ones with the same name)    */  
 			eMerge,           /*!< Add to scene and update animation                      */

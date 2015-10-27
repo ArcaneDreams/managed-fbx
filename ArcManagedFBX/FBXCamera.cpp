@@ -67,9 +67,9 @@ float64 FBXCamera::FieldOfView::get()
 }
 
 // Return the camera format to the end user.
-Format FBXCamera::CameraFormat::get()
+EFormat FBXCamera::CameraFormat::get()
 {
-	return (Format)this->GetFBXCamera()->GetFormat();
+	return (EFormat)this->GetFBXCamera()->GetFormat();
 }
 
 // Set the ratio of the object.

@@ -26,9 +26,9 @@ FBXGeometry::FBXGeometry(FbxGeometry* instance)
 	this->m_NativeObject = instance;
 }
 
-ArcManagedFBX::Types::AttributeType ArcManagedFBX::FBXGeometry::GetAttributeType()
+ArcManagedFBX::Types::EAttributeType ArcManagedFBX::FBXGeometry::GetAttributeType()
 {
-	return (AttributeType)this->GetFBXGeometry()->GetAttributeType();
+	return (EAttributeType)this->GetFBXGeometry()->GetAttributeType();
 }
 
 int32 ArcManagedFBX::FBXGeometry::GetShapeCount(int32 blendShapeIndex, int32 blendShapeChannelIndex, FBXStatus^ status)

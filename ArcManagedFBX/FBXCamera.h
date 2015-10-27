@@ -26,7 +26,7 @@ namespace ArcManagedFBX
 		ARC_PROPERTY_PUBLICGET(float64,AspectHeight)
 		ARC_PROPERTY_PUBLICGET(float64,FieldOfView)
 		ARC_PROPERTY_PUBLICGET(float64,FocalLength)
-		ARC_PROPERTY_PUBLICGET(Format,CameraFormat)
+		ARC_PROPERTY_PUBLICGET(EFormat,CameraFormat)
 		ARC_DEFAULT_INTERNAL_CONSTRUCTOR(FBXCamera,FbxCamera)
 	private:
 		ARC_CHILD_CAST(NativeObject,FbxCamera,FBXCamera);

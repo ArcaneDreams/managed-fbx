@@ -9,6 +9,11 @@ ARC_DEFAULT_CONSTRUCTORS_IMPL(FBXLight)
 
 void ArcManagedFBX::FBXLight::SetShadowTexture(FBXTexture^ textureInstance)
 {
+	this->GetFBXLight()->SetShadowTexture(textureInstance->GetFBXTexture());
+}
 
+FBXTexture^ ArcManagedFBX::FBXLight::GetShadowTexture()
+{
+	return gcnew FBXTexture(this->GetFBXLight()->GetShadowTexture());
 }
 
