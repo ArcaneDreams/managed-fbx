@@ -1,4 +1,9 @@
 #include "Stdafx.h"
+#include "FBXLine.h"
+#include "FBXCamera.h"
+#include "FBXSkeleton.h"
+#include "FBXBoundary.h"
+#include "FBXLight.h"
 #include "FBXNode.h"
 
 using namespace ArcManagedFBX;
@@ -50,6 +55,44 @@ int32 ArcManagedFBX::FBXNode::GetNodeAttributeCount()
 FBXNodeAttribute^ ArcManagedFBX::FBXNode::GetNodeAttribute()
 {
 	ARC_CHECK_AND_THROW(this->GetFBXNode() == nullptr, "This FBX node has not been properly initialized. Check and try again")
+
+	FbxNodeAttribute* attributeInstance = this->GetFBXNode()->GetNodeAttribute();
+
+	// Be sure to cast the value properly into the right clr type otherwise we end up in a scenario where we have to instantiate new objects on the heap.
+	switch(this->GetFBXNode()->GetNodeAttribute()->GetAttributeType())
+	{
+	case FbxNodeAttribute::EType::eLight:
+			return FBXNodeAttribute::CreateNodeAttribute<FBXLight^>(attributeInstance);		
+		break;
+
+	case FbxNodeAttribute::EType::eBoundary:
+			return FBXNodeAttribute::CreateNodeAttribute<FBXBoundary^>(attributeInstance);		
+		break;
+
+	case FbxNodeAttribute::EType::eMesh:
+			return FBXNodeAttribute::CreateNodeAttribute<FBXLight^>(attributeInstance);		
+		break;
+
+	case FbxNodeAttribute::EType::eSkeleton:
+			return FBXNodeAttribute::CreateNodeAttribute<FBXSkeleton^>(attributeInstance);
+		break;
+
+	case FbxNodeAttribute::EType::eCamera:
+			return FBXNodeAttribute::CreateNodeAttribute<FBXCamera^>(attributeInstance);
+		break;
+
+	case FbxNodeAttribute::EType::eLine:
+
+		break;
+
+	case FbxNodeAttribute::EType::eShape:
+
+		break;
+
+	case FbxNodeAttribute::EType::eLODGroup:
+
+		break;
+	}
 
 	return gcnew FBXNodeAttribute(this->GetFBXNode()->GetNodeAttribute());
 }

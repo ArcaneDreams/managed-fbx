@@ -17,6 +17,9 @@ using ArcManagedFBX.IO;
 
 namespace ArcManagedFBXTest
 {
+    /// <summary>
+    ///     Basic framework to be used for testing the library.
+    /// </summary>
     public sealed class Framework
     {
         #region Singleton Shenanigans
@@ -32,8 +35,6 @@ namespace ArcManagedFBXTest
         #endregion
 
         private ArgumentHandler m_Handler = null;
-
-        private FBXScene m_Scene = null;
 
         #region Properties
         [CommandLineArgument("filename",false)]
@@ -69,8 +70,8 @@ namespace ArcManagedFBXTest
 
         public void Load()
         {
+
             LogMessage("Instantiating the FBX Manager...");
-            // Instantiate the manager that is to be used
             FBXManager managerInstance = ArcManagedFBX.FBXManager.Create();
 
             if (string.IsNullOrEmpty(Filename))
@@ -79,11 +80,9 @@ namespace ArcManagedFBXTest
             if (!File.Exists(Filename))
                 throw new FileNotFoundException("The file that is being loaded was not found on disk.");
 
-
             LogMessage("Instantiating the FBX Settings...");
             FBXIOSettings settings = FBXIOSettings.Create(managerInstance, "IOSRoot");
             
-            // Load in the settings and the plugins directory required
             managerInstance.SetIOSettings(settings);
 
             LogMessage("Loading plugins directory...");
@@ -91,15 +90,16 @@ namespace ArcManagedFBXTest
 
             int fileMajorNumber = 0, fileMinorNumber = 0, fileRevisionNumber = 0;
 
-
             LogMessage("Instantiating the Scene...");
+
             // Generate the scene that is to be used
             FBXScene scene = FBXScene.Create(managerInstance, "My Scene");
 
             // Load in the importer that we are to use
             FBXImporter importer = FBXImporter.Create(managerInstance, "");
 
-            bool initializeResult = importer.Initialize("Assets/dude.fbx", -1, managerInstance.GetIOSettings());
+            LogMessage("Load the importer for the file '{0}'",Filename);
+            bool initializeResult = importer.Initialize(Filename, -1, managerInstance.GetIOSettings());
             FBXManager.GetFileFormatVersion(ref fileMajorNumber,ref fileMinorNumber,ref fileRevisionNumber);
 
             bool importResult = importer.Import(scene);
@@ -146,12 +146,20 @@ namespace ArcManagedFBXTest
             }
         }
 
+        /// <summary>
+        ///     Display information regarding lights.
+        /// </summary>
+        /// <param name="lightInstance">The instance of the light that we are working with</param>
         private static void DisplayLight(FBXLight lightInstance)
         {
             if (lightInstance == null)
                 throw new ArgumentNullException("The light instance is null. Check and try again.");
         }
 
+        /// <summary>
+        ///     Display information regarding the camera
+        /// </summary>
+        /// <param name="cameraInstance">The camera instance</param>
         private static void DisplayCamera(FBXCamera cameraInstance)
         {
             if (cameraInstance == null)
@@ -166,6 +174,10 @@ namespace ArcManagedFBXTest
             FBXVector[] controlPoints = meshInstance.GetControlPoints();
         }
 
+        /// <summary>
+        ///     Display the control points for the mesh
+        /// </summary>
+        /// <param name="meshInstance">Output information regarding the control points</param>
         private static void DisplayControlPoints(FBXMesh meshInstance)
         {
             if (meshInstance == null)
@@ -194,6 +206,30 @@ namespace ArcManagedFBXTest
         {
             if (skelInstance == null)
                 throw new ArgumentNullException("The mesh instance was null. Check and try again!");
+
+            string[] skeletonTypes = new string[] { "Root", "Limb", "Limb Node", "Effector" };
+
+            LogMessage("Type: {0}",skeletonTypes[(int)skelInstance.GetSkeletonType()]);
+
+            // Based on the type of skeleton it is, display the relevant information
+            switch (skelInstance.GetSkeletonType())
+            {
+                case ESkeletonType.eEffector:
+                        
+                    break;
+
+                case ESkeletonType.eLimb:
+                        
+                    break;
+
+                case ESkeletonType.eRoot:
+                        
+                    break;
+
+                case ESkeletonType.eLimbNode:
+
+                    break;
+            }
         }
 
         /// <summary>

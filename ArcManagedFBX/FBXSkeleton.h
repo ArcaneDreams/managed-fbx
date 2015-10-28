@@ -12,16 +12,7 @@ namespace ArcManagedFBX
 	{
 	public:
 		ARC_DEFAULT_CONSTRUCTORS(FBXSkeleton)
-
-		static operator FBXSkeleton^(FBXNodeAttribute^ attributeInstance)
-		{
-			return static_cast<FBXSkeleton^>(attributeInstance);
-		};
-
-		FBXSkeleton(FBXSkeleton% other)
-		{
-
-		}
+		ARC_CLR_CHILD_CAST(FBXSkeleton,FBXNodeAttribute,FbxSkeleton)
 
 		typedef class FbxSkeleton NativeType;
 

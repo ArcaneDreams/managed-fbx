@@ -122,6 +122,13 @@ namespace ArcManagedFBX
 			eFine		//!< Display smooth mesh.
 		};
 
+		public enum class EDisplayLevel
+		{
+			eUseLOD,
+			eShow,
+			eHide
+		};
+
 		// The types that are to be used for the attributes
 		public enum class EAttributeType
 		{   

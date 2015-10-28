@@ -24,12 +24,25 @@ namespace ArcManagedFBX
 		ARC_PROPERTY_PUBLICGET(String^,ColourName);
 		ARC_PROPERTY_PUBLICGET(FBXColour,Colour)
 
-	internal:
 		ARC_CHILD_CAST(NativeObject,FbxNodeAttribute,FBXNodeAttribute);
+
+
 	protected:
+
 		virtual void ConstructProperties(bool pForceSet);
 
 		ARC_DEFAULT_INTERNAL_CONSTRUCTOR(FBXNodeAttribute,FbxNodeAttribute)
+
+	internal:
+		generic<typename NewType> where NewType : FBXNodeAttribute, gcnew()
+		static NewType CreateNodeAttribute(FbxNodeAttribute* nativeInstance)
+		{
+			NewType instanceToReturn = gcnew NewType;
+			((FBXNodeAttribute^)instanceToReturn)->SetInstance(nativeInstance);
+
+			return instanceToReturn;
+
+		}
 
 	};
 }

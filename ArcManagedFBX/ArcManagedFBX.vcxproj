@@ -152,6 +152,9 @@
     <ClInclude Include="FBXAnimCurveKeyBase.h" />
     <ClInclude Include="FBXAnimLayer.h" />
     <ClInclude Include="FBXAnimStack.h" />
+    <ClInclude Include="FBXBoundary.h" />
+    <ClInclude Include="FBXLine.h" />
+    <ClInclude Include="FBXLODGroup.h" />
     <ClInclude Include="FBXNodeAttribute.h" />
     <ClInclude Include="FBXCamera.h" />
     <ClInclude Include="FBXClassId.h" />
@@ -187,6 +190,7 @@
     <ClInclude Include="FBXPose.h" />
     <ClInclude Include="FBXProperty.h" />
     <ClInclude Include="FBXScene.h" />
+    <ClInclude Include="FBXShape.h" />
     <ClInclude Include="FBXSkeleton.h" />
     <ClInclude Include="FBXSkin.h" />
     <ClInclude Include="FBXStatus.h" />
@@ -205,6 +209,9 @@
     <ClCompile Include="AssemblyInfo.cpp" />
     <ClCompile Include="FBXAnimLayer.cpp" />
     <ClCompile Include="FBXAnimStack.cpp" />
+    <ClCompile Include="FBXBoundary.cpp" />
+    <ClCompile Include="FBXLine.cpp" />
+    <ClCompile Include="FBXLODGroup.cpp" />
     <ClCompile Include="FBXNodeAttribute.cpp" />
     <ClCompile Include="FBXCamera.cpp" />
     <ClCompile Include="FBXClassId.cpp" />
@@ -236,6 +243,7 @@
     <ClCompile Include="FBXPolygonDef.cpp" />
     <ClCompile Include="FBXProperty.cpp" />
     <ClCompile Include="FBXScene.cpp" />
+    <ClCompile Include="FBXShape.cpp" />
     <ClCompile Include="FBXSkeleton.cpp" />
     <ClCompile Include="FBXSkin.cpp" />
     <ClCompile Include="FBXStatus.cpp" />

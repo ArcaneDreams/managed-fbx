@@ -68,5 +68,6 @@ namespace ArcManagedFBX
 		ARC_DEFAULT_INTERNAL_CONSTRUCTOR(FBXNode,FbxNode)
 
 	private:
+
 	};
 }

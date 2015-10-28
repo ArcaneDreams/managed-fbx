@@ -77,6 +77,11 @@ namespace ArcManagedFBX
 	protected:
 		FbxObject* m_NativeObject;
 
+		ARC_FORCEINLINE void SetInstance(FbxObject* nativeObjectInstance)
+		{
+			m_NativeObject = nativeObjectInstance;
+		}
+
 		FBXManager^ m_ManagerInstance;
 	internal:
 		ARC_DEFAULT_INTERNAL_CONSTRUCTOR(FBXObject,FbxObject)
