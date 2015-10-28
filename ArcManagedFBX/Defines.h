@@ -20,6 +20,17 @@ typedef double	float64;
 #define ARC_FORCEINLINE __forceinline
 #define ARC_INLINE inline
 
+// basic macro for making user-defined conversions for child classes in cli.
+// i have no fucking clue why i have to explicitly define these in cli, but with csc.exe generated MSIL it's fine. :l
+#define ARC_CLR_CHILD_CAST(Child,Parent, ChildNative)\
+static operator Child^(Parent^ parentInstance)\
+{\
+	if (Child::typeid != Parent::typeid)\
+		return gcnew Child(static_cast<ChildNative*>(parentInstance->Get##Parent()));\
+	else\
+		return safe_cast<Child^>(parentInstance);\
+};
+
 // Assertion checking on the condition that is made
 #define ARC_CHECK_AND_THROW(Condition,Message) \
 	if (Condition) \
@@ -50,7 +61,7 @@ typedef double	float64;
 
 /* 
  * **********************************
- * ARCMANAGEDFBX SPECIFIC MACROS 
+ *	ARCMANAGEDFBX SPECIFIC MACROS 
  * **********************************
  */
 #define ARC_DEFAULT_INTERNAL_CONSTRUCTOR(Type,NativeType) \

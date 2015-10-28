@@ -15,8 +15,7 @@ namespace ArcManagedFBX
 
 		static operator FBXSkeleton^(FBXNodeAttribute^ attributeInstance)
 		{
-			FBXSkeleton^ skelInstance = gcnew FBXSkeleton(static_cast<FbxSkeleton*>(attributeInstance->GetFBXNodeAttribute()));
-			return skelInstance;
+			return static_cast<FBXSkeleton^>(attributeInstance);
 		};
 
 		FBXSkeleton(FBXSkeleton% other)

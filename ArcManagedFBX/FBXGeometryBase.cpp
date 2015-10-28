@@ -105,7 +105,12 @@ array<FBXVector>^ ArcManagedFBX::FBXGeometryBase::GetControlPoints(FBXStatus^ st
 	array<FBXVector>^ outputVectors = gcnew array<FBXVector>(controlPointsCount);
 
 	// Retrieve the control points
-	FbxVector4* controlPointsHandle = this->GetFBXGeometryBase()->GetControlPoints(status->GetInstance());
+	FbxVector4* controlPointsHandle = 0;
+
+	if (status != nullptr)
+		controlPointsHandle = this->GetFBXGeometryBase()->GetControlPoints(status->GetInstance());
+	else
+		controlPointsHandle = this->GetFBXGeometryBase()->GetControlPoints(0);
 
 	// Iterate over the control points and store them into the array
 	for(uint32 i = 0; i < (uint32)controlPointsCount; i++)

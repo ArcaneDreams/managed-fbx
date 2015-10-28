@@ -105,9 +105,9 @@ namespace ArcManagedFBXTest
             bool importResult = importer.Import(scene);
 
             if (importResult)
-            {
                 DisplayContent(scene);
-            }
+            else
+                LogError("Import failed. Nothing to do!");
         }
 
         // Display content within the instance
@@ -127,7 +127,7 @@ namespace ArcManagedFBXTest
                     switch (attributeType)
                     {
                         case EAttributeType.eMesh:
-                            DisplayMesh((FBXMesh)nodeInstance.GetNodeAttribute());
+                            DisplayMesh(nodeInstance.GetNodeAttribute());
                             break;
 
                         case EAttributeType.eCamera:
@@ -177,11 +177,13 @@ namespace ArcManagedFBXTest
         /// <summary>
         ///     Output the contents of the mesh
         /// </summary>
-        /// <param name="meshInstance"></param>
+        /// <param name="meshInstance">The instance for the mesh that we are retrieving the control points from</param>
         private static void DisplayMesh(FBXMesh meshInstance)
         {
             if (meshInstance == null)
                 throw new ArgumentNullException("The mesh instance was null. Check and try again!");
+
+            FBXVector[] controlPoints = meshInstance.GetControlPoints();
         }
 
         /// <summary>

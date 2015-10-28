@@ -8,22 +8,12 @@ namespace ArcManagedFBXTest
 {
     class Program
     {
-
-        class A
-        {
-
-        }
-
-        class B : A
-        {
-
-        }
-
         static void Main(string[] args)
         {
-
             Framework.Instance.Initialize(args);
-            Framework.Instance.Process();            
+            Framework.Instance.Process();
+
+            Console.ReadKey();
         }
     }
 }
