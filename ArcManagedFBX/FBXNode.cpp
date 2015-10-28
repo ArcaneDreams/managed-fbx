@@ -51,6 +51,9 @@ FBXNodeAttribute^ ArcManagedFBX::FBXNode::GetNodeAttribute()
 {
 	ARC_CHECK_AND_THROW(this->GetFBXNode() == nullptr, "This FBX node has not been properly initialized. Check and try again")
 
+	// Retrieve the attribute type that we are to use
+	FbxNodeAttribute::EType attributeType = this->GetFBXNode()->GetNodeAttribute()->GetAttributeType();
+
 	return gcnew FBXNodeAttribute(this->GetFBXNode()->GetNodeAttribute());
 }
 
