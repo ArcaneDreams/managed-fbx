@@ -98,19 +98,18 @@ void ArcManagedFBX::FBXGeometryBase::ComputeBBox()
 	this->GetFBXGeometryBase()->ComputeBBox();
 }
 
-array<FBXVector^>^ ArcManagedFBX::FBXGeometryBase::GetControlPoints(FBXStatus^ status)
+array<FBXVector>^ ArcManagedFBX::FBXGeometryBase::GetControlPoints(FBXStatus^ status)
 {
 	// Retrieve the total count of control points that exist.
 	int32 controlPointsCount  = this->GetFBXGeometryBase()->GetControlPointsCount();
-	array<FBXVector^>^ outputVectors = gcnew array<FBXVector^>(controlPointsCount);
+	array<FBXVector>^ outputVectors = gcnew array<FBXVector>(controlPointsCount);
 
+	// Retrieve the control points
 	FbxVector4* controlPointsHandle = this->GetFBXGeometryBase()->GetControlPoints(status->GetInstance());
 
-	// Iterate over the control points and store them into the output vectors
+	// Iterate over the control points and store them into the array
 	for(uint32 i = 0; i < (uint32)controlPointsCount; i++)
-	{
-		outputVectors[i] = FBXVector::ConvertVector4(&controlPointsHandle[i]);
-	}
+		outputVectors[i] = *FBXVector::ConvertVector4(&controlPointsHandle[i]);
 
 	return outputVectors;
 }

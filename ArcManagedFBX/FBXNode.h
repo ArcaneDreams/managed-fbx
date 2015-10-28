@@ -15,15 +15,7 @@ namespace ArcManagedFBX
 	public ref class FBXNode : public FBXObject
 	{
 	public:
-		FBXNode();
-		FBXNode(FBXNode^ other);
-		virtual ~FBXNode();
-		!FBXNode();
-		
-		// Get only properties that are to be used for getting the position and rotation
-		ARC_PROPERTY_PUBLICGET(FBXVector^,Position);
-		ARC_PROPERTY_PUBLICGET(FBXVector^,Rotation);
-		ARC_PROPERTY_PUBLICGET(FBXVector^,Scale);
+		ARC_DEFAULT_CONSTRUCTORS(FBXNode)
 
 		// Add a child node to this node.
 		void AddChild(FBXNode^ Node);
@@ -73,7 +65,7 @@ namespace ArcManagedFBX
 
 	internal:
 		ARC_CHILD_CAST(NativeObject,FbxNode,FBXNode)
-		FBXNode(FbxNode* instance);
+		ARC_DEFAULT_INTERNAL_CONSTRUCTOR(FBXNode,FbxNode)
 
 	private:
 	};

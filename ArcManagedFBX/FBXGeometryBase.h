@@ -3,6 +3,8 @@
 #include "FBXVector.h"
 #include "FBXLayerContainer.h"
 
+using namespace System::Runtime::InteropServices;
+
 namespace ArcManagedFBX
 {
 	// The geometry base that is to be used
@@ -47,7 +49,7 @@ namespace ArcManagedFBX
 		
 		ARC_PROPERTY_PUBLICGET(bool,PrimaryVisibility)
 			
-		virtual array<FBXVector^>^ GetControlPoints(FBXStatus^ status);
+		virtual array<FBXVector>^ GetControlPoints([Optional] FBXStatus^ status);
 	private:
 
 

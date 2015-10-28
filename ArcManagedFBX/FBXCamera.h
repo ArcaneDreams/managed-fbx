@@ -14,10 +14,21 @@ namespace ArcManagedFBX
 	public:
 		ARC_DEFAULT_CONSTRUCTORS(FBXCamera)
 
-		void SetPixelRatio(double ratio);
+		void SetPixelRatio(float64 ratio);
 
 		const float64 GetPixelRatio();
-		void SetNearPlane(double distance);
+
+		void SetNearPlane(float64 distance);
+
+		void SetFarPlane(float64 distance);
+
+		void Reset();
+
+		EFormat GetFormat();
+
+		float64 GetFarPlane();
+
+		EApertureFormat GetApertureFormat();
 
 		// The properties that are to be used for representing the camera class.
 		ARC_PROPERTY_PUBLICGET(FBXVector,Position)

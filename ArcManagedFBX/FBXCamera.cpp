@@ -82,3 +82,28 @@ const float64 FBXCamera::GetPixelRatio()
 {
 	return this->GetFBXCamera()->GetPixelRatio();
 }
+
+ArcManagedFBX::Types::EApertureFormat ArcManagedFBX::FBXCamera::GetApertureFormat()
+{
+	return (EApertureFormat)this->GetFBXCamera()->GetApertureFormat();
+}
+
+float64 ArcManagedFBX::FBXCamera::GetFarPlane()
+{
+	return this->GetFBXCamera()->GetFarPlane();
+}
+
+ArcManagedFBX::Types::EFormat ArcManagedFBX::FBXCamera::GetFormat()
+{
+	return (EFormat)this->GetFBXCamera()->GetFormat();
+}
+
+void ArcManagedFBX::FBXCamera::Reset()
+{
+	this->GetFBXCamera()->Reset();
+}
+
+void ArcManagedFBX::FBXCamera::SetFarPlane(float64 distance)
+{
+	this->GetFBXCamera()->SetFarPlane(distance);
+}

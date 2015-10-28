@@ -13,7 +13,7 @@ FBXObject::FBXObject() : m_NativeObject(0)
 
 }
 
-FBXObject::FBXObject(FBXManager^ managerInstance, String^ objectName)
+FBXObject::FBXObject(FBXManager^ managerInstance, String^ objectName) : m_NativeObject(0)
 {
 
 }
@@ -100,7 +100,7 @@ void FBXObject::SetSelected(bool pSelected)
 	this->m_NativeObject->SetSelected(pSelected);
 }
 
-FbxObject* FBXObject::GetObjectInstance()
+FbxObject* FBXObject::GetFBXObject()
 {
 	return this->m_NativeObject;
 }
@@ -127,12 +127,12 @@ const uint64 FBXObject::GetUniqueID()
 
 bool FBXObject::IsConnectedSrcObject(FBXObject^ other)
 {
-	return this->m_NativeObject->IsConnectedSrcObject(other->GetObjectInstance());
+	return this->m_NativeObject->IsConnectedSrcObject(other->GetFBXObject());
 }
 
 bool FBXObject::DisconnectSrcObject(FBXObject^ other)
 {
-	return this->m_NativeObject->DisconnectSrcObject(other->GetObjectInstance());
+	return this->m_NativeObject->DisconnectSrcObject(other->GetFBXObject());
 }
 
 // Reset the properties of the native object.

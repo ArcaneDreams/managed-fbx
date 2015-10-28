@@ -13,6 +13,17 @@ namespace ArcManagedFBX
 	public:
 		ARC_DEFAULT_CONSTRUCTORS(FBXSkeleton)
 
+		static operator FBXSkeleton^(FBXNodeAttribute^ attributeInstance)
+		{
+			FBXSkeleton^ skelInstance = gcnew FBXSkeleton(static_cast<FbxSkeleton*>(attributeInstance->GetFBXNodeAttribute()));
+			return skelInstance;
+		};
+
+		FBXSkeleton(FBXSkeleton% other)
+		{
+
+		}
+
 		typedef class FbxSkeleton NativeType;
 
 		virtual EAttributeType GetAttributeType() override;

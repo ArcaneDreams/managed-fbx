@@ -21,9 +21,9 @@ FBXGeometry::~FBXGeometry()
 
 }
 
-FBXGeometry::FBXGeometry(FbxGeometry* instance)
+FBXGeometry::FBXGeometry(FbxGeometry* instance) : FBXGeometryBase(instance)
 {
-	this->m_NativeObject = instance;
+
 }
 
 ArcManagedFBX::Types::EAttributeType ArcManagedFBX::FBXGeometry::GetAttributeType()

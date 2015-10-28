@@ -8,9 +8,8 @@ FBXMesh::FBXMesh()
 
 }
 
-FBXMesh::FBXMesh(FbxMesh* instance)
+FBXMesh::FBXMesh(FbxMesh* instance) : FBXGeometry(instance)
 {
-	this->m_Instance = instance;
 }
 
 FBXMesh::~FBXMesh()
@@ -35,21 +34,29 @@ void FBXMesh::AddPolygon(int32 pIndex, int32 pTextureUVIndex)
 
 int32 FBXMesh::GetPolygonCount()
 {
+	ARC_CHECK_AND_THROW(this->GetFBXMesh() == nullptr,"Native FBX mesh instance is null. Check and try again.")
+
 	return this->GetFBXMesh()->GetPolygonCount();
 }
 
 ARC_INLINE int32 ArcManagedFBX::FBXMesh::GetPolygonSize(int32 polygonIndex)
 {
+	ARC_CHECK_AND_THROW(this->GetFBXMesh() == nullptr,"Native FBX mesh instance is null. Check and try again.")
+
 	return this->GetFBXMesh()->GetPolygonSize(polygonIndex);
 }
 
 ARC_INLINE int32 ArcManagedFBX::FBXMesh::GetPolygonGroup(int32 polygonIndex)
 {
+	ARC_CHECK_AND_THROW(this->GetFBXMesh() == nullptr,"Native FBX mesh instance is null. Check and try again.")
+
 	return this->GetFBXMesh()->GetPolygonGroup(polygonIndex);
 }
 
 ARC_INLINE void ArcManagedFBX::FBXMesh::SetPolygonGroup(int32 polygonIndex,int32 group)
 {
+	ARC_CHECK_AND_THROW(this->GetFBXMesh() == nullptr,"Native FBX mesh instance is null. Check and try again.")
+
 	this->GetFBXMesh()->SetPolygonGroup(polygonIndex,group);
 }
 
@@ -100,8 +107,9 @@ bool ArcManagedFBX::FBXMesh::GetPolygonVertexUV(int32 polygonindex, int32 vertex
 }
 
 // This is going to require some work as we convert between an fbx array and a CLI array that is to be used for returning to the consumer.
-bool ArcManagedFBX::FBXMesh::GetPolygonVertexNormals(array<FBXVector^>^ normals)
+bool ArcManagedFBX::FBXMesh::GetPolygonVertexNormals(array<FBXVector>^% normals)
 {	
+	// TODO: Implement this
 	return false;
 }
 

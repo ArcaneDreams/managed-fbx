@@ -76,14 +76,10 @@ namespace ArcManagedFBX
 
 	protected:
 		FbxObject* m_NativeObject;
-		FBXManager^ m_ManagerInstance;
-		
-		char* m_ObjectName;
 
+		FBXManager^ m_ManagerInstance;
 	internal:
-		ARC_CHILD_CAST(NativeObject,FbxObject,FBXObject);
-		FBXObject(FbxObject* objectInstance);
-	
-		FbxObject* GetObjectInstance();
+		ARC_DEFAULT_INTERNAL_CONSTRUCTOR(FBXObject,FbxObject)
+		FbxObject* GetFBXObject();
 	};
 }

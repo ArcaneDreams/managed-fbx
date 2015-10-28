@@ -20,34 +20,10 @@ FBXNode::~FBXNode()
 
 FBXNode::!FBXNode()
 {
-
-}
-
-FBXNode::FBXNode(FBXNode^ other)
-{
-
 }
 
 FBXNode::FBXNode(FbxNode* instance) : FBXObject(instance)
 {
-}
-
-FBXVector^ FBXNode::Position::get()
-{
-	FBXVector toReturn = FBXVector();
-	return nullptr;
-}
-
-FBXVector^ FBXNode::Scale::get()
-{
-	FBXVector toReturn = FBXVector();
-	return nullptr;
-}
-
-FBXVector^ FBXNode::Rotation::get()
-{
-	FBXVector toReturn = FBXVector();
-	return nullptr;
 }
 
 void FBXNode::AddChild(FBXNode^ node)
@@ -134,7 +110,7 @@ ArcManagedFBX::FBXVector ArcManagedFBX::FBXNode::GetPostTargetRotation()
 
 void ArcManagedFBX::FBXNode::SetPostTargetRotation(FBXVector vector)
 {
-	
+	// TODO:
 }
 
 FBXNode^ ArcManagedFBX::FBXNode::GetTarget()

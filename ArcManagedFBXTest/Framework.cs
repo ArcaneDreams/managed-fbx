@@ -121,26 +121,57 @@ namespace ArcManagedFBXTest
                 {
                     var attributeType = rootNode.GetChild(index).GetNodeAttribute().GetAttributeType();
 
+                    FBXNode nodeInstance = rootNode.GetChild(index);
+
                     // Cast out the node object based on the type of the attribute.
                     switch (attributeType)
                     {
-                        case AttributeType.eMesh:
-                            DisplayMesh((FBXMesh)rootNode.GetChild(index).GetNodeAttribute());
-                            break;
-                        case AttributeType.eCamera:
-
+                        case EAttributeType.eMesh:
+                            DisplayMesh((FBXMesh)nodeInstance.GetNodeAttribute());
                             break;
 
-                        case AttributeType.eLight:
-
+                        case EAttributeType.eCamera:
+                            DisplayCamera((FBXCamera)nodeInstance.GetNodeAttribute());
                             break;
 
-                        case AttributeType.eSkeleton:
-                            DisplaySkeleton((FBXSkeleton)rootNode.GetChild(index).GetNodeAttribute());
+                        case EAttributeType.eLight:
+                            DisplayLight((FBXLight)nodeInstance.GetNodeAttribute());
+                            break;
+
+                        case EAttributeType.eSkeleton:
+                            DisplaySkeleton(nodeInstance.GetNodeAttribute());
                             break;
                     }
                 }
             }
+        }
+
+        private static void DisplayLight(FBXLight lightInstance)
+        {
+            if (lightInstance == null)
+                throw new ArgumentNullException("The light instance is null. Check and try again.");
+        }
+
+        private static void DisplayCamera(FBXCamera cameraInstance)
+        {
+            if (cameraInstance == null)
+                throw new ArgumentNullException("Camera instance was null. Check and try again");
+        }
+
+        private static void DisplayPolygons(FBXMesh meshInstance)
+        {
+            if (meshInstance == null)
+                throw new ArgumentNullException("The mesh instance is null. Check and try again.");
+
+            FBXVector[] controlPoints = meshInstance.GetControlPoints();
+        }
+
+        private static void DisplayControlPoints(FBXMesh meshInstance)
+        {
+            if (meshInstance == null)
+                throw new ArgumentNullException("The mesh instance is null. Check and try again.");
+
+
         }
 
         /// <summary>

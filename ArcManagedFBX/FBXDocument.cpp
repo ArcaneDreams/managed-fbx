@@ -70,5 +70,5 @@ int32 ArcManagedFBX::FBXDocument::GetRootMemberCount()
 
 void ArcManagedFBX::FBXDocument::AddRootMember(FBXObject^ other)
 {
-	this->GetFBXDocument()->AddRootMember(other->GetObjectInstance());
+	this->GetFBXDocument()->AddRootMember(other->GetFBXObject());
 }

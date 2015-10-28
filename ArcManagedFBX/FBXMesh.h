@@ -9,10 +9,8 @@ namespace ArcManagedFBX
 	public ref class FBXMesh : public FBXGeometry
 	{
 	public:
-		FBXMesh();
-		virtual ~FBXMesh();
-		!FBXMesh();
-		
+		ARC_DEFAULT_CONSTRUCTORS(FBXMesh)
+
 		void BeginPolygon(int32 pMaterial, int32 pTexture, int32 pGroup, bool pLegacy);
 
 		void AddPolygon(int32 pIndex, int32 pTextureUVIndex);
@@ -27,7 +25,7 @@ namespace ArcManagedFBX
 
 		ARC_INLINE int32 GetDeformerCount();
 
-		ARC_INLINE void ReservePolygonCount(int count);
+		ARC_INLINE void ReservePolygonCount(int32 count);
 
 		ARC_INLINE int32 GetPolygonCount();
 
@@ -45,7 +43,7 @@ namespace ArcManagedFBX
 		
 		bool GetPolygonVertexNormal(int32 polygonIndex, int32 vertexIndex, FBXVector^ normal);
 
-		bool GetPolygonVertexNormals(array<FBXVector^>^ normals);
+		bool GetPolygonVertexNormals(array<FBXVector>^% normals);
 
 		bool GetPolygonVertexUV(int32 polygonindex, int32 vertexindex, String^ uvSetName, FBXVector uv, bool^ unmapped);
 
@@ -65,12 +63,8 @@ namespace ArcManagedFBX
 
 		int32 GetControlPointsCount();
 
-	internal:
-		FBXMesh(FbxMesh* instance);
-
+		ARC_DEFAULT_INTERNAL_CONSTRUCTOR(FBXMesh,FbxMesh)
 	private:
 		ARC_CHILD_CAST(NativeObject,FbxMesh,FBXMesh)
-		FbxNode* m_RootNode;
-		FbxMesh* m_Instance;
 	};
 }
