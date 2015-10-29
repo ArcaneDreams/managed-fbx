@@ -5,20 +5,7 @@ using namespace ArcManagedFBX;
 using namespace ArcManagedFBX::Layers;
 using namespace ArcManagedFBX::Types;
 
-FBXAnimStack::FBXAnimStack()
-{
-
-}
-
-FBXAnimStack::~FBXAnimStack()
-{
-
-}
-
-FBXAnimStack::!FBXAnimStack()
-{
-
-}
+ARC_DEFAULT_CONSTRUCTORS_IMPL(FBXAnimStack)
 
 FBXAnimStack::FBXAnimStack(FbxAnimStack* instance)
 {

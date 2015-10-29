@@ -17,6 +17,8 @@ namespace ArcManagedFBX
 
 		ARC_STATIC_PROPERTY_PUBLICGET(FBXVector^,Zero)		
 		ARC_STATIC_PROPERTY_PUBLICGET(FBXVector^,One)		
+
+		virtual String^ ToString() override;
 	private:
 		float64 x,y,z,w;
 
@@ -25,8 +27,13 @@ namespace ArcManagedFBX
 		FbxVector2 GenerateVector2();
 
 		// Converter methods used for converting the native instances of vectors into their managed counter-parts.
-		static FBXVector^ ConvertVector4(FbxVector4* instance);
 		static FBXVector^ ConvertVector2(FbxVector2* instance);
+		static FBXVector^ ConvertVector4(FbxVector4* instance);
+
+		// Convert the vector template instances that also exist in the sdk
+		static FBXVector^ ConvertVector2(FbxDouble2* instance);
+		static FBXVector^ ConvertVector3(FbxDouble3* instance);
+		static FBXVector^ ConvertVector4(FbxDouble4* instance);
 
 		FBXVector(FbxVector4 vector);
 	};

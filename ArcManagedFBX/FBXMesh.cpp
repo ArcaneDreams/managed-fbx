@@ -82,15 +82,12 @@ array<int>^ ArcManagedFBX::FBXMesh::GetPolygonVertices()
 	int32 vertexCount = this->GetFBXMesh()->GetPolygonVertexCount();
 
 	array<int>^ vertexOutput = gcnew array<int>(vertexCount);
-
 	int* vertices = this->GetFBXMesh()->GetPolygonVertices();
 
 	if (vertices != nullptr)
 	{
 		for(int32 i = 0; i < vertexCount; i++)
-		{
 			vertexOutput[i] = vertices[i];
-		}
 	}
 
 	return vertexOutput;

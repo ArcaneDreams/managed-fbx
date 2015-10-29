@@ -24,3 +24,5 @@ C:\Users\luc.shelton\Documents\GitHub\ArcManagedFBX\ArcManagedFBXTest\bin\x64\De
 C:\Users\luc.shelton\Documents\GitHub\ArcManagedFBX\ArcManagedFBXTest\bin\x64\Debug\ArcManagedFBX.dll
 C:\Users\luc.shelton\Documents\GitHub\ArcManagedFBX\ArcManagedFBXTest\bin\x64\Debug\ArcManagedFBX.pdb
 C:\Users\luc.shelton\Documents\GitHub\ArcManagedFBX\ArcManagedFBXTest\obj\x64\Debug\ArcManagedFBXTest.pdb
+C:\Users\luc.shelton\Documents\GitHub\ArcManagedFBX\ArcManagedFBXTest\bin\x64\Debug\ArcManagedFBX.Shared.dll
+C:\Users\luc.shelton\Documents\GitHub\ArcManagedFBX\ArcManagedFBXTest\bin\x64\Debug\ArcManagedFBX.Shared.pdb

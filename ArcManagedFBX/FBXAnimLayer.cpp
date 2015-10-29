@@ -8,20 +8,7 @@ using namespace System::Text;
 using namespace ArcManagedFBX;
 using namespace ArcManagedFBX::Layers;
 
-FBXAnimLayer::FBXAnimLayer()
-{
-
-}
-
-FBXAnimLayer::~FBXAnimLayer()
-{
-
-}
-
-FBXAnimLayer::!FBXAnimLayer()
-{
-
-}
+ARC_DEFAULT_CONSTRUCTORS_IMPL(FBXAnimLayer)
 
 bool FBXAnimLayer::Mute::get()
 {

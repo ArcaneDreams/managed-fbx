@@ -20,7 +20,6 @@ namespace ArcManagedFBX
 		bool Error();
 
 		bool operator==(FBXStatus^ rhs);
-		bool operator!=(FBXStatus^ rhs);
 
 	internal:
 		FBXStatus(FbxStatus* instance);

@@ -5,6 +5,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ArcManagedFBX", "ArcManaged
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArcManagedFBXTest", "ArcManagedFBXTest\ArcManagedFBXTest.csproj", "{9CC95E75-4A51-491E-B298-FF78E3092368}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArcManagedFBX.Shared", "ArcManagedFBX.Shared\ArcManagedFBX.Shared.csproj", "{28A74A7A-30BE-4978-8473-C3CB8A8C70DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +46,18 @@ Global
 		{9CC95E75-4A51-491E-B298-FF78E3092368}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{9CC95E75-4A51-491E-B298-FF78E3092368}.Release|Win32.ActiveCfg = Release|Any CPU
 		{9CC95E75-4A51-491E-B298-FF78E3092368}.Release|x64.ActiveCfg = Release|Any CPU
+		{28A74A7A-30BE-4978-8473-C3CB8A8C70DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28A74A7A-30BE-4978-8473-C3CB8A8C70DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28A74A7A-30BE-4978-8473-C3CB8A8C70DE}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{28A74A7A-30BE-4978-8473-C3CB8A8C70DE}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{28A74A7A-30BE-4978-8473-C3CB8A8C70DE}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{28A74A7A-30BE-4978-8473-C3CB8A8C70DE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{28A74A7A-30BE-4978-8473-C3CB8A8C70DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28A74A7A-30BE-4978-8473-C3CB8A8C70DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28A74A7A-30BE-4978-8473-C3CB8A8C70DE}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{28A74A7A-30BE-4978-8473-C3CB8A8C70DE}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{28A74A7A-30BE-4978-8473-C3CB8A8C70DE}.Release|Win32.ActiveCfg = Release|Any CPU
+		{28A74A7A-30BE-4978-8473-C3CB8A8C70DE}.Release|x64.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

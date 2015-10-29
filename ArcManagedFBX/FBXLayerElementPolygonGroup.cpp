@@ -6,17 +6,4 @@ using namespace ArcManagedFBX::Utility;
 using namespace ArcManagedFBX::Types;
 using namespace ArcManagedFBX::Exceptions;
 
-FBXLayerElementPolygonGroup::FBXLayerElementPolygonGroup()
-{
-
-}
-
-FBXLayerElementPolygonGroup::!FBXLayerElementPolygonGroup()
-{
-
-}
-
-FBXLayerElementPolygonGroup::~FBXLayerElementPolygonGroup()
-{
-
-}
+ARC_DEFAULT_CONSTRUCTORS_IMPL(FBXLayerElementPolygonGroup)

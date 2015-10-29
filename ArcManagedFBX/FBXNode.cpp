@@ -2,6 +2,9 @@
 #include "FBXLine.h"
 #include "FBXCamera.h"
 #include "FBXSkeleton.h"
+#include "FBXShape.h"
+#include "FBXLODGroup.h"
+#include "FBXLine.h"
 #include "FBXBoundary.h"
 #include "FBXLight.h"
 #include "FBXNode.h"
@@ -70,7 +73,7 @@ FBXNodeAttribute^ ArcManagedFBX::FBXNode::GetNodeAttribute()
 		break;
 
 	case FbxNodeAttribute::EType::eMesh:
-			return FBXNodeAttribute::CreateNodeAttribute<FBXLight^>(attributeInstance);		
+			return FBXNodeAttribute::CreateNodeAttribute<FBXMesh^>(attributeInstance);		
 		break;
 
 	case FbxNodeAttribute::EType::eSkeleton:
@@ -82,15 +85,15 @@ FBXNodeAttribute^ ArcManagedFBX::FBXNode::GetNodeAttribute()
 		break;
 
 	case FbxNodeAttribute::EType::eLine:
-
+			return FBXNodeAttribute::CreateNodeAttribute<FBXLine^>(attributeInstance);
 		break;
 
 	case FbxNodeAttribute::EType::eShape:
-
+			return FBXNodeAttribute::CreateNodeAttribute<FBXShape^>(attributeInstance);
 		break;
 
 	case FbxNodeAttribute::EType::eLODGroup:
-
+			return FBXNodeAttribute::CreateNodeAttribute<FBXLODGroup^>(attributeInstance);
 		break;
 	}
 

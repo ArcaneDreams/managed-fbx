@@ -7,20 +7,7 @@ using namespace ArcManagedFBX::Types;
 using namespace ArcManagedFBX::Utility;
 using namespace ArcManagedFBX::Exceptions;
 
-FBXGeometryBase::FBXGeometryBase()
-{
-
-}
-
-FBXGeometryBase::!FBXGeometryBase()
-{
-
-}
-
-FBXGeometryBase::~FBXGeometryBase()
-{
-
-}
+ARC_DEFAULT_CONSTRUCTORS_IMPL(FBXGeometryBase)
 
 FBXGeometryBase::FBXGeometryBase(FbxGeometryBase* instance)
 {
@@ -44,27 +31,37 @@ bool FBXGeometryBase::PrimaryVisibility::get()
 
 bool FBXGeometryBase::ReceiveShadow::get()
 {
+	ARC_CHECK_AND_THROW(this->GetFBXGeometryBase() == nullptr, "")
+
 	return this->GetFBXGeometryBase()->ReceiveShadow.Get();
 }
 
 bool FBXGeometryBase::CastShadow::get()
 {
+	ARC_CHECK_AND_THROW(this->GetFBXGeometryBase() == nullptr, "")
+
 	return this->GetFBXGeometryBase()->CastShadow.Get();
 }
 
 void ArcManagedFBX::FBXGeometryBase::InitBinormals(int32 count, const int32 layerindex, String^ name)
 {
+	ARC_CHECK_AND_THROW(this->GetFBXGeometryBase() == nullptr, "")
+
 	const char* nativeName = StringHelper::ToNative(name);
 	this->GetFBXGeometryBase()->InitBinormals(count,layerindex,nativeName);
 }
 
 void ArcManagedFBX::FBXGeometryBase::InitTangents(FBXGeometryBase^ source, const int32 layerindex)
 {
-	
+	ARC_CHECK_AND_THROW(this->GetFBXGeometryBase() == nullptr, "")
+
+	this->GetFBXGeometryBase()->InitTangents(source->GetFBXGeometryBase(),layerindex);
 }
 
 void ArcManagedFBX::FBXGeometryBase::InitTangents(int32 count, int32 layerindex, String^ name)
 {
+	ARC_CHECK_AND_THROW(this->GetFBXGeometryBase() == nullptr, "")
+
 	this->GetFBXGeometryBase()->InitTangents(count,layerindex,StringHelper::ToNative(name));
 }
 

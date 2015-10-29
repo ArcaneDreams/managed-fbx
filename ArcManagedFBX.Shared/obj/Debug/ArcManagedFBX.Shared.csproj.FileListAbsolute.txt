@@ -1,0 +1,5 @@
+C:\Users\luc.shelton\Documents\GitHub\ArcManagedFBX\ArcManagedFBX.Shared\bin\Debug\ArcManagedFBX.Shared.dll
+C:\Users\luc.shelton\Documents\GitHub\ArcManagedFBX\ArcManagedFBX.Shared\bin\Debug\ArcManagedFBX.Shared.pdb
+C:\Users\luc.shelton\Documents\GitHub\ArcManagedFBX\ArcManagedFBX.Shared\obj\Debug\ArcManagedFBX.Shared.csprojResolveAssemblyReference.cache
+C:\Users\luc.shelton\Documents\GitHub\ArcManagedFBX\ArcManagedFBX.Shared\obj\Debug\ArcManagedFBX.Shared.dll
+C:\Users\luc.shelton\Documents\GitHub\ArcManagedFBX\ArcManagedFBX.Shared\obj\Debug\ArcManagedFBX.Shared.pdb

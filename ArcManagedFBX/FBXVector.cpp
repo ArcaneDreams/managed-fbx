@@ -40,6 +40,16 @@ FBXVector^ ArcManagedFBX::FBXVector::ConvertVector2(FbxVector2* instance)
 	return gcnew FBXVector(0.f,0.f,0.f,0.f);
 }
 
+FBXVector^ ArcManagedFBX::FBXVector::ConvertVector3(FbxDouble3* instance)
+{
+	return FBXVector::Zero;
+}
+
+FBXVector^ ArcManagedFBX::FBXVector::ConvertVector4(FbxDouble4* instance)
+{
+	return FBXVector::Zero;
+}
+
 FBXVector^ ArcManagedFBX::FBXVector::ConvertVector4(FbxVector4* instance)
 {
 	if (instance != nullptr)
@@ -48,11 +58,21 @@ FBXVector^ ArcManagedFBX::FBXVector::ConvertVector4(FbxVector4* instance)
 	return gcnew FBXVector(0.f,0.f,0.f,0.f);
 }
 
+FBXVector^ ArcManagedFBX::FBXVector::ConvertVector2(FbxDouble2* instance)
+{
+	return FBXVector::Zero;
+}
+
 FbxVector2 ArcManagedFBX::FBXVector::GenerateVector2()
 {
 	FbxVector2 outputVector = FbxVector2(this->x,this->y);
 	
 	return outputVector;
+}
+
+String^ ArcManagedFBX::FBXVector::ToString()
+{
+	return String::Format("X:{0}, Y:{1}, Z:{2}, W:{3}",x,y,z,w);
 }
 
 FbxVector4 ArcManagedFBX::FBXVector::GenerateVector4()

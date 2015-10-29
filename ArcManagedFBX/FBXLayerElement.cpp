@@ -5,21 +5,7 @@ using namespace ArcManagedFBX;
 using namespace ArcManagedFBX::Types;
 using namespace ArcManagedFBX::Exceptions;
 
-FBXLayerElement::FBXLayerElement()
-{
-
-}
-
-FBXLayerElement::!FBXLayerElement()
-{
-
-}
-
-FBXLayerElement::~FBXLayerElement()
-{
-
-}
-
+ARC_DEFAULT_CONSTRUCTORS_IMPL(FBXLayerElement)
 
 ArcManagedFBX::Types::EMappingMode ArcManagedFBX::FBXLayerElement::GetMappingMode()
 {

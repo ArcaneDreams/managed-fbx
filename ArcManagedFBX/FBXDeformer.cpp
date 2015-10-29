@@ -4,20 +4,7 @@
 using namespace ArcManagedFBX;
 using namespace ArcManagedFBX::Types;
 
-FBXDeformer::FBXDeformer()
-{
-
-}
-
-FBXDeformer::~FBXDeformer()
-{
-
-}
-
-FBXDeformer::!FBXDeformer()
-{
-
-}
+ARC_DEFAULT_CONSTRUCTORS_IMPL(FBXDeformer)
 
 FBXDeformer::FBXDeformer(FbxDeformer* instance) : FBXObject(instance)
 {

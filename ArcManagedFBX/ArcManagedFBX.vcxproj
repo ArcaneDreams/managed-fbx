@@ -268,6 +268,16 @@
   <ItemGroup>
     <None Include="FBXIOFileHeaderInfo.h" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ArcManagedFBX.Shared\ArcManagedFBX.Shared.csproj">
+      <Project>{28a74a7a-30be-4978-8473-c3cb8a8c70de}</Project>
+      <Private>true</Private>
+      <ReferenceOutputAssembly>true</ReferenceOutputAssembly>
+      <CopyLocalSatelliteAssemblies>false</CopyLocalSatelliteAssemblies>
+      <LinkLibraryDependencies>true</LinkLibraryDependencies>
+      <UseLibraryDependencyInputs>false</UseLibraryDependencyInputs>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

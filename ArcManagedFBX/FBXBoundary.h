@@ -16,6 +16,9 @@ namespace ArcManagedFBX
 		ARC_DEFAULT_CONSTRUCTORS(FBXBoundary)
 		void ClearCurves();
 		bool IsValid([Optional] bool mustClosed);
+
+		int32 GetCurveCount();
+		bool IsCounterClockwise();
 	private:
 
 	internal:

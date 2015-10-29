@@ -31,5 +31,5 @@ String^ ArcManagedFBX::IO::FBXIOBase::GetFilename()
 
 bool ArcManagedFBX::IO::FBXIOBase::Initialize(String^ filename, int fileformat,FBXIOSettings^ iosettings)
 {
-	return false;
+	return this->GetFBXIOBase()->Initialize(StringHelper::ToNative(filename),fileformat,iosettings->GetFBXIOSettings());
 }

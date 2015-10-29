@@ -139,7 +139,7 @@ namespace ArcManagedFBXTest
                             break;
 
                         case EAttributeType.eSkeleton:
-                            DisplaySkeleton(nodeInstance.GetNodeAttribute());
+                            DisplaySkeleton((FBXSkeleton)nodeInstance.GetNodeAttribute());
                             break;
                     }
                 }
@@ -196,6 +196,10 @@ namespace ArcManagedFBXTest
                 throw new ArgumentNullException("The mesh instance was null. Check and try again!");
 
             FBXVector[] controlPoints = meshInstance.GetControlPoints();
+
+            foreach (var vector in controlPoints)
+            {
+            }
         }
 
         /// <summary>
@@ -209,6 +213,7 @@ namespace ArcManagedFBXTest
 
             string[] skeletonTypes = new string[] { "Root", "Limb", "Limb Node", "Effector" };
 
+            // Write out the type of node that it is
             LogMessage("Type: {0}",skeletonTypes[(int)skelInstance.GetSkeletonType()]);
 
             // Based on the type of skeleton it is, display the relevant information

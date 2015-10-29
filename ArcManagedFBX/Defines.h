@@ -96,6 +96,17 @@ static operator Child^(Parent^ parentInstance)\
 	{\
 	}
 
+#define ARC_DEFAULT_CONSTRUCTORS_INHERIT_IMPL(ImplType, ParentImplType) \
+	ImplType::ImplType() : ParentImplType()\
+	{\
+	}\
+	ImplType::~ImplType()\
+	{\
+	}\
+	ImplType::!ImplType()\
+	{\
+	}
+
 // This will most likely be used with the likes of FBXObject and having to cast down and up based on
 // all the child classes in the SDK
 #define ARC_CHILD_CAST(ParentMember, NativeType, ChildType) \
