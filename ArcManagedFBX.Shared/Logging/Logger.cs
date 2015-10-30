@@ -10,6 +10,16 @@ using System.Runtime.InteropServices;
 
 namespace ArcManagedFBX.Shared
 {
+    enum LogType
+    {
+        Normal = 1,
+        Warning,
+        Error
+    }
+
+    /// <summary>
+    ///     The logger class that is responsible for outputting log content
+    /// </summary>
     public class Logger
     {
         private static Logger instance = null;
@@ -35,6 +45,15 @@ namespace ArcManagedFBX.Shared
             }
         }
 
+        private string GetCallingApplicationName()
+        {
+            Assembly currentCallingAssembly = Assembly.GetCallingAssembly();
+            if (currentCallingAssembly != null)
+                return currentCallingAssembly.FullName.ToString();
+
+            return string.Empty;
+        }
+
         private const string DEFAULT_FILE_NAME = "output.log";
 
         private Logger()
@@ -42,24 +61,28 @@ namespace ArcManagedFBX.Shared
 
         }
 
+        private void Output(LogType type, string message)
+        {
+
+        }
+
         public static void LogMessage(string message, params object[] parameters)
         {
             if (string.IsNullOrEmpty(message))
-            {
-
-            }
+                throw new ArgumentNullException("The message that was specified is either null or empty.");
         }
 
         public static void LogWarning(string message, params object[] parameters)
         {
+            if (string.IsNullOrEmpty(message))
+                throw new ArgumentNullException("The message that was specified is either null or empty.");
         }
 
         public static void LogError(string message, params object[] parameters)
         {
             if (string.IsNullOrEmpty(message))
-            {
+                throw new ArgumentNullException("The message that was specified is either null or empty.");
 
-            }
         }
     }
 }
