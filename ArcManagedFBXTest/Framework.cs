@@ -327,10 +327,5 @@ namespace ArcManagedFBXTest
         }
     }
 
-    enum LogType 
-    {
-        Normal = 1,
-        Warning,
-        Error
-    }
+
 }
