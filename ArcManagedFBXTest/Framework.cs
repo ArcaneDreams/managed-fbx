@@ -147,6 +147,12 @@ namespace ArcManagedFBXTest
             }
         }
 
+        private static void DisplayLODGroup(FBXLODGroup lodGroupInstance)
+        {
+            if (lodGroupInstance == null)
+                throw new ArgumentNullException("The lod group instance is invalid.");
+        }
+
         /// <summary>
         ///     Display information regarding lights.
         /// </summary>

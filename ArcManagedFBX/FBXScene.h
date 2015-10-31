@@ -17,14 +17,23 @@ namespace ArcManagedFBX
 
 		// Constructors that are to be used
 		FBXScene();
-		FBXScene(FBXScene^ other);
 		virtual ~FBXScene();
 		!FBXScene();
 
-		// The nicely wrapped methods.
 		int32 CreateCharacter(String^ pName);
+
 		void DestroyCharacter(int32 pIndex);
+
+		int32 GetGenericNodeCount();
+
+		int32 GetCharacterCount();
+
+		int32 CreateCharacter(String^ name);
+
+		void DestroyCharacter(int32 index);
+
 		int32 GetControlSetPlugCount();
+
 		int32 GetCurveOnSurfaceCount();
 
 		FBXNode^ GetRootNode();
@@ -32,11 +41,8 @@ namespace ArcManagedFBX
 		FBXDocumentInfo^ GetSceneInfo();
 
 		void SyncShowPropertyForInstance();
-		void ConnectTextures();
 
-		// Import / export operations that are to be performed
-		FBXScene^ Import(String^ fileName);
-		void Export(String^ fileName);
+		void ConnectTextures();
 
 	internal:
 		FBXScene(FbxScene* instance);
