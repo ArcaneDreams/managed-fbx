@@ -1,6 +1,7 @@
 ArcManagedFBX.opensdf
 ArcManagedFBX.sdf
 Bin/
+Output/
 ArcManagedFBX/obj/*
 ArcManagedFBX/bin/*
 ipch/
