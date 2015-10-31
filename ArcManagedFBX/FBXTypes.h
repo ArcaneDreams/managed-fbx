@@ -4,6 +4,29 @@ namespace ArcManagedFBX
 {
 	namespace Types
 	{
+		public enum class EMarkerType
+		{
+			eStandard, 
+			eOptical, 
+			eEffectorFK,
+			eEffectorIK
+		};
+
+		public enum class ELook
+		{ 
+			eCube, 
+			eHardCross, 
+			eLightCross, 
+			eSphere,
+			eCapsule,
+			eBox,
+			eBone,
+			eCircle,
+			eSquare,
+			eStick,
+			eNone
+		};
+
 		public enum class EFbxType
 		{
 			eFbxUndefined,	//!< Unidentified.

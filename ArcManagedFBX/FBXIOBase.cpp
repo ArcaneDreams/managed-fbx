@@ -26,7 +26,7 @@ FBXIOBase::FBXIOBase(FbxIOBase* instance) : FBXObject(instance)
 
 String^ ArcManagedFBX::IO::FBXIOBase::GetFilename()
 {
-	return "";
+	return StringHelper::ToManaged(this->GetFBXIOBase()->GetFileName().Buffer());
 }
 
 bool ArcManagedFBX::IO::FBXIOBase::Initialize(String^ filename, int fileformat,FBXIOSettings^ iosettings)

@@ -73,23 +73,27 @@
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(IncludePath);..\Libs\FBX\include</IncludePath>
     <LibraryPath>$(LibraryPath);..\Libs\FBX\lib\vs2012\x86\debug</LibraryPath>
-    <OutDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)Output\ArcManagedFBX\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Output\ArcManagedFBX\$(Platform)\$(Configuration)\</IntDir>
     <SourcePath>$(SourcePath);..\Libs\FBX\include</SourcePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(IncludePath);..\Libs\FBX\include</IncludePath>
     <LibraryPath>$(LibraryPath);..\Libs\FBX\lib\vs2012\x64\debug</LibraryPath>
-    <OutDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)Bin\$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)Output\ArcManagedFBX\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Output\ArcManagedFBX\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <LibraryPath>$(LibraryPath);..\Libs\FBX\lib\vs2012\x86\release</LibraryPath>
+    <OutDir>$(SolutionDir)Output\ArcManagedFBX\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Output\ArcManagedFBX\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)Output\ArcManagedFBX\$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Output\ArcManagedFBX\$(Platform)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -155,6 +159,7 @@
     <ClInclude Include="FBXBoundary.h" />
     <ClInclude Include="FBXLine.h" />
     <ClInclude Include="FBXLODGroup.h" />
+    <ClInclude Include="FBXMarker.h" />
     <ClInclude Include="FBXNodeAttribute.h" />
     <ClInclude Include="FBXCamera.h" />
     <ClInclude Include="FBXClassId.h" />
@@ -212,6 +217,7 @@
     <ClCompile Include="FBXBoundary.cpp" />
     <ClCompile Include="FBXLine.cpp" />
     <ClCompile Include="FBXLODGroup.cpp" />
+    <ClCompile Include="FBXMarker.cpp" />
     <ClCompile Include="FBXNodeAttribute.cpp" />
     <ClCompile Include="FBXCamera.cpp" />
     <ClCompile Include="FBXClassId.cpp" />

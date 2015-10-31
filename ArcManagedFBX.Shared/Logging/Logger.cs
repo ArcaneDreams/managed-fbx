@@ -45,6 +45,11 @@ namespace ArcManagedFBX.Shared
             }
         }
 
+
+        /// <summary>
+        ///     Retrieve the name of the application that is calling into this
+        /// </summary>
+        /// <returns>Returns the name of the application by using reflection</returns>
         private string GetCallingApplicationName()
         {
             Assembly currentCallingAssembly = Assembly.GetCallingAssembly();
@@ -61,16 +66,46 @@ namespace ArcManagedFBX.Shared
 
         }
 
+        /// <summary>
+        ///     Write the message out as required
+        /// </summary>
+        /// <param name="type"></param>
+        /// <param name="message"></param>
         private void Output(LogType type, string message)
         {
+            Console.ForegroundColor = ConsoleColor.White;
+
+            Console.Write("[");
+            switch (type)
+            {
+                case LogType.Normal:
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    break;
+                case LogType.Warning:
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    break;
+                case LogType.Error:
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    break;
+            }
+            Console.Write(message);
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.Write("] ");
+
+            Console.WriteLine("[{0}] [{1}] {2}", GetCallingApplicationName(), string.Empty, Message);
 
         }
 
+        /// <summary>
+        ///     Write the message out that is to be used
+        /// </summary>
+        /// <param name="message">The message that we are writing out</param>
+        /// <param name="parameters"></param>
         public static void LogMessage(string message, params object[] parameters)
         {
             if (string.IsNullOrEmpty(message))
                 throw new ArgumentNullException("The message that was specified is either null or empty.");
-        }
+        }   
 
         public static void LogWarning(string message, params object[] parameters)
         {

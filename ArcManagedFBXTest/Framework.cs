@@ -14,6 +14,7 @@ using ArcManagedFBX.Types;
 using ArcManagedFBX.Framework;
 using ArcManagedFBX.Exceptions;
 using ArcManagedFBX.IO;
+using ArcManagedFBX.Shared;
 
 namespace ArcManagedFBXTest
 {
@@ -164,6 +165,7 @@ namespace ArcManagedFBXTest
         {
             if (cameraInstance == null)
                 throw new ArgumentNullException("Camera instance was null. Check and try again");
+
         }
 
         private static void DisplayPolygons(FBXMesh meshInstance)

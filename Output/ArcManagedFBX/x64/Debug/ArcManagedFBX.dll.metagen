@@ -1,0 +1,1060 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly ArcManagedFBX, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly ArcManagedFBX.Shared, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Class ArcManagedFBX.Exceptions.FBXException: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Exception
+    Void .ctor(System.String, System.Object[]): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class ArcManagedFBX.Utility.StringHelper: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    ToNative(String): PrivateScope, Public, Static, HideBySig
+    ToManaged(SByte*): PrivateScope, Public, Static, HideBySig
+    InitContext(): PrivateScope, Public, Static, HideBySig
+Struct ArcManagedFBX.Types.EMarkerType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ArcManagedFBX.Types.EMarkerType eStandard = 0 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EMarkerType eOptical = 1 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EMarkerType eEffectorFK = 2 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EMarkerType eEffectorIK = 3 : Public, Static, Literal, HasDefault
+Struct ArcManagedFBX.Types.ELook: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ArcManagedFBX.Types.ELook eCube = 0 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELook eHardCross = 1 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELook eLightCross = 2 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELook eSphere = 3 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELook eCapsule = 4 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELook eBox = 5 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELook eBone = 6 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELook eCircle = 7 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELook eSquare = 8 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELook eStick = 9 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELook eNone = 10 : Public, Static, Literal, HasDefault
+Struct ArcManagedFBX.Types.EFbxType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ArcManagedFBX.Types.EFbxType eFbxUndefined = 0 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EFbxType eFbxChar = 1 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EFbxType eFbxUChar = 2 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EFbxType eFbxShort = 3 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EFbxType eFbxUShort = 4 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EFbxType eFbxUInt = 5 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EFbxType eFbxLongLong = 6 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EFbxType eFbxULongLong = 7 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EFbxType eFbxHalfFloat = 8 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EFbxType eFbxBool = 9 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EFbxType eFbxInt = 10 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EFbxType eFbxFloat = 11 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EFbxType eFbxDouble = 12 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EFbxType eFbxDouble2 = 13 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EFbxType eFbxDouble3 = 14 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EFbxType eFbxDouble4 = 15 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EFbxType eFbxDouble4x4 = 16 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EFbxType eFbxEnum = 17 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EFbxType eFbxString = 18 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EFbxType eFbxTime = 19 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EFbxType eFbxReference = 20 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EFbxType eFbxBlob = 21 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EFbxType eFbxDistance = 22 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EFbxType eFbxDateTime = 23 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EFbxType eFbxTypeCount = 24 : Public, Static, Literal, HasDefault
+Struct ArcManagedFBX.Types.EFileMode: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ArcManagedFBX.Types.EFileMode eNone = 0 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EFileMode eReadOnly = 1 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EFileMode eReadWrite = 2 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EFileMode eCreateWriteOnly = 3 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EFileMode eCreateReadWrite = 4 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EFileMode eCreateAppend = 5 : Public, Static, Literal, HasDefault
+Struct ArcManagedFBX.Types.EFileSeekPos: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ArcManagedFBX.Types.EFileSeekPos eBegin = 0 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EFileSeekPos eCurrent = 1 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EFileSeekPos eEnd = 2 : Public, Static, Literal, HasDefault
+Struct ArcManagedFBX.Types.ESkeletonType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ArcManagedFBX.Types.ESkeletonType eRoot = 0 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ESkeletonType eLimb = 1 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ESkeletonType eLimbNode = 2 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ESkeletonType eEffector = 3 : Public, Static, Literal, HasDefault
+Struct ArcManagedFBX.Types.EBoundaryRule: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ArcManagedFBX.Types.EBoundaryRule eLegacy = 0 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EBoundaryRule eCreaseAll = 1 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EBoundaryRule eCreaseEdge = 2 : Public, Static, Literal, HasDefault
+Struct ArcManagedFBX.Types.EStatusCode: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ArcManagedFBX.Types.EStatusCode eSuccess = 0 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EStatusCode eFailure = 1 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EStatusCode eInsufficientMemory = 2 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EStatusCode eInvalidParameter = 3 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EStatusCode eIndexOutOfRange = 4 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EStatusCode ePasswordError = 5 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EStatusCode eInvalidFileVersion = 6 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EStatusCode eInvalidFile = 7 : Public, Static, Literal, HasDefault
+Struct ArcManagedFBX.Types.EReferenceMode: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ArcManagedFBX.Types.EReferenceMode eDirect = 0 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EReferenceMode eIndex = 1 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EReferenceMode eIndexToDirect = 2 : Public, Static, Literal, HasDefault
+Struct ArcManagedFBX.Types.EMappingMode: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ArcManagedFBX.Types.EMappingMode eNone = 0 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EMappingMode eByControlPoint = 1 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EMappingMode eByPolygonVertex = 2 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EMappingMode eByPolygon = 3 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EMappingMode eByEdge = 4 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EMappingMode eAllSame = 5 : Public, Static, Literal, HasDefault
+Struct ArcManagedFBX.Types.EDeformerType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ArcManagedFBX.Types.EDeformerType eUnknown = 0 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EDeformerType eSkin = 1 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EDeformerType eBlendShape = 2 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EDeformerType eVertexCache = 3 : Public, Static, Literal, HasDefault
+Struct ArcManagedFBX.Types.EShadingMode: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ArcManagedFBX.Types.EShadingMode eHardShading = 0 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EShadingMode eWireFrame = 1 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EShadingMode eFlatShading = 2 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EShadingMode eLightShading = 3 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EShadingMode eTextureShading = 4 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EShadingMode eFullShading = 5 : Public, Static, Literal, HasDefault
+Struct ArcManagedFBX.Types.ESmoothness: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ArcManagedFBX.Types.ESmoothness eHull = 0 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ESmoothness eRough = 1 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ESmoothness eMedium = 2 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ESmoothness eFine = 3 : Public, Static, Literal, HasDefault
+Struct ArcManagedFBX.Types.EDisplayLevel: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ArcManagedFBX.Types.EDisplayLevel eUseLOD = 0 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EDisplayLevel eShow = 1 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EDisplayLevel eHide = 2 : Public, Static, Literal, HasDefault
+Struct ArcManagedFBX.Types.EAttributeType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ArcManagedFBX.Types.EAttributeType eUnknown = 0 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EAttributeType eNull = 1 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EAttributeType eMarker = 2 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EAttributeType eSkeleton = 3 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EAttributeType eMesh = 4 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EAttributeType eNurbs = 5 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EAttributeType ePatch = 6 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EAttributeType eCamera = 7 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EAttributeType eCameraStereo = 8 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EAttributeType eCameraSwitcher = 9 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EAttributeType eLight = 10 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EAttributeType eOpticalReference = 11 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EAttributeType eOpticalMarker = 12 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EAttributeType eNurbsCurve = 13 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EAttributeType eTrimNurbsSurface = 14 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EAttributeType eBoundary = 15 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EAttributeType eNurbsSurface = 16 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EAttributeType eShape = 17 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EAttributeType eLODGroup = 18 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EAttributeType eSubDiv = 19 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EAttributeType eCachedEffect = 20 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EAttributeType eLine = 21 : Public, Static, Literal, HasDefault
+Struct ArcManagedFBX.Types.EMode: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ArcManagedFBX.Types.EMode eNone = 0 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EMode eReadOnly = 1 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EMode eReadWrite = 2 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EMode eCreateWriteOnly = 3 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EMode eCreateReadWrite = 4 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EMode eCreateAppend = 5 : Public, Static, Literal, HasDefault
+Struct ArcManagedFBX.Types.ESeekPos: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ArcManagedFBX.Types.ESeekPos eBegin = 0 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ESeekPos eCurrent = 1 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ESeekPos eEnd = 2 : Public, Static, Literal, HasDefault
+Struct ArcManagedFBX.Types.ELanguage: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ArcManagedFBX.Types.ELanguage eENU = 0 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELanguage eDEU = 1 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELanguage eFRA = 2 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELanguage eJPN = 3 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELanguage eKOR = 4 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELanguage eCHS = 5 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELanguage eLanguageCount = 6 : Public, Static, Literal, HasDefault
+Struct ArcManagedFBX.Types.ERotationAccumulationMode: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ArcManagedFBX.Types.ERotationAccumulationMode eRotationByLayer = 0 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ERotationAccumulationMode eRotationByChannel = 1 : Public, Static, Literal, HasDefault
+Struct ArcManagedFBX.Types.EScaleAccumulationMode: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ArcManagedFBX.Types.EScaleAccumulationMode eScaleMultiply = 0 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EScaleAccumulationMode eScaleAdditive = 1 : Public, Static, Literal, HasDefault
+Struct ArcManagedFBX.Types.EFilmRollOrder: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ArcManagedFBX.Types.EFilmRollOrder eRotateFirst = 0 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EFilmRollOrder eTranslateFirst = 1 : Public, Static, Literal, HasDefault
+Struct ArcManagedFBX.Types.EUnit: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ArcManagedFBX.Types.EUnit Metres = 0 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EUnit Centimetres = 1 : Public, Static, Literal, HasDefault
+Struct ArcManagedFBX.Types.EAxisSystem: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ArcManagedFBX.Types.EAxisSystem Max = 0 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EAxisSystem MayaYUp = 1 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EAxisSystem MayaZUp = 2 : Public, Static, Literal, HasDefault
+Struct ArcManagedFBX.Types.EDecayType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ArcManagedFBX.Types.EDecayType eNone = 0 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EDecayType eLinear = 1 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EDecayType eQuadratic = 2 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EDecayType eCubic = 3 : Public, Static, Literal, HasDefault
+Struct ArcManagedFBX.Types.EObjectFlag: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ArcManagedFBX.Types.EObjectFlag eNone = 0 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EObjectFlag eInitialized = 1 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EObjectFlag eSystem = 2 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EObjectFlag eSavable = 4 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EObjectFlag eSelected = 8 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EObjectFlag eHidden = 16 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EObjectFlag eContentLoaded = 32 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EObjectFlag eDontLocalize = 64 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EObjectFlag eCopyCalledByClone = 65536 : Public, Static, Literal, HasDefault
+Struct ArcManagedFBX.Types.EBlendMode: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ArcManagedFBX.Types.EBlendMode eBlendAdditive = 0 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EBlendMode eBlendOverride = 1 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EBlendMode eBlendOverridePassthrough = 2 : Public, Static, Literal, HasDefault
+Struct ArcManagedFBX.Types.ELightType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ArcManagedFBX.Types.ELightType ePoint = 0 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELightType eDirectional = 1 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELightType eSpot = 2 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELightType eArea = 3 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELightType eVolume = 4 : Public, Static, Literal, HasDefault
+Struct ArcManagedFBX.Types.ELayerType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ArcManagedFBX.Types.ELayerType eUnknown = 0 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELayerType eNormal = 1 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELayerType eBiNormal = 2 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELayerType eTangent = 3 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELayerType eMaterial = 4 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELayerType ePolygonGroup = 5 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELayerType eUV = 6 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELayerType eVertexColor = 7 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELayerType eSmoothing = 8 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELayerType eVertexCrease = 9 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELayerType eEdgeCrease = 10 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELayerType eHole = 11 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELayerType eUserData = 12 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELayerType eVisibility = 13 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELayerType eTextureDiffuse = 14 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELayerType eTextureDiffuseFactor = 15 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELayerType eTextureEmissive = 16 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELayerType eTextureEmissiveFactor = 17 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELayerType eTextureAmbient = 18 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELayerType eTextureAmbientFactor = 19 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELayerType eTextureSpecular = 20 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELayerType eTextureSpecularFactor = 21 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELayerType eTextureShininess = 22 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELayerType eTextureNormalMap = 23 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELayerType eTextureBump = 24 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELayerType eTextureTransparency = 25 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELayerType eTextureTransparencyFactor = 26 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELayerType eTextureReflection = 27 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELayerType eTextureReflectionFactor = 28 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELayerType eTextureDisplacement = 29 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELayerType eTextureDisplacementVector = 30 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELayerType eTypeCount = 31 : Public, Static, Literal, HasDefault
+Struct ArcManagedFBX.Types.EAreaLightShape: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ArcManagedFBX.Types.EAreaLightShape eRectangle = 0 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EAreaLightShape eSphere = 1 : Public, Static, Literal, HasDefault
+Struct ArcManagedFBX.Types.EApertureMode: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ArcManagedFBX.Types.EApertureMode eHorizAndVert = 0 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EApertureMode eHorizontal = 1 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EApertureMode eVertical = 2 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EApertureMode eFocalLength = 3 : Public, Static, Literal, HasDefault
+Struct ArcManagedFBX.Types.EAspectRatioMode: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ArcManagedFBX.Types.EAspectRatioMode eWindowSize = 0 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EAspectRatioMode eFixedRatio = 1 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EAspectRatioMode eFixedResolution = 2 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EAspectRatioMode eFixedWidth = 3 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EAspectRatioMode eFixedHeight = 4 : Public, Static, Literal, HasDefault
+Struct ArcManagedFBX.Types.EApertureFormat: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ArcManagedFBX.Types.EApertureFormat eCustomAperture = 0 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EApertureFormat e16mmTheatrical = 1 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EApertureFormat eSuper16mm = 2 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EApertureFormat e35mmAcademy = 3 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EApertureFormat e35mmTVProjection = 4 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EApertureFormat e35mmFullAperture = 5 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EApertureFormat e35mm185Projection = 6 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EApertureFormat e35mmAnamorphic = 7 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EApertureFormat e70mmProjection = 8 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EApertureFormat eVistaVision = 9 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EApertureFormat eDynaVision = 10 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EApertureFormat eIMAX = 11 : Public, Static, Literal, HasDefault
+Struct ArcManagedFBX.Types.EFormat: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ArcManagedFBX.Types.EFormat eCustomFormat = 0 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EFormat eD1NTSC = 1 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EFormat eNTSC = 2 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EFormat ePAL = 3 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EFormat eD1PAL = 4 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EFormat eHD = 5 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EFormat e640x480 = 6 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EFormat e320x200 = 7 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EFormat e320x240 = 8 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EFormat e128x128 = 9 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EFormat eFullscreen = 10 : Public, Static, Literal, HasDefault
+Struct ArcManagedFBX.Types.EProjectionType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ArcManagedFBX.Types.EProjectionType ePerspective = 0 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EProjectionType eOrthogonal = 1 : Public, Static, Literal, HasDefault
+Struct ArcManagedFBX.Types.ELoadMode: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ArcManagedFBX.Types.ELoadMode eCreate = 0 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELoadMode eMerge = 1 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ELoadMode eExclusiveMerge = 2 : Public, Static, Literal, HasDefault
+Struct ArcManagedFBX.Types.QuaternionMode: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ArcManagedFBX.Types.QuaternionMode eAsQuaternion = 0 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.QuaternionMode eAsEuler = 1 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.QuaternionMode eResample = 2 : Public, Static, Literal, HasDefault
+Struct ArcManagedFBX.Types.ObjectDerivation: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ArcManagedFBX.Types.ObjectDerivation eByLayer = 0 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ObjectDerivation eByEntity = 1 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.ObjectDerivation eByBlock = 2 : Public, Static, Literal, HasDefault
+Struct ArcManagedFBX.Types.SysUnits: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ArcManagedFBX.Types.SysUnits eUnitsUser = 0 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.SysUnits eUnitsInches = 1 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.SysUnits eUnitsFeet = 2 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.SysUnits eUnitYards = 3 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.SysUnits eUnitsMiles = 4 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.SysUnits eUnitsMillimeters = 5 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.SysUnits eUnitsCentimeters = 6 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.SysUnits eUnitsMeters = 7 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.SysUnits eUnitsKilometers = 8 : Public, Static, Literal, HasDefault
+Struct ArcManagedFBX.Types.SysFrameRate: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ArcManagedFBX.Types.SysFrameRate eFrameRateUser = 0 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.SysFrameRate eFrameRateHours = 1 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.SysFrameRate eFrameRateMinutes = 2 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.SysFrameRate eFrameRateSeconds = 3 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.SysFrameRate eFrameRateMilliseconds = 4 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.SysFrameRate eFrameRateGames15 = 5 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.SysFrameRate eFrameRateFilm24 = 6 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.SysFrameRate eFrameRatePAL25 = 7 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.SysFrameRate eFrameRateNTSC30 = 8 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.SysFrameRate eFrameRateShowScan48 = 9 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.SysFrameRate eFrameRatePALField50 = 10 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.SysFrameRate eFrameRateNTSCField60 = 11 : Public, Static, Literal, HasDefault
+Struct ArcManagedFBX.Types.EnveloppeSystem: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ArcManagedFBX.Types.EnveloppeSystem eSkinModifier = 0 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EnveloppeSystem ePhysic = 1 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EnveloppeSystem eBonePro = 2 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.EnveloppeSystem eEnveloppeSystemCount = 3 : Public, Static, Literal, HasDefault
+Struct ArcManagedFBX.Types.GeometryType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ArcManagedFBX.Types.GeometryType eTriangle = 0 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.GeometryType eSimplifiedPoly = 1 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.GeometryType ePolygon = 2 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.GeometryType eNurbs = 3 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.GeometryType ePatch = 4 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.GeometryType eGeometryTypeCount = 5 : Public, Static, Literal, HasDefault
+Struct ArcManagedFBX.Types.IKType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    ArcManagedFBX.Types.IKType eNone = 0 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.IKType eFBIK = 1 : Public, Static, Literal, HasDefault
+    ArcManagedFBX.Types.IKType eHumanIK = 2 : Public, Static, Literal, HasDefault
+Class ArcManagedFBX.Framework.ArcFBXFramework: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    Initialize(): PrivateScope, Public, HideBySig
+    LoadFile(String): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Struct ArcManagedFBX.FBXColour: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+    Void .ctor(Double, Double, Double, Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Double A   'get ' : 
+    Double B   'get ' : 
+    Double G   'get ' : 
+    Double R   'get ' : 
+  Methods:
+    ToString(): PrivateScope, Public, Final, Virtual, HideBySig
+    get_R(): PrivateScope, Public, HideBySig, SpecialName
+    get_G(): PrivateScope, Public, HideBySig, SpecialName
+    get_B(): PrivateScope, Public, HideBySig, SpecialName
+    get_A(): PrivateScope, Public, HideBySig, SpecialName
+Class ArcManagedFBX.FBXEmitter: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class ArcManagedFBX.FBXObject: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ArcManagedFBX.FBXEmitter
+    Void .ctor(ArcManagedFBX.FBXManager, System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Create(FBXObject, String): PrivateScope, Public, Static, HideBySig
+    SetSelected(Boolean(HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetSelected(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetManager(): PrivateScope, Public, HideBySig
+    GetDocument(): PrivateScope, Public, HideBySig
+    GetRootDocument(): PrivateScope, Public, HideBySig
+    GetScene(): PrivateScope, Public, HideBySig
+    SetAllObjectFlags(UInt32): PrivateScope, Public, HideBySig
+    GetAllObjectFlags(): PrivateScope, Public, HideBySig
+    GetReferencedByCount(): PrivateScope, Public, HideBySig
+    GetReferencedBy(Int32): PrivateScope, Public, HideBySig
+    ResetProperties(): PrivateScope, Public, HideBySig
+    Destroy(Boolean(Optional, HasFieldMarshal)): PrivateScope, Public, HideBySig
+    GetInitialName(): PrivateScope, Public, HideBySig
+    GetName(): PrivateScope, Public, HideBySig
+    SetName(String): PrivateScope, Public, HideBySig
+    GetNameSpaceOnly(): PrivateScope, Public, HideBySig
+    GetNameOnly(): PrivateScope, Public, HideBySig
+    GetNameSpacePrefix(): PrivateScope, Public, HideBySig
+    GetUniqueID(): PrivateScope, Public, HideBySig
+    GetSrcObject(Int32): PrivateScope, Public, HideBySig
+    IsConnectedSrcObject(FBXObject): PrivateScope, Public, HideBySig
+    DisconnectSrcObject(FBXObject): PrivateScope, Public, HideBySig
+Class ArcManagedFBX.FBXCollection: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ArcManagedFBX.FBXObject
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Create(FBXObject, String): PrivateScope, Public, Static, HideBySig
+Class ArcManagedFBX.Layers.FBXAnimLayer: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ArcManagedFBX.FBXCollection
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    ArcManagedFBX.FBXColour Color 'get ' : 
+    Boolean Lock 'get ' : 
+    Boolean Solo 'get ' : 
+    Boolean Mute 'get ' : 
+    Double Weight 'get ' : 
+  Methods:
+    get_Weight(): PrivateScope, Public, HideBySig, SpecialName
+    get_Mute(): PrivateScope, Public, HideBySig, SpecialName
+    get_Solo(): PrivateScope, Public, HideBySig, SpecialName
+    get_Lock(): PrivateScope, Public, HideBySig, SpecialName
+    get_Color(): PrivateScope, Public, HideBySig, SpecialName
+    Reset(): PrivateScope, Public, HideBySig
+Class ArcManagedFBX.Layers.FBXAnimStack: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ArcManagedFBX.FBXCollection
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class ArcManagedFBX.FBXStatus: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    SetCode(EStatusCode): PrivateScope, Public, HideBySig
+    GetErrorString(): PrivateScope, Public, HideBySig
+    Clear(): PrivateScope, Public, HideBySig
+    GetCode(): PrivateScope, Public, HideBySig
+    Error(): PrivateScope, Public, HideBySig
+    op_Equality(FBXStatus): PrivateScope, Public, HideBySig, SpecialName
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class ArcManagedFBX.FBXDeformer: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ArcManagedFBX.FBXObject
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Create(FBXObject, String): PrivateScope, Public, Static, HideBySig
+    GetDeformerType(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Struct ArcManagedFBX.FBXVector: AutoLayout, AnsiClass, Class, Public, SequentialLayout, Sealed, BeforeFieldInit
+  :System.ValueType
+    Void .ctor(Double, Double, Double, Double): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(System.ValueType): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.ValueType One 'get ' FBXVector IsBoxed : 
+    System.ValueType Zero 'get ' FBXVector IsBoxed : 
+  Methods:
+    Cross(ValueType FBXVector IsBoxed): PrivateScope, Public, HideBySig
+    Dot(ValueType FBXVector IsBoxed): PrivateScope, Public, HideBySig
+    get_Zero(): PrivateScope, Public, Static, HideBySig, SpecialName
+    get_One(): PrivateScope, Public, Static, HideBySig, SpecialName
+    ToString(): PrivateScope, Public, Final, Virtual, HideBySig
+Class ArcManagedFBX.FBXLayer: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class ArcManagedFBX.FBXNodeAttribute: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ArcManagedFBX.FBXObject
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    ArcManagedFBX.FBXColour Colour 'get ' : 
+    System.String ColourName 'get ' : 
+  Methods:
+    GetAttributeType(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetNodeCount(): PrivateScope, Public, HideBySig
+    get_ColourName(): PrivateScope, Public, HideBySig, SpecialName
+    get_Colour(): PrivateScope, Public, HideBySig, SpecialName
+Class ArcManagedFBX.FBXLayerContainer: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ArcManagedFBX.FBXNodeAttribute
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class ArcManagedFBX.FBXGeometryBase: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ArcManagedFBX.FBXLayerContainer
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean PrimaryVisibility 'get ' : 
+    Boolean ReceiveShadow 'get ' : 
+    Boolean CastShadow 'get ' : 
+    ArcManagedFBX.FBXVector BBoxMin 'get ' : 
+    ArcManagedFBX.FBXVector BBoxMax 'get ' : 
+  Methods:
+    InitNormals(FBXGeometryBase): PrivateScope, Public, HideBySig
+    InitNormals(Int32): PrivateScope, Public, HideBySig
+    InitTangents(FBXGeometryBase, Int32 IsConst): PrivateScope, Public, HideBySig
+    InitTangents(Int32, Int32, String): PrivateScope, Public, HideBySig
+    InitBinormals(Int32, Int32 IsConst, String): PrivateScope, Public, HideBySig
+    InitControlPoints(Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SetControlPoint(ValueType IsConst FBXVector IsBoxed, ValueType IsConst FBXVector IsBoxed): PrivateScope, Public, HideBySig
+    SetControlPointAt(ValueType FBXVector IsBoxed, Int32): PrivateScope, Public, HideBySig
+    GetElementVertexColorCount(): PrivateScope, Public, HideBySig
+    GetControlPointAt(Int32): PrivateScope, Public, HideBySig
+    SetControlPointCount(Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetControlPointsCount(): PrivateScope, Public, HideBySig
+    ComputeBBox(): PrivateScope, Public, HideBySig
+    get_BBoxMax(): PrivateScope, Public, HideBySig, SpecialName
+    get_BBoxMin(): PrivateScope, Public, HideBySig, SpecialName
+    get_CastShadow(): PrivateScope, Public, HideBySig, SpecialName
+    get_ReceiveShadow(): PrivateScope, Public, HideBySig, SpecialName
+    get_PrimaryVisibility(): PrivateScope, Public, HideBySig, SpecialName
+    GetControlPoints(FBXStatus(Optional)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class ArcManagedFBX.FBXGeometry: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ArcManagedFBX.FBXGeometryBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    GetAttributeType(): PrivateScope, Public, Virtual, HideBySig
+    AddDeformer(FBXDeformer): PrivateScope, Public, HideBySig
+    RemoveDeformer(Int32, FBXStatus): PrivateScope, Public, HideBySig
+    GetDeformerCount(EDeformerType): PrivateScope, Public, HideBySig
+    GetDeformerCount(): PrivateScope, Public, HideBySig
+    GetDestinationGeometryWeightedMapCount(): PrivateScope, Public, HideBySig
+    ClearShape(): PrivateScope, Public, HideBySig
+    GetShapeCount(Int32, Int32, FBXStatus): PrivateScope, Public, HideBySig
+    GetShapeCount(): PrivateScope, Public, HideBySig
+    ApplyPivot(): PrivateScope, Public, HideBySig
+Class ArcManagedFBX.FBXBoundary: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ArcManagedFBX.FBXGeometry
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    ClearCurves(): PrivateScope, Public, HideBySig
+    IsValid(Boolean(Optional, HasFieldMarshal)): PrivateScope, Public, HideBySig
+    GetCurveCount(): PrivateScope, Public, HideBySig
+    IsCounterClockwise(): PrivateScope, Public, HideBySig
+Class ArcManagedFBX.FBXLine: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ArcManagedFBX.FBXGeometry
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    AddEndPoint(Int32): PrivateScope, Public, HideBySig
+    GetEndPointAt(Int32): PrivateScope, Public, HideBySig
+    GetEndPointCount(): PrivateScope, Public, HideBySig
+    AddPointIndex(Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+Class ArcManagedFBX.FBXMesh: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ArcManagedFBX.FBXGeometry
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    op_Implicit(FBXGeometry): PrivateScope, Public, Static, HideBySig, SpecialName
+    op_Implicit(FBXNodeAttribute): PrivateScope, Public, Static, HideBySig, SpecialName
+    BeginPolygon(Int32, Int32, Int32, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    AddPolygon(Int32, Int32): PrivateScope, Public, HideBySig
+    EndPolygon(): PrivateScope, Public, HideBySig
+    IsTriangleMesh(): PrivateScope, Public, HideBySig
+    Compact(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetShapeCount(): PrivateScope, Public, HideBySig
+    GetDeformerCount(): PrivateScope, Public, HideBySig
+    ReservePolygonCount(Int32): PrivateScope, Public, HideBySig
+    GetPolygonCount(): PrivateScope, Public, HideBySig
+    GetPolygonVertex(Int32, Int32): PrivateScope, Public, HideBySig
+    GetPolygonSize(Int32): PrivateScope, Public, HideBySig
+    GetPolygonGroup(Int32): PrivateScope, Public, HideBySig
+    SetPolygonGroup(Int32, Int32): PrivateScope, Public, HideBySig
+    GetPolygonVertexCount(): PrivateScope, Public, HideBySig
+    GetPolygonVertices(): PrivateScope, Public, HideBySig
+    GetPolygonVertexNormal(Int32, Int32, ValueType FBXVector IsBoxed): PrivateScope, Public, HideBySig
+    GetPolygonVertexNormals(FBXVector[]&): PrivateScope, Public, HideBySig
+    GetPolygonVertexUV(Int32, Int32, String, FBXVector, ValueType Boolean IsBoxed): PrivateScope, Public, HideBySig
+    GetPolygonVertexUVs(String, FBXVector[], Int32[]): PrivateScope, Public, HideBySig
+    GenerateTangetsData(String, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    RemovePolygon(Int32): PrivateScope, Public, HideBySig
+    GetUVLayercount(): PrivateScope, Public, HideBySig
+    Reset(): PrivateScope, Public, HideBySig
+    GenerateNormals(Boolean(HasFieldMarshal), Boolean(HasFieldMarshal), Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    RemoveBadPolygons(): PrivateScope, Public, HideBySig
+    GetControlPointsCount(): PrivateScope, Public, HideBySig
+Class ArcManagedFBX.FBXClassId: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(System.String, ArcManagedFBX.FBXClassId): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Destroy(): PrivateScope, Public, HideBySig
+    GetName(): PrivateScope, Public, HideBySig
+    Is(FBXClassId IsConst): PrivateScope, Public, HideBySig
+    op_Equality(FBXClassId IsConst): PrivateScope, Public, HideBySig, SpecialName
+    op_Inequality(FBXClassId IsConst): PrivateScope, Public, HideBySig, SpecialName
+    GetFbxFileTypeName(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    GetFbxFileSubTypeName(): PrivateScope, Public, HideBySig
+    GetObjectTypePrefix(): PrivateScope, Public, HideBySig
+    ClassInstanceIncRef(): PrivateScope, Public, HideBySig
+    ClassInstanceDecRef(): PrivateScope, Public, HideBySig
+    GetInstanceRef(): PrivateScope, Public, HideBySig
+Class ArcManagedFBX.IO.FBXIOSettings: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ArcManagedFBX.FBXObject
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    ArcManagedFBX.FBXClassId ClassId : Public, Static
+  Methods:
+    Create(FBXObject, String): PrivateScope, Public, Static, HideBySig
+    Create(FBXManager, String): PrivateScope, Public, Static, HideBySig
+    GetBoolProp(String, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    SetBoolProp(String, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    GetDoubleProp(String, Double): PrivateScope, Public, HideBySig
+    SetDoubleProp(String, Double): PrivateScope, Public, HideBySig
+    GetIntProp(String, Int32): PrivateScope, Public, HideBySig
+    SetIntProp(String, Int32): PrivateScope, Public, HideBySig
+Class ArcManagedFBX.FBXDocumentInfo: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ArcManagedFBX.FBXObject
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Create(FBXObject, String): PrivateScope, Public, Static, HideBySig
+Class ArcManagedFBX.FBXDocument: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ArcManagedFBX.FBXCollection
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    ArcManagedFBX.FBXObject RootMember 'get ' : 
+    Int32 RootMemberCount 'get ' : 
+  Methods:
+    Clear(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    AddRootMember(FBXObject): PrivateScope, Public, HideBySig
+    GetRootMemberCount(): PrivateScope, Public, HideBySig
+    GetRootMember(Int32): PrivateScope, Public, HideBySig
+    IsRootMember(FBXObject): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetDocumentInfo(): PrivateScope, Public, HideBySig
+    SetDocumentInfo(FBXDocumentInfo): PrivateScope, Public, HideBySig
+    get_RootMemberCount(): PrivateScope, Public, HideBySig, SpecialName
+    get_RootMember(): PrivateScope, Public, HideBySig, SpecialName
+Class ArcManagedFBX.IO.FBXIOPluginRegistry: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Interfaces:
+    System.IDisposable
+  Methods:
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class ArcManagedFBX.FBXManager: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    Create(): PrivateScope, Public, Static, HideBySig
+    GetDefaultManager(): PrivateScope, Public, Static, HideBySig
+    Destroy(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetVersion(Boolean(HasFieldMarshal)): PrivateScope, Public, Static, HideBySig
+    GetFileFormatVersion(Int32&, Int32&, Int32&): PrivateScope, Public, Static, HideBySig
+    CreateNewObjectFromClassId(FBXClassId, String, FBXObject): PrivateScope, Public, HideBySig
+    GetDataTypeCount(): PrivateScope, Public, HideBySig
+    GetIOSettings(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SetIOSettings(FBXIOSettings): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    SetLocale(String): PrivateScope, Public, HideBySig
+    GetReferenceCount(): PrivateScope, Public, HideBySig
+    GetDocument(Int32): PrivateScope, Public, HideBySig
+    GetDocumentCount(): PrivateScope, Public, HideBySig
+    GetIOPluginRegistry(): PrivateScope, Public, HideBySig
+    GetPluginCount(): PrivateScope, Public, HideBySig
+    LoadPlugin(String): PrivateScope, Public, HideBySig
+    LoadPluginsDirectory(String, String): PrivateScope, Public, HideBySig
+    UnloadPlugins(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class ArcManagedFBX.FBXNode: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ArcManagedFBX.FBXObject
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    AddChild(FBXNode): PrivateScope, Public, HideBySig
+    RemoveChild(FBXNode): PrivateScope, Public, HideBySig
+    GetChildCount(Boolean(Optional, HasFieldMarshal)): PrivateScope, Public, HideBySig
+    GetChild(Int32): PrivateScope, Public, HideBySig
+    FindChild(String, Boolean(HasFieldMarshal), Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    SetTarget(FBXNode): PrivateScope, Public, HideBySig
+    GetTarget(): PrivateScope, Public, HideBySig
+    SetPostTargetRotation(FBXVector): PrivateScope, Public, HideBySig
+    GetPostTargetRotation(): PrivateScope, Public, HideBySig
+    SetTargetUp(FBXNode): PrivateScope, Public, HideBySig
+    GetTargetUp(): PrivateScope, Public, HideBySig
+    SetTargetUpVector(FBXVector): PrivateScope, Public, HideBySig
+    GetTargetUpVector(): PrivateScope, Public, HideBySig
+    SetVisibility(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    GetVisibility(): PrivateScope, Public, HideBySig
+    SetShadingMode(EShadingMode): PrivateScope, Public, HideBySig
+    GetShadingMode(): PrivateScope, Public, HideBySig
+    SetNodeAttribute(FBXNodeAttribute): PrivateScope, Public, HideBySig
+    GetNodeAttribute(): PrivateScope, Public, HideBySig
+    GetNodeAttributeCount(): PrivateScope, Public, HideBySig
+    GetDefaultNodeAttributeIndex(): PrivateScope, Public, HideBySig
+    SetDefaultNodeAttributeIndex(Int32, FBXStatus): PrivateScope, Public, HideBySig
+Class ArcManagedFBX.FBXLODGroup: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ArcManagedFBX.FBXNodeAttribute
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Boolean WorldSpace 'get ' : 
+    Double MaxDistance 'get ' : 
+    Double MinDistance 'get ' : 
+    Double MinMaxDistance 'get ' : 
+  Methods:
+    get_MinMaxDistance(): PrivateScope, Public, HideBySig, SpecialName
+    get_MinDistance(): PrivateScope, Public, HideBySig, SpecialName
+    get_MaxDistance(): PrivateScope, Public, HideBySig, SpecialName
+    get_WorldSpace(): PrivateScope, Public, HideBySig, SpecialName
+    GetNumThresholds(): PrivateScope, Public, HideBySig
+    GetNumDisplayLevels(): PrivateScope, Public, HideBySig
+Class ArcManagedFBX.FBXMarker: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ArcManagedFBX.FBXNodeAttribute
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    SetType(EMarkerType): PrivateScope, Public, HideBySig
+    GetType(): PrivateScope, Public, HideBySig
+    GetDefaultOcclusion(): PrivateScope, Public, HideBySig
+    SetDefaultOcclusion(Double): PrivateScope, Public, HideBySig
+    GetDefaultIKReachTranslation(): PrivateScope, Public, HideBySig
+    SetDefaultIKReachTranslation(Double): PrivateScope, Public, HideBySig
+    GetDefaultIKReachRotation(): PrivateScope, Public, HideBySig
+    SetDefaultIKReachRotation(Double): PrivateScope, Public, HideBySig
+    GetDefaultIKPull(): PrivateScope, Public, HideBySig
+    SetDefaultIKPull(Double): PrivateScope, Public, HideBySig
+    GetDefaultIKPullHips(): PrivateScope, Public, HideBySig
+    SetDefaultIKPullHips(Double): PrivateScope, Public, HideBySig
+Class ArcManagedFBX.FBXCamera: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ArcManagedFBX.FBXNodeAttribute
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Double ViewCameraToLookAt 'get ' : 
+    Double FilmOffsetX 'get ' : 
+    Double FilmOffsetY 'get ' : 
+    Double FilmTranslateY 'get ' : 
+    Double FilmTranslateX 'get ' : 
+    Double FilmRollValue 'get ' : 
+    Double FilmRollPivotY 'get ' : 
+    Double FilmRollPivotX 'get ' : 
+    ArcManagedFBX.Types.EFormat CameraFormat 'get ' : 
+    Double FocalLength 'get ' : 
+    Double FieldOfView 'get ' : 
+    Double AspectHeight 'get ' : 
+    Double AspectWidth 'get ' : 
+    Double PixelAspectRatio 'get ' : 
+    ArcManagedFBX.FBXVector Position 'get ' : 
+  Methods:
+    SetPixelRatio(Double): PrivateScope, Public, HideBySig
+    GetPixelRatio(): PrivateScope, Public, HideBySig
+    SetNearPlane(Double): PrivateScope, Public, HideBySig
+    SetFarPlane(Double): PrivateScope, Public, HideBySig
+    Reset(): PrivateScope, Public, HideBySig
+    GetFormat(): PrivateScope, Public, HideBySig
+    GetFarPlane(): PrivateScope, Public, HideBySig
+    GetApertureFormat(): PrivateScope, Public, HideBySig
+    get_Position(): PrivateScope, Public, HideBySig, SpecialName
+    get_PixelAspectRatio(): PrivateScope, Public, HideBySig, SpecialName
+    get_AspectWidth(): PrivateScope, Public, HideBySig, SpecialName
+    get_AspectHeight(): PrivateScope, Public, HideBySig, SpecialName
+    get_FieldOfView(): PrivateScope, Public, HideBySig, SpecialName
+    get_FocalLength(): PrivateScope, Public, HideBySig, SpecialName
+    get_CameraFormat(): PrivateScope, Public, HideBySig, SpecialName
+    get_FilmRollPivotX(): PrivateScope, Public, HideBySig, SpecialName
+    get_FilmRollPivotY(): PrivateScope, Public, HideBySig, SpecialName
+    get_FilmRollValue(): PrivateScope, Public, HideBySig, SpecialName
+    get_FilmTranslateX(): PrivateScope, Public, HideBySig, SpecialName
+    get_FilmTranslateY(): PrivateScope, Public, HideBySig, SpecialName
+    get_FilmOffsetY(): PrivateScope, Public, HideBySig, SpecialName
+    get_FilmOffsetX(): PrivateScope, Public, HideBySig, SpecialName
+    get_ViewCameraToLookAt(): PrivateScope, Public, HideBySig, SpecialName
+Class ArcManagedFBX.IO.FBXIOBase: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ArcManagedFBX.FBXObject
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Initialize(String, Int32, FBXIOSettings): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    GetFilename(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+Class ArcManagedFBX.IO.FBXExporter: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ArcManagedFBX.IO.FBXIOBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Create(FBXObject, String): PrivateScope, Public, Static, HideBySig
+    GetIOSettings(): PrivateScope, Public, HideBySig
+    SetIOSettings(FBXIOSettings): PrivateScope, Public, HideBySig
+    GetExportOptions(): PrivateScope, Public, HideBySig
+    GetFileFormat(): PrivateScope, Public, HideBySig
+    IsFBX(): PrivateScope, Public, HideBySig
+    Export(FBXDocument, Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    IsExporting(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    Initialize(String, Int32, FBXIOSettings): PrivateScope, Public, Virtual, HideBySig
+Class ArcManagedFBX.IO.FBXFile: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    Open(String, EFileMode, Boolean(HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Close(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Seek(Int64 IsConst, EFileSeekPos IsConst): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class ArcManagedFBX.FBXGeometryWeightedMap: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ArcManagedFBX.FBXObject
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class ArcManagedFBX.IO.FBXIOFileHeaderInfo: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    System.String Creator 'get ' : 
+    Boolean PLE 'get ' : 
+    Boolean IOPlugin 'get ' : 
+    Boolean CreationTimeStampPresent 'get ' : 
+    Int32 FileVersion 'get ' : 
+  Methods:
+    Reset(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask
+    get_FileVersion(): PrivateScope, Public, HideBySig, SpecialName
+    get_CreationTimeStampPresent(): PrivateScope, Public, HideBySig, SpecialName
+    get_IOPlugin(): PrivateScope, Public, HideBySig, SpecialName
+    get_PLE(): PrivateScope, Public, HideBySig, SpecialName
+    get_Creator(): PrivateScope, Public, HideBySig, SpecialName
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class ArcManagedFBX.IO.FBXImporter: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ArcManagedFBX.IO.FBXIOBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    ArcManagedFBX.FBXClassId ClassId : Public, Static
+  Methods:
+    Create(FBXManager, String): PrivateScope, Public, Static, HideBySig
+    Import(FBXDocument, Boolean(Optional, HasFieldMarshal)): PrivateScope, Public, HideBySig
+    GetProgress(String): PrivateScope, Public, HideBySig
+    SetPassword(String): PrivateScope, Public, HideBySig
+    Initialize(String, Int32, FBXIOSettings): PrivateScope, Public, Virtual, HideBySig
+    GetStatus(): PrivateScope, Public, HideBySig
+    IsImporting(ValueType Boolean IsBoxed): PrivateScope, Public, HideBySig
+    GetFileHeaderInfo(): PrivateScope, Public, HideBySig
+    GetEmbeddingExtractionFolder(): PrivateScope, Public, HideBySig
+    GetIOSettings(): PrivateScope, Public, HideBySig
+    SetIOSettings(FBXIOSettings): PrivateScope, Public, HideBySig
+    GetAnimStackCount(): PrivateScope, Public, HideBySig
+    GetActiveAnimStackName(): PrivateScope, Public, HideBySig
+    GetSceneInfo(): PrivateScope, Public, HideBySig
+    GetFileFormat(): PrivateScope, Public, HideBySig
+    IsFBX(): PrivateScope, Public, HideBySig
+Class ArcManagedFBX.FBXLayerElement: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Fields:
+    System.String[] sTextureChannelNames : Public, Static
+    System.String[] sTextureUVNames : Public, Static
+    System.String[] sNonTextureNames : Public, Static
+  Methods:
+    SetMappingMode(EMappingMode): PrivateScope, Public, HideBySig
+    GetMappingMode(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class ArcManagedFBX.FBXLayerElementPolygonGroup: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class ArcManagedFBX.FBXLayerElementTemplate`1[Type]: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  Type parameter: Type
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class ArcManagedFBX.FBXTexture: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ArcManagedFBX.FBXObject
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class ArcManagedFBX.FBXLight: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ArcManagedFBX.FBXNodeAttribute
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    Create(FBXObject, String): PrivateScope, Public, Static, HideBySig
+    SetShadowTexture(FBXTexture): PrivateScope, Public, HideBySig
+    GetShadowTexture(): PrivateScope, Public, HideBySig
+Class ArcManagedFBX.FBXSkeleton: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ArcManagedFBX.FBXNodeAttribute
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Double Size 'get ' : 
+    Double LimbLength 'get ' : 
+  Methods:
+    op_Implicit(FBXNodeAttribute): PrivateScope, Public, Static, HideBySig, SpecialName
+    GetAttributeType(): PrivateScope, Public, Virtual, HideBySig
+    Reset(): PrivateScope, Public, HideBySig
+    SetSkeletonType(ESkeletonType): PrivateScope, Public, HideBySig
+    GetSkeletonType(): PrivateScope, Public, HideBySig
+    GetSkeletonTypeIsSet(): PrivateScope, Public, HideBySig
+    GetSkeletonTypeDefaultValue(): PrivateScope, Public, HideBySig
+    GetLimbLengthDefaultValue(): PrivateScope, Public, HideBySig
+    IsSkeletonRoot(): PrivateScope, Public, HideBySig
+    GetLimbNodeColorIsSet(): PrivateScope, Public, HideBySig
+    SetLimbNodeColor(FBXColour): PrivateScope, Public, HideBySig
+    get_LimbLength(): PrivateScope, Public, HideBySig, SpecialName
+    get_Size(): PrivateScope, Public, HideBySig, SpecialName
+Class ArcManagedFBX.FBXShape: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ArcManagedFBX.FBXGeometryBase
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    GetControlPointIndices(): PrivateScope, Public, HideBySig
+    GetControlPointIndicesCount(): PrivateScope, Public, HideBySig
+    GetBaseGeometry(): PrivateScope, Public, HideBySig
+    SetControlPointIndicesCount(Int32): PrivateScope, Public, HideBySig
+    AddControlPointIndex(Int32): PrivateScope, Public, HideBySig
+    Reset(): PrivateScope, Public, HideBySig
+Class ArcManagedFBX.FBXScene: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ArcManagedFBX.FBXDocument
+    Void .ctor(ArcManagedFBX.FBXScene): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    ArcManagedFBX.FBXClassId ClassId : Public, Static
+  Methods:
+    Create(FBXManager, String): PrivateScope, Public, Static, HideBySig
+    CreateCharacter(String): PrivateScope, Public, HideBySig
+    DestroyCharacter(Int32): PrivateScope, Public, HideBySig
+    GetControlSetPlugCount(): PrivateScope, Public, HideBySig
+    GetCurveOnSurfaceCount(): PrivateScope, Public, HideBySig
+    GetRootNode(): PrivateScope, Public, HideBySig
+    GetSceneInfo(): PrivateScope, Public, HideBySig
+    SyncShowPropertyForInstance(): PrivateScope, Public, HideBySig
+    ConnectTextures(): PrivateScope, Public, HideBySig
+    Import(String): PrivateScope, Public, HideBySig
+    Export(String): PrivateScope, Public, HideBySig
+Class ArcManagedFBX.FBXPolygonDef: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    Int32 Group 'get set' : 
+    Int32 Size 'get set' : 
+    Int32 Index 'get set' : 
+  Methods:
+    get_Index(): PrivateScope, Public, HideBySig, SpecialName
+    set_Index(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Size(): PrivateScope, Public, HideBySig, SpecialName
+    set_Size(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Group(): PrivateScope, Public, HideBySig, SpecialName
+    set_Group(Int32): PrivateScope, Public, HideBySig, SpecialName
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class ArcManagedFBX.FBXProperty: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Methods:
+    Destroy(): PrivateScope, Public, HideBySig
+    DestroyRecursively(): PrivateScope, Public, HideBySig
+    DestroyChildren(): PrivateScope, Public, HideBySig
+    GetName(): PrivateScope, Public, HideBySig
+    GetHierarchicalName(): PrivateScope, Public, HideBySig
+    GetLabel(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig
+    SetLabel(String): PrivateScope, Public, HideBySig
+    GetFbxObject(): PrivateScope, Public, HideBySig
+    SetUserTag(Int32): PrivateScope, Public, HideBySig
+    GetUserTag(): PrivateScope, Public, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class ArcManagedFBX.FBXSkin: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :ArcManagedFBX.FBXDeformer
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    GetControlPointIndicesCount(): PrivateScope, Public, HideBySig
+    GetControlPointIndices(): PrivateScope, Public, HideBySig
+    SetControlPointIWCount(Int32): PrivateScope, Public, HideBySig
+    AddControlPointIndex(Int32, Double): PrivateScope, Public, HideBySig
+    GetClusterCount(): PrivateScope, Public, HideBySig
+Class ArcManagedFBX.FBXThumbnail: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
