@@ -28,10 +28,6 @@ namespace ArcManagedFBX
 
 		int32 GetCharacterCount();
 
-		int32 CreateCharacter(String^ name);
-
-		void DestroyCharacter(int32 index);
-
 		int32 GetControlSetPlugCount();
 
 		int32 GetCurveOnSurfaceCount();

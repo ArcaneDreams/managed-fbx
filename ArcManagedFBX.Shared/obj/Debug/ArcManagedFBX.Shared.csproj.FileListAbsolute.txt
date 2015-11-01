@@ -9,3 +9,4 @@ I:\Repositories\GitHub\ArcManagedFBX\ArcManagedFBX.Shared\obj\Debug\ArcManagedFB
 I:\Repositories\GitHub\ArcManagedFBX\ArcManagedFBX.Shared\obj\Debug\ArcManagedFBX.Shared.pdb
 I:\Repositories\GitHub\ArcManagedFBX\Output\ArcManagedFBX.Shared\x64\Debug\ArcManagedFBX.Shared.dll
 I:\Repositories\GitHub\ArcManagedFBX\Output\ArcManagedFBX.Shared\x64\Debug\ArcManagedFBX.Shared.pdb
+I:\Repositories\GitHub\ArcManagedFBX\ArcManagedFBX.Shared\obj\Debug\ArcManagedFBX.Shared.csprojResolveAssemblyReference.cache

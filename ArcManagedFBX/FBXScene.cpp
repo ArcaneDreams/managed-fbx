@@ -74,10 +74,13 @@ int32 ArcManagedFBX::FBXScene::GetCharacterCount()
 {
 	ARC_CHECK_AND_THROW(m_NativeObject == nullptr, "The native instance of this object is null. Check and try again.");
 
+	return this->GetFBXScene()->GetCharacterCount();
 }
 
 int32 ArcManagedFBX::FBXScene::GetGenericNodeCount()
 {
 	ARC_CHECK_AND_THROW(m_NativeObject == nullptr, "The native instance of this object is null. Check and try again.");
 
+
+	return this->GetFBXScene()->GetGenericNodeCount();
 }

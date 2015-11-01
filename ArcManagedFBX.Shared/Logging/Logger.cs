@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 
 namespace ArcManagedFBX.Shared
 {
-    enum LogType
+    public enum LogType
     {
         Normal = 1,
         Warning,
@@ -69,8 +69,8 @@ namespace ArcManagedFBX.Shared
         /// <summary>
         ///     Write the message out as required
         /// </summary>
-        /// <param name="type"></param>
-        /// <param name="message"></param>
+        /// <param name="type">The type of log message that we are outputting</param>
+        /// <param name="message">The message that we are logging out</param>
         private void Output(LogType type, string message)
         {
             Console.ForegroundColor = ConsoleColor.White;
@@ -92,7 +92,7 @@ namespace ArcManagedFBX.Shared
             Console.ForegroundColor = ConsoleColor.White;
             Console.Write("] ");
 
-            Console.WriteLine("[{0}] [{1}] {2}", GetCallingApplicationName(), string.Empty, Message);
+            Console.WriteLine("[{0}] [{1}] {2}", GetCallingApplicationName(), string.Empty, message);
 
         }
 
@@ -100,17 +100,21 @@ namespace ArcManagedFBX.Shared
         ///     Write the message out that is to be used
         /// </summary>
         /// <param name="message">The message that we are writing out</param>
-        /// <param name="parameters"></param>
+        /// <param name="parameters">The parameters that we are to format with the string</param>
         public static void LogMessage(string message, params object[] parameters)
         {
             if (string.IsNullOrEmpty(message))
                 throw new ArgumentNullException("The message that was specified is either null or empty.");
+
+            message = string.Format(message, parameters);
         }   
 
         public static void LogWarning(string message, params object[] parameters)
         {
             if (string.IsNullOrEmpty(message))
                 throw new ArgumentNullException("The message that was specified is either null or empty.");
+
+            message = string.Format(message, parameters);
         }
 
         public static void LogError(string message, params object[] parameters)
@@ -118,6 +122,7 @@ namespace ArcManagedFBX.Shared
             if (string.IsNullOrEmpty(message))
                 throw new ArgumentNullException("The message that was specified is either null or empty.");
 
+            message = string.Format(message, parameters);
         }
     }
 }
