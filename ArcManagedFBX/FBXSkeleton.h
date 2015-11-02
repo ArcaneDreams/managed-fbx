@@ -12,6 +12,7 @@ namespace ArcManagedFBX
 	{
 	public:
 		ARC_DEFAULT_CONSTRUCTORS(FBXSkeleton)
+		
 		ARC_CLR_CHILD_CAST(FBXSkeleton,FBXNodeAttribute,FbxSkeleton)
 
 		typedef class FbxSkeleton NativeType;
@@ -37,6 +38,7 @@ namespace ArcManagedFBX
 		bool SetLimbNodeColor(FBXColour color);
 
 		ARC_PROPERTY_FBXPROPERTY_PUBLICGET(float64,LimbLength)
+
 		ARC_PROPERTY_FBXPROPERTY_PUBLICGET(float64,Size)
 
 	internal:

@@ -10,7 +10,6 @@ namespace ArcManagedFBX
 		ARC_DEFAULT_CONSTRUCTORS(FBXLayerElementTemplate)
 
 	private:
-
-
+		
 	};
 }

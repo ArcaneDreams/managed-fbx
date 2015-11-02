@@ -85,6 +85,13 @@ ArcManagedFBX::FBXVector ArcManagedFBX::FBXGeometryBase::GetControlPointAt(int32
 	return FBXVector();
 }
 
+int32 ArcManagedFBX::FBXGeometryBase::GetElementPolygonGroupCount()
+{
+	ARC_CHECK_AND_THROW(this->GetFBXGeometryBase() == nullptr,"The element polygon group count is null or empty");
+
+	return this->GetFBXGeometryBase()->GetElementPolygonGroupCount();
+}
+
 int32 ArcManagedFBX::FBXGeometryBase::GetControlPointsCount()
 {
 	return this->GetFBXGeometryBase()->GetControlPointsCount();

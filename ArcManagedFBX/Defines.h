@@ -177,13 +177,13 @@ type classname##::##name##::get()\
 #define ARC_IMPL_GET_STRING_PROP(ClassName,Name,PropertyName)\
 String^ ClassName##::##PropertyName##::get()\
 {\
-	return gcnew String(StringHelper::ToManaged(this->Get##ClassName##()->##Name##.Get().Buffer()));\
+	return StringHelper::ToManaged(this->Get##ClassName##()->##Name##.Get().Buffer());\
 }
 
 #define ARC_IMPL_GET_STRING_MEMBER(ClassName,Name,PropertyName)\
 String^ ClassName##::##PropertyName##::get()\
 {\
-	return gcnew String(StringHelper::ToManaged(this->Get##ClassName##()->##Name##.Buffer()));\
+	return StringHelper::ToManaged(this->Get##ClassName##()->##Name##.Buffer());\
 }
 
 // The type being the return type of the method

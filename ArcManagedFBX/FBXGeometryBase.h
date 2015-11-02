@@ -33,6 +33,8 @@ namespace ArcManagedFBX
 
 		FBXVector GetControlPointAt(int32 index);
 
+		int32 GetElementPolygonGroupCount();
+
 		virtual void SetControlPointCount(int32 count);
 
 		int32 GetControlPointsCount();

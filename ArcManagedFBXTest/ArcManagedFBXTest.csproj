@@ -89,6 +89,7 @@
     <Compile Include="Tests\TestDisplayLight.cs" />
     <Compile Include="Tests\TestDisplayMesh.cs" />
     <Compile Include="Utility\ArgumentHandler.cs" />
+    <Compile Include="Utility\DateTimeHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

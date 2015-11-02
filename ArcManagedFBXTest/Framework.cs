@@ -128,122 +128,50 @@ namespace ArcManagedFBXTest
                     switch (attributeType)
                     {
                         case EAttributeType.eMesh:
-                            DisplayMesh(nodeInstance.GetNodeAttribute());
+
                             break;
 
                         case EAttributeType.eCamera:
-                            DisplayCamera((FBXCamera)nodeInstance.GetNodeAttribute());
+
                             break;
 
                         case EAttributeType.eLight:
-                            DisplayLight((FBXLight)nodeInstance.GetNodeAttribute());
+
                             break;
 
                         case EAttributeType.eSkeleton:
-                            DisplaySkeleton((FBXSkeleton)nodeInstance.GetNodeAttribute());
+
                             break;
                     }
                 }
             }
         }
 
-        private static void DisplayLODGroup(FBXLODGroup lodGroupInstance)
-        {
-            if (lodGroupInstance == null)
-                throw new ArgumentNullException("The lod group instance is invalid.");
-        }
-
         /// <summary>
-        ///     Display information regarding lights.
+        ///     Display the information that is relevant to the scene (in the form of a documentinfo)
         /// </summary>
-        /// <param name="lightInstance">The instance of the light that we are working with</param>
-        private static void DisplayLight(FBXLight lightInstance)
+        /// <param name="instance">The instance that we are retrieving metadata for</param>
+        private static void DisplayMetaData(FBXScene instance)
         {
-            if (lightInstance == null)
-                throw new ArgumentNullException("The light instance is null. Check and try again.");
+            if (instance == null)
+                throw new ArgumentNullException("The instance specified is either null or invalid.");
+
+            FBXDocumentInfo metaDataContainer = instance.GetSceneInfo();
+
+            if (metaDataContainer == null)
+                throw new ArgumentNullException("The FBXDocumentInfo instance is either null or invalid.");
+
+            // Display information regarding the scene that we have just loaded
+            Logger.LogMessage("Title: {0}");
+            Logger.LogMessage("Title: {0}");
+            Logger.LogMessage("Title: {0}");
+            Logger.LogMessage("Title: {0}");
+            Logger.LogMessage("Title: {0}");
+
+            FBXThumbnail thumbnailInstance = null;
         }
 
-        /// <summary>
-        ///     Display information regarding the camera
-        /// </summary>
-        /// <param name="cameraInstance">The camera instance</param>
-        private static void DisplayCamera(FBXCamera cameraInstance)
-        {
-            if (cameraInstance == null)
-                throw new ArgumentNullException("Camera instance was null. Check and try again");
 
-        }
-
-        private static void DisplayPolygons(FBXMesh meshInstance)
-        {
-            if (meshInstance == null)
-                throw new ArgumentNullException("The mesh instance is null. Check and try again.");
-
-            FBXVector[] controlPoints = meshInstance.GetControlPoints();
-        }
-
-        /// <summary>
-        ///     Display the control points for the mesh
-        /// </summary>
-        /// <param name="meshInstance">Output information regarding the control points</param>
-        private static void DisplayControlPoints(FBXMesh meshInstance)
-        {
-            if (meshInstance == null)
-                throw new ArgumentNullException("The mesh instance is null. Check and try again.");
-
-
-        }
-
-        /// <summary>
-        ///     Output the contents of the mesh
-        /// </summary>
-        /// <param name="meshInstance">The instance for the mesh that we are retrieving the control points from</param>
-        private static void DisplayMesh(FBXMesh meshInstance)
-        {
-            if (meshInstance == null)
-                throw new ArgumentNullException("The mesh instance was null. Check and try again!");
-
-            FBXVector[] controlPoints = meshInstance.GetControlPoints();
-
-            foreach (var vector in controlPoints)
-            {
-            }
-        }
-
-        /// <summary>
-        ///     Display the information regarding the skeleton
-        /// </summary>
-        /// <param name="skelInstance">The skeleton instance in question</param>
-        private static void DisplaySkeleton(FBXSkeleton skelInstance)
-        {
-            if (skelInstance == null)
-                throw new ArgumentNullException("The mesh instance was null. Check and try again!");
-
-            string[] skeletonTypes = new string[] { "Root", "Limb", "Limb Node", "Effector" };
-
-            // Write out the type of node that it is
-            LogMessage("Type: {0}",skeletonTypes[(int)skelInstance.GetSkeletonType()]);
-
-            // Based on the type of skeleton it is, display the relevant information
-            switch (skelInstance.GetSkeletonType())
-            {
-                case ESkeletonType.eEffector:
-                        
-                    break;
-
-                case ESkeletonType.eLimb:
-                        
-                    break;
-
-                case ESkeletonType.eRoot:
-                        
-                    break;
-
-                case ESkeletonType.eLimbNode:
-
-                    break;
-            }
-        }
 
         /// <summary>
         ///     Write out the log message

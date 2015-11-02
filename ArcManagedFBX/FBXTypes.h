@@ -12,6 +12,7 @@ namespace ArcManagedFBX
 			eEffectorIK
 		};
 
+
 		public enum class ELook
 		{ 
 			eCube, 
@@ -152,6 +153,49 @@ namespace ArcManagedFBX
 			eHide
 		};
 
+		public enum class ELayerElementType
+		{
+			eUnknown,
+
+			//Non-Texture layer element types
+			//Note: Make sure to update static index below if you change this enum!
+			eNormal,
+			eBiNormal,
+			eTangent,
+			eMaterial,
+			ePolygonGroup,
+			eUV,
+			eVertexColor,
+			eSmoothing,
+			eVertexCrease,
+			eEdgeCrease,
+			eHole,
+			eUserData,
+			eVisibility,
+
+			//Texture layer element types
+			//Note: Make sure to update static index below if you change this enum!
+			eTextureDiffuse,
+			eTextureDiffuseFactor,
+			eTextureEmissive,
+			eTextureEmissiveFactor,
+			eTextureAmbient,
+			eTextureAmbientFactor,
+			eTextureSpecular,
+			eTextureSpecularFactor,
+			eTextureShininess,
+			eTextureNormalMap,
+			eTextureBump,
+			eTextureTransparency,
+			eTextureTransparencyFactor,
+			eTextureReflection,
+			eTextureReflectionFactor,
+			eTextureDisplacement,
+			eTextureDisplacementVector,
+
+			eTypeCount
+		};
+
 		// The types that are to be used for the attributes
 		public enum class EAttributeType
 		{   
@@ -250,7 +294,21 @@ namespace ArcManagedFBX
 			eDontLocalize = 1 << 6,		 //!< Used by asset builder; Do not localize this object
 			eCopyCalledByClone = 1 << 16 //!< Used internally. If set, modify the Copy behavior of the object
 		};
+
+		public enum class EDataFormat
+		{
+			eRGB_24, // 3 components
+			eRGBA_32 // 4 components
+		};
 		
+		public enum class EImageSize
+		{
+			eNotSet = 0,
+			e64x64 = 64,
+			e128x128 = 128,
+			eCustomSize = -1
+		};
+
 		public enum class EBlendMode
 		{
 			eBlendAdditive,	//! The layer "adds" its animation to layers that precede it in the stack and affect the same attributes.

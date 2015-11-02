@@ -19,12 +19,14 @@ namespace ArcManagedFBX
 			void Initialize();
 			void LoadFile(String^ fileName);
 
+			void Destroy();
+
 		private:
-			String^ fileName;
-			
-			FbxManager* m_Manager;
-			FbxIOSettings* m_IOSettings;
-			FbxScene* m_Scene;
+			String^			m_Filename;
+		
+			FbxManager*		m_Manager;
+			FbxIOSettings*	m_IOSettings;
+			FbxScene*		m_Scene;
 		internal:
 
 		};

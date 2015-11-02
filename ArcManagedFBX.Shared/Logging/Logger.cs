@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using System.Reflection;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
+using System.IO;
+using ArcManagedFBX.Shared.Time;
 
 namespace ArcManagedFBX.Shared
 {
@@ -23,6 +25,8 @@ namespace ArcManagedFBX.Shared
     public class Logger
     {
         private static Logger instance = null;
+
+        private FileInfo m_ExecutingAssemblyInfo = null;
 
         public static Logger Instance
         {
@@ -41,7 +45,15 @@ namespace ArcManagedFBX.Shared
         {
             get
             {
-                return string.Empty;
+                return ExecutingAssembly.Directory.FullName;
+            }
+        }
+
+        private FileInfo ExecutingAssembly
+        {
+            get
+            {
+                return m_ExecutingAssemblyInfo ?? (m_ExecutingAssemblyInfo = new FileInfo(Assembly.GetExecutingAssembly().FullName));
             }
         }
 
@@ -50,7 +62,7 @@ namespace ArcManagedFBX.Shared
         ///     Retrieve the name of the application that is calling into this
         /// </summary>
         /// <returns>Returns the name of the application by using reflection</returns>
-        private string GetCallingApplicationName()
+        private static string GetCallingApplicationName()
         {
             Assembly currentCallingAssembly = Assembly.GetCallingAssembly();
             if (currentCallingAssembly != null)
@@ -92,7 +104,7 @@ namespace ArcManagedFBX.Shared
             Console.ForegroundColor = ConsoleColor.White;
             Console.Write("] ");
 
-            Console.WriteLine("[{0}] [{1}] {2}", GetCallingApplicationName(), string.Empty, message);
+            Console.WriteLine("[{0}] [{1}] {2}", GetCallingApplicationName(), DateTimeHelper.DateTimeFormatted, message);
 
         }
 
@@ -107,6 +119,8 @@ namespace ArcManagedFBX.Shared
                 throw new ArgumentNullException("The message that was specified is either null or empty.");
 
             message = string.Format(message, parameters);
+
+            instance.Output(LogType.Normal, message);
         }   
 
         public static void LogWarning(string message, params object[] parameters)
@@ -115,6 +129,8 @@ namespace ArcManagedFBX.Shared
                 throw new ArgumentNullException("The message that was specified is either null or empty.");
 
             message = string.Format(message, parameters);
+
+            instance.Output(LogType.Warning, message);
         }
 
         public static void LogError(string message, params object[] parameters)
@@ -123,6 +139,8 @@ namespace ArcManagedFBX.Shared
                 throw new ArgumentNullException("The message that was specified is either null or empty.");
 
             message = string.Format(message, parameters);
+
+            instance.Output(LogType.Error, message);
         }
     }
 }
