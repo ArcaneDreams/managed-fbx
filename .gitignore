@@ -4,6 +4,10 @@ Bin/
 Output/
 ArcManagedFBX/obj/*
 ArcManagedFBX/bin/*
+ArcManagedFBX.Shared/obj/*
+ArcManagedFBX.Shared/bin/*
+ArcManagedFBXTest/obj/*
+ArcManagedFBXTest/bin/*
 ipch/
 /*.opensdf
 /*.exe
