@@ -11,8 +11,12 @@ namespace ArcManagedFBX
 		ARC_FBXSDK_FBXOBJECT_IMPLEMENT(FBXDocumentInfo,FBXObject,FbxDocumentInfo)
 
 		ARC_DEFAULT_CONSTRUCTORS(FBXDocumentInfo)
-	private:
-
+		ARC_PROPERTY_PUBLICGET(String^,Title)
+		ARC_PROPERTY_PUBLICGET(String^,Subject)
+		ARC_PROPERTY_PUBLICGET(String^,Author)
+		ARC_PROPERTY_PUBLICGET(String^,Keywords)
+		ARC_PROPERTY_PUBLICGET(String^,Revision)
+		ARC_PROPERTY_PUBLICGET(String^,Comment)
 		// The various properties for the document information that we are working on
 		ARC_PROPERTY_PUBLICGET(String^,Url)
 		ARC_PROPERTY_PUBLICGET(String^,LastSavedUrl)
@@ -24,13 +28,9 @@ namespace ArcManagedFBX
 		ARC_PROPERTY_PUBLICGET(String^,LastSavedApplicationVendor)
 		ARC_PROPERTY_PUBLICGET(String^,LastSavedApplicationVersion)
 		ARC_PROPERTY_PUBLICGET(String^,EmbeddedUrl)
+	private:
+
 		
-		ARC_PROPERTY_PUBLICGET(String^,Title)
-		ARC_PROPERTY_PUBLICGET(String^,Subject)
-		ARC_PROPERTY_PUBLICGET(String^,Author)
-		ARC_PROPERTY_PUBLICGET(String^,Keywords)
-		ARC_PROPERTY_PUBLICGET(String^,Revision)
-		ARC_PROPERTY_PUBLICGET(String^,Comment)
 
 		void Clear();
 	internal:

@@ -93,10 +93,7 @@ namespace ArcManagedFBXTest
 
             LogMessage("Instantiating the Scene...");
 
-            // Generate the scene that is to be used
             FBXScene scene = FBXScene.Create(managerInstance, "My Scene");
-
-            // Load in the importer that we are to use
             FBXImporter importer = FBXImporter.Create(managerInstance, "");
 
             LogMessage("Load the importer for the file '{0}'",Filename);
@@ -106,9 +103,50 @@ namespace ArcManagedFBXTest
             bool importResult = importer.Import(scene);
 
             if (importResult)
-                DisplayContent(scene);
+                PerformTests(scene);
             else
                 LogError("Import failed. Nothing to do!");
+        }
+
+        private static void PerformTests(FBXScene scene)
+        {
+            if (scene == null)
+                throw new ArgumentNullException("The scene that was specified is either null or empty.");
+
+            DisplayHierarachy(scene);
+            DisplayContent(scene);
+        }
+
+        /// <summary>
+        ///     
+        /// </summary>
+        /// <param name="sceneInstance">The fbx scene</param>
+        private static void DisplayHierarachy(FBXScene sceneInstance)
+        {
+            if (sceneInstance == null)
+                throw new ArgumentNullException("The scene is invalid. Check and try again.");
+         
+            FBXNode rootNode = sceneInstance.GetRootNode();
+            DisplayHierarchyRecursive(rootNode, 0);
+        }
+
+        /// <summary>
+        ///     
+        /// </summary>
+        /// <param name="nodeInstance">The node that we are recursing into.</param>
+        /// <param name="depth"></param>
+        private static void DisplayHierarchyRecursive(FBXNode nodeInstance, int depth)
+        {
+            string output = string.Empty;
+
+            for (int index = 0; index < depth; index++)
+                output += "    ";
+
+            // Write the information out
+            Logger.LogMessage("{0}{1}", output,nodeInstance.GetName());
+
+            for (int index = 0; index < nodeInstance.GetChildCount(); index++)
+                DisplayHierarchyRecursive(nodeInstance.GetChild(index), depth + 1);
         }
 
         // Display content within the instance
@@ -123,28 +161,77 @@ namespace ArcManagedFBXTest
                     var attributeType = rootNode.GetChild(index).GetNodeAttribute().GetAttributeType();
 
                     FBXNode nodeInstance = rootNode.GetChild(index);
+                    FBXNodeAttribute attributeInstance = nodeInstance.GetNodeAttribute();
 
                     // Cast out the node object based on the type of the attribute.
                     switch (attributeType)
                     {
                         case EAttributeType.eMesh:
-
+                                DisplayMesh((FBXMesh)attributeInstance);                    
                             break;
 
                         case EAttributeType.eCamera:
-
+                                DisplayCamera((FBXCamera)attributeInstance);
                             break;
 
                         case EAttributeType.eLight:
-
+                                DisplayLight((FBXLight)attributeInstance);
                             break;
 
                         case EAttributeType.eSkeleton:
-
+                                DisplaySkeleton((FBXSkeleton)attributeInstance);
                             break;
                     }
                 }
             }
+        }
+
+        /// <summary>
+        ///     Output contents regarding the skeleton instance
+        /// </summary>
+        /// <param name="skeletonInstance">The instance that we are outputting for.</param>
+        private static void DisplaySkeleton(FBXSkeleton skeletonInstance)
+        {
+            if (skeletonInstance == null)
+                throw new ArgumentNullException("The skeleton instance is null or invalid. Check and try again.");
+            
+            
+        }
+
+        private static void DisplayLight(FBXLight lightInstance)
+        {
+            if (lightInstance == null)
+                throw new ArgumentNullException("The light instance is null or invalid. Check and try again.");
+        
+            
+        }
+
+        private static void DisplayCamera(FBXMesh meshInstance)
+        {
+            if (meshInstance == null)
+                throw new ArgumentNullException("The mesh instance is null or invalid. Check and try again.");
+        
+
+        }
+
+        private static void DisplayMesh(FBXMesh meshInstance)
+        {
+            if (meshInstance == null)
+                throw new ArgumentNullException("The mesh instance specified is null or invalid. Check and try again.");
+
+
+        }
+
+        /// <summary>
+        ///     Output the control points that are part of the mesh in question
+        /// </summary>
+        /// <param name="meshInstance">The instance of the mesh that we are observing</param>
+        private static void DisplayControlsPoints(FBXMesh meshInstance)
+        {
+            if (meshInstance == null)
+                throw new ArgumentNullException("The mesh instance specified is null or invalid. Check and try again.");
+
+
         }
 
         /// <summary>
@@ -161,17 +248,14 @@ namespace ArcManagedFBXTest
             if (metaDataContainer == null)
                 throw new ArgumentNullException("The FBXDocumentInfo instance is either null or invalid.");
 
-            // Display information regarding the scene that we have just loaded
-            Logger.LogMessage("Title: {0}");
-            Logger.LogMessage("Title: {0}");
-            Logger.LogMessage("Title: {0}");
-            Logger.LogMessage("Title: {0}");
-            Logger.LogMessage("Title: {0}");
+            // Output the contents of the metadata class.
+            Logger.LogMessage("Title: {0}",metaDataContainer.Title);
+            Logger.LogMessage("Subject: {0}",metaDataContainer.Subject);
+            Logger.LogMessage("Author: {0}",metaDataContainer.Author);
+            Logger.LogMessage("Keywords: {0}",metaDataContainer.Keywords);
+            Logger.LogMessage("Revision: {0}",metaDataContainer.Revision);
 
-            FBXThumbnail thumbnailInstance = null;
         }
-
-
 
         /// <summary>
         ///     Write out the log message
