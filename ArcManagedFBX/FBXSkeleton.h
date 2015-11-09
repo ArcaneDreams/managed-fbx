@@ -43,6 +43,7 @@ namespace ArcManagedFBX
 
 	internal:
 		ARC_DEFAULT_INTERNAL_CONSTRUCTOR(FBXSkeleton,FbxSkeleton)
+
 		ARC_CHILD_CAST(NativeObject,FbxSkeleton,FBXSkeleton)
 
 	private:

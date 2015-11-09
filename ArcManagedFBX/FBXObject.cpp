@@ -156,5 +156,8 @@ const String^ FBXObject::GetInitialName()
 generic<class ObjectType> where ObjectType : FBXObject, gcnew()
 ObjectType ArcManagedFBX::FBXObject::GetSrcObject(int32 index)
 {
+	Type^ typeInstance = ObjectType::typeid;
+
+
 	return gcnew ObjectType();
 }

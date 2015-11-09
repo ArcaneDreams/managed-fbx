@@ -114,6 +114,7 @@ namespace ArcManagedFBXTest
                 throw new ArgumentNullException("The scene that was specified is either null or empty.");
 
             DisplayHierarachy(scene);
+            DisplayMetaData(scene);
             DisplayContent(scene);
         }
 
@@ -134,13 +135,13 @@ namespace ArcManagedFBXTest
         ///     
         /// </summary>
         /// <param name="nodeInstance">The node that we are recursing into.</param>
-        /// <param name="depth"></param>
+        /// <param name="depth">The depth of the hierarchy we are displaying</param>
         private static void DisplayHierarchyRecursive(FBXNode nodeInstance, int depth)
         {
             string output = string.Empty;
 
             for (int index = 0; index < depth; index++)
-                output += "    ";
+                output += "  ";
 
             // Write the information out
             Logger.LogMessage("{0}{1}", output,nodeInstance.GetName());
@@ -194,8 +195,8 @@ namespace ArcManagedFBXTest
         {
             if (skeletonInstance == null)
                 throw new ArgumentNullException("The skeleton instance is null or invalid. Check and try again.");
-            
-            
+
+            var skeletonType = skeletonInstance.GetSkeletonType();
         }
 
         private static void DisplayLight(FBXLight lightInstance)
@@ -210,8 +211,8 @@ namespace ArcManagedFBXTest
         {
             if (meshInstance == null)
                 throw new ArgumentNullException("The mesh instance is null or invalid. Check and try again.");
-        
 
+            Logger.LogMessage("");
         }
 
         private static void DisplayMesh(FBXMesh meshInstance)
