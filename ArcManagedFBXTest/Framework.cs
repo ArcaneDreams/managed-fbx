@@ -15,6 +15,7 @@ using ArcManagedFBX.Framework;
 using ArcManagedFBX.Exceptions;
 using ArcManagedFBX.IO;
 using ArcManagedFBX.Shared;
+using ArcManagedFBXTest.Tests;
 
 namespace ArcManagedFBXTest
 {
@@ -34,6 +35,8 @@ namespace ArcManagedFBXTest
             }
         } 
         #endregion
+
+        private SceneFramework m_SceneFramework = null;
 
         private ArgumentHandler m_Handler = null;
 
@@ -96,11 +99,16 @@ namespace ArcManagedFBXTest
             FBXScene scene = FBXScene.Create(managerInstance, "My Scene");
             FBXImporter importer = FBXImporter.Create(managerInstance, "");
 
+            // Instantiate the framework for the scene as required.
+            m_SceneFramework = new SceneFramework(scene);
+
             LogMessage("Load the importer for the file '{0}'",Filename);
             bool initializeResult = importer.Initialize(Filename, -1, managerInstance.GetIOSettings());
             FBXManager.GetFileFormatVersion(ref fileMajorNumber,ref fileMinorNumber,ref fileRevisionNumber);
 
             bool importResult = importer.Import(scene);
+
+            m_SceneFramework.Operation();
 
             if (importResult)
                 PerformTests(scene);
@@ -150,7 +158,10 @@ namespace ArcManagedFBXTest
                 DisplayHierarchyRecursive(nodeInstance.GetChild(index), depth + 1);
         }
 
-        // Display content within the instance
+        /// <summary>
+        ///     The display content method
+        /// </summary>
+        /// <param name="sceneInstance">The scene that we are running on.</param>
         private static void DisplayContent(FBXScene sceneInstance)
         {
             FBXNode rootNode = sceneInstance.GetRootNode();

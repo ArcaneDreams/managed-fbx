@@ -85,9 +85,7 @@
     <Compile Include="Framework.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tests\TestBase.cs" />
-    <Compile Include="Tests\TestDisplayLight.cs" />
-    <Compile Include="Tests\TestDisplayMesh.cs" />
+    <Compile Include="Tests\SceneFramework.cs" />
     <Compile Include="Utility\ArgumentHandler.cs" />
     <Compile Include="Utility\DateTimeHelper.cs" />
   </ItemGroup>

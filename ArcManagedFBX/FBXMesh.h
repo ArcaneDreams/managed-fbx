@@ -11,6 +11,7 @@ namespace ArcManagedFBX
 		ARC_DEFAULT_CONSTRUCTORS(FBXMesh)
 
 		ARC_CLR_CHILD_CAST(FBXMesh,FBXNodeAttribute,FbxMesh)
+
 		ARC_CLR_CHILD_CAST(FBXMesh,FBXGeometry,FbxMesh)
 
 		void BeginPolygon(int32 pMaterial, int32 pTexture, int32 pGroup, bool pLegacy);
