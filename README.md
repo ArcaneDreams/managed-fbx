@@ -1,7 +1,7 @@
 ![arcmanagedfbx](http://i.imgur.com/br4KwNr.png)
 ====
 ## Description
-A managed CLR .NET wrapper for the Autodesk FBX SDK 2015. Enables developers writing in C# or any other .NET supported language to work with the FBX SDK without having to use pinvokes and the like.
+A managed CLR .NET wrapper for the Autodesk FBX SDK 2015. Enables developers writing in C# or any other .NET supported language to work with the FBX SDK without having to use any other aspect of the CLR's platform invocation services.
 
 ## Features
 * Import and save scenes
