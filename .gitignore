@@ -1,6 +1,8 @@
 ArcManagedFBX.opensdf
 ArcManagedFBX.sdf
+Bin/*
 Bin/
+Output/*
 Output/
 ArcManagedFBX/obj/*
 ArcManagedFBX/bin/*
@@ -8,10 +10,13 @@ ArcManagedFBX.Shared/obj/*
 ArcManagedFBX.Shared/bin/*
 ArcManagedFBXTest/obj/*
 ArcManagedFBXTest/bin/*
+ipch/*
 ipch/
 /*.opensdf
 /*.exe
 /*.obj
 /*.v11.suo
 /*.suo
+/*.dll
+/*.lib
 Libs/FBX/lib/
