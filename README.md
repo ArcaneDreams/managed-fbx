@@ -10,7 +10,7 @@ A managed common-language runtime wrapper for the Autodesk FBX SDK. Enables deve
 
 ## Tasks
 - [ ] Integrate support for FBX SDK 2019.5
-- [ ] Upgrade to Visual Studio 2019 MSVC
+- [ ] Upgrade to Visual Studio 2019
 
 ## Requirements
 * [Visual Studio 2012 with Update 4](http://www.microsoft.com/en-gb/download/details.aspx?id=39305)
@@ -18,6 +18,11 @@ A managed common-language runtime wrapper for the Autodesk FBX SDK. Enables deve
 
 ## Purpose
 * To be used in conjunction with MonoGame for importing the FBX file asset type and retrieving more indepth information about files imported through the API.
+
+## Contributors
+This project is looking for frequent contributors. It has proven to be popular, but unfortunately I don't have as much spare time as I would like to support this project.
+
+**Email:** [github@arcanedreams.com](mailto:github@arcanedreams.com)
 
 ## Shoutout
 https://github.com/returnString/ManagedFBX
