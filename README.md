@@ -12,6 +12,8 @@ A managed common-language runtime wrapper for the Autodesk FBX SDK. Enables deve
 - [ ] Integrate support for FBX SDK 2019.5
 - [ ] Upgrade to Visual Studio 2019
 
+[Find the task board for this project here.](https://tasks.arcanedreams.tech/b/sCLrKtyEMB3cZbdAd/arcanemanagedfbx)
+
 ## Requirements
 * [Visual Studio 2012 with Update 4](http://www.microsoft.com/en-gb/download/details.aspx?id=39305)
 * [Autodesk FBX SDK 2015](http://usa.autodesk.com/adsk/servlet/pc/item?siteID=123112&id=10775847)
