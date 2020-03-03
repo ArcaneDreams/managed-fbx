@@ -11,6 +11,7 @@ A managed common-language runtime wrapper for the Autodesk FBX SDK. Enables deve
 ## Tasks
 - [ ] Integrate support for FBX SDK 2019.5
 - [ ] Upgrade to Visual Studio 2019
+- [ ] Add support for .NET Core 3.1 (only compatible with Windows)
 
 [Find the task board for this project here.](https://tasks.arcanedreams.tech/b/sCLrKtyEMB3cZbdAd/arcanemanagedfbx)
 
