@@ -6,9 +6,9 @@ A managed common-language runtime wrapper for the Autodesk FBX SDK. Enables deve
 ## Features
 * Import and save scenes.
 * Modify cameras, attributes, nodes and more.
-* Comprehensive wrapper of most of the features documented and made accessible by the FBX SDK.
+* Comprehensive one-to-one wrapper of most of the documented types and interfaces.
 
-## Tasks
+## Roadmap
 - [ ] Integrate support for FBX SDK 2019.5
 - [ ] Upgrade to Visual Studio 2019
 - [ ] Add support for .NET Core 3.1 (only compatible with Windows)
