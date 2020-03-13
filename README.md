@@ -1,12 +1,12 @@
 ![arcmanagedfbx](http://i.imgur.com/br4KwNr.png)
 ====
 ## Description
-A managed common-language runtime wrapper for the Autodesk FBX SDK. Enables developers writing in C# or any other .NET supported language to work with the FBX SDK without having to use any other aspect of the CLR's platform invocation services.
+A managed common-language runtime wrapper for the Autodesk FBX SDK. Enables developers writing in C# or any other .NET supported language to work with the FBX SDK, without having to use any other aspect of the CLR's platform invocation services.
 
 ## Features
 * Import and save scenes.
 * Modify cameras, attributes, nodes and more.
-* Comprehensive one-to-one wrapper of most of the documented types and interfaces.
+* Comprehensive one-to-one type wrapper of most of the documented types and interfaces.
 
 ## Roadmap
 - [ ] Integrate support for FBX SDK 2019.5
