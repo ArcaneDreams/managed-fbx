@@ -15,7 +15,7 @@ A managed common-language runtime wrapper for the Autodesk FBX SDK. Enables deve
 
 ## Requirements
 * [Visual Studio 2012 with Update 4](http://www.microsoft.com/en-gb/download/details.aspx?id=39305)
-* [Autodesk FBX SDK 2015](http://usa.autodesk.com/adsk/servlet/pc/item?siteID=123112&id=10775847)
+* [Autodesk FBX SDK 2015](https://www.autodesk.com/developer-network/platform-technologies/fbx-sdk-2015)
 
 ## Purpose
 * To be used in conjunction with MonoGame for importing the FBX file asset type and retrieving more indepth information about files imported through the API.
